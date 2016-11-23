@@ -36,7 +36,7 @@ architecture mic of microprocessor is
 begin
 
 	IFetch : inst_fetch port map(clock => clock, reset => reset, pcIn => pcIn, pc_reg => '1',if_id_reg(15 downto 0) => pcPlusOne, if_id_reg(31 downto 16) => instruction);
-	IF_ID  : registers generic map() port map(input(31 downto 16) => instruction, input(15 downto 0) => pcPlusOne,clock => clock, reset => reset, enable =>, output(31 downto 16) => instructionR, output(15 downto 0) => pcPlusOneR);
+	IF_ID  : registers generic map(N => 32) port map(input(31 downto 16) => instruction, input(15 downto 0) => pcPlusOne,clock => clock, reset => reset, enable =>, output(31 downto 16) => instructionR, output(15 downto 0) => pcPlusOneR);
 	
 	Decoded: decode port map(instruction  => instructionR,
 				clock	     => clock,
