@@ -9,7 +9,7 @@ entity microprocessor is
 		  reset : in std_logic);
 		  
 architecture mic of microprocessor is
-	signal pcIn;
+	signal pcIn : std_logic_vector(15 downto 0);
 	signal pcPlusOne,pcPlusOneR;
 	signal instruction,instructionR;
 	signal pcPlusOneOut_d;
@@ -61,4 +61,99 @@ begin
 				rf_dataIn_sel=> rf_dataIn_sel_d,
 				alu_crtl     => alu_crtl_d,
 				op2in 	     => op2in _d);
+	
+	ID_RR : registers generic map(N => 61) port map(clock	     => clock,
+																	reset      => reset,
+																	enabe		  => ,
+																	input(60 downto 45) => pcPlusOneOut_d,
+																	input(44 downto 43)	 => pcMux_crtl_d,
+																	input(42 downto 40)		 => A_sel_d,
+																	input(39 downto 37)		 => B_sel_d,
+																	input(36 downto 35)=> rf_dataIn_mux_d,
+																	input(34)  => carryEnable_d,
+																	input(33)   => zeroEnable_d,
+																	input(32 downto 17)      => signExt_d,
+																	input(16)=> alu_a_muxCrtl_d,
+																	input(15 downto 14)=>alu_b_muxCrtl_d,
+																	input(13)	=> r7_enable_d,
+																	input(12)  => memWrite_en_d,
+																	input(11)  => beq_pc_crtl_d,
+																	input(10)  => rf_wren_mux _d,
+																	input(9)		=> rf_wren_d,
+																	input(8)  => counter_mux_d,
+																	input(7)		=> mem_mux_d,
+																	input(6 downto 4)=> rf_dataIn_sel_d,
+																	input(3 downto 2)     => alu_crtl_d,
+																	input(1 downto 0) 	     => op2in _d,
+																	output(60 downto 45) => pcPlusOneOut_r,
+																	output(44 downto 43)	 => pcMux_crtl_r,
+																	output(42 downto 40)		 => A_sel_r,
+																	output(39 downto 37)		 => B_sel_r,
+																	output(36 downto 35)=> rf_dataIn_mux_r,
+																	output(34)  => carryEnable_r,
+																	output(33)   => zeroEnable_r,
+																	output(32 downto 17)      => signExt_r,
+																	output(16)=> alu_a_muxCrtl_r,
+																	output(15 downto 14)=>alu_b_muxCrtl_r,
+																	output(13)	=> r7_enable_r,
+																	output(12)  => memWrite_en_r,
+																	output(11)  => beq_pc_crtl_r,
+																	output(10)  => rf_wren_mux _r,
+																	output(9)		=> rf_wren_r,
+																	output(8)  => counter_mux_r,
+																	output(7)		=> mem_mux_r,
+																	output(6 downto 4)=> rf_dataIn_sel_r,
+																	output(3 downto 2)     => alu_crtl_r,
+																	output(1 downto 0) 	     => op2in _r);
+																	
+	RF : registerRead port map(clock						=> clock,
+										reset						=> reset,
+										r7_enableTo_RF 		=> in std_logic;								-- From Write Back Stage
+										pc_in			  			=> in std_logic_vector(15 downto 0);	-- From WB
+										regWrite		  			=> in std_logic;								-- From WB
+										dataIn			  		=> in std_logic_vector(15 downto 0);	-- From WB
+										dataIn_sel_actual	  	=> in std_logic_vector(2 downto 0);		-- From WB
+										pcPlusOnein 			=> pcPlusOneOut_r,
+										pcMux_crtlin	 		=> pcMux_crtl_r,
+										A_selin			 		=> A_sel_r,
+										B_selin			 		=> B_sel_r,
+										rf_dataIn_muxin		=> rf_dataIn_mux_r,
+										carryEnablein  		=> carryEnable_r,
+										zeroEnablein   		=> zeroEnable_r,
+										signExtin      		=> signExt_r,
+										alu_a_muxCrtlin		=> alu_a_muxCrtl_r,
+										alu_b_muxCrtlin		=> alu_b_muxCrtl_r,
+										r7_enablein	 			=> r7_enable_r,
+										memWrite_enin  		=> memWrite_en_r,
+										beq_pc_crtlin  		=> beq_pc_crtl_r,
+										rf_wren_muxin  		=> rf_wren_mux _r,
+										rf_wrenin		 		=> rf_wren_r,
+										counter_muxin  		=> counter_mux_r,
+										mem_muxin		 		=> mem_mux_r,
+										rf_dataIn_selin		=> rf_dataIn_sel_r,
+										alu_crtlin     		=> alu_crtl_r,
+										op2inin			 		=> op2in _r,
+										
+										pcPlusOneOut 			=> pcPlusOneOut_e,
+										pcMux_crtlout	 		=> pcMux_crtl_e,
+										regA			 			=> regA,
+										regB			 			=> regB,
+										rf_dataIn_muxout		=> rf_dataIn_mux_e,
+										carryEnableout  		=> carryEnable_e,
+										zeroEnableout   		=> zeroEnable_e,
+										signExtout      		=> signExt_e,
+										alu_a_muxCrtlout		=> alu_a_muxCrtl_e,
+										alu_b_muxCrtlout		=> alu_b_muxCrtl_e,
+										r7_enableout	 		=> r7_enable_e,
+										memWrite_enout  		=> memWrite_en_e,
+										beq_pc_crtlout  		=> beq_pc_crtl_e,
+										rf_wren_muxout  		=> rf_wren_mux_e,
+										rf_wrenout		 		=> rf_wren_e,
+										counter_muxout  		=> counter_mux_e,
+										mem_muxout		 		=> mem_mux_e,
+										rf_dataIn_selout		=> rf_dataIn_sel_e,
+										alu_crtlout     		=> alu_crtl_e,
+										op2inout			 		=> op2in_e);
+	
+	RR_EX : registers generic map(N => ) port map();
 end mic;
