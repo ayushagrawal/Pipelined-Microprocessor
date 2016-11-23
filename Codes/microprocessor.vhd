@@ -10,28 +10,28 @@ entity microprocessor is
 		  
 architecture mic of microprocessor is
 	signal pcIn : std_logic_vector(15 downto 0);
-	signal pcPlusOne,pcPlusOneR;
-	signal instruction,instructionR;
-	signal pcPlusOneOut_d;
-	signal pcMux_crtl_d;
-	signal A_sel_d;
-	signal B_sel_d;
-	signal rf_dataIn_mux_d;
-	signal carryEnable_d;
-	signal zeroEnable_d;
-	signal signExt_d;
-	signal alu_a_muxCrtl_d;
-	signal alu_b_muxCrtl_d;
-	signal r7_enable_d;
-	signal memWrite_en_d;
-	signal beq_pc_crtl_d;
-	signal rf_wren_mux _d;
-	signal rf_wren_d;
-	signal counter_mux_d;
-	signal mem_mux_d;
-	signal rf_dataIn_sel_d;
-	signal alu_crtl_d;
-	signal op2in _d;	
+	signal pcPlusOne,pcPlusOneR: std_logic_vector(15 downto 0);
+	signal instruction,instructionR: std_logic_vector(15 downto 0);
+	signal pcPlusOneOut_d: std_logic_vector(15 downto 0);
+	signal pcMux_crtl_d : std_logic_vector(1 downto 0);	
+	signal A_sel_d : std_logic_vector(2 downto 0);	
+	signal B_sel_d : std_logic_vector(2 downto 0);	
+	signal rf_dataIn_mux_d : std_logic_vector(1 downto 0);	
+	signal carryEnable_d : std_logic;
+	signal zeroEnable_d : std_logic;
+	signal signExt_d: std_logic_vector(15 downto 0);
+	signal alu_a_muxCrtl_d : std_logic;
+	signal alu_b_muxCrtl_d std_logic_vector(1 downto 0);	
+	signal r7_enable_d : std_logic;
+	signal memWrite_en_d : std_logic;
+	signal beq_pc_crtl_d : std_logic;
+	signal rf_wren_mux _d : std_logic;
+	signal rf_wren_d : std_logic;
+	signal counter_mux_d : std_logic;
+	signal mem_mux_d : std_logic;
+	signal rf_dataIn_sel_d : std_logic_vector(2 downto 0);	
+	signal alu_crtl_d : std_logic_vector(1 downto 0);	
+	signal op2in _d : std_logic_vector(1 downto 0);	
 	
 begin
 
@@ -155,5 +155,46 @@ begin
 										alu_crtlout     		=> alu_crtl_e,
 										op2inout			 		=> op2in_e);
 	
-	RR_EX : registers generic map(N => ) port map();
+	RR_EX : registers generic map(N => ) port map(clock => clock, reset =>,
+																 input(86 downto 71) 			=> pcPlusOneOut_e,
+																 input(70 downto 69)	 		=> pcMux_crtl_e,
+																 input(68 downto 53)			 			=> regA,
+																 input(52 downto 37)		=> regB,
+																 input(36 downto 35)		=> rf_dataIn_mux_e,
+																 input(34)  		=> carryEnable_e,
+																 input(33)   		=> zeroEnable_e,
+																 input(32 downto 17)   		=> signExt_e,
+																 input(16)		=> alu_a_muxCrtl_e,
+																 input(15 downto 14)		=> alu_b_muxCrtl_e,
+																 input(13)	 		=> r7_enable_e,
+																 input(12)  		=> memWrite_en_e,
+																 input(11)  		=> beq_pc_crtl_e,
+																 input(10)=> rf_wren_mux_e,
+																 input(9)		 		=> rf_wren_e,
+																 input(8)  		=> counter_mux_e,
+																 input(7) 		=> mem_mux_e,
+																 input(6 downto 4)			=> rf_dataIn_sel_e,
+																 input(3 downto 2)   		=> alu_crtl_e,
+																 input(1 downto 0)		 		=> op2in_e,
+																 
+																 output(downto) 			=> pcPlusOneOut_m,
+																 output(downto)	 		=> pcMux_crtl_m,
+																 output(downto)			 			=> regA,
+																 output(downto)		=> regB,
+																 output(downto)		=> rf_dataIn_mux_m,
+																 output(downto)  		=> carryEnable_m,
+																 output(downto)   		=> zeroEnable_m,
+																 output(downto)   		=> signExt_m,
+																 output(downto)		=> alu_a_muxCrtl_m,
+																 output(downto)		=> alu_b_muxCrtl_m,
+																 output(downto)	 		=> r7_enable_m,
+																 output(downto)  		=> memWrite_en_m,
+																 output(downto)  		=> beq_pc_crtl_m,
+																 output(downto)=> rf_wren_mux_m,
+																 output(downto)		 		=> rf_wren_m,
+																 output(downto)  		=> counter_mux_m,
+																 output(downto) 		=> mem_mux_m,
+																 output(downto)=> rf_dataIn_sel_m,
+																 output(downto)   		=> alu_crtl_m,
+																 output(downto)		 		=> op2in_m);
 end mic;
