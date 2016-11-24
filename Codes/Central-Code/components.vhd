@@ -132,9 +132,9 @@ package components is
 	
 	component registers is
 		generic(N : integer);
-		port(dataIn: in std_logic_vector((N-1) downto 0);
+		port(input: in std_logic_vector((N-1) downto 0);
 			  enable: in std_logic;
-			  dataOut: out std_logic_vector((N-1) downto 0);
+			  output: out std_logic_vector((N-1) downto 0);
 			  clock: in std_logic;
 			  reset: in std_logic);
 	end component;

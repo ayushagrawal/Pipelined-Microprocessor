@@ -1,5 +1,5 @@
 Analysis & Synthesis report for microprocessor
-Thu Nov 24 15:57:15 2016
+Thu Nov 24 16:09:53 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Thu Nov 24 15:57:15 2016           ;
+; Analysis & Synthesis Status        ; Failed - Thu Nov 24 16:09:53 2016           ;
 ; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                      ; microprocessor                              ;
 ; Top-level Entity Name              ; microprocessor                              ;
@@ -162,7 +162,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Thu Nov 24 15:57:01 2016
+    Info: Processing started: Thu Nov 24 16:09:40 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off microprocessor -c microprocessor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -250,19 +250,11 @@ Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file adder.vhd
     Info (12022): Found design unit 1: adder-SYN File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/adder.vhd Line: 54
     Info (12023): Found entity 1: adder File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/adder.vhd Line: 43
-Error (10482): VHDL error at microprocessor.vhd(48): object "input" is used but not declared File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 48
-Error (10346): VHDL error at microprocessor.vhd(48): formal port or parameter "dataIn" must have actual or default value File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 48
-Error (10784): HDL error at components.vhd(135): see declaration for object "dataIn" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/components.vhd Line: 135
-Error (10346): VHDL error at microprocessor.vhd(48): formal port or parameter "enable" must have actual or default value File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 48
-Error (10784): HDL error at components.vhd(136): see declaration for object "enable" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/components.vhd Line: 136
-Error (10346): VHDL error at microprocessor.vhd(48): formal port or parameter "clock" must have actual or default value File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 48
-Error (10784): HDL error at components.vhd(138): see declaration for object "clock" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/components.vhd Line: 138
-Error (10346): VHDL error at microprocessor.vhd(48): formal port or parameter "reset" must have actual or default value File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 48
-Error (10784): HDL error at components.vhd(139): see declaration for object "reset" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/components.vhd Line: 139
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 9 errors, 1 warning
+Error (10467): VHDL Component Configuration or Component Instantiation Statement error at microprocessor.vhd(286): component "execute" is used but not declared File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 286
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
     Error: Peak virtual memory: 876 megabytes
-    Error: Processing ended: Thu Nov 24 15:57:15 2016
-    Error: Elapsed time: 00:00:14
-    Error: Total CPU time (on all processors): 00:00:32
+    Error: Processing ended: Thu Nov 24 16:09:53 2016
+    Error: Elapsed time: 00:00:13
+    Error: Total CPU time (on all processors): 00:00:30
 
 

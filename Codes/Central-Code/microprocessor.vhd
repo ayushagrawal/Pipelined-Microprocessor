@@ -33,6 +33,70 @@ architecture mic of microprocessor is
 	signal rf_dataIn_sel_d : std_logic_vector(2 downto 0);	
 	signal alu_crtl_d : std_logic_vector(1 downto 0);	
 	signal op2in_d : std_logic_vector(1 downto 0);	
+	
+	signal pcPlusOneOut_r: std_logic_vector(15 downto 0);
+	signal pcMux_crtl_r : std_logic_vector(1 downto 0);	
+	signal A_sel_r : std_logic_vector(2 downto 0);	
+	signal B_sel_r : std_logic_vector(2 downto 0);	
+	signal rf_dataIn_mux_r : std_logic_vector(1 downto 0);	
+	signal carryEnable_r : std_logic;
+	signal zeroEnable_r : std_logic;
+	signal signExt_r: std_logic_vector(15 downto 0);
+	signal alu_a_muxCrtl_r : std_logic;
+	signal alu_b_muxCrtl_r : std_logic_vector(1 downto 0);	
+	signal r7_enable_r : std_logic;
+	signal memWrite_en_r : std_logic;
+	signal beq_pc_crtl_r : std_logic;
+	signal rf_wren_mux_r : std_logic;
+	signal rf_wren_r : std_logic;
+	signal counter_mux_r : std_logic;
+	signal mem_mux_r : std_logic;
+	signal rf_dataIn_sel_r : std_logic_vector(2 downto 0);	
+	signal alu_crtl_r : std_logic_vector(1 downto 0);	
+	signal op2in_r : std_logic_vector(1 downto 0);	
+	
+	signal pcPlusOneOut_e: std_logic_vector(15 downto 0);
+	signal pcMux_crtl_e : std_logic_vector(1 downto 0);	
+	signal A_sel_e : std_logic_vector(2 downto 0);	
+	signal B_sel_e : std_logic_vector(2 downto 0);	
+	signal rf_dataIn_mux_e : std_logic_vector(1 downto 0);	
+	signal carryEnable_e : std_logic;
+	signal zeroEnable_e : std_logic;
+	signal signExt_e: std_logic_vector(15 downto 0);
+	signal alu_a_muxCrtl_e : std_logic;
+	signal alu_b_muxCrtl_e : std_logic_vector(1 downto 0);	
+	signal r7_enable_e : std_logic;
+	signal memWrite_en_e : std_logic;
+	signal beq_pc_crtl_e : std_logic;
+	signal rf_wren_mux_e : std_logic;
+	signal rf_wren_e : std_logic;
+	signal counter_mux_e : std_logic;
+	signal mem_mux_e : std_logic;
+	signal rf_dataIn_sel_e : std_logic_vector(2 downto 0);	
+	signal alu_crtl_e : std_logic_vector(1 downto 0);	
+	signal op2in_e : std_logic_vector(1 downto 0);
+	
+	signal pcPlusOneOut_m: std_logic_vector(15 downto 0);
+	signal pcMux_crtl_m : std_logic_vector(1 downto 0);	
+	signal A_sel_m : std_logic_vector(2 downto 0);	
+	signal B_sel_m : std_logic_vector(2 downto 0);	
+	signal rf_dataIn_mux_m : std_logic_vector(1 downto 0);	
+	signal carryEnable_m : std_logic;
+	signal zeroEnable_m : std_logic;
+	signal signExt_m: std_logic_vector(15 downto 0);
+	signal alu_a_muxCrtl_m : std_logic;
+	signal alu_b_muxCrtl_m : std_logic_vector(1 downto 0);	
+	signal r7_enable_m : std_logic;
+	signal memWrite_en_m : std_logic;
+	signal beq_pc_crtl_m : std_logic;
+	signal rf_wren_mux_m : std_logic;
+	signal rf_wren_m : std_logic;
+	signal counter_mux_m : std_logic;
+	signal mem_mux_m : std_logic;
+	signal rf_dataIn_sel_m : std_logic_vector(2 downto 0);	
+	signal alu_crtl_m : std_logic_vector(1 downto 0);	
+	signal op2in_m : std_logic_vector(1 downto 0);	
+	
 	signal ex_reg_out,exe_out : std_logic_vector(108 downto 0) ;
 	signal mem_wb_out,mem_wb_in : std_logic_vector(88 downto 0);
 	signal rfDataInsel_out_w : std_logic_vector(2 downto 0);
@@ -40,12 +104,21 @@ architecture mic of microprocessor is
 	signal regWrite_w : std_logic;
 	signal DataIn_w : std_logic_vector(15 downto 0);  
 	signal pcIn_w : std_logic_vector(15 downto 0);
-	signal enable_if,enable_id,counter_reset: std_logic;
+	signal enable_if,enable_id,enable_rr,counter_reset: std_logic;
+	signal regA,regB : std_logic_vector(15 downto 0);
 
 begin
 
 	IFetch : inst_fetch port map(clock => clock, reset => reset, pcIn => pcIn, pc_reg => '1',if_id_reg(15 downto 0) => pcPlusOne, if_id_reg(31 downto 16) => instruction);
 	IF_ID  : registers generic map(N => 32) port map(input(31 downto 16) => instruction, input(15 downto 0) => pcPlusOne,clock => clock, reset => reset, enable => enable_IF, output(31 downto 16) => instructionR, output(15 downto 0) => pcPlusOneR);
+	
+	
+	
+	enable_id <= '1';
+	enable_if <= '1';
+	
+	
+	
 	
 	Decoded: decode port map(instruction  => instructionR,
 				clock	     => clock,
@@ -73,7 +146,7 @@ begin
 	
 	ID_RR : registers generic map(N => 61) port map(clock	     => clock,
 																	reset      => reset,
-																	enabe		  => enable_id,
+																	enable		  => enable_id,
 																	input(60 downto 45) => pcPlusOneOut_d,
 																	input(44 downto 43)	 => pcMux_crtl_d,
 																	input(42 downto 40)		 => A_sel_d,
@@ -166,6 +239,7 @@ begin
 	
 	RR_EX : registers generic map(N => 87) port map(clock => clock,
 																	reset => reset,
+																	enable => enable_rr,
 																 input(86 downto 71) => pcPlusOneOut_e,
 																 input(70 downto 69) => pcMux_crtl_e,
 																 input(68 downto 53)	=> regA,
@@ -209,7 +283,7 @@ begin
 
 counter_reset <= (not (rf_dataIn_sel_m(0)) ) and (not (rf_dataIn_sel_m(1)) ) and (not (rf_dataIn_sel_m(2)));
 																 
-execute : execute port map ( clock => clock,
+executed : execute port map ( clock => clock,
 							 reset => reset,
 							counter_reset => counter_reset,
 							counter_ctrl => counter_mux_m,
