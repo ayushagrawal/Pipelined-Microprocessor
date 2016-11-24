@@ -36,7 +36,9 @@ begin
 	
 	enable_id <= '1';
 	enable_if <= '1';
-	
+	enable_rr <= '1';
+	enable_ex <= '1';
+	enable_mem <= '1';
 	
 	
 	
@@ -116,20 +118,21 @@ begin
 										carryEnableout  		=> input_rr(0));
 	
 
-	counter_reset <= (not (rf_dataIn_sel_m(0)) ) and (not (rf_dataIn_sel_m(1)) ) and (not (rf_dataIn_sel_m(2)));
+	counter_reset <= (not (output_rr(22)) ) and (not (output_rr(21)) ) and (not (output_rr(20)));
 																 
 	executed : execute port map ( clock => clock,
 											reset => reset,
 											counter_reset 		=> counter_reset,
 											pcPlusOneIn 		=> output_rr(86 downto 71),
 											signExtend 			=> output_rr(70 downto 55),
-											regA 					=> output_rr(54 downto 49),
-											regB 					=> output_rr(48 downto 23),
+											regA 					=> output_rr(54 downto 39),
+											regB 					=> output_rr(38 downto 23),
 											rf_dataIn_sel 		=> output_rr(22 downto 20),
 											B_mux_sel 			=> output_rr(19 downto 18),
 											alu_ctrl				=> output_rr(17 downto 16),
 											op2in 				=> output_rr(15 downto 14),
 											rf_dataIn_mux 		=> output_rr(13 downto 12),
+											pc_mux_ctrl			=> output_rr(11 downto 10),
 											A_mux_sel 			=> output_rr(9),
 											beq_mux_ctrl 		=> output_rr(8),
 											counter_ctrl 		=> output_rr(7),
@@ -174,19 +177,19 @@ memory : mem_access port map (clock 						=> clock,
 										rf_wren_mux_ctrl 			=> output_ex(3),
 										r7_enable 					=> output_ex(2),
 										rf_wren 						=> output_ex(1),
-										counterMux_in 				=> output_ex(0),
+										counterMuxIn 				=> output_ex(0),
 										
 										pc_mux_out 					=> input_mem(88 downto 73),
 										mem_data_out 				=> input_mem(72 downto 57),
 										pcPlusOne_out 				=> input_mem(56 downto 41),
-										signExtend_out 			=> input_mem(42 downto 25),
+										signExtend_out 			=> input_mem(40 downto 25),
 										ALUresult_out 				=> input_mem(24 downto 9),
 										rfDataInSel_out 			=> input_mem(8  downto 6),
 										rf_dataIn_mux_ctrl_out 	=> input_mem(5  downto 4),
 										r7_enable_out 				=> input_mem(3),
 										rf_wren_mux_ctrl_out 	=> input_mem(2),
 										rf_wren_out 				=> input_mem(1),
-										counterMux_out 			=> input_mem(0));
+										counterMuxOut	 			=> input_mem(0));
 
 writes : writeBack port map (pc_mux_out 					=> output_mem(88 downto 73),
 								memData_Out 						=> output_mem(72 downto 57),

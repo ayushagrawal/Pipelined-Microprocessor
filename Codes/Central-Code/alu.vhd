@@ -15,7 +15,8 @@ entity alu is
 		clock : in std_logic ;
 		reset : in std_logic;						
 		carry_flag : out std_logic;
-		zero_flag : out std_logic 
+		zero_flag_in : out std_logic;
+		zero_flag_out : out std_logic
 		);
 end entity;
 
@@ -71,8 +72,9 @@ begin
 
 	carry_temp <= (add_out(16))and(not alu_ctrl(0))and(not alu_ctrl(1));
 
-	carry_flag <= carry_flag1;
-	zero_flag <= zero_flag1;
+	carry_flag <= carry_temp;
+	zero_flag_in <= zero_temp;
+	zero_flag_out <= zero_flag1;
 	
 	temp_carry_en <= enable_carry and((op_2in(1) and (not op_2in(0)) and carry_flag1) or ((not op_2in(1)) and op_2in(0) and zero_flag1) or (not(op_2in(1) xor op_2in(0))));
 	

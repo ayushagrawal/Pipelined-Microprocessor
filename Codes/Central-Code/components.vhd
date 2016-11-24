@@ -139,9 +139,7 @@ package components is
 					pcPlusOneOut : out std_logic_vector(15 downto 0);
 					regA_out : out std_logic_vector(15 downto 0);
 					regB_out : out std_logic_vector(15 downto 0); 
-					ex_mem_reg : out std_logic_vector(107 downto 0);
-					carry_flag,zero_flag : out std_logic;
-					mem_addr : out std_logic_vector(15 downto 0);	
+					ALUresult_out : out std_logic_vector(15 downto 0);	
 					signExtendOut : out std_logic_vector(15 downto 0);		
 					rf_dataIn_mux_out : out std_logic_vector(1 downto 0);
 					r7_enable_out : out std_logic;

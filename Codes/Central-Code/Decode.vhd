@@ -34,7 +34,8 @@ architecture arch of Decode is
 		signal counter_enable : std_logic;
 		signal counter_out    : std_logic_vector(2 downto 0);
 begin
-		
+	signExtend : signExtender port map(input => instruction(8 downto 0),output => signExt, opcode => instruction(15 downto 12));
+	count : multiple port map(counter_enable => counter_enable, clock => clock, bit8 => instruction(7 downto 0), counter_out => counter_out, mux_out => counter_mux);
 process(instruction,pcPlusOneIn,counter_out)
 	variable Nalu_crtl : std_logic_vector(1 downto 0);
 	variable NzeroEnable : std_logic;
@@ -275,6 +276,5 @@ begin
 	pcPlusOneOut <= pcPlusOneIn;
 	op2in <= instruction(1 downto 0);
 end process;
-	signExtend : signExtender port map(input => instruction(8 downto 0),output => signExt, opcode => instruction(15 downto 12));
-	count : multiple port map(counter_enable => counter_enable, clock => clock, bit8 => instruction(7 downto 0), counter_out => counter_out, mux_out => counter_mux);
+	
 end arch;

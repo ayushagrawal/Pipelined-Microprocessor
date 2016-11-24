@@ -52,9 +52,7 @@ entity execute is
 				pcPlusOneOut : out std_logic_vector(15 downto 0);
 				regA_out : out std_logic_vector(15 downto 0);
 				regB_out : out std_logic_vector(15 downto 0); 
-				ex_mem_reg : out std_logic_vector(107 downto 0);
-				carry_flag,zero_flag : out std_logic;
-				mem_addr : out std_logic_vector(15 downto 0);	
+				ALUresult_out : out std_logic_vector(15 downto 0);	
 				signExtendOut : out std_logic_vector(15 downto 0);		
 				rf_dataIn_mux_out : out std_logic_vector(1 downto 0);
 				r7_enable_out : out std_logic;
@@ -73,16 +71,16 @@ architecture Behave of execute is
 	signal temp : std_logic_vector(16 downto 0);
 	signal alu_a_in,alu_b_in,alu_output : std_logic_vector(15 downto 0);
 	signal cntr_16 : std_logic_vector(15 downto 0);	
+	signal carry_signal,zero_signal_in,zero_signal_out : std_logic;
 
 begin
 
-	pc_mux_ctrl_out <= pc_mux_ctrl;
-	rf_wren_out_out <= rf_wren_out;
-add2 : adder port map (data0x => pcPlusOneIn,data1x => signExtend,result => temp);
-pcPlusOneOut <= pcPlusOneIn;
-pcALUresult <= temp(15 downto 0);
-regA_out <= regA;
-regB_out <= regB;
+	rf_wren_out_out <= rf_wren_out and ((not op2in(0) and op2in(1) and carry_signal) or ((not op2in(1)) and op2in(0) and zero_signal_in) or (not (op2in(0) xor op2in(1))));
+	add2 : adder port map (data0x => pcPlusOneIn,data1x => signExtend,result => temp);
+	pcPlusOneOut <= pcPlusOneIn;
+	pcALUresult <= temp(15 downto 0);
+	regA_out <= regA;
+	regB_out <= regB;
 
 counter2 : counter port map (aclr => counter_reset,clock => clock,cnt_en =>counter_ctrl,q => cntr_16(2 downto 0));
 cntr_16(15 downto 3) <= (others => '0');
@@ -102,15 +100,16 @@ alu_b_mux : mux3 generic map (n => 15) port map ( 	in0 =>signExtend,
 
 alu1 : alu port map ( ra => alu_a_in,
 					  rb => alu_b_in,
-					  rc => mem_addr,
+					  rc => ALUresult_out,
 					  alu_ctrl => alu_ctrl,
 					  op_2in => op2in,
 					  enable_carry =>	carryEnable,
 					  enable_zero => zeroEnable,
 					  clock => clock,
 					  reset => reset,
-					  carry_flag => carry_flag,
-					  zero_flag => zero_flag);
+					  carry_flag => carry_signal,
+					  zero_flag_in => zero_signal_in,
+					  zero_flag_out => zero_signal_out);
 
 signExtendOut <= signExtend;
 rf_dataIn_mux_out <=rf_dataIn_mux;
@@ -119,5 +118,20 @@ memWrite_en_out <= memWrite_en;
 rf_wren_mux_out <= rf_wren_mux;
 mem_mux_out <= mem_mux;
 rf_dataIn_sel_out <= rf_dataIn_sel;
+
+process(beq_mux_ctrl,pc_mux_ctrl,zero_signal_out)
+	variable var_pc_mux_ctrl_out : std_logic_vector(1 downto 0);
+	begin
+		if (beq_mux_ctrl = '1') then
+			if (zero_signal_out = '1') then
+				var_pc_mux_ctrl_out := "01";
+			else
+				var_pc_mux_ctrl_out := "10";
+			end if ;
+		else
+				var_pc_mux_ctrl_out := pc_mux_ctrl;
+		end if;
+	pc_mux_ctrl_out <= var_pc_mux_ctrl_out;
+	end process;
 end Behave;
 

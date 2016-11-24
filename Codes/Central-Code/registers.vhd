@@ -17,7 +17,7 @@ begin
 	begin
 		if(clock'event and clock = '1') then
 			if(reset = '1') then
-				data := "0000000000000000";
+				data := (others => '0');
 			elsif(enable = '1') then
 				data := input;
 			end if;

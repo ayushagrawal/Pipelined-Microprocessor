@@ -17,16 +17,17 @@ package exe_components is
 	END component;
 	
 	component alu is
-	port ( 	ra , rb : in std_logic_vector(15 downto 0);			 
+	port ( 	ra , rb : in std_logic_vector(15 downto 0);	 
 		rc : out std_logic_vector(15 downto 0);					
 		alu_ctrl : in std_logic_vector(1 downto 0);				
 		op_2in 	 : in std_logic_vector(1 downto 0);				
 		enable_carry : in std_logic;							
-		enable_zero : in std_logic;								
+		enable_zero : in std_logic;							
 		clock : in std_logic ;
 		reset : in std_logic;						
 		carry_flag : out std_logic;
-		zero_flag : out std_logic 
+		zero_flag_in : out std_logic;
+		zero_flag_out : out std_logic
 		);
 	end component;
 
