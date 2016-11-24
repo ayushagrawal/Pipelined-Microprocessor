@@ -33,7 +33,7 @@ architecture mic of microprocessor is
 	signal rf_dataIn_sel_d : std_logic_vector(2 downto 0);	
 	signal alu_crtl_d : std_logic_vector(1 downto 0);	
 	signal op2in_d : std_logic_vector(1 downto 0);	
-	signal ex_reg_out,exe_out : std_logic_vector(108 downto 0) ;
+	signal ex_reg_out,exe_out : std_logic_vector(107 downto 0) ;
 	signal mem_wb_out,mem_wb_in : std_logic_vector(88 downto 0);
 	signal rfDataInsel_out_w : std_logic_vector(2 downto 0);
 	signal r7_enable_out_w : std_logic;
@@ -232,10 +232,9 @@ execute : execute port map ( clock => clock,
 							rr_ex_reg(81) => rf_wren_m,
 							rr_ex_reg(82) => mem_mux_m,
 							rr_ex_reg(85 downto 83) => rf_dataIn_sel_m,
-							rr_ex_reg(86) => counter_mux_m,---
 							ex_mem_reg => exe_out); 
 
-EX_MEM : registers generic map(N => 109) port map (clock => clock , reset => reset ,
+EX_MEM : registers generic map(N => 108) port map (clock => clock , reset => reset ,
 											input => exe_out ,
 											output => ex_reg_out);
 
@@ -255,7 +254,6 @@ memory : mem_access port map (	clock => clock,
 								ex_mem_reg2(102) => ex_reg_out(103),--rf_wren
 								ex_mem_reg2(105 downto 103) => ex_reg_out(107 downto 105), -- rf_dataIn_sel
 								ex_mem_reg2(107 downto 106) => ex_reg_out(99 downto 98),--rf_dataIn_mux
-								ex_mem_reg2(108) => ex_reg_out(108),
 								mem_wb_reg => mem_wb_in);
 
 MEM_WB : registers generic map(N => 89) port map (	clock => clock, reset => reset,

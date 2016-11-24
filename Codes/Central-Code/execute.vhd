@@ -28,8 +28,8 @@ entity execute is
 				clock	:in STD_LOGIC;
 		 		reset	:in STD_LOGIC;
 				counter_reset : in std_logic;
-				rr_ex_reg : in std_logic_vector(85 downto 0);
-				ex_mem_reg : out std_logic_vector(107 downto 0);
+				rr_ex_reg : in std_logic_vector(86 downto 0);
+				ex_mem_reg : out std_logic_vector(108 downto 0);
 				carry_flag,zero_flag : out std_logic;
 				counter_ctrl : in std_logic);
 end entity;
@@ -75,13 +75,14 @@ alu1 : alu port map ( ra => alu_a_in,
 
 ex_mem_reg(79 downto 64) <= rr_ex_reg(47 downto 32);
 ex_mem_reg(95 downto 80) <= rr_ex_reg(63 downto 48);
-ex_mem_reg(97 downto 96) <= rr_ex_reg(74 downto 73);
+ex_mem_reg(97 downto 96) <= rr_ex_reg(76 downto 75);
 ex_mem_reg(99 downto 98) <= rr_ex_reg(76 downto 75);
 ex_mem_reg(100)			<= rr_ex_reg(77);
 ex_mem_reg(101) 		<= rr_ex_reg(78);
 ex_mem_reg(102)			<=	rr_ex_reg(80) ;
 ex_mem_reg(103)			<= rr_ex_reg(81) ;
 ex_mem_reg(104)			<= rr_ex_reg(82) ;
-ex_mem_reg(107 downto 105)	<= rr_ex_reg(85 downto 83);											
+ex_mem_reg(107 downto 105)	<= rr_ex_reg(85 downto 83);	
+ex_mem_reg(108) <= rr_ex_reg(86);										
 end Behave;
 

@@ -23,7 +23,7 @@ entity mem_access is
 	port	(	
 				clock	:in STD_LOGIC;
 		 		reset	:in STD_LOGIC;
-				ex_mem_reg2 : in std_logic_vector(108 downto 0);
+				ex_mem_reg2 : in std_logic_vector(105 downto 0);
 				mem_wb_reg : out std_logic_vector(88 downto 0)			
 		);
 end entity;
@@ -60,9 +60,9 @@ mem_wb_reg(47 downto 32) <= mem_data_out;
 mem_wb_reg(63 downto 48) <= ex_mem_reg2(63 downto 48);
 mem_wb_reg(79 downto 64) <= ex_mem_reg2(95 downto 80);
 mem_wb_reg(81 downto 80) <= ex_mem_reg2(97 downto 96);
-mem_wb_reg(84 downto 82) <= ex_mem_reg2(107 downto 105);
-mem_wb_reg(85) <= ex_mem_reg2(108);
-mem_wb_reg(86) <= ex_mem_reg2(102);
-mem_wb_reg(87) <= ex_mem_reg2(103);
+mem_wb_reg(84 downto 82) <= ex_mem_reg2(106 downto 104);
+mem_wb_reg(85) <= ex_mem_reg2();
+mem_wb_reg(86) <= ex_mem_reg2(101);
+mem_wb_reg(87) <= ex_mem_reg2(104);
 mem_wb_reg(88) <= ex_mem_reg2(100);						 
 end Behave;

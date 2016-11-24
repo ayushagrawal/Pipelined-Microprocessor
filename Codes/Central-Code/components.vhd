@@ -115,10 +115,28 @@ package components is
 					clock	:in STD_LOGIC;
 					reset	:in STD_LOGIC;
 					counter_reset : in std_logic;
-					rr_ex_reg : in std_logic_vector(85 downto 0);
-					ex_mem_reg : out std_logic_vector(107 downto 0);
+					rr_ex_reg : in std_logic_vector(86 downto 0);
+					ex_mem_reg : out std_logic_vector(108 downto 0);
 					carry_flag,zero_flag : out std_logic;
 					counter_ctrl : in std_logic);
+	end component;
+	
+	component mem_access is
+		port	(	
+					clock	:in STD_LOGIC;
+					reset	:in STD_LOGIC;
+					ex_mem_reg2 : in std_logic_vector(107 downto 0);
+					mem_wb_reg : out std_logic_vector(88 downto 0)			
+			);
+	end component;
+	
+	component registers is
+		generic(N : integer);
+		port(dataIn: in std_logic_vector((N-1) downto 0);
+			  enable: in std_logic;
+			  dataOut: out std_logic_vector((N-1) downto 0);
+			  clock: in std_logic;
+			  reset: in std_logic);
 	end component;
 	
 end package;
