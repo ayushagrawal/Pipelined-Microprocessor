@@ -1,4 +1,5 @@
--- rr_ex_Reg : 15 to 0 : pc+1 
+-- BEQ MUX CRTL LOGIC REMAINING -- rr_ex_reg(79)
+-- rr_ex_Reg : 15 to 0 : pc+1 						*86
 -- 				31 to 16 : alu_a_mux input 0
 -- 				63 to 48 : alu_a_mx input 1 and alu_b_mux input 0
 --   			47 to 32 : alu_b_mux input 1
@@ -27,8 +28,8 @@ entity execute is
 				clock	:in STD_LOGIC;
 		 		reset	:in STD_LOGIC;
 				counter_reset : in std_logic;
-				rr_ex_reg : in std_logic_vector(72 downto 0);
-				ex_mem_reg : out std_logic_vector(95 downto 0);
+				rr_ex_reg : in std_logic_vector(85 downto 0);
+				ex_mem_reg : out std_logic_vector(107 downto 0);
 				carry_flag,zero_flag : out std_logic;
 				counter_ctrl : in std_logic;				
 		);
@@ -75,6 +76,13 @@ alu1 : alu port map ( ra => alu_a_in,
 
 ex_mem_reg(79 downto 64) <= rr_ex_reg(47 downto 32);
 ex_mem_reg(95 downto 80) <= rr_ex_reg(63 downto 48);
-											
+ex_mem_reg(97 downto 96) <= rr_ex_reg(74 downto 73);
+ex_mem_reg(99 downto 98) <= rr_ex_reg(76 downto 75);
+ex_mem_reg(100)			<= rr_ex_reg(77);
+ex_mem_reg(101) 		<= rr_ex_reg(78);
+ex_mem_reg(102)			<=	rr_ex_reg(80) ;
+ex_mem_reg(103)			<= rr_ex_reg(81) ;
+ex_mem_reg(104)			<= rr_ex_reg(82) ;
+ex_mem_reg(107 downto 105)	<= rr_ex_reg(85 downto 83);											
 end Behave;
 
