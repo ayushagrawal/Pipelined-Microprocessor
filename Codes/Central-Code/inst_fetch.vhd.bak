@@ -40,7 +40,7 @@ inst_memory : memory port map(	address => mem_address,
 								 q => mem_out,
 								 clock => clock);
 
-add3 : adder port map (data0x => pc_out,data1x => (0 => '1' , 1 => '0' , 2 => '1' , others => '0'),result => temp);
+add3 : adder port map (data0x => pc_out,data1x => (0 => '1' , others => '0'),result => temp);
 if_id_reg(31 downto 16) <= mem_out;
 if_id_reg(15 downto 0) <= temp(15 downto 0);
 

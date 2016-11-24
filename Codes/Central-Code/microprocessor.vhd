@@ -10,11 +10,11 @@ entity microprocessor is
 end entity;
 		  
 architecture mic of microprocessor is
-	signal input_of,  output_if  : std_logic_vector(31 downto 0);
-	signal input_id,  output_id  : std_logic_vector(downto 0);
-	signal input_rr,  output_rr  : std_logic_vector(downto 0);
-	signal input_ex,  output_ex  : std_logic_vector(downto 0);
-	signal input_mem, output_mem : std_logic_vector(downto 0);
+	signal input_if,  output_if  : std_logic_vector(31 downto 0);
+	signal input_id,  output_id  : std_logic_vector(60 downto 0);
+	signal input_rr,  output_rr  : std_logic_vector(86 downto 0);
+	signal input_ex,  output_ex  : std_logic_vector(108 downto 0);
+	signal input_mem, output_mem : std_logic_vector(88 downto 0);
 	signal pcIn : std_logic_vector(15 downto 0);
 		
 	
@@ -29,13 +29,13 @@ architecture mic of microprocessor is
 
 begin
 
-	IFetch : inst_fetch port map(clock => clock, reset => reset, pcIn => pcIn, pc_reg => '1',if_id_reg => input_ir);
+	IFetch : inst_fetch port map(clock => clock, reset => reset, pcIn => pcIn, pc_reg => '1',if_id_reg => input_if);
 	
-	IF_ID  : registers generic map(N => 32)  port map(clock => clock, reset => reset, enable => enable_IF,  input => input_ir,  output => output_ir);
+	IF_ID  : registers generic map(N => 32)  port map(clock => clock, reset => reset, enable => enable_IF,  input => input_if,  output => output_if);
 	ID_RR  : registers generic map(N => 61)  port map(clock => clock, reset => reset, enable => enable_id,  input => input_id,  output => output_id);
 	RR_EX  : registers generic map(N => 87)  port map(clock => clock, reset => reset, enable => enable_rr,  input => input_rr,  output => output_rr);
 	EX_MEM : registers generic map(N => 109) port map(clock => clock, reset => reset, enable => enable_ex,  input => input_ex,  output => output_ex);
-	MEM_WB : registers generic map(N => 89)  port map(clock => clock, reset => reset, enable => enable_mem, input => input_mem, output => outptu_mem);
+	MEM_WB : registers generic map(N => 89)  port map(clock => clock, reset => reset, enable => enable_mem, input => input_mem, output => output_mem);
 
 	
 	enable_id <= '1';
@@ -45,8 +45,8 @@ begin
 	
 	
 	Decoded: decode port map(	clock	     		=> clock,
-										instruction  	=> output_ir(31 downto 16),
-   									pcPlusOneIn  	=> output_ir(15 downto 0),
+										instruction  	=> output_if(31 downto 16),
+   									pcPlusOneIn  	=> output_if(15 downto 0),
 										signExt      	=> input_id(60 downto 45),
 										pcPlusOneOut 	=> input_id(44 downto 29),
 										A_sel		 		=> input_id(28 downto 26),
