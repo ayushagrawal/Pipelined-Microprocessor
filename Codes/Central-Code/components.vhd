@@ -115,17 +115,77 @@ package components is
 					clock	:in STD_LOGIC;
 					reset	:in STD_LOGIC;
 					counter_reset : in std_logic;
-					rr_ex_reg : in std_logic_vector(86 downto 0);
-					ex_mem_reg : out std_logic_vector(108 downto 0);
-					counter_ctrl : in std_logic);
+					beq_mux_ctrl : in std_logic;
+					pcPlusOneIn : in std_logic_vector(15 downto 0);
+					regA : in std_logic_vector(15 downto 0);
+					regB : in std_logic_vector(15 downto 0);
+					signExtend : in std_logic_vector(15 downto 0);
+					counter_ctrl : in std_logic;
+					A_mux_sel : in std_logic;
+					B_mux_sel : in std_logic_vector(1 downto 0);
+					alu_ctrl : in std_logic_vector(1 downto 0);
+					op2in : in std_logic_vector(1 downto 0);
+					carryEnable : in std_logic;			
+					zeroEnable : in std_logic;
+					rf_dataIn_mux : in std_logic_vector(1 downto 0);
+					r7_enable : in std_logic;
+					memWrite_en : in std_logic;
+					rf_wren_mux : in std_logic;
+					mem_mux : in std_logic;
+					rf_dataIn_sel : in std_logic_vector(2 downto 0);
+					pc_mux_ctrl : in std_logic_vector(1 downto 0);
+					rf_wren_out : in std_logic;
+										
+					pcPlusOneOut : out std_logic_vector(15 downto 0);
+					regA_out : out std_logic_vector(15 downto 0);
+					regB_out : out std_logic_vector(15 downto 0); 
+					ex_mem_reg : out std_logic_vector(107 downto 0);
+					carry_flag,zero_flag : out std_logic;
+					mem_addr : out std_logic_vector(15 downto 0);	
+					signExtendOut : out std_logic_vector(15 downto 0);		
+					rf_dataIn_mux_out : out std_logic_vector(1 downto 0);
+					r7_enable_out : out std_logic;
+					memWrite_en_out : out std_logic;
+					rf_wren_mux_out : out std_logic;
+					mem_mux_out : out std_logic;
+					pc_mux_ctrl_out : out std_logic_vector(1 downto 0);
+					rf_wren_out_out : out std_logic;
+					rf_dataIn_sel_out : out std_logic_vector(2 downto 0);
+					pcALUresult : out std_logic_vector(15 downto 0);
+					counter_mux_out : out std_logic);
 	end component;
 	
 	component mem_access is
 		port	(	
 					clock	:in STD_LOGIC;
 					reset	:in STD_LOGIC;
-					ex_mem_reg2 : in std_logic_vector(107 downto 0);
-					mem_wb_reg : out std_logic_vector(88 downto 0)			
+					pcAlu_result : in std_logic_vector(15 downto 0);	
+					pcPlusOne : in std_logic_vector(15 downto 0);
+					regA : in std_logic_vector(15 downto 0);
+					ALUresult : in std_logic_vector(15 downto 0);	
+					regB : in std_logic_vector(15 downto 0);
+					signExtend : in std_logic_vector(15 downto 0);	
+					pcMux_ctrl : in std_logic_vector(1 downto 0);
+					mem_mux_ctrl : in std_logic;
+					memWrite_en : in std_logic;
+					rf_dataIn_mux_ctrl : in std_logic_vector(1 downto 0);
+					rfDataInSel : in std_logic_vector(2 downto 0);	
+					counterMuxIn : in std_logic;
+					rf_wren_mux_ctrl : in std_logic;
+					rf_wren : in std_logic;
+					r7_enable : in std_logic;
+		
+					pc_mux_out : out std_logic_vector(15 downto 0);	
+					pcPlusOne_out : out std_logic_vector(15 downto 0);		
+					mem_data_out : out std_logic_vector(15 downto 0);	
+					ALUresult_out : out std_logic_vector(15 downto 0);
+					signExtend_out : out std_logic_vector(15 downto 0);
+					rf_dataIn_mux_ctrl_out : out std_logic_vector(1 downto 0);
+					rfDataInSel_out : out std_logic_vector(2 downto 0);
+					counterMuxOut : out std_logic;
+					rf_wren_mux_ctrl_out : out std_logic;
+					rf_wren_out : out std_logic;
+					r7_enable_out : out std_logic
 			);
 	end component;
 	

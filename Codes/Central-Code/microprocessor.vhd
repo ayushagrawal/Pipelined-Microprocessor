@@ -15,11 +15,7 @@ architecture mic of microprocessor is
 	signal input_rr,  output_rr  : std_logic_vector(86 downto 0);
 	signal input_ex,  output_ex  : std_logic_vector(108 downto 0);
 	signal input_mem, output_mem : std_logic_vector(88 downto 0);
-	signal pcIn : std_logic_vector(15 downto 0);
-		
 	
-	signal ex_reg_out,exe_out : std_logic_vector(108 downto 0) ;
-	signal mem_wb_out,mem_wb_in : std_logic_vector(88 downto 0);
 	signal rfDataInsel_out_w : std_logic_vector(2 downto 0);
 	signal r7_enable_out_w : std_logic;
 	signal regWrite_w : std_logic;
@@ -29,7 +25,7 @@ architecture mic of microprocessor is
 
 begin
 
-	IFetch : inst_fetch port map(clock => clock, reset => reset, pcIn => pcIn, pc_reg => '1',if_id_reg => input_if);
+	IFetch : inst_fetch port map(clock => clock, reset => reset, pcIn => pcIn_w, pc_reg => '1',if_id_reg => input_if);
 	
 	IF_ID  : registers generic map(N => 32)  port map(clock => clock, reset => reset, enable => enable_IF,  input => input_if,  output => output_if);
 	ID_RR  : registers generic map(N => 61)  port map(clock => clock, reset => reset, enable => enable_id,  input => input_id,  output => output_id);
@@ -145,69 +141,69 @@ begin
 											zeroEnable			=> output_rr(1),
 											carryEnable 		=> output_rr(0),
 											
-											pcALUresult => input_ex(108 downto 93);
-											regB_out => input_ex(76 downto 61),
-											ALUresult_out => input_ex(92 downto 77),
-											regA_out => input_ex(60 downto 45),
-											pcPlusOneOut => input_ex(28 downto 13),
-											signExtendOut =>input_ex(44 downto 29),
-											rf_dataIn_sel_out => input_ex(12 downto 10),
-											rf_dataIn_mux_out => input_ex(9 downto 8),
-											memWrite_en_out => input_ex(5),
-											mem_mux_out => input_ex(4),
-											rf_wren_mux_out => input_ex(1),
-											r7_enable_out => input_ex(2),
-											pc_mux_ctrl_out => input_ex(7 downto 6),
-											rf_wren_out_out => input_ex(3),
-											counter_mux_out => input_ex(0)); 
+											pcALUresult 		=> input_ex(108 downto 93),
+											ALUresult_out 		=> input_ex(92  downto 77),
+											regB_out 			=> input_ex(76  downto 61),
+											regA_out 			=> input_ex(60  downto 45),
+											signExtendOut 		=> input_ex(44  downto 29),
+											pcPlusOneOut 		=> input_ex(28  downto 13),
+											rf_dataIn_sel_out => input_ex(12  downto 10),
+											rf_dataIn_mux_out => input_ex(9   downto 8),
+											pc_mux_ctrl_out 	=> input_ex(7   downto 6),
+											memWrite_en_out 	=> input_ex(5),
+											mem_mux_out 		=> input_ex(4),
+											rf_wren_out_out 	=> input_ex(3),
+											r7_enable_out 		=> input_ex(2),
+											rf_wren_mux_out 	=> input_ex(1),
+											counter_mux_out 	=> input_ex(0)); 
 
 
-memory : mem_access port map (clock => clock,
-										reset => reset,
-										counterMux_in => output_ex(0),
-										ALUresult => output_ex(92 downto 77),
-										memWrite_en => output_ex(5),
-										pcAlu_result => output_ex(108 downto 93),
-										pcPlusOne => output_ex(28 downto 13),
-										pcMux_ctrl => output_ex(7 downto 6),
-										regA => output_ex(60 downto 45),
-										regB => output_ex(76 downto 61),
-										mem_mux_ctrl => output_ex(4),
-										rfDataInSel => output_ex(12 downto 10),
-										rf_dataIn_mux_ctrl => output_ex(9 downto 8),
-										rf_wren_mux_ctrl => output_ex(3),
-										rf_wren => output_ex(1),
-										r7_enable => output_ex(2),
-										signExtend => output_ex(44 downto 29),
+memory : mem_access port map (clock 						=> clock,
+										reset 						=> reset,
+										pcAlu_result				=> output_ex(108 downto 93),
+										ALUresult 					=> output_ex(92  downto 77),
+										regB 							=> output_ex(76  downto 61),
+										regA 							=> output_ex(60  downto 45),
+										signExtend 					=> output_ex(44  downto 29),
+										pcPlusOne 					=> output_ex(28  downto 13),
+										rfDataInSel 				=> output_ex(12  downto 10),
+										rf_dataIn_mux_ctrl	 	=> output_ex(9   downto 8),
+										pcMux_ctrl 					=> output_ex(7   downto 6),
+										memWrite_en 				=> output_ex(5),
+										mem_mux_ctrl	 			=> output_ex(4),
+										rf_wren_mux_ctrl 			=> output_ex(3),
+										r7_enable 					=> output_ex(2),
+										rf_wren 						=> output_ex(1),
+										counterMux_in 				=> output_ex(0),
 										
-										counterMux_out => input_mem(0),
-										ALUresult_out => input_mem(24 downto 9),
-										mem_data_out => input_mem(72 downto 57),
-										pcPlusOne_out => input_mem(56 downto 41),
-										pc_mux_out => input_mem(88 downto 73),
-										rfDataInSel_out => input_mem(8 downto 6),
-										rf_dataIn_mux_ctrl_out => input_mem(5 downto 4),
-										rf_wren_mux_ctrl_out => input_mem(2),
-										rf_wren_out => input_mem(1),
-										r7_enable_out => input_mem(3),
-										signExtend_out => input_mem(42 downto 25));
+										pc_mux_out 					=> input_mem(88 downto 73),
+										mem_data_out 				=> input_mem(72 downto 57),
+										pcPlusOne_out 				=> input_mem(56 downto 41),
+										signExtend_out 			=> input_mem(42 downto 25),
+										ALUresult_out 				=> input_mem(24 downto 9),
+										rfDataInSel_out 			=> input_mem(8  downto 6),
+										rf_dataIn_mux_ctrl_out 	=> input_mem(5  downto 4),
+										r7_enable_out 				=> input_mem(3),
+										rf_wren_mux_ctrl_out 	=> input_mem(2),
+										rf_wren_out 				=> input_mem(1),
+										counterMux_out 			=> input_mem(0));
 
-writes : writeBack port map (pc_mux_out => output_mem(88 downto 73),
-								alu_out => output_mem(24 downto 9);
-								rf_dataIn_mux_crtl => output_mem(5 downto 4);
-								signExtender => output_mem(40 downto 25);
-								pcPlusOne => output_mem(56 downto 41),
-								rfDataInSel => output_mem(8 downto 6);
-								counterMuxOut => output_mem(0),
-								rf_wren_mux_crtl => output_mem(2),
-								rf_wren => output_mem(1),
-								r7_enable => output_mem(3),
-								memData_Out => output_mem(72 downto 57),
+writes : writeBack port map (pc_mux_out 					=> output_mem(88 downto 73),
+								memData_Out 						=> output_mem(72 downto 57),
+								pcPlusOne 							=> output_mem(56 downto 41),
+								signExtender 						=> output_mem(40 downto 25),
+								alu_out 								=> output_mem(24 downto 9),
+								rfDataInSel 						=> output_mem(8 downto 6),
+								rf_dataIn_mux_crtl 				=> output_mem(5 downto 4),
+								r7_enable 							=> output_mem(3),
+								rf_wren_mux_crtl 					=> output_mem(2),
+								rf_wren 								=> output_mem(1),
+								counterMuxOut 						=> output_mem(0),
 								
 								r7_enable_out => r7_enable_out_w,
 								regWrite => regWrite_w,
 								DataIn => DataIn_w,
 								pcIn => pcIn_w,
-								rfDataInsel_out => );
+								rfDataInsel_out => rfDataInsel_out_w);
 
 end mic;

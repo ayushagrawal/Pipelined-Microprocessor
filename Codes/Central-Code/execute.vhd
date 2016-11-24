@@ -65,8 +65,7 @@ entity execute is
 				rf_wren_out_out : out std_logic;
 				rf_dataIn_sel_out : out std_logic_vector(2 downto 0);
 				pcALUresult : out std_logic_vector(15 downto 0);
-				counter_mux_out : out std_logic;
-		);
+				counter_mux_out : out std_logic);
 end entity;
 
 architecture Behave of execute is
