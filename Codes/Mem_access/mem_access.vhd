@@ -1,13 +1,12 @@
--- ex_mem_reg2 : 15 to 0 : pc_alu_result
---					31 to 16 : pc+1
---					47 to 32 : reg_file_A
---					63 to 48 : ALU_result
---					79 to 64 : reg_file_B
---					95 to 80 : sign_extend/LH output
---					97 to 96 : pc_mux_sel
+-- ex_mem_reg2 : 15 to 0 : pc_alu_result .				*108
+--					31 to 16 : pc+1 .
+--					47 to 32 : reg_file_A .
+--					63 to 48 : ALU_result .
+--					79 to 64 : reg_file_B .
+--					95 to 80 : sign_extend/LH output .
+--					97 to 96 : pc_mux_sel.
 -- 					98 		 : data_mem_mux_sel
 --					99		 : mem_wr_en
---					100 	 : mem_rd_en
 -- mem_wb_reg : 15 to 0 : pc_mux_out
 -- 				31 to 16 : pc+1
 --				47 to 32 : data_mem_out
@@ -24,8 +23,8 @@ entity mem_access is
 	port	(	
 				clock	:in STD_LOGIC;
 		 		reset	:in STD_LOGIC;
-				mem_wb_reg : out std_logic_vector(79 downto 0);
-				ex_mem_reg2 : in std_logic_vector(100 downto 0)				
+				ex_mem_reg2 : in std_logic_vector(105 downto 0);
+				mem_wb_reg : out std_logic_vector(88 downto 0)			
 		);
 end entity;
 
@@ -54,11 +53,16 @@ data_mem_mux : mux2 generic map(n => 15) port map ( in0 => ex_mem_reg2(47 downto
 data_mem : memory port map(	address => ex_mem_reg2(63 downto 48),
 								 data => data_mem_mux_out, 
 								 wren => ex_mem_reg2(99), 
-								 rden => ex_mem_reg2(100),
+								 rden => '1',
 								 q => mem_data_out,
 								 clock => clock);
 mem_wb_reg(47 downto 32) <= mem_data_out;
 mem_wb_reg(63 downto 48) <= ex_mem_reg2(63 downto 48);
 mem_wb_reg(79 downto 64) <= ex_mem_reg2(95 downto 80);
-
+mem_wb_reg(81 downto 80) <= ex_mem_reg2(97 downto 96);
+mem_wb_reg(84 downto 82) <= ex_mem_reg2(106 downto 104);
+mem_wb_reg(85) <= ex_mem_reg2();
+mem_wb_reg(86) <= ex_mem_reg2(101);
+mem_wb_reg(87) <= ex_mem_reg2(104);
+mem_wb_reg(88) <= ex_mem_reg2(100);						 
 end Behave;
