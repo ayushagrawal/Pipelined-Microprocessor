@@ -104,7 +104,7 @@ architecture mic of microprocessor is
 	signal regWrite_w : std_logic;
 	signal DataIn_w : std_logic_vector(15 downto 0);  
 	signal pcIn_w : std_logic_vector(15 downto 0);
-	signal enable_if,enable_id,enable_rr,counter_reset: std_logic;
+	signal enable_if,enable_id,enable_rr,enable_ex,enable_mem,counter_reset: std_logic;
 	signal regA,regB : std_logic_vector(15 downto 0);
 
 begin
@@ -289,7 +289,7 @@ executed : execute port map ( clock => clock,
 							counter_ctrl => counter_mux_m,
 							rr_ex_reg(15 downto 0) => pcPlusOneOut_m,
 							rr_ex_reg(31 downto 16) => regA,
-							rr_ex_reg(63 downto 48) => sighExt_m,
+							rr_ex_reg(63 downto 48) => signExt_m,
 							rr_ex_reg(47 downto 32) => regB,
 							rr_ex_reg(65 downto 64) => alu_crtl_m,
 							rr_ex_reg(67 downto 66) => op2in_m,
@@ -309,7 +309,7 @@ executed : execute port map ( clock => clock,
 							rr_ex_reg(86) => counter_mux_m,---
 							ex_mem_reg => exe_out); 
 
-EX_MEM : registers generic map(N => 109) port map (clock => clock , reset => reset ,
+EX_MEM : registers generic map(N => 109) port map (clock => clock , reset => reset , enable => enable_ex,
 											input => exe_out ,
 											output => ex_reg_out);
 
@@ -332,11 +332,11 @@ memory : mem_access port map (	clock => clock,
 								ex_mem_reg2(108) => ex_reg_out(108),
 								mem_wb_reg => mem_wb_in);
 
-MEM_WB : registers generic map(N => 89) port map (	clock => clock, reset => reset,
+MEM_WB : registers generic map(N => 89) port map (	clock => clock, reset => reset,enable => enable_mem,
 											input => mem_wb_in,
 											output => mem_wb_out);
 
-writeback : writeBack port map (pc_mux_out => mem_wb_out(15 downto 0),
+writes : writeBack port map (pc_mux_out => mem_wb_out(15 downto 0),
 								alu_out => mem_wb_out(63 downto 48),
 								rf_dataIn_mux_crtl => mem_wb_out(81 downto 80),
 								signExtender =>	mem_wb_out(79 downto 64),

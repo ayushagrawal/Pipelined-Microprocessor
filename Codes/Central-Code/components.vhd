@@ -117,7 +117,6 @@ package components is
 					counter_reset : in std_logic;
 					rr_ex_reg : in std_logic_vector(86 downto 0);
 					ex_mem_reg : out std_logic_vector(108 downto 0);
-					carry_flag,zero_flag : out std_logic;
 					counter_ctrl : in std_logic);
 	end component;
 	

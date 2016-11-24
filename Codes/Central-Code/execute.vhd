@@ -30,7 +30,6 @@ entity execute is
 				counter_reset : in std_logic;
 				rr_ex_reg : in std_logic_vector(86 downto 0);
 				ex_mem_reg : out std_logic_vector(108 downto 0);
-				carry_flag,zero_flag : out std_logic;
 				counter_ctrl : in std_logic);
 end entity;
 
@@ -42,7 +41,7 @@ architecture Behave of execute is
 
 begin
 	
-add2 : adder port map (data0x => rr_ex_reg(15 downto 0),data1x => ex_mem_reg(15 downto 0),result => temp);
+add2 : adder port map (data0x => rr_ex_reg(15 downto 0),data1x => rr_ex_reg(63 downto 48),result => temp);
 ex_mem_reg(15 downto 0) <= temp(15 downto 0);
 ex_mem_reg(31 downto 16) <= rr_ex_reg(15 downto 0);
 ex_mem_reg(47 downto 32) <= rr_ex_reg(31 downto 16);

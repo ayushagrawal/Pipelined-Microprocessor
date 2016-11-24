@@ -1,5 +1,5 @@
 Analysis & Synthesis report for microprocessor
-Thu Nov 24 16:09:53 2016
+Thu Nov 24 16:19:11 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Thu Nov 24 16:09:53 2016           ;
+; Analysis & Synthesis Status        ; Failed - Thu Nov 24 16:19:11 2016           ;
 ; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                      ; microprocessor                              ;
 ; Top-level Entity Name              ; microprocessor                              ;
@@ -162,7 +162,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Thu Nov 24 16:09:40 2016
+    Info: Processing started: Thu Nov 24 16:18:57 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off microprocessor -c microprocessor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -250,11 +250,17 @@ Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file adder.vhd
     Info (12022): Found design unit 1: adder-SYN File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/adder.vhd Line: 54
     Info (12023): Found entity 1: adder File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/adder.vhd Line: 43
-Error (10467): VHDL Component Configuration or Component Instantiation Statement error at microprocessor.vhd(286): component "execute" is used but not declared File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 286
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 876 megabytes
-    Error: Processing ended: Thu Nov 24 16:09:53 2016
-    Error: Elapsed time: 00:00:13
-    Error: Total CPU time (on all processors): 00:00:30
+Info (12127): Elaborating entity "microprocessor" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at microprocessor.vhd(13): used implicit default value for signal "pcIn" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 13
+Warning (10541): VHDL Signal Declaration warning at microprocessor.vhd(107): used implicit default value for signal "enable_rr" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 107
+Warning (10541): VHDL Signal Declaration warning at microprocessor.vhd(107): used implicit default value for signal "enable_ex" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 107
+Warning (10541): VHDL Signal Declaration warning at microprocessor.vhd(107): used implicit default value for signal "enable_mem" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 107
+Error (10384): VHDL assignment error at microprocessor.vhd(332): index 108 is outside the range (107 downto 0) of object "ex_mem_reg2" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 332
+Error (12153): Can't elaborate top-level user hierarchy
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 5 warnings
+    Error: Peak virtual memory: 880 megabytes
+    Error: Processing ended: Thu Nov 24 16:19:11 2016
+    Error: Elapsed time: 00:00:14
+    Error: Total CPU time (on all processors): 00:00:32
 
 

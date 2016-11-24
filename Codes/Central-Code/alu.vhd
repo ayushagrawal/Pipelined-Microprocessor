@@ -57,7 +57,7 @@ architecture formulas of alu is
 	signal addc,addz,subz,nandz : std_logic;
 
 	signal rc1 : std_logic_vector(15 downto 0);	
-	signal carry_temp,zero_temp : std_logic;
+	signal carry_temp,zero_temp,temp_carry_en, temp_zero_en : std_logic;
 	signal zero_flag1,carry_flag1  : std_logic;
 
 begin
@@ -67,14 +67,14 @@ begin
 	
 	zero_temp <= (addz and(not alu_ctrl(0))and(not alu_ctrl(1))) or (subz and(not alu_ctrl(1))and(alu_ctrl(0))) or (nandz and(not alu_ctrl(0))and(alu_ctrl(1)));
 
-	carry_temp <= (adder_output(16))and(not alu_ctrl(0))and(not alu_ctrl(1));
+	carry_temp <= (add_out(16))and(not alu_ctrl(0))and(not alu_ctrl(1));
 
 	carry_flag <= carry_flag1;
 	zero_flag <= zero_flag1;
 	
-	temp_carry_en <= enable_carry and((op2in(1) and (not op2in(0)) and carry_flag1) or ((not op2in(1)) and op2in(0) and zero_flag1) or (not(op2in(1) xor op2in(0))));
+	temp_carry_en <= enable_carry and((op_2in(1) and (not op_2in(0)) and carry_flag1) or ((not op_2in(1)) and op_2in(0) and zero_flag1) or (not(op_2in(1) xor op_2in(0))));
 	
-	temp_zero_en <= enable_zero and ((op2in(1) and (not op2in(0)) and carry_flag1) or ((not op2in(1)) and op2in(0) and zero_flag1) or (not(op2in(1) xor op2in(0)))); 
+	temp_zero_en <= enable_zero and ((op_2in(1) and (not op_2in(0)) and carry_flag1) or ((not op_2in(1)) and op_2in(0) and zero_flag1) or (not(op_2in(1) xor op_2in(0)))); 
 	
 	reg1 : register_1bit port map (dataIn => carry_temp,enable => temp_carry_en ,dataOut => carry_flag1,clock => clock ,reset => reset);	
 	reg2 : register_1bit port map (dataIn => zero_temp,enable => temp_zero_en, dataOut => zero_flag1,clock => clock, reset => reset);
