@@ -1,5 +1,5 @@
-Analysis & Synthesis report for microprocessor
-Thu Nov 24 15:21:13 2016
+Analysis & Elaboration report for microprocessor
+Thu Nov 24 15:22:43 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -7,10 +7,10 @@ Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Analysis & Elaboration Messages
 
 
 
@@ -35,9 +35,9 @@ agreement for further details.
 
 
 +----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
+; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Thu Nov 24 15:21:13 2016           ;
+; Analysis & Elaboration Status      ; Failed - Thu Nov 24 15:22:43 2016           ;
 ; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                      ; microprocessor                              ;
 ; Top-level Entity Name              ; microprocessor                              ;
@@ -54,8 +54,24 @@ agreement for further details.
 +------------------------------------+---------------------------------------------+
 
 
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
 +----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                        ;
+; Analysis & Elaboration Settings                                                                                      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
@@ -140,37 +156,21 @@ agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Thu Nov 24 15:21:01 2016
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off microprocessor -c microprocessor
+    Info: Processing started: Thu Nov 24 15:22:30 2016
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off microprocessor -c microprocessor --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file writeback.vhd
     Info (12022): Found design unit 1: writeBack-WB File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/writeBack.vhd Line: 24
     Info (12023): Found entity 1: writeBack File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/writeBack.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file subtractor.vhd
-    Info (12022): Found design unit 1: subtractor_16bit-formulas File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/subtractor.vhd Line: 15
+    Info (12022): Found design unit 1: subtractor-formulas File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/subtractor.vhd Line: 15
     Info (12023): Found entity 1: subtractor File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/subtractor.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file signextender.vhd
     Info (12022): Found design unit 1: signExtender-form File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/signExtender.vhd Line: 14
@@ -218,8 +218,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file inst_fe
     Info (12023): Found entity 1: inst_fetch File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/inst_fetch.vhd Line: 10
 Info (12021): Found 1 design units, including 0 entities, in source file if_components.vhd
     Info (12022): Found design unit 1: if_components File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/if_components.vhd Line: 7
-Error (10500): VHDL syntax error at execute.vhd(58) near text "alu_b_mux";  expecting ";" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/execute.vhd Line: 58
-Info (12021): Found 0 design units, including 0 entities, in source file execute.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file execute.vhd
+    Info (12022): Found design unit 1: execute-Behave File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/execute.vhd Line: 37
+    Info (12023): Found entity 1: execute File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/execute.vhd Line: 26
 Info (12021): Found 1 design units, including 0 entities, in source file exe_components.vhd
     Info (12022): Found design unit 1: exe_components File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/exe_components.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file decoderrf.vhd
@@ -244,10 +245,11 @@ Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file adder.vhd
     Info (12022): Found design unit 1: adder-SYN File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/adder.vhd Line: 54
     Info (12023): Found entity 1: adder File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/adder.vhd Line: 43
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 876 megabytes
-    Error: Processing ended: Thu Nov 24 15:21:13 2016
-    Error: Elapsed time: 00:00:12
-    Error: Total CPU time (on all processors): 00:00:29
+Error (10482): VHDL error at microprocessor.vhd(47): object "inst_fetch" is used but not declared File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 47
+Error: Quartus Prime Analysis & Elaboration was unsuccessful. 1 error, 1 warning
+    Error: Peak virtual memory: 879 megabytes
+    Error: Processing ended: Thu Nov 24 15:22:43 2016
+    Error: Elapsed time: 00:00:13
+    Error: Total CPU time (on all processors): 00:00:30
 
 

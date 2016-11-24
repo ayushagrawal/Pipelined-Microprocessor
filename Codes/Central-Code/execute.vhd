@@ -53,7 +53,7 @@ cntr_16(15 downto 3) <= (others => '0');
 alu_a_mux : mux2 generic map (n => 15) port map ( 	in0 =>rr_ex_reg(31 downto 16),
 													in1 =>rr_ex_reg(63 downto 48),
 													sel =>rr_ex_reg(70),
-													output => alu_a_in )
+													output => alu_a_in );
 
 alu_b_mux : mux3 generic map (n => 15) port map ( 	in0 =>rr_ex_reg(63 downto 48),
 													in1 =>rr_ex_reg(47 downto 32),
