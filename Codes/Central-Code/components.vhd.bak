@@ -100,25 +100,4 @@ package components is
 				
 	end component;
 	
-	component inst_fetch is
-		port(	
-				clock	:in std_logic;
-				reset	:in std_logic;
-				pcIn : in std_logic_vector(15 downto 0);
-				pc_reg : in std_logic;
-				if_id_reg : out std_logic_vector(31 downto 0)				
-			);
-	end component;
-	
-	component execute is
-		port	(	
-					clock	:in STD_LOGIC;
-					reset	:in STD_LOGIC;
-					counter_reset : in std_logic;
-					rr_ex_reg : in std_logic_vector(85 downto 0);
-					ex_mem_reg : out std_logic_vector(107 downto 0);
-					carry_flag,zero_flag : out std_logic;
-					counter_ctrl : in std_logic);
-	end component;
-	
 end package;
