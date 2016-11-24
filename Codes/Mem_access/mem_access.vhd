@@ -28,8 +28,8 @@ entity mem_access is
 				pcMux_ctrl : in std_logic_vector(1 downto 0);
 				mem_mux_ctrl : in std_logic;
 				memWrite_en : in std_logic;
-				rf_dataIn_mux_ctrl : in std_logic;
-				rfDataInSel : in std_logic_vector(1 downto 0);	
+				rf_dataIn_mux_ctrl : in std_logic_vector(1 downto 0);
+				rfDataInSel : in std_logic_vector(2 downto 0);	
 				counterMuxIn : in std_logic;
 				rf_wren_mux_ctrl : in std_logic;
 				rf_wren : in std_logic;
@@ -38,10 +38,10 @@ entity mem_access is
 				pc_mux_out : out std_logic_vector(15 downto 0);	
 				pcPlusOne_out : out std_logic_vector(15 downto 0);		
 				mem_data_out : out std_logic_vector(15 downto 0);	
-				mem_addr : out std_logic_vector(15 downto 0);
+				ALUresult_out : out std_logic_vector(15 downto 0);
 				signExtend_out : out std_logic_vector(15 downto 0);
-				rf_dataIn_mux_ctrl_out : out std_logic;
-				rfDataInSel_out : out std_logic_vector(1 downto 0);
+				rf_dataIn_mux_ctrl_out : out std_logic_vector(1 downto 0);
+				rfDataInSel_out : out std_logic_vector(2 downto 0);
 				counterMuxOut : out std_logic;
 				rf_wren_mux_ctrl_out : out std_logic;
 				rf_wren_out : out std_logic;
@@ -79,7 +79,7 @@ data_mem : memory port map(	address => ALUresult,
 								 clock => clock);
 
 mem_data_out <= mem_out;
-mem_addr <= ALUresult;
+ALUresult_out <= ALUresult;
 signExtend_out <= signExtend;
 rf_dataIn_mux_ctrl_out <= rf_dataIn_mux_ctrl;
 rfDataInSel_out <= rfDataInSel;
