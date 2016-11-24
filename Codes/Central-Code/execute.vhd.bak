@@ -31,7 +31,8 @@ entity execute is
 				rr_ex_reg : in std_logic_vector(85 downto 0);
 				ex_mem_reg : out std_logic_vector(107 downto 0);
 				carry_flag,zero_flag : out std_logic;
-				counter_ctrl : in std_logic);
+				counter_ctrl : in std_logic;				
+		);
 end entity;
 
 architecture Behave of execute is
@@ -59,7 +60,7 @@ alu_b_mux : mux3 generic map (n => 15) port map ( 	in0 =>rr_ex_reg(63 downto 48)
 													in1 =>rr_ex_reg(47 downto 32),
 													in2 =>cntr_16,
 													sel =>rr_ex_reg(72 downto 71),
-													output =>alu_b_in);
+													output =>alu_b_in)
 
 alu1 : alu port map ( ra => alu_a_in,
 					  rb => alu_b_in,
@@ -67,11 +68,11 @@ alu1 : alu port map ( ra => alu_a_in,
 					  alu_ctrl => rr_ex_reg(65 downto 64),
 					  op_2in => rr_ex_reg(67 downto 66),
 					  enable_carry =>	rr_ex_reg(68),
-					  enable_zero => rr_ex_reg(69),
+					  enable_zero => rr_ex_reg(69)
 					  clock => clock,
 					  reset => reset,
 					  carry_flag => carry_flag,
-					  zero_flag => zero_flag);
+					  zero_flag => zero_flag)
 
 ex_mem_reg(79 downto 64) <= rr_ex_reg(47 downto 32);
 ex_mem_reg(95 downto 80) <= rr_ex_reg(63 downto 48);

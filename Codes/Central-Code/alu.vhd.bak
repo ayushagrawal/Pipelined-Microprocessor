@@ -87,12 +87,12 @@ begin
 	output_var := x"0000";
 
 	if (alu_ctrl = "00") then							  	-- add operations
-		if ((op_2in = "00")or(op_2in = "01")or(op_2in = "10")) then 
+		if ((op_2in = "00")or(op_2in = "01")or(op_2in = "10") then 
 			output_var := add_out(15 downto 0) ;
 		end if;
 		
 	elsif (alu_ctrl = "01") then							  -- NAND operations
-		if ((op_2in = "00")or(op_2in = "01")or(op_2in = "10")) then
+		if ((op_2in = "00")or(op_2in = "01")or(op_2in = "10") then
 			output_var := nand_out ;
 		end if;	
 	
