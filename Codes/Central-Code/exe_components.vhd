@@ -6,17 +6,6 @@ use ieee.std_logic_1164.all;
 
 package exe_components is
 
-	component execute is
-	port	(	
-				clock	:in STD_LOGIC;
-		 		reset	:in STD_LOGIC;
-				counter_reset : in std_logic;
-				rr_ex_reg : in std_logic_vector(72 downto 0);
-				ex_mem_reg : out std_logic_vector(95 downto 0);
-				carry_flag,zero_flag : out std_logic;
-				counter_ctrl : in std_logic);
-	end component;
-
 	component adder IS
 	PORT
 	(
@@ -41,7 +30,7 @@ package exe_components is
 		);
 	end component;
 
-	component counter_2 IS
+	component counter IS
 	PORT
 	(
 		aclr		: IN STD_LOGIC ;

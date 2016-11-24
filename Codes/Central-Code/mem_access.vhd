@@ -1,11 +1,7 @@
--- ex_mem_reg2 : 15 to 0 : pc_alu_result .				*108
---					31 to 16 : pc+1 .
---					47 to 32 : reg_file_A .
---					63 to 48 : ALU_result .
---					79 to 64 : reg_file_B .
---					95 to 80 : sign_extend/LH output .
---					97 to 96 : pc_mux_sel.
--- 					98 		 : data_mem_mux_sel
+-- ex_mem_reg2 : 				*108
+--			
+--				
+--				
 --					99		 : mem_wr_en
 -- mem_wb_reg : 15 to 0 : pc_mux_out
 -- 				31 to 16 : pc+1
@@ -23,46 +19,73 @@ entity mem_access is
 	port	(	
 				clock	:in STD_LOGIC;
 		 		reset	:in STD_LOGIC;
-				ex_mem_reg2 : in std_logic_vector(108 downto 0);
-				mem_wb_reg : out std_logic_vector(88 downto 0)			
+				pcAlu_result : in std_logic_vector(15 downto 0);	
+				pcPlusOne : in std_logic_vector(15 downto 0);
+				regA : in std_logic_vector(15 downto 0);
+				ALUresult : in std_logic_vector(15 downto 0);	
+				regB : in std_logic_vector(15 downto 0);
+				signExtend : in std_logic_vector(15 downto 0);	
+				pcMux_ctrl : in std_logic_vector(1 downto 0);
+				mem_mux_ctrl : in std_logic;
+				memWrite_en : in std_logic;
+				rf_dataIn_mux_ctrl : in std_logic_vector(1 downto 0);
+				rfDataInSel : in std_logic_vector(2 downto 0);	
+				counterMuxIn : in std_logic;
+				rf_wren_mux_ctrl : in std_logic;
+				rf_wren : in std_logic;
+				r7_enable : in std_logic;
+	
+				pc_mux_out : out std_logic_vector(15 downto 0);	
+				pcPlusOne_out : out std_logic_vector(15 downto 0);		
+				mem_data_out : out std_logic_vector(15 downto 0);	
+				ALUresult_out : out std_logic_vector(15 downto 0);
+				signExtend_out : out std_logic_vector(15 downto 0);
+				rf_dataIn_mux_ctrl_out : out std_logic_vector(1 downto 0);
+				rfDataInSel_out : out std_logic_vector(2 downto 0);
+				counterMuxOut : out std_logic;
+				rf_wren_mux_ctrl_out : out std_logic;
+				rf_wren_out : out std_logic;
+				r7_enable_out : out std_logic
 		);
 end entity;
 
 architecture Behave of mem_access is
 
-signal pc_mux_out : std_logic_vector(15 downto 0);
-signal data_mem_mux_out : std_logic_vector(15 downto 0);
-signal mem_data_out : std_logic_vector(15 downto 0);
+signal pc_out : std_logic_vector(15 downto 0);
+signal mem_mux_out : std_logic_vector(15 downto 0);
+signal mem_out : std_logic_vector(15 downto 0);
 
 begin 
 
-pc_mux : mux3 generic map (n => 15) port map (	in0 =>ex_mem_reg2(79 downto 64),
-												in1 =>ex_mem_reg2(15 downto 0),
-												in2 =>ex_mem_reg2(31 downto 16),
-												sel =>ex_mem_reg2(97 downto 96),
-												output => pc_mux_out);
+pc_mux : mux3 generic map (n => 15) port map (	in0 => regB,
+												in1 => pcAlu_result,
+												in2 => pcPlusOne,
+												sel => pcMux_ctrl,
+												output => pc_out);
 						
-mem_wb_reg(15 downto 0) <= pc_mux_out;
-mem_wb_reg(31 downto 16) <= ex_mem_reg2(31 downto 16);
+pc_mux_out <= pc_out;
+pcPlusOne_out <= pcPlusOne;
 
-data_mem_mux : mux2 generic map(n => 15) port map ( in0 => ex_mem_reg2(47 downto 32),
-													in1 => ex_mem_reg2(79 downto 64),
-													sel => ex_mem_reg2(98),
-													output => data_mem_mux_out);
+data_mem_mux : mux2 generic map(n => 15) port map ( in0 => regA,
+													in1 => regB,
+													sel => mem_mux_ctrl,
+													output => mem_mux_out);
 
-data_mem : memory port map(	address => ex_mem_reg2(63 downto 48),
-								 data => data_mem_mux_out, 
-								 wren => ex_mem_reg2(99), 
+data_mem : memory port map(	address => ALUresult,
+								 data =>  mem_mux_out, 
+								 wren => memWrite_en, 
 								 rden => '1',
-								 q => mem_data_out,
+								 q => mem_out,
 								 clock => clock);
-mem_wb_reg(47 downto 32) <= mem_data_out;
-mem_wb_reg(63 downto 48) <= ex_mem_reg2(63 downto 48);
-mem_wb_reg(79 downto 64) <= ex_mem_reg2(95 downto 80);
-mem_wb_reg(81 downto 80) <= ex_mem_reg2(97 downto 96);
-mem_wb_reg(84 downto 82) <= ex_mem_reg2(107 downto 105);
-mem_wb_reg(85) <= ex_mem_reg2(108);
-mem_wb_reg(86) <= ex_mem_reg2(102);
-mem_wb_reg(87) <= ex_mem_reg2(103);
-mem_wb_reg(88) <= ex_mem_reg2(100);						 
+
+mem_data_out <= mem_out;
+ALUresult_out <= ALUresult;
+signExtend_out <= signExtend;
+rf_dataIn_mux_ctrl_out <= rf_dataIn_mux_ctrl;
+rfDataInSel_out <= rfDataInSel;
+counterMuxOut <= counterMuxIn ;
+rf_wren_mux_ctrl_out <= rf_wren_mux_ctrl;
+rf_wren_out <= rf_wren;
+r7_enable_out <= r7_enable;
+					 
 end Behave;

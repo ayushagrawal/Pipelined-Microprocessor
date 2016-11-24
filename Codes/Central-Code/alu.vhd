@@ -39,7 +39,7 @@ architecture formulas of alu is
 			);
 	END component;
 	
-	component subtractor_16bit is
+	component subtractor is
 		port ( 	ra , rb : in std_logic_vector(15 downto 0);
 			rc : out std_logic_vector(15 downto 0);	
 			zero_flag : out std_logic 
@@ -53,16 +53,18 @@ architecture formulas of alu is
 	     );
 	end component;
 		
-	signal add_out,sub_out,nand_out : std_logic_vector(16 downto 0);
+	signal add_out: std_logic_vector(16 downto 0);
+	signal sub_out,nand_out : std_logic_vector(15 downto 0);
 	signal addc,addz,subz,nandz : std_logic;
 
 	signal rc1 : std_logic_vector(15 downto 0);	
-	signal carry_temp,zero_temp,temp_carry_en, temp_zero_en : std_logic;
+	signal carry_temp,zero_temp : std_logic;
 	signal zero_flag1,carry_flag1  : std_logic;
+	signal temp_carry_en,temp_zero_en : std_logic;
 
 begin
     add1 : adder port map (data0x =>ra,data1x => rb, result =>add_out, zero_flag =>addz);
-    sub1 : subtractor_16bit port map (ra => ra, rb => rb, rc => sub_out, zero_flag => subz);
+    sub1 : subtractor port map (ra => ra, rb => rb, rc => sub_out, zero_flag => subz);
     nnd1 : nand_logic port map (ra => ra, rb => rb, rc => nand_out, zero_flag => nandz);
 	
 	zero_temp <= (addz and(not alu_ctrl(0))and(not alu_ctrl(1))) or (subz and(not alu_ctrl(1))and(alu_ctrl(0))) or (nandz and(not alu_ctrl(0))and(alu_ctrl(1)));
