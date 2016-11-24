@@ -12,7 +12,7 @@ entity subtractor is
 		);
 end entity;
 
-architecture formulas of subtractor_16bit is
+architecture formulas of subtractor is
 	signal temp : std_logic_vector(15 downto 0);
 begin
 	temp <= (ra xor rb);
