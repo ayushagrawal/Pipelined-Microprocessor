@@ -5,7 +5,7 @@ library work;
 use work.components.all;
 
 entity microprocessor is
-	port(clock : in std_logic;
+	port(clock_c : in std_logic;
 		  reset : in std_logic);
 end entity;
 		  
@@ -22,10 +22,13 @@ architecture mic of microprocessor is
 	signal DataIn_w : std_logic_vector(15 downto 0);  
 	signal pcIn_w : std_logic_vector(15 downto 0);
 	signal enable_if,enable_id,enable_rr,enable_ex,enable_mem,counter_reset: std_logic;
+	signal clock : std_logic;
 
 begin
+	
+	clk_divide : CLOCK_DIVIDER port map (reset => reset,clk => clock_c,half_clk => clock);
 
-	IFetch : inst_fetch port map(clock => clock, reset => reset, pcIn => pcIn_w, pc_reg => '1',if_id_reg => input_if);
+	IFetch : inst_fetch port map(clock => clock_c, reset => reset, pcIn => pcIn_w, pc_reg => '1',if_id_reg => input_if);
 	
 	IF_ID  : registers generic map(N => 32)  port map(clock => clock, reset => reset, enable => enable_IF,  input => input_if,  output => output_if);
 	ID_RR  : registers generic map(N => 61)  port map(clock => clock, reset => reset, enable => enable_id,  input => input_id,  output => output_id);
@@ -161,7 +164,7 @@ begin
 											counter_mux_out 	=> input_ex(0)); 
 
 
-memory : mem_access port map (clock 						=> clock,
+memory : mem_access port map (clock 						=> clock_c,
 										reset 						=> reset,
 										pcAlu_result				=> output_ex(108 downto 93),
 										ALUresult 					=> output_ex(92  downto 77),
