@@ -9,9 +9,9 @@ end entity;
 
 architecture Behave of testbench is
 	
-	component combined is
+	component microprocessor is
 		port	(	clock_c	:in STD_LOGIC;
-			 		reset_c	:in STD_LOGIC
+			 		reset	:in STD_LOGIC
 			);
 	end component;
 
@@ -78,9 +78,9 @@ begin
 	wait;
   end process;
  
-dut: combined 
+dut: microprocessor 
  	 port map(
-		  reset_c => reset,
+		  reset => reset,
 		  clock_c => clk);
 
 end Behave;
