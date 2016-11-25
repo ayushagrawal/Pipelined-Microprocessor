@@ -3,6 +3,14 @@ use ieee.std_logic_1164.all;
 
 package components is
 	
+	component CLOCK_DIVIDER is
+	    port(
+		reset   :   in std_logic;
+		clk :   in std_logic;
+		half_clk    :   out std_logic
+		);
+	end component;
+
 	component Decode is 
 		port (instruction  : in std_logic_vector(15 downto 0);
 				clock			 : in std_logic;
