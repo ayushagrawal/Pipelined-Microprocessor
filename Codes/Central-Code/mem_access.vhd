@@ -71,10 +71,9 @@ data_mem_mux : mux2 generic map(n => 15) port map ( in0 => regA,
 													sel => mem_mux_ctrl,
 													output => mem_mux_out);
 
-data_mem : memory port map(	address => ALUresult,
+data_mem : data_memory port map(	address => ALUresult,
 								 data =>  mem_mux_out, 
 								 wren => memWrite_en, 
-								 rden => '1',
 								 q => mem_out,
 								 clock => clock);
 

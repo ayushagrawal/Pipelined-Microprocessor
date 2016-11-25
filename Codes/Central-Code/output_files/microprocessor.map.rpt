@@ -1,6 +1,6 @@
 Analysis & Synthesis report for microprocessor
-Fri Nov 25 01:35:16 2016
-Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+Fri Nov 25 11:45:42 2016
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
 ---------------------
@@ -13,32 +13,32 @@ Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Source assignments for inst_fetch:IFetch|memory:inst_memory|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated
- 12. Source assignments for mem_access:memory|memory:data_mem|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated
- 13. Parameter Settings for User Entity Instance: inst_fetch:IFetch|memory:inst_memory|altsyncram:altsyncram_component
- 14. Parameter Settings for User Entity Instance: inst_fetch:IFetch|adder:add3|parallel_add:parallel_add_component
- 15. Parameter Settings for User Entity Instance: registers:IF_ID
- 16. Parameter Settings for User Entity Instance: registers:ID_RR
- 17. Parameter Settings for User Entity Instance: registers:RR_EX
- 18. Parameter Settings for User Entity Instance: registers:EX_MEM
- 19. Parameter Settings for User Entity Instance: registers:MEM_WB
- 20. Parameter Settings for User Entity Instance: Decode:Decoded|multiple:count|counter:counter_init|lpm_counter:LPM_COUNTER_component
- 21. Parameter Settings for User Entity Instance: registerRead:RF|registerFile:RF|mux2:r7_mux
- 22. Parameter Settings for User Entity Instance: registerRead:RF|registerFile:RF|mux8:muxA
- 23. Parameter Settings for User Entity Instance: registerRead:RF|registerFile:RF|mux8:muxb
- 24. Parameter Settings for User Entity Instance: execute:executed|adder:add2|parallel_add:parallel_add_component
- 25. Parameter Settings for User Entity Instance: execute:executed|counter:counter2|lpm_counter:LPM_COUNTER_component
- 26. Parameter Settings for User Entity Instance: execute:executed|mux2:alu_a_mux
- 27. Parameter Settings for User Entity Instance: execute:executed|mux3:alu_b_mux
- 28. Parameter Settings for User Entity Instance: execute:executed|alu:alu1|adder:add1|parallel_add:parallel_add_component
- 29. Parameter Settings for User Entity Instance: mem_access:memory|mux3:pc_mux
- 30. Parameter Settings for User Entity Instance: mem_access:memory|mux2:data_mem_mux
- 31. Parameter Settings for User Entity Instance: mem_access:memory|memory:data_mem|altsyncram:altsyncram_component
- 32. altsyncram Parameter Settings by Entity Instance
- 33. Port Connectivity Checks: "mem_access:memory|memory:data_mem"
+  8. Analysis & Synthesis IP Cores Summary
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Source assignments for inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component|altsyncram_3js3:auto_generated
+ 13. Source assignments for mem_access:memory|data_memory:data_mem|altsyncram:altsyncram_component|altsyncram_jhs3:auto_generated
+ 14. Parameter Settings for User Entity Instance: inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component
+ 15. Parameter Settings for User Entity Instance: inst_fetch:IFetch|adder:add3|parallel_add:parallel_add_component
+ 16. Parameter Settings for User Entity Instance: registers:IF_ID
+ 17. Parameter Settings for User Entity Instance: registers:ID_RR
+ 18. Parameter Settings for User Entity Instance: registers:RR_EX
+ 19. Parameter Settings for User Entity Instance: registers:EX_MEM
+ 20. Parameter Settings for User Entity Instance: registers:MEM_WB
+ 21. Parameter Settings for User Entity Instance: Decode:Decoded|multiple:count|counter:counter_init|lpm_counter:LPM_COUNTER_component
+ 22. Parameter Settings for User Entity Instance: registerRead:RF|registerFile:RF|mux2:r7_mux
+ 23. Parameter Settings for User Entity Instance: registerRead:RF|registerFile:RF|mux8:muxA
+ 24. Parameter Settings for User Entity Instance: registerRead:RF|registerFile:RF|mux8:muxb
+ 25. Parameter Settings for User Entity Instance: execute:executed|adder:add2|parallel_add:parallel_add_component
+ 26. Parameter Settings for User Entity Instance: execute:executed|counter:counter2|lpm_counter:LPM_COUNTER_component
+ 27. Parameter Settings for User Entity Instance: execute:executed|mux2:alu_a_mux
+ 28. Parameter Settings for User Entity Instance: execute:executed|mux3:alu_b_mux
+ 29. Parameter Settings for User Entity Instance: execute:executed|alu:alu1|adder:add1|parallel_add:parallel_add_component
+ 30. Parameter Settings for User Entity Instance: mem_access:memory|mux3:pc_mux
+ 31. Parameter Settings for User Entity Instance: mem_access:memory|mux2:data_mem_mux
+ 32. Parameter Settings for User Entity Instance: mem_access:memory|data_memory:data_mem|altsyncram:altsyncram_component
+ 33. altsyncram Parameter Settings by Entity Instance
  34. Port Connectivity Checks: "execute:executed|alu:alu1|subtractor:sub1"
  35. Port Connectivity Checks: "execute:executed|mux3:alu_b_mux"
  36. Port Connectivity Checks: "execute:executed|adder:add2"
@@ -49,7 +49,7 @@ Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
  41. Port Connectivity Checks: "registers:ID_RR"
  42. Port Connectivity Checks: "registers:IF_ID"
  43. Port Connectivity Checks: "inst_fetch:IFetch|adder:add3"
- 44. Port Connectivity Checks: "inst_fetch:IFetch|memory:inst_memory"
+ 44. Port Connectivity Checks: "inst_fetch:IFetch|instruction_memory:inst_memory"
  45. Port Connectivity Checks: "inst_fetch:IFetch"
  46. Post-Synthesis Netlist Statistics for Top Partition
  47. Elapsed Time Per Partition
@@ -60,18 +60,18 @@ Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
-Your use of Altera Corporation's design tools, logic functions 
+Copyright (C) 2016  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Altera Program License 
-Subscription Agreement, the Altera Quartus Prime License Agreement,
-the Altera MegaCore Function License Agreement, or other 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
 applicable license agreement, including, without limitation, 
 that your use is for the sole purpose of programming logic 
-devices manufactured by Altera and sold by Altera or its 
+devices manufactured by Intel and sold by Intel or its 
 authorized distributors.  Please refer to the applicable 
 agreement for further details.
 
@@ -80,8 +80,8 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 25 01:35:16 2016       ;
-; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 25 11:45:42 2016       ;
+; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; microprocessor                              ;
 ; Top-level Entity Name              ; microprocessor                              ;
 ; Family                             ; Cyclone IV E                                ;
@@ -110,7 +110,7 @@ agreement for further details.
 ; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
 ; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
 ; Preserve fewer node names                                                  ; On                 ; On                 ;
-; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; OpenCore Plus hardware evaluation                                          ; Enable             ; Enable             ;
 ; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
 ; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
 ; State Machine Processing                                                   ; Auto               ; Auto               ;
@@ -179,7 +179,6 @@ agreement for further details.
 ; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
 ; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
 ; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
-; Synthesis Seed                                                             ; 1                  ; 1                  ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
@@ -204,6 +203,7 @@ agreement for further details.
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                          ; Library ;
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------+---------+
+; CLOCK_DIVIDER.vhd                ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/CLOCK_DIVIDER.vhd          ;         ;
 ; mem_components.vhd               ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mem_components.vhd         ;         ;
 ; mem_access.vhd                   ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mem_access.vhd             ;         ;
 ; writeBack.vhd                    ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/writeBack.vhd              ;         ;
@@ -221,7 +221,6 @@ agreement for further details.
 ; mux2.vhd                         ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mux2.vhd                   ;         ;
 ; multiple.vhd                     ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/multiple.vhd               ;         ;
 ; microprocessor.vhd               ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd         ;         ;
-; memory.vhd                       ; yes             ; User Wizard-Generated File   ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/memory.vhd                 ;         ;
 ; inst_fetch.vhd                   ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/inst_fetch.vhd             ;         ;
 ; if_components.vhd                ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/if_components.vhd          ;         ;
 ; execute.vhd                      ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/execute.vhd                ;         ;
@@ -233,72 +232,85 @@ agreement for further details.
 ; components.vhd                   ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/components.vhd             ;         ;
 ; alu.vhd                          ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/alu.vhd                    ;         ;
 ; adder.vhd                        ; yes             ; User Wizard-Generated File   ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/adder.vhd                  ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/altera_lite/16.0/quartus/libraries/megafunctions/altsyncram.tdf                                    ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/altera_lite/16.0/quartus/libraries/megafunctions/stratix_ram_block.inc                             ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/altera_lite/16.0/quartus/libraries/megafunctions/lpm_mux.inc                                       ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/altera_lite/16.0/quartus/libraries/megafunctions/lpm_decode.inc                                    ;         ;
-; aglobal160.inc                   ; yes             ; Megafunction                 ; c:/altera_lite/16.0/quartus/libraries/megafunctions/aglobal160.inc                                    ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/altera_lite/16.0/quartus/libraries/megafunctions/a_rdenreg.inc                                     ;         ;
-; altrom.inc                       ; yes             ; Megafunction                 ; c:/altera_lite/16.0/quartus/libraries/megafunctions/altrom.inc                                        ;         ;
-; altram.inc                       ; yes             ; Megafunction                 ; c:/altera_lite/16.0/quartus/libraries/megafunctions/altram.inc                                        ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                 ; c:/altera_lite/16.0/quartus/libraries/megafunctions/altdpram.inc                                      ;         ;
-; db/altsyncram_hur3.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf     ;         ;
-; parallel_add.tdf                 ; yes             ; Megafunction                 ; c:/altera_lite/16.0/quartus/libraries/megafunctions/parallel_add.tdf                                  ;         ;
-; pcpa_add.inc                     ; yes             ; Megafunction                 ; c:/altera_lite/16.0/quartus/libraries/megafunctions/pcpa_add.inc                                      ;         ;
-; csa_add.inc                      ; yes             ; Megafunction                 ; c:/altera_lite/16.0/quartus/libraries/megafunctions/csa_add.inc                                       ;         ;
-; altshift.inc                     ; yes             ; Megafunction                 ; c:/altera_lite/16.0/quartus/libraries/megafunctions/altshift.inc                                      ;         ;
+; instruction_memory.vhd           ; yes             ; User Wizard-Generated File   ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/instruction_memory.vhd     ;         ;
+; data_memory.vhd                  ; yes             ; User Wizard-Generated File   ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/data_memory.vhd            ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altsyncram.tdf                                 ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/stratix_ram_block.inc                          ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_mux.inc                                    ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_decode.inc                                 ;         ;
+; aglobal161.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/aglobal161.inc                                 ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/a_rdenreg.inc                                  ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altrom.inc                                     ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altram.inc                                     ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altdpram.inc                                   ;         ;
+; db/altsyncram_3js3.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_3js3.tdf     ;         ;
+; parallel_add.tdf                 ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/parallel_add.tdf                               ;         ;
+; pcpa_add.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/pcpa_add.inc                                   ;         ;
+; csa_add.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/csa_add.inc                                    ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altshift.inc                                   ;         ;
 ; db/par_add_gve.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/par_add_gve.tdf         ;         ;
-; lpm_counter.tdf                  ; yes             ; Megafunction                 ; c:/altera_lite/16.0/quartus/libraries/megafunctions/lpm_counter.tdf                                   ;         ;
-; lpm_constant.inc                 ; yes             ; Megafunction                 ; c:/altera_lite/16.0/quartus/libraries/megafunctions/lpm_constant.inc                                  ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/altera_lite/16.0/quartus/libraries/megafunctions/lpm_add_sub.inc                                   ;         ;
-; cmpconst.inc                     ; yes             ; Megafunction                 ; c:/altera_lite/16.0/quartus/libraries/megafunctions/cmpconst.inc                                      ;         ;
-; lpm_compare.inc                  ; yes             ; Megafunction                 ; c:/altera_lite/16.0/quartus/libraries/megafunctions/lpm_compare.inc                                   ;         ;
-; lpm_counter.inc                  ; yes             ; Megafunction                 ; c:/altera_lite/16.0/quartus/libraries/megafunctions/lpm_counter.inc                                   ;         ;
-; dffeea.inc                       ; yes             ; Megafunction                 ; c:/altera_lite/16.0/quartus/libraries/megafunctions/dffeea.inc                                        ;         ;
-; alt_counter_stratix.inc          ; yes             ; Megafunction                 ; c:/altera_lite/16.0/quartus/libraries/megafunctions/alt_counter_stratix.inc                           ;         ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_counter.tdf                                ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_constant.inc                               ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_add_sub.inc                                ;         ;
+; cmpconst.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/cmpconst.inc                                   ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_compare.inc                                ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_counter.inc                                ;         ;
+; dffeea.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/dffeea.inc                                     ;         ;
+; alt_counter_stratix.inc          ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/alt_counter_stratix.inc                        ;         ;
 ; db/cntr_2si.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/cntr_2si.tdf            ;         ;
+; db/altsyncram_jhs3.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_jhs3.tdf     ;         ;
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-;                                             ;       ;
-; Total combinational functions               ; 0     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 2     ;
-;                                             ;       ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; clock ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 2     ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++---------------------------------------------+---------+
+; Resource                                    ; Usage   ;
++---------------------------------------------+---------+
+;                                             ;         ;
+; Total combinational functions               ; 0       ;
+; Logic element usage by number of LUT inputs ;         ;
+;     -- 4 input functions                    ; 0       ;
+;     -- 3 input functions                    ; 0       ;
+;     -- <=2 input functions                  ; 0       ;
+;                                             ;         ;
+; Logic elements by mode                      ;         ;
+;     -- normal mode                          ; 0       ;
+;     -- arithmetic mode                      ; 0       ;
+;                                             ;         ;
+; Total registers                             ; 0       ;
+;     -- Dedicated logic registers            ; 0       ;
+;     -- I/O registers                        ; 0       ;
+;                                             ;         ;
+; I/O pins                                    ; 2       ;
+;                                             ;         ;
+; Embedded Multiplier 9-bit elements          ; 0       ;
+;                                             ;         ;
+; Maximum fan-out node                        ; clock_c ;
+; Maximum fan-out                             ; 1       ;
+; Total fan-out                               ; 2       ;
+; Average fan-out                             ; 0.50    ;
++---------------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                          ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+----------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name    ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+----------------+--------------+
-; |microprocessor            ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 2    ; 0            ; |microprocessor     ; microprocessor ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+----------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+----------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name    ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+----------------+--------------+
+; |microprocessor            ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 2    ; 0            ; |microprocessor     ; microprocessor ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                     ;
++--------+--------------+---------+--------------+--------------+------------------------------------------------------------------+------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                  ; IP Include File        ;
++--------+--------------+---------+--------------+--------------+------------------------------------------------------------------+------------------------+
+; Altera ; RAM: 1-PORT  ; 16.1    ; N/A          ; N/A          ; |microprocessor|inst_fetch:IFetch|instruction_memory:inst_memory ; instruction_memory.vhd ;
+; Altera ; RAM: 1-PORT  ; 16.1    ; N/A          ; N/A          ; |microprocessor|mem_access:memory|data_memory:data_mem           ; data_memory.vhd        ;
++--------+--------------+---------+--------------+--------------+------------------------------------------------------------------+------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -340,7 +352,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; registers:ID_RR|output[0..60]                                                                                                      ; Lost fanout        ;
 ; registers:IF_ID|output[0..31]                                                                                                      ; Lost fanout        ;
 ; inst_fetch:IFetch|register16:PC|dataOut[0..15]                                                                                     ; Lost fanout        ;
-; Total Number of Removed Registers = 1054                                                                                           ;                    ;
+; CLOCK_DIVIDER:clk_divide|tick                                                                                                      ; Lost fanout        ;
+; Total Number of Removed Registers = 1055                                                                                           ;                    ;
 +------------------------------------------------------------------------------------------------------------------------------------+--------------------+
 
 
@@ -465,10 +478,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_3|dataOut[5],                                                                ;
 ;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_2|dataOut[5],                                                                ;
 ;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_0|dataOut[5]                                                                 ;
+; registers:MEM_WB|data[88]                ; Lost Fanouts       ; registers:EX_MEM|output[6], registers:EX_MEM|output[7], registers:EX_MEM|output[28],                                             ;
+;                                          ;                    ; registers:EX_MEM|output[76], registers:EX_MEM|output[108],                                                                       ;
+;                                          ;                    ; CLOCK_DIVIDER:clk_divide|tick                                                                                                    ;
 ; registers:ID_RR|data[60]                 ; Lost Fanouts       ; registers:IF_ID|output[21], registers:IF_ID|output[24], registers:IF_ID|output[28],                                              ;
 ;                                          ;                    ; registers:IF_ID|output[29], registers:IF_ID|output[30], registers:IF_ID|output[31]                                               ;
-; registers:MEM_WB|data[88]                ; Lost Fanouts       ; registers:EX_MEM|output[6], registers:EX_MEM|output[7], registers:EX_MEM|output[28],                                             ;
-;                                          ;                    ; registers:EX_MEM|output[76], registers:EX_MEM|output[108]                                                                        ;
 ; registers:EX_MEM|data[108]               ; Lost Fanouts       ; registers:RR_EX|output[69], registers:RR_EX|output[70], registers:RR_EX|output[85],                                              ;
 ;                                          ;                    ; registers:RR_EX|output[86]                                                                                                       ;
 ; registers:IF_ID|data[31]                 ; Lost Fanouts       ; inst_fetch:IFetch|register16:PC|dataOut[0],                                                                                      ;
@@ -753,82 +767,82 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for inst_fetch:IFetch|memory:inst_memory|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated ;
-+---------------------------------+--------------------+------+--------------------------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                                           ;
-+---------------------------------+--------------------+------+--------------------------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                            ;
-+---------------------------------+--------------------+------+--------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component|altsyncram_3js3:auto_generated ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                       ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                        ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for mem_access:memory|memory:data_mem|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated ;
-+---------------------------------+--------------------+------+-----------------------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                                        ;
-+---------------------------------+--------------------+------+-----------------------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                         ;
-+---------------------------------+--------------------+------+-----------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for mem_access:memory|data_memory:data_mem|altsyncram:altsyncram_component|altsyncram_jhs3:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                             ;
++---------------------------------+--------------------+------+----------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                              ;
++---------------------------------+--------------------+------+----------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: inst_fetch:IFetch|memory:inst_memory|altsyncram:altsyncram_component ;
-+------------------------------------+----------------------+-------------------------------------------------------+
-; Parameter Name                     ; Value                ; Type                                                  ;
-+------------------------------------+----------------------+-------------------------------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                               ;
-; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                            ;
-; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                          ;
-; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                          ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                        ;
-; WIDTH_BYTEENA                      ; 1                    ; Untyped                                               ;
-; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                                               ;
-; WIDTH_A                            ; 16                   ; Signed Integer                                        ;
-; WIDTHAD_A                          ; 6                    ; Signed Integer                                        ;
-; NUMWORDS_A                         ; 64                   ; Signed Integer                                        ;
-; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                               ;
-; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                               ;
-; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                               ;
-; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                               ;
-; INDATA_ACLR_A                      ; NONE                 ; Untyped                                               ;
-; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                               ;
-; WIDTH_B                            ; 1                    ; Signed Integer                                        ;
-; WIDTHAD_B                          ; 1                    ; Signed Integer                                        ;
-; NUMWORDS_B                         ; 0                    ; Signed Integer                                        ;
-; INDATA_REG_B                       ; CLOCK1               ; Untyped                                               ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                               ;
-; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                               ;
-; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                               ;
-; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                               ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                               ;
-; INDATA_ACLR_B                      ; NONE                 ; Untyped                                               ;
-; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                               ;
-; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                               ;
-; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                               ;
-; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                               ;
-; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                               ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                        ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Signed Integer                                        ;
-; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                               ;
-; BYTE_SIZE                          ; 8                    ; Signed Integer                                        ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                               ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                               ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                               ;
-; INIT_FILE                          ; input.hex            ; Untyped                                               ;
-; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                               ;
-; MAXIMUM_DEPTH                      ; 0                    ; Signed Integer                                        ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                               ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                               ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                               ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                               ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                               ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                               ;
-; ENABLE_ECC                         ; FALSE                ; Untyped                                               ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                               ;
-; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer                                        ;
-; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                               ;
-; CBXI_PARAMETER                     ; altsyncram_hur3      ; Untyped                                               ;
-+------------------------------------+----------------------+-------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-------------------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                              ;
++------------------------------------+----------------------+-------------------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                           ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                                        ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                                      ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                                      ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                                    ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                           ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                                                           ;
+; WIDTH_A                            ; 16                   ; Signed Integer                                                    ;
+; WIDTHAD_A                          ; 6                    ; Signed Integer                                                    ;
+; NUMWORDS_A                         ; 64                   ; Signed Integer                                                    ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                           ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                           ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                           ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                           ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                           ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                           ;
+; WIDTH_B                            ; 1                    ; Signed Integer                                                    ;
+; WIDTHAD_B                          ; 1                    ; Signed Integer                                                    ;
+; NUMWORDS_B                         ; 0                    ; Signed Integer                                                    ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                           ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                           ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                           ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                                           ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                           ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                           ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                           ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                           ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                           ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                           ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                           ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                           ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                                    ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Signed Integer                                                    ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                           ;
+; BYTE_SIZE                          ; 8                    ; Signed Integer                                                    ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                           ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                           ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                           ;
+; INIT_FILE                          ; instruction.hex      ; Untyped                                                           ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                           ;
+; MAXIMUM_DEPTH                      ; 0                    ; Signed Integer                                                    ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                           ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                           ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                                           ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                           ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                           ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                           ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                           ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                           ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer                                                    ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                                           ;
+; CBXI_PARAMETER                     ; altsyncram_3js3      ; Untyped                                                           ;
++------------------------------------+----------------------+-------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1075,105 +1089,96 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mem_access:memory|memory:data_mem|altsyncram:altsyncram_component ;
-+------------------------------------+----------------------+----------------------------------------------------+
-; Parameter Name                     ; Value                ; Type                                               ;
-+------------------------------------+----------------------+----------------------------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                            ;
-; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                         ;
-; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                       ;
-; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                       ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                     ;
-; WIDTH_BYTEENA                      ; 1                    ; Untyped                                            ;
-; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                                            ;
-; WIDTH_A                            ; 16                   ; Signed Integer                                     ;
-; WIDTHAD_A                          ; 6                    ; Signed Integer                                     ;
-; NUMWORDS_A                         ; 64                   ; Signed Integer                                     ;
-; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                            ;
-; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                            ;
-; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                            ;
-; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                            ;
-; INDATA_ACLR_A                      ; NONE                 ; Untyped                                            ;
-; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                            ;
-; WIDTH_B                            ; 1                    ; Signed Integer                                     ;
-; WIDTHAD_B                          ; 1                    ; Signed Integer                                     ;
-; NUMWORDS_B                         ; 0                    ; Signed Integer                                     ;
-; INDATA_REG_B                       ; CLOCK1               ; Untyped                                            ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                            ;
-; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                            ;
-; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                            ;
-; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                            ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                            ;
-; INDATA_ACLR_B                      ; NONE                 ; Untyped                                            ;
-; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                            ;
-; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                            ;
-; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                            ;
-; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                            ;
-; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                            ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                     ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Signed Integer                                     ;
-; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                            ;
-; BYTE_SIZE                          ; 8                    ; Signed Integer                                     ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                            ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                            ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                            ;
-; INIT_FILE                          ; input.hex            ; Untyped                                            ;
-; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                            ;
-; MAXIMUM_DEPTH                      ; 0                    ; Signed Integer                                     ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                            ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                            ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                            ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                            ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                            ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                            ;
-; ENABLE_ECC                         ; FALSE                ; Untyped                                            ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                            ;
-; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer                                     ;
-; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                            ;
-; CBXI_PARAMETER                     ; altsyncram_hur3      ; Untyped                                            ;
-+------------------------------------+----------------------+----------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mem_access:memory|data_memory:data_mem|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+---------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                    ;
++------------------------------------+----------------------+---------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                 ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                              ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                            ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                            ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                          ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                 ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                                                 ;
+; WIDTH_A                            ; 16                   ; Signed Integer                                          ;
+; WIDTHAD_A                          ; 6                    ; Signed Integer                                          ;
+; NUMWORDS_A                         ; 64                   ; Signed Integer                                          ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                 ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                 ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                 ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                 ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                 ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                 ;
+; WIDTH_B                            ; 1                    ; Signed Integer                                          ;
+; WIDTHAD_B                          ; 1                    ; Signed Integer                                          ;
+; NUMWORDS_B                         ; 0                    ; Signed Integer                                          ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                 ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                 ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                 ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                                 ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                 ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                 ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                 ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                 ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                 ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                 ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                 ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                 ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                          ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Signed Integer                                          ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                 ;
+; BYTE_SIZE                          ; 8                    ; Signed Integer                                          ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                 ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                 ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                 ;
+; INIT_FILE                          ; data_memory.hex      ; Untyped                                                 ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                 ;
+; MAXIMUM_DEPTH                      ; 0                    ; Signed Integer                                          ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                 ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                 ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                                 ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                 ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                 ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                 ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                 ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                 ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer                                          ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                                 ;
+; CBXI_PARAMETER                     ; altsyncram_jhs3      ; Untyped                                                 ;
++------------------------------------+----------------------+---------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                                                                 ;
-+-------------------------------------------+----------------------------------------------------------------------+
-; Name                                      ; Value                                                                ;
-+-------------------------------------------+----------------------------------------------------------------------+
-; Number of entity instances                ; 2                                                                    ;
-; Entity Instance                           ; inst_fetch:IFetch|memory:inst_memory|altsyncram:altsyncram_component ;
-;     -- OPERATION_MODE                     ; SINGLE_PORT                                                          ;
-;     -- WIDTH_A                            ; 16                                                                   ;
-;     -- NUMWORDS_A                         ; 64                                                                   ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                         ;
-;     -- WIDTH_B                            ; 1                                                                    ;
-;     -- NUMWORDS_B                         ; 0                                                                    ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                                               ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                         ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                 ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                            ;
-; Entity Instance                           ; mem_access:memory|memory:data_mem|altsyncram:altsyncram_component    ;
-;     -- OPERATION_MODE                     ; SINGLE_PORT                                                          ;
-;     -- WIDTH_A                            ; 16                                                                   ;
-;     -- NUMWORDS_A                         ; 64                                                                   ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                         ;
-;     -- WIDTH_B                            ; 1                                                                    ;
-;     -- NUMWORDS_B                         ; 0                                                                    ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                                               ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                         ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                 ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                            ;
-+-------------------------------------------+----------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------+
-; Port Connectivity Checks: "mem_access:memory|memory:data_mem" ;
-+------+-------+----------+-------------------------------------+
-; Port ; Type  ; Severity ; Details                             ;
-+------+-------+----------+-------------------------------------+
-; rden ; Input ; Info     ; Stuck at VCC                        ;
-+------+-------+----------+-------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                             ;
++-------------------------------------------+----------------------------------------------------------------------------------+
+; Name                                      ; Value                                                                            ;
++-------------------------------------------+----------------------------------------------------------------------------------+
+; Number of entity instances                ; 2                                                                                ;
+; Entity Instance                           ; inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                                                      ;
+;     -- WIDTH_A                            ; 16                                                                               ;
+;     -- NUMWORDS_A                         ; 64                                                                               ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                     ;
+;     -- WIDTH_B                            ; 1                                                                                ;
+;     -- NUMWORDS_B                         ; 0                                                                                ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                           ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                     ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                             ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                        ;
+; Entity Instance                           ; mem_access:memory|data_memory:data_mem|altsyncram:altsyncram_component           ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                                                      ;
+;     -- WIDTH_A                            ; 16                                                                               ;
+;     -- NUMWORDS_A                         ; 64                                                                               ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                     ;
+;     -- WIDTH_B                            ; 1                                                                                ;
+;     -- NUMWORDS_B                         ; 0                                                                                ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                           ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                     ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                             ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                        ;
++-------------------------------------------+----------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
@@ -1272,15 +1277,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------+
-; Port Connectivity Checks: "inst_fetch:IFetch|memory:inst_memory" ;
-+------+-------+----------+----------------------------------------+
-; Port ; Type  ; Severity ; Details                                ;
-+------+-------+----------+----------------------------------------+
-; data ; Input ; Info     ; Stuck at GND                           ;
-; wren ; Input ; Info     ; Stuck at GND                           ;
-; rden ; Input ; Info     ; Stuck at VCC                           ;
-+------+-------+----------+----------------------------------------+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "inst_fetch:IFetch|instruction_memory:inst_memory" ;
++------+-------+----------+----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                            ;
++------+-------+----------+----------------------------------------------------+
+; data ; Input ; Info     ; Stuck at GND                                       ;
+; wren ; Input ; Info     ; Stuck at GND                                       ;
++------+-------+----------+----------------------------------------------------+
 
 
 +-----------------------------------------------+
@@ -1318,11 +1322,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Fri Nov 25 01:34:53 2016
+    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+    Info: Processing started: Fri Nov 25 11:45:27 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off microprocessor -c microprocessor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file clock_divider.vhd
+    Info (12022): Found design unit 1: CLOCK_DIVIDER-CLOCK_DIVIDER File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/CLOCK_DIVIDER.vhd Line: 13
+    Info (12023): Found entity 1: CLOCK_DIVIDER File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/CLOCK_DIVIDER.vhd Line: 4
 Info (12021): Found 1 design units, including 0 entities, in source file mem_components.vhd
     Info (12022): Found design unit 1: mem_components File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mem_components.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file mem_access.vhd
@@ -1372,9 +1379,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file multipl
 Info (12021): Found 2 design units, including 1 entities, in source file microprocessor.vhd
     Info (12022): Found design unit 1: microprocessor-mic File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 12
     Info (12023): Found entity 1: microprocessor File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file memory.vhd
-    Info (12022): Found design unit 1: memory-SYN File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/memory.vhd Line: 56
-    Info (12023): Found entity 1: memory File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/memory.vhd Line: 43
 Info (12021): Found 2 design units, including 1 entities, in source file inst_fetch.vhd
     Info (12022): Found design unit 1: inst_fetch-Behave File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/inst_fetch.vhd Line: 20
     Info (12023): Found entity 1: inst_fetch File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/inst_fetch.vhd Line: 10
@@ -1407,13 +1411,20 @@ Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file adder.vhd
     Info (12022): Found design unit 1: adder-SYN File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/adder.vhd Line: 54
     Info (12023): Found entity 1: adder File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/adder.vhd Line: 43
+Info (12021): Found 2 design units, including 1 entities, in source file instruction_memory.vhd
+    Info (12022): Found design unit 1: instruction_memory-SYN File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/instruction_memory.vhd Line: 55
+    Info (12023): Found entity 1: instruction_memory File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/instruction_memory.vhd Line: 43
+Info (12021): Found 2 design units, including 1 entities, in source file data_memory.vhd
+    Info (12022): Found design unit 1: data_memory-SYN File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/data_memory.vhd Line: 55
+    Info (12023): Found entity 1: data_memory File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/data_memory.vhd Line: 43
 Info (12127): Elaborating entity "microprocessor" for the top level hierarchy
-Info (12128): Elaborating entity "inst_fetch" for hierarchy "inst_fetch:IFetch" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 28
+Info (12128): Elaborating entity "CLOCK_DIVIDER" for hierarchy "CLOCK_DIVIDER:clk_divide" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 29
+Info (12128): Elaborating entity "inst_fetch" for hierarchy "inst_fetch:IFetch" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 31
 Info (12128): Elaborating entity "register16" for hierarchy "inst_fetch:IFetch|register16:PC" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/inst_fetch.vhd Line: 29
-Info (12128): Elaborating entity "memory" for hierarchy "inst_fetch:IFetch|memory:inst_memory" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/inst_fetch.vhd Line: 36
-Info (12128): Elaborating entity "altsyncram" for hierarchy "inst_fetch:IFetch|memory:inst_memory|altsyncram:altsyncram_component" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/memory.vhd Line: 63
-Info (12130): Elaborated megafunction instantiation "inst_fetch:IFetch|memory:inst_memory|altsyncram:altsyncram_component" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/memory.vhd Line: 63
-Info (12133): Instantiated megafunction "inst_fetch:IFetch|memory:inst_memory|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/memory.vhd Line: 63
+Info (12128): Elaborating entity "instruction_memory" for hierarchy "inst_fetch:IFetch|instruction_memory:inst_memory" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/inst_fetch.vhd Line: 36
+Info (12128): Elaborating entity "altsyncram" for hierarchy "inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/instruction_memory.vhd Line: 62
+Info (12130): Elaborated megafunction instantiation "inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/instruction_memory.vhd Line: 62
+Info (12133): Instantiated megafunction "inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/instruction_memory.vhd Line: 62
     Info (12134): Parameter "address_aclr_a" = "UNUSED"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -1434,7 +1445,7 @@ Info (12133): Instantiated megafunction "inst_fetch:IFetch|memory:inst_memory|al
     Info (12134): Parameter "indata_aclr_a" = "UNUSED"
     Info (12134): Parameter "indata_aclr_b" = "NONE"
     Info (12134): Parameter "indata_reg_b" = "CLOCK1"
-    Info (12134): Parameter "init_file" = "input.hex"
+    Info (12134): Parameter "init_file" = "instruction.hex"
     Info (12134): Parameter "init_file_layout" = "PORT_A"
     Info (12134): Parameter "maximum_depth" = "0"
     Info (12134): Parameter "numwords_a" = "64"
@@ -1464,10 +1475,10 @@ Info (12133): Instantiated megafunction "inst_fetch:IFetch|memory:inst_memory|al
     Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_hur3.tdf
-    Info (12023): Found entity 1: altsyncram_hur3 File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_hur3" for hierarchy "inst_fetch:IFetch|memory:inst_memory|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated" File: c:/altera_lite/16.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "adder" for hierarchy "inst_fetch:IFetch|adder:add3" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/inst_fetch.vhd Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_3js3.tdf
+    Info (12023): Found entity 1: altsyncram_3js3 File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_3js3.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_3js3" for hierarchy "inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component|altsyncram_3js3:auto_generated" File: c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "adder" for hierarchy "inst_fetch:IFetch|adder:add3" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/inst_fetch.vhd Line: 42
 Info (12128): Elaborating entity "parallel_add" for hierarchy "inst_fetch:IFetch|adder:add3|parallel_add:parallel_add_component" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/adder.vhd Line: 100
 Info (12130): Elaborated megafunction instantiation "inst_fetch:IFetch|adder:add3|parallel_add:parallel_add_component" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/adder.vhd Line: 100
 Info (12133): Instantiated megafunction "inst_fetch:IFetch|adder:add3|parallel_add:parallel_add_component" with the following parameter: File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/adder.vhd Line: 100
@@ -1483,13 +1494,13 @@ Info (12133): Instantiated megafunction "inst_fetch:IFetch|adder:add3|parallel_a
     Info (12134): Parameter "lpm_type" = "parallel_add"
 Info (12021): Found 1 design units, including 1 entities, in source file db/par_add_gve.tdf
     Info (12023): Found entity 1: par_add_gve File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/par_add_gve.tdf Line: 25
-Info (12128): Elaborating entity "par_add_gve" for hierarchy "inst_fetch:IFetch|adder:add3|parallel_add:parallel_add_component|par_add_gve:auto_generated" File: c:/altera_lite/16.0/quartus/libraries/megafunctions/parallel_add.tdf Line: 148
-Info (12128): Elaborating entity "registers" for hierarchy "registers:IF_ID" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 30
-Info (12128): Elaborating entity "registers" for hierarchy "registers:ID_RR" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 31
-Info (12128): Elaborating entity "registers" for hierarchy "registers:RR_EX" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 32
-Info (12128): Elaborating entity "registers" for hierarchy "registers:EX_MEM" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 33
-Info (12128): Elaborating entity "registers" for hierarchy "registers:MEM_WB" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 34
-Info (12128): Elaborating entity "Decode" for hierarchy "Decode:Decoded" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 45
+Info (12128): Elaborating entity "par_add_gve" for hierarchy "inst_fetch:IFetch|adder:add3|parallel_add:parallel_add_component|par_add_gve:auto_generated" File: c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/parallel_add.tdf Line: 148
+Info (12128): Elaborating entity "registers" for hierarchy "registers:IF_ID" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 33
+Info (12128): Elaborating entity "registers" for hierarchy "registers:ID_RR" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 34
+Info (12128): Elaborating entity "registers" for hierarchy "registers:RR_EX" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 35
+Info (12128): Elaborating entity "registers" for hierarchy "registers:EX_MEM" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 36
+Info (12128): Elaborating entity "registers" for hierarchy "registers:MEM_WB" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 37
+Info (12128): Elaborating entity "Decode" for hierarchy "Decode:Decoded" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 48
 Warning (10541): VHDL Signal Declaration warning at Decode.vhd(34): used implicit default value for signal "counter_enable" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/Decode.vhd Line: 34
 Info (12128): Elaborating entity "signExtender" for hierarchy "Decode:Decoded|signExtender:signExtend" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/Decode.vhd Line: 37
 Info (12128): Elaborating entity "multiple" for hierarchy "Decode:Decoded|multiple:count" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/Decode.vhd Line: 38
@@ -1503,69 +1514,126 @@ Info (12133): Instantiated megafunction "Decode:Decoded|multiple:count|counter:c
     Info (12134): Parameter "lpm_width" = "3"
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_2si.tdf
     Info (12023): Found entity 1: cntr_2si File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/cntr_2si.tdf Line: 26
-Info (12128): Elaborating entity "cntr_2si" for hierarchy "Decode:Decoded|multiple:count|counter:counter_init|lpm_counter:LPM_COUNTER_component|cntr_2si:auto_generated" File: c:/altera_lite/16.0/quartus/libraries/megafunctions/lpm_counter.tdf Line: 259
-Info (12128): Elaborating entity "registerRead" for hierarchy "registerRead:RF" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 71
+Info (12128): Elaborating entity "cntr_2si" for hierarchy "Decode:Decoded|multiple:count|counter:counter_init|lpm_counter:LPM_COUNTER_component|cntr_2si:auto_generated" File: c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_counter.tdf Line: 259
+Info (12128): Elaborating entity "registerRead" for hierarchy "registerRead:RF" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 74
 Info (12128): Elaborating entity "registerFile" for hierarchy "registerRead:RF|registerFile:RF" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerRead.vhd Line: 81
 Info (12128): Elaborating entity "decoderRF" for hierarchy "registerRead:RF|registerFile:RF|decoderRF:inSel" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerFile.vhd Line: 28
 Info (12128): Elaborating entity "mux2" for hierarchy "registerRead:RF|registerFile:RF|mux2:r7_mux" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerFile.vhd Line: 42
 Info (12128): Elaborating entity "mux8" for hierarchy "registerRead:RF|registerFile:RF|mux8:muxA" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerFile.vhd Line: 53
-Info (12128): Elaborating entity "execute" for hierarchy "execute:executed" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 123
+Info (12128): Elaborating entity "execute" for hierarchy "execute:executed" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 126
 Info (12128): Elaborating entity "mux3" for hierarchy "execute:executed|mux3:alu_b_mux" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/execute.vhd Line: 95
 Info (12128): Elaborating entity "alu" for hierarchy "execute:executed|alu:alu1" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/execute.vhd Line: 101
 Warning (10036): Verilog HDL or VHDL warning at alu.vhd(58): object "sub_out" assigned a value but never read File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/alu.vhd Line: 58
 Info (12128): Elaborating entity "subtractor" for hierarchy "execute:executed|alu:alu1|subtractor:sub1" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/alu.vhd Line: 68
 Info (12128): Elaborating entity "nand_logic" for hierarchy "execute:executed|alu:alu1|nand_logic:nnd1" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/alu.vhd Line: 69
 Info (12128): Elaborating entity "register_1bit" for hierarchy "execute:executed|alu:alu1|register_1bit:reg1" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/alu.vhd Line: 83
-Info (12128): Elaborating entity "mem_access" for hierarchy "mem_access:memory" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 164
-Info (12128): Elaborating entity "writeBack" for hierarchy "writeBack:writes" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 194
+Info (12128): Elaborating entity "mem_access" for hierarchy "mem_access:memory" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 167
+Info (12128): Elaborating entity "data_memory" for hierarchy "mem_access:memory|data_memory:data_mem" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mem_access.vhd Line: 74
+Info (12128): Elaborating entity "altsyncram" for hierarchy "mem_access:memory|data_memory:data_mem|altsyncram:altsyncram_component" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/data_memory.vhd Line: 62
+Info (12130): Elaborated megafunction instantiation "mem_access:memory|data_memory:data_mem|altsyncram:altsyncram_component" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/data_memory.vhd Line: 62
+Info (12133): Instantiated megafunction "mem_access:memory|data_memory:data_mem|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/data_memory.vhd Line: 62
+    Info (12134): Parameter "address_aclr_a" = "UNUSED"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "byteena_aclr_a" = "UNUSED"
+    Info (12134): Parameter "byteena_aclr_b" = "NONE"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK1"
+    Info (12134): Parameter "clock_enable_core_a" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_core_b" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "NORMAL"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
+    Info (12134): Parameter "enable_ecc" = "FALSE"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "indata_aclr_a" = "UNUSED"
+    Info (12134): Parameter "indata_aclr_b" = "NONE"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "init_file" = "data_memory.hex"
+    Info (12134): Parameter "init_file_layout" = "PORT_A"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "64"
+    Info (12134): Parameter "numwords_b" = "0"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "rdcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK1"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "stratixiv_m144k_allow_dual_clocks" = "ON"
+    Info (12134): Parameter "width_a" = "16"
+    Info (12134): Parameter "width_b" = "1"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "width_eccstatus" = "3"
+    Info (12134): Parameter "widthad_a" = "6"
+    Info (12134): Parameter "widthad_b" = "1"
+    Info (12134): Parameter "wrcontrol_aclr_a" = "UNUSED"
+    Info (12134): Parameter "wrcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_jhs3.tdf
+    Info (12023): Found entity 1: altsyncram_jhs3 File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_jhs3.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_jhs3" for hierarchy "mem_access:memory|data_memory:data_mem|altsyncram:altsyncram_component|altsyncram_jhs3:auto_generated" File: c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "writeBack" for hierarchy "writeBack:writes" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 197
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "mem_access:memory|memory:data_mem|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated|q_a[0]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 37
-        Warning (14320): Synthesized away node "mem_access:memory|memory:data_mem|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated|q_a[1]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 61
-        Warning (14320): Synthesized away node "mem_access:memory|memory:data_mem|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated|q_a[2]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 85
-        Warning (14320): Synthesized away node "mem_access:memory|memory:data_mem|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated|q_a[3]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 109
-        Warning (14320): Synthesized away node "mem_access:memory|memory:data_mem|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated|q_a[4]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 133
-        Warning (14320): Synthesized away node "mem_access:memory|memory:data_mem|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated|q_a[5]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 157
-        Warning (14320): Synthesized away node "mem_access:memory|memory:data_mem|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated|q_a[6]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 181
-        Warning (14320): Synthesized away node "mem_access:memory|memory:data_mem|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated|q_a[7]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 205
-        Warning (14320): Synthesized away node "mem_access:memory|memory:data_mem|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated|q_a[8]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 229
-        Warning (14320): Synthesized away node "mem_access:memory|memory:data_mem|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated|q_a[9]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 253
-        Warning (14320): Synthesized away node "mem_access:memory|memory:data_mem|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated|q_a[10]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 277
-        Warning (14320): Synthesized away node "mem_access:memory|memory:data_mem|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated|q_a[11]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 301
-        Warning (14320): Synthesized away node "mem_access:memory|memory:data_mem|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated|q_a[12]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 325
-        Warning (14320): Synthesized away node "mem_access:memory|memory:data_mem|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated|q_a[13]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 349
-        Warning (14320): Synthesized away node "mem_access:memory|memory:data_mem|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated|q_a[14]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 373
-        Warning (14320): Synthesized away node "mem_access:memory|memory:data_mem|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated|q_a[15]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 397
-        Warning (14320): Synthesized away node "inst_fetch:IFetch|memory:inst_memory|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated|q_a[0]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 37
-        Warning (14320): Synthesized away node "inst_fetch:IFetch|memory:inst_memory|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated|q_a[1]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 61
-        Warning (14320): Synthesized away node "inst_fetch:IFetch|memory:inst_memory|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated|q_a[2]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 85
-        Warning (14320): Synthesized away node "inst_fetch:IFetch|memory:inst_memory|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated|q_a[3]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 109
-        Warning (14320): Synthesized away node "inst_fetch:IFetch|memory:inst_memory|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated|q_a[4]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 133
-        Warning (14320): Synthesized away node "inst_fetch:IFetch|memory:inst_memory|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated|q_a[5]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 157
-        Warning (14320): Synthesized away node "inst_fetch:IFetch|memory:inst_memory|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated|q_a[6]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 181
-        Warning (14320): Synthesized away node "inst_fetch:IFetch|memory:inst_memory|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated|q_a[7]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 205
-        Warning (14320): Synthesized away node "inst_fetch:IFetch|memory:inst_memory|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated|q_a[8]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 229
-        Warning (14320): Synthesized away node "inst_fetch:IFetch|memory:inst_memory|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated|q_a[9]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 253
-        Warning (14320): Synthesized away node "inst_fetch:IFetch|memory:inst_memory|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated|q_a[10]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 277
-        Warning (14320): Synthesized away node "inst_fetch:IFetch|memory:inst_memory|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated|q_a[11]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 301
-        Warning (14320): Synthesized away node "inst_fetch:IFetch|memory:inst_memory|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated|q_a[12]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 325
-        Warning (14320): Synthesized away node "inst_fetch:IFetch|memory:inst_memory|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated|q_a[13]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 349
-        Warning (14320): Synthesized away node "inst_fetch:IFetch|memory:inst_memory|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated|q_a[14]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 373
-        Warning (14320): Synthesized away node "inst_fetch:IFetch|memory:inst_memory|altsyncram:altsyncram_component|altsyncram_hur3:auto_generated|q_a[15]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_hur3.tdf Line: 397
+        Warning (14320): Synthesized away node "mem_access:memory|data_memory:data_mem|altsyncram:altsyncram_component|altsyncram_jhs3:auto_generated|q_a[0]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_jhs3.tdf Line: 37
+        Warning (14320): Synthesized away node "mem_access:memory|data_memory:data_mem|altsyncram:altsyncram_component|altsyncram_jhs3:auto_generated|q_a[1]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_jhs3.tdf Line: 61
+        Warning (14320): Synthesized away node "mem_access:memory|data_memory:data_mem|altsyncram:altsyncram_component|altsyncram_jhs3:auto_generated|q_a[2]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_jhs3.tdf Line: 85
+        Warning (14320): Synthesized away node "mem_access:memory|data_memory:data_mem|altsyncram:altsyncram_component|altsyncram_jhs3:auto_generated|q_a[3]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_jhs3.tdf Line: 109
+        Warning (14320): Synthesized away node "mem_access:memory|data_memory:data_mem|altsyncram:altsyncram_component|altsyncram_jhs3:auto_generated|q_a[4]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_jhs3.tdf Line: 133
+        Warning (14320): Synthesized away node "mem_access:memory|data_memory:data_mem|altsyncram:altsyncram_component|altsyncram_jhs3:auto_generated|q_a[5]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_jhs3.tdf Line: 157
+        Warning (14320): Synthesized away node "mem_access:memory|data_memory:data_mem|altsyncram:altsyncram_component|altsyncram_jhs3:auto_generated|q_a[6]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_jhs3.tdf Line: 181
+        Warning (14320): Synthesized away node "mem_access:memory|data_memory:data_mem|altsyncram:altsyncram_component|altsyncram_jhs3:auto_generated|q_a[7]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_jhs3.tdf Line: 205
+        Warning (14320): Synthesized away node "mem_access:memory|data_memory:data_mem|altsyncram:altsyncram_component|altsyncram_jhs3:auto_generated|q_a[8]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_jhs3.tdf Line: 229
+        Warning (14320): Synthesized away node "mem_access:memory|data_memory:data_mem|altsyncram:altsyncram_component|altsyncram_jhs3:auto_generated|q_a[9]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_jhs3.tdf Line: 253
+        Warning (14320): Synthesized away node "mem_access:memory|data_memory:data_mem|altsyncram:altsyncram_component|altsyncram_jhs3:auto_generated|q_a[10]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_jhs3.tdf Line: 277
+        Warning (14320): Synthesized away node "mem_access:memory|data_memory:data_mem|altsyncram:altsyncram_component|altsyncram_jhs3:auto_generated|q_a[11]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_jhs3.tdf Line: 301
+        Warning (14320): Synthesized away node "mem_access:memory|data_memory:data_mem|altsyncram:altsyncram_component|altsyncram_jhs3:auto_generated|q_a[12]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_jhs3.tdf Line: 325
+        Warning (14320): Synthesized away node "mem_access:memory|data_memory:data_mem|altsyncram:altsyncram_component|altsyncram_jhs3:auto_generated|q_a[13]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_jhs3.tdf Line: 349
+        Warning (14320): Synthesized away node "mem_access:memory|data_memory:data_mem|altsyncram:altsyncram_component|altsyncram_jhs3:auto_generated|q_a[14]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_jhs3.tdf Line: 373
+        Warning (14320): Synthesized away node "mem_access:memory|data_memory:data_mem|altsyncram:altsyncram_component|altsyncram_jhs3:auto_generated|q_a[15]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_jhs3.tdf Line: 397
+        Warning (14320): Synthesized away node "inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component|altsyncram_3js3:auto_generated|q_a[0]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_3js3.tdf Line: 37
+        Warning (14320): Synthesized away node "inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component|altsyncram_3js3:auto_generated|q_a[1]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_3js3.tdf Line: 61
+        Warning (14320): Synthesized away node "inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component|altsyncram_3js3:auto_generated|q_a[2]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_3js3.tdf Line: 85
+        Warning (14320): Synthesized away node "inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component|altsyncram_3js3:auto_generated|q_a[3]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_3js3.tdf Line: 109
+        Warning (14320): Synthesized away node "inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component|altsyncram_3js3:auto_generated|q_a[4]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_3js3.tdf Line: 133
+        Warning (14320): Synthesized away node "inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component|altsyncram_3js3:auto_generated|q_a[5]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_3js3.tdf Line: 157
+        Warning (14320): Synthesized away node "inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component|altsyncram_3js3:auto_generated|q_a[6]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_3js3.tdf Line: 181
+        Warning (14320): Synthesized away node "inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component|altsyncram_3js3:auto_generated|q_a[7]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_3js3.tdf Line: 205
+        Warning (14320): Synthesized away node "inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component|altsyncram_3js3:auto_generated|q_a[8]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_3js3.tdf Line: 229
+        Warning (14320): Synthesized away node "inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component|altsyncram_3js3:auto_generated|q_a[9]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_3js3.tdf Line: 253
+        Warning (14320): Synthesized away node "inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component|altsyncram_3js3:auto_generated|q_a[10]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_3js3.tdf Line: 277
+        Warning (14320): Synthesized away node "inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component|altsyncram_3js3:auto_generated|q_a[11]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_3js3.tdf Line: 301
+        Warning (14320): Synthesized away node "inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component|altsyncram_3js3:auto_generated|q_a[12]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_3js3.tdf Line: 325
+        Warning (14320): Synthesized away node "inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component|altsyncram_3js3:auto_generated|q_a[13]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_3js3.tdf Line: 349
+        Warning (14320): Synthesized away node "inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component|altsyncram_3js3:auto_generated|q_a[14]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_3js3.tdf Line: 373
+        Warning (14320): Synthesized away node "inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component|altsyncram_3js3:auto_generated|q_a[15]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_3js3.tdf Line: 397
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (17049): 1054 registers lost all their fanouts during netlist optimizations.
+Info (17049): 1055 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clock" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 8
+    Warning (15610): No output dependent on input pin "clock_c" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 8
     Warning (15610): No output dependent on input pin "reset" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 9
 Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 41 warnings
-    Info: Peak virtual memory: 918 megabytes
-    Info: Processing ended: Fri Nov 25 01:35:16 2016
-    Info: Elapsed time: 00:00:23
-    Info: Total CPU time (on all processors): 00:00:43
+    Info: Peak virtual memory: 708 megabytes
+    Info: Processing ended: Fri Nov 25 11:45:42 2016
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:32
 
 

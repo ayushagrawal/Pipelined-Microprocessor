@@ -34,16 +34,15 @@ package if_components is
 	);
 	END component;
 
-	component memory IS
-	PORT
-	(
-		address		: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
-		clock		: IN STD_LOGIC  := '1';
-		data		: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
-		wren		: IN STD_LOGIC ;
-		rden		: IN STD_LOGIC ;
-		q		: OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
-	);
-	END component;	
+	COMPONENT instruction_memory IS
+		PORT
+		(
+			address		: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+			clock		: IN STD_LOGIC  := '1';
+			data		: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+			wren		: IN STD_LOGIC ;
+			q		: OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
+		);
+	END COMPONENT;
 
 end package;

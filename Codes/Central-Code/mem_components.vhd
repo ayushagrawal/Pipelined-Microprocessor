@@ -6,17 +6,16 @@ use ieee.std_logic_1164.all;
 
 package mem_components is
 
-	component memory IS
-	PORT
-	(
-		address		: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
-		clock		: IN STD_LOGIC  := '1';
-		data		: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
-		wren		: IN STD_LOGIC ;
-		rden		: IN STD_LOGIC ;
-		q		: OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
-	);
-	END component;
+	COMPONENT data_memory IS
+		PORT
+		(
+			address		: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+			clock		: IN STD_LOGIC  := '1';
+			data		: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+			wren		: IN STD_LOGIC ;
+			q		: OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
+		);
+	END COMPONENT;
 
 	component mux2 is 
 	generic (n : integer);

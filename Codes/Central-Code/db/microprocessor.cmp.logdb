@@ -34,7 +34,7 @@ IO_RULES_MATRIX,Total Pass,0;0;0;0;0;2;0;0;2;2;0;0;0;0;2;0;0;2;0;0;0;0;0;0;0;0;0
 IO_RULES_MATRIX,Total Unchecked,0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0,
 IO_RULES_MATRIX,Total Inapplicable,2;2;2;2;2;0;2;2;0;0;2;2;2;2;0;2;2;0;2;2;2;2;2;2;2;2;2;0;2;2,
 IO_RULES_MATRIX,Total Fail,0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0,
-IO_RULES_MATRIX,clock,Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Pass;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable,
+IO_RULES_MATRIX,clock_c,Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Pass;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable,
 IO_RULES_MATRIX,reset,Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Pass;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Inapplicable;Pass;Inapplicable;Inapplicable,
 IO_RULES_SUMMARY,Total I/O Rules,30,
 IO_RULES_SUMMARY,Number of I/O Rules Passed,6,

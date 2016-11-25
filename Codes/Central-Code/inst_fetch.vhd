@@ -33,10 +33,9 @@ PC : register16 port map(dataIn => pcIn,
 				 	reset => reset);
 
 mem_address <= pc_out;
-inst_memory : memory port map(	address => mem_address,
+inst_memory : instruction_memory port map(	address => mem_address,
 								 data => x"0000", 
 								 wren => '0', 
-								 rden => '1',
 								 q => mem_out,
 								 clock => clock);
 
