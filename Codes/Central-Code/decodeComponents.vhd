@@ -21,6 +21,7 @@ package decodeComponents is
 		PORT
 		(
 			clock		: IN STD_LOGIC ;
+			aclr		: IN STD_LOGIC ;
 			cnt_en		: IN STD_LOGIC ;
 			q		: OUT STD_LOGIC_VECTOR (2 DOWNTO 0)
 		);

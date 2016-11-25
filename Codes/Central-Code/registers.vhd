@@ -12,7 +12,7 @@ entity registers is
 
 architecture reg of registers is
 begin
-	process(clock,enable)
+	process(clock,enable,reset)
 		variable data: std_logic_vector((N-1) downto 0);
 	begin
 		if(clock'event and clock = '1') then
@@ -21,7 +21,10 @@ begin
 			elsif(enable = '1') then
 				data := input;
 			end if;
-			output <= data;
 		end if;
+		if(reset = '1') then
+			data := (others => '0');
+		end if;
+		output <= data;
 	end process;
 end;

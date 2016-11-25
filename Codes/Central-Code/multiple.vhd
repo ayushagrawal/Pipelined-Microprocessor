@@ -16,7 +16,7 @@ architecture form of multiple is
 		signal count_out : std_logic_vector(2 downto 0);
 begin
 
-	counter_init : counter port map(clock => clock, cnt_en => counter_enable, q => count_out);
+	counter_init : counter port map(clock => clock, cnt_en => counter_enable, q => count_out, aclr => '0');
 	counter_out <= count_out;
 	process(count_out,bit8)
 	variable Nmux_out : std_logic;

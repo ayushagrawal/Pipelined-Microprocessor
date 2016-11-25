@@ -12,39 +12,39 @@
 # 
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/CLOCK_DIVIDER.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:47:17 on Nov 25,2016
+# Start time: 12:10:50 on Nov 25,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/CLOCK_DIVIDER.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity CLOCK_DIVIDER
 # -- Compiling architecture CLOCK_DIVIDER of CLOCK_DIVIDER
-# End time: 11:47:17 on Nov 25,2016, Elapsed time: 0:00:00
+# End time: 12:10:50 on Nov 25,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mem_components.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:47:18 on Nov 25,2016
+# Start time: 12:10:50 on Nov 25,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mem_components.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package mem_components
-# End time: 11:47:18 on Nov 25,2016, Elapsed time: 0:00:00
+# End time: 12:10:50 on Nov 25,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/writeBack.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:47:18 on Nov 25,2016
+# Start time: 12:10:50 on Nov 25,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/writeBack.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity writeBack
 # -- Compiling architecture WB of writeBack
-# End time: 11:47:18 on Nov 25,2016, Elapsed time: 0:00:00
+# End time: 12:10:50 on Nov 25,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/subtractor.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:47:18 on Nov 25,2016
+# Start time: 12:10:50 on Nov 25,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/subtractor.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -52,11 +52,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity subtractor
 # -- Compiling architecture formulas of subtractor
-# End time: 11:47:18 on Nov 25,2016, Elapsed time: 0:00:00
+# End time: 12:10:50 on Nov 25,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/signExtender.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:47:18 on Nov 25,2016
+# Start time: 12:10:50 on Nov 25,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/signExtender.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -64,43 +64,43 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity signExtender
 # -- Compiling architecture form of signExtender
-# End time: 11:47:18 on Nov 25,2016, Elapsed time: 0:00:00
+# End time: 12:10:51 on Nov 25,2016, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registers.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:47:18 on Nov 25,2016
+# Start time: 12:10:51 on Nov 25,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registers.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity registers
 # -- Compiling architecture reg of registers
-# End time: 11:47:18 on Nov 25,2016, Elapsed time: 0:00:00
+# End time: 12:10:51 on Nov 25,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerFileComponents.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:47:18 on Nov 25,2016
+# Start time: 12:10:51 on Nov 25,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerFileComponents.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package registerFileComponents
-# End time: 11:47:18 on Nov 25,2016, Elapsed time: 0:00:00
+# End time: 12:10:51 on Nov 25,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/register_1bit.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:47:18 on Nov 25,2016
+# Start time: 12:10:51 on Nov 25,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/register_1bit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity register_1bit
 # -- Compiling architecture reg of register_1bit
-# End time: 11:47:18 on Nov 25,2016, Elapsed time: 0:00:00
+# End time: 12:10:51 on Nov 25,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/nand_logic.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:47:18 on Nov 25,2016
+# Start time: 12:10:51 on Nov 25,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/nand_logic.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -108,95 +108,95 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity nand_logic
 # -- Compiling architecture form of nand_logic
-# End time: 11:47:18 on Nov 25,2016, Elapsed time: 0:00:00
+# End time: 12:10:51 on Nov 25,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mux8.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:47:18 on Nov 25,2016
+# Start time: 12:10:51 on Nov 25,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mux8.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity mux8
 # -- Compiling architecture Behave of mux8
-# End time: 11:47:18 on Nov 25,2016, Elapsed time: 0:00:00
+# End time: 12:10:51 on Nov 25,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mux3.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:47:18 on Nov 25,2016
+# Start time: 12:10:51 on Nov 25,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mux3.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity mux3
 # -- Compiling architecture Behave of mux3
-# End time: 11:47:18 on Nov 25,2016, Elapsed time: 0:00:00
+# End time: 12:10:51 on Nov 25,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mux2.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:47:18 on Nov 25,2016
+# Start time: 12:10:51 on Nov 25,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mux2.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity mux2
 # -- Compiling architecture Behave of mux2
-# End time: 11:47:18 on Nov 25,2016, Elapsed time: 0:00:00
+# End time: 12:10:51 on Nov 25,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/if_components.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:47:18 on Nov 25,2016
+# Start time: 12:10:51 on Nov 25,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/if_components.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package if_components
-# End time: 11:47:19 on Nov 25,2016, Elapsed time: 0:00:01
+# End time: 12:10:51 on Nov 25,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/exe_components.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:47:19 on Nov 25,2016
+# Start time: 12:10:51 on Nov 25,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/exe_components.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package exe_components
-# End time: 11:47:19 on Nov 25,2016, Elapsed time: 0:00:00
+# End time: 12:10:51 on Nov 25,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/decodeComponents.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:47:19 on Nov 25,2016
+# Start time: 12:10:51 on Nov 25,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/decodeComponents.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package decodeComponents
-# End time: 11:47:19 on Nov 25,2016, Elapsed time: 0:00:00
+# End time: 12:10:51 on Nov 25,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/counter.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:47:19 on Nov 25,2016
+# Start time: 12:10:51 on Nov 25,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/counter.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity counter
 # -- Compiling architecture SYN of counter
-# End time: 11:47:19 on Nov 25,2016, Elapsed time: 0:00:00
+# End time: 12:10:51 on Nov 25,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/components.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:47:19 on Nov 25,2016
+# Start time: 12:10:51 on Nov 25,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/components.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package components
-# End time: 11:47:19 on Nov 25,2016, Elapsed time: 0:00:00
+# End time: 12:10:52 on Nov 25,2016, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/alu.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:47:19 on Nov 25,2016
+# Start time: 12:10:52 on Nov 25,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/alu.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -204,11 +204,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity alu
 # -- Compiling architecture formulas of alu
-# End time: 11:47:19 on Nov 25,2016, Elapsed time: 0:00:00
+# End time: 12:10:52 on Nov 25,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/adder.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:47:19 on Nov 25,2016
+# Start time: 12:10:52 on Nov 25,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/adder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -216,11 +216,11 @@
 # -- Loading package altera_mf_components
 # -- Compiling entity adder
 # -- Compiling architecture SYN of adder
-# End time: 11:47:19 on Nov 25,2016, Elapsed time: 0:00:00
+# End time: 12:10:52 on Nov 25,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/instruction_memory.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:47:19 on Nov 25,2016
+# Start time: 12:10:52 on Nov 25,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/instruction_memory.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -228,11 +228,11 @@
 # -- Loading package altera_mf_components
 # -- Compiling entity instruction_memory
 # -- Compiling architecture SYN of instruction_memory
-# End time: 11:47:19 on Nov 25,2016, Elapsed time: 0:00:00
+# End time: 12:10:52 on Nov 25,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/data_memory.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:47:20 on Nov 25,2016
+# Start time: 12:10:52 on Nov 25,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/data_memory.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -240,11 +240,11 @@
 # -- Loading package altera_mf_components
 # -- Compiling entity data_memory
 # -- Compiling architecture SYN of data_memory
-# End time: 11:47:20 on Nov 25,2016, Elapsed time: 0:00:00
+# End time: 12:10:52 on Nov 25,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mem_access.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:47:20 on Nov 25,2016
+# Start time: 12:10:52 on Nov 25,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mem_access.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -252,11 +252,11 @@
 # -- Loading package mem_components
 # -- Compiling entity mem_access
 # -- Compiling architecture Behave of mem_access
-# End time: 11:47:20 on Nov 25,2016, Elapsed time: 0:00:00
+# End time: 12:10:52 on Nov 25,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerRead.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:47:20 on Nov 25,2016
+# Start time: 12:10:52 on Nov 25,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerRead.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -264,11 +264,11 @@
 # -- Loading package registerFileComponents
 # -- Compiling entity registerRead
 # -- Compiling architecture RR of registerRead
-# End time: 11:47:20 on Nov 25,2016, Elapsed time: 0:00:00
+# End time: 12:10:52 on Nov 25,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerFile.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:47:20 on Nov 25,2016
+# Start time: 12:10:52 on Nov 25,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerFile.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -276,11 +276,11 @@
 # -- Loading package registerFileComponents
 # -- Compiling entity registerFile
 # -- Compiling architecture RF of registerFile
-# End time: 11:47:20 on Nov 25,2016, Elapsed time: 0:00:00
+# End time: 12:10:52 on Nov 25,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/register16.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:47:20 on Nov 25,2016
+# Start time: 12:10:52 on Nov 25,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/register16.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -288,11 +288,11 @@
 # -- Loading package registerFileComponents
 # -- Compiling entity register16
 # -- Compiling architecture reg of register16
-# End time: 11:47:20 on Nov 25,2016, Elapsed time: 0:00:00
+# End time: 12:10:52 on Nov 25,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/multiple.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:47:20 on Nov 25,2016
+# Start time: 12:10:52 on Nov 25,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/multiple.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -300,11 +300,11 @@
 # -- Loading package decodeComponents
 # -- Compiling entity multiple
 # -- Compiling architecture form of multiple
-# End time: 11:47:20 on Nov 25,2016, Elapsed time: 0:00:00
+# End time: 12:10:52 on Nov 25,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:47:20 on Nov 25,2016
+# Start time: 12:10:52 on Nov 25,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -312,11 +312,11 @@
 # -- Loading package components
 # -- Compiling entity microprocessor
 # -- Compiling architecture mic of microprocessor
-# End time: 11:47:20 on Nov 25,2016, Elapsed time: 0:00:00
+# End time: 12:10:52 on Nov 25,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/inst_fetch.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:47:20 on Nov 25,2016
+# Start time: 12:10:52 on Nov 25,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/inst_fetch.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -324,11 +324,11 @@
 # -- Loading package if_components
 # -- Compiling entity inst_fetch
 # -- Compiling architecture Behave of inst_fetch
-# End time: 11:47:20 on Nov 25,2016, Elapsed time: 0:00:00
+# End time: 12:10:53 on Nov 25,2016, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/execute.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:47:20 on Nov 25,2016
+# Start time: 12:10:53 on Nov 25,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/execute.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -336,11 +336,11 @@
 # -- Loading package exe_components
 # -- Compiling entity execute
 # -- Compiling architecture Behave of execute
-# End time: 11:47:20 on Nov 25,2016, Elapsed time: 0:00:00
+# End time: 12:10:53 on Nov 25,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/decoderRF.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:47:20 on Nov 25,2016
+# Start time: 12:10:53 on Nov 25,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/decoderRF.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -348,11 +348,11 @@
 # -- Loading package registerFileComponents
 # -- Compiling entity decoderRF
 # -- Compiling architecture Decode of decoderRF
-# End time: 11:47:20 on Nov 25,2016, Elapsed time: 0:00:00
+# End time: 12:10:53 on Nov 25,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/Decode.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:47:20 on Nov 25,2016
+# Start time: 12:10:53 on Nov 25,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/Decode.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -360,30 +360,72 @@
 # -- Loading package decodeComponents
 # -- Compiling entity Decode
 # -- Compiling architecture arch of Decode
-# End time: 11:47:20 on Nov 25,2016, Elapsed time: 0:00:00
+# End time: 12:10:53 on Nov 25,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/testbench.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:47:20 on Nov 25,2016
+# Start time: 12:10:53 on Nov 25,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/testbench.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity testbench
 # -- Compiling architecture Behave of testbench
-# End time: 11:47:21 on Nov 25,2016, Elapsed time: 0:00:01
+# End time: 12:10:53 on Nov 25,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  testbench
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=""+acc"" testbench 
-# Start time: 11:47:21 on Nov 25,2016
+# Start time: 12:10:53 on Nov 25,2016
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading work.testbench(behave)
-# ** Warning: (vsim-3473) Component instance "dut : combined" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/testbench.vhd
+# Loading work.components
+# Loading work.microprocessor(mic)
+# Loading work.clock_divider(clock_divider)
+# Loading work.if_components
+# Loading work.inst_fetch(behave)
+# Loading work.registerfilecomponents
+# Loading work.register16(reg)
+# Loading altera_mf.altera_mf_components
+# Loading work.instruction_memory(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+# Loading work.adder(syn)
+# Loading altera_mf.parallel_add(behaviour)
+# Loading work.registers(reg)
+# Loading work.decodecomponents
+# Loading work.decode(arch)
+# Loading ieee.numeric_std(body)
+# Loading work.signextender(form)
+# Loading work.multiple(form)
+# Loading work.counter(syn)
+# Loading lpm.lpm_components
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_counter(lpm_syn)
+# Loading work.registerread(rr)
+# Loading work.registerfile(rf)
+# Loading work.decoderrf(decode)
+# Loading work.mux2(behave)
+# Loading work.mux8(behave)
+# Loading work.exe_components
+# Loading work.execute(behave)
+# Loading work.mux3(behave)
+# Loading work.alu(formulas)
+# Loading work.subtractor(formulas)
+# Loading work.nand_logic(form)
+# Loading work.register_1bit(reg)
+# Loading work.mem_components
+# Loading work.mem_access(behave)
+# Loading work.data_memory(syn)
+# Loading work.writeback(wb)
+# ** Warning: Design size of 10670 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
 # 
 # add wave *
 # view structure
@@ -391,14 +433,651 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 15 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 15 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 15 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 15 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 15 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 15 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 25 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 25 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 25 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 35 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 35 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 35 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 55 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 55 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 55 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 55 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 55 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 55 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 65 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 65 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 65 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 65 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 65 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 65 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 75 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 75 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 75 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 85 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 85 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 85 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 85 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 85 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 85 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 95 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 95 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 95 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 95 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 95 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 95 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 105 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 105 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 105 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 105 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 105 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 105 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 115 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 115 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 115 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 115 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 115 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 115 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
 # ** Note: SUCCESS, all tests passed.
-#    Time: 8250 ns  Iteration: 0  Instance: /testbench
+#    Time: 8260 ns  Iteration: 0  Instance: /testbench
+add wave -position insertpoint  \
+sim:/testbench/dut/IFetch/pcIn
 restart
-# ** Warning: (vsim-3473) Component instance "dut : combined" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/testbench.vhd
-add wave -position insertpoint sim:/std_logic_1164/*
-# (vish-4014) No objects found matching '/std_logic_1164/*'.
-add dataflow sim:/testbench/*
-# WARNING: No extended dataflow license exists
-# End time: 11:51:34 on Nov 25,2016, Elapsed time: 0:04:13
-# Errors: 1, Warnings: 3
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 15 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 15 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 15 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 15 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 15 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 15 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 25 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 25 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 25 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 35 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 35 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 35 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 55 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 55 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 55 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 55 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 55 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 55 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 65 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 65 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 65 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 65 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 65 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 65 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 75 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 75 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 75 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 85 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 85 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 85 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 85 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 85 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 85 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 95 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 95 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 95 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 95 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 95 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 95 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 105 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 105 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 105 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 105 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 105 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 105 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 115 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 115 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 115 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 115 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 115 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 115 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Note: SUCCESS, all tests passed.
+#    Time: 8260 ns  Iteration: 0  Instance: /testbench
+add wave -position insertpoint  \
+sim:/testbench/dut/MEM_WB/reset
+add wave -position insertpoint  \
+sim:/testbench/dut/MEM_WB/output
+restart
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 15 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 15 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 15 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 15 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 15 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 15 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 25 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 25 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 25 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 35 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 35 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 35 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 55 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 55 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 55 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 55 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 55 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 55 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 65 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 65 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 65 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 65 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 65 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 65 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 75 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 75 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 75 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 85 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 85 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 85 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 85 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 85 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 85 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 95 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 95 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 95 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 95 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 95 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 95 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 105 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 105 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 105 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 105 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 105 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 105 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 115 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 115 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 115 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 115 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 115 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 115 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Note: SUCCESS, all tests passed.
+#    Time: 8260 ns  Iteration: 0  Instance: /testbench
+add wave -position insertpoint  \
+sim:/testbench/dut/MEM_WB/clock
+restart
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 5 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 15 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 15 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 15 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 15 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 15 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 15 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 25 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 25 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 25 ns  Iteration: 2  Instance: /testbench/dut/memory/data_mem/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 35 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 35 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 35 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 55 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 55 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 55 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 55 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 55 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 55 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 65 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 65 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 65 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 65 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 65 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 65 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 75 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 75 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 75 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 85 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 85 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 85 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 85 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 85 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 85 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 95 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 95 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 95 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 95 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 95 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 95 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 105 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 105 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 105 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 105 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 105 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 105 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 115 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 115 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 115 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 115 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 115 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 115 ns  Iteration: 2  Instance: /testbench/dut/IFetch/inst_memory/altsyncram_component
+# ** Note: SUCCESS, all tests passed.
+#    Time: 8260 ns  Iteration: 0  Instance: /testbench
+# End time: 12:15:13 on Nov 25,2016, Elapsed time: 0:04:20
+# Errors: 0, Warnings: 313

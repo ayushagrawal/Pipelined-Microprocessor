@@ -1,5 +1,5 @@
 Analysis & Synthesis report for microprocessor
-Fri Nov 25 11:45:42 2016
+Fri Nov 25 12:18:35 2016
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -80,7 +80,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 25 11:45:42 2016       ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 25 12:18:35 2016       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; microprocessor                              ;
 ; Top-level Entity Name              ; microprocessor                              ;
@@ -198,68 +198,70 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                              ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                          ; Library ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------+---------+
-; CLOCK_DIVIDER.vhd                ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/CLOCK_DIVIDER.vhd          ;         ;
-; mem_components.vhd               ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mem_components.vhd         ;         ;
-; mem_access.vhd                   ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mem_access.vhd             ;         ;
-; writeBack.vhd                    ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/writeBack.vhd              ;         ;
-; subtractor.vhd                   ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/subtractor.vhd             ;         ;
-; signExtender.vhd                 ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/signExtender.vhd           ;         ;
-; registers.vhd                    ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registers.vhd              ;         ;
-; registerRead.vhd                 ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerRead.vhd           ;         ;
-; registerFileComponents.vhd       ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerFileComponents.vhd ;         ;
-; registerFile.vhd                 ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerFile.vhd           ;         ;
-; register16.vhd                   ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/register16.vhd             ;         ;
-; register_1bit.vhd                ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/register_1bit.vhd          ;         ;
-; nand_logic.vhd                   ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/nand_logic.vhd             ;         ;
-; mux8.vhd                         ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mux8.vhd                   ;         ;
-; mux3.vhd                         ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mux3.vhd                   ;         ;
-; mux2.vhd                         ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mux2.vhd                   ;         ;
-; multiple.vhd                     ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/multiple.vhd               ;         ;
-; microprocessor.vhd               ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd         ;         ;
-; inst_fetch.vhd                   ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/inst_fetch.vhd             ;         ;
-; if_components.vhd                ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/if_components.vhd          ;         ;
-; execute.vhd                      ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/execute.vhd                ;         ;
-; exe_components.vhd               ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/exe_components.vhd         ;         ;
-; decoderRF.vhd                    ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/decoderRF.vhd              ;         ;
-; decodeComponents.vhd             ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/decodeComponents.vhd       ;         ;
-; Decode.vhd                       ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/Decode.vhd                 ;         ;
-; counter.vhd                      ; yes             ; User Wizard-Generated File   ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/counter.vhd                ;         ;
-; components.vhd                   ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/components.vhd             ;         ;
-; alu.vhd                          ; yes             ; User VHDL File               ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/alu.vhd                    ;         ;
-; adder.vhd                        ; yes             ; User Wizard-Generated File   ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/adder.vhd                  ;         ;
-; instruction_memory.vhd           ; yes             ; User Wizard-Generated File   ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/instruction_memory.vhd     ;         ;
-; data_memory.vhd                  ; yes             ; User Wizard-Generated File   ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/data_memory.vhd            ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altsyncram.tdf                                 ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/stratix_ram_block.inc                          ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_mux.inc                                    ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_decode.inc                                 ;         ;
-; aglobal161.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/aglobal161.inc                                 ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/a_rdenreg.inc                                  ;         ;
-; altrom.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altrom.inc                                     ;         ;
-; altram.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altram.inc                                     ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altdpram.inc                                   ;         ;
-; db/altsyncram_3js3.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_3js3.tdf     ;         ;
-; parallel_add.tdf                 ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/parallel_add.tdf                               ;         ;
-; pcpa_add.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/pcpa_add.inc                                   ;         ;
-; csa_add.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/csa_add.inc                                    ;         ;
-; altshift.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altshift.inc                                   ;         ;
-; db/par_add_gve.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/par_add_gve.tdf         ;         ;
-; lpm_counter.tdf                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_counter.tdf                                ;         ;
-; lpm_constant.inc                 ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_constant.inc                               ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_add_sub.inc                                ;         ;
-; cmpconst.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/cmpconst.inc                                   ;         ;
-; lpm_compare.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_compare.inc                                ;         ;
-; lpm_counter.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_counter.inc                                ;         ;
-; dffeea.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/dffeea.inc                                     ;         ;
-; alt_counter_stratix.inc          ; yes             ; Megafunction                 ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/alt_counter_stratix.inc                        ;         ;
-; db/cntr_2si.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/cntr_2si.tdf            ;         ;
-; db/altsyncram_jhs3.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_jhs3.tdf     ;         ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                       ;
++----------------------------------+-----------------+---------------------------------------+-------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                             ; File Name with Absolute Path                                                                          ; Library ;
++----------------------------------+-----------------+---------------------------------------+-------------------------------------------------------------------------------------------------------+---------+
+; instruction.hex                  ; yes             ; User Hexadecimal (Intel-Format) File  ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/instruction.hex            ;         ;
+; CLOCK_DIVIDER.vhd                ; yes             ; User VHDL File                        ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/CLOCK_DIVIDER.vhd          ;         ;
+; mem_components.vhd               ; yes             ; User VHDL File                        ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mem_components.vhd         ;         ;
+; mem_access.vhd                   ; yes             ; User VHDL File                        ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mem_access.vhd             ;         ;
+; writeBack.vhd                    ; yes             ; User VHDL File                        ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/writeBack.vhd              ;         ;
+; subtractor.vhd                   ; yes             ; User VHDL File                        ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/subtractor.vhd             ;         ;
+; signExtender.vhd                 ; yes             ; User VHDL File                        ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/signExtender.vhd           ;         ;
+; registers.vhd                    ; yes             ; User VHDL File                        ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registers.vhd              ;         ;
+; registerRead.vhd                 ; yes             ; User VHDL File                        ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerRead.vhd           ;         ;
+; registerFileComponents.vhd       ; yes             ; User VHDL File                        ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerFileComponents.vhd ;         ;
+; registerFile.vhd                 ; yes             ; User VHDL File                        ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerFile.vhd           ;         ;
+; register16.vhd                   ; yes             ; User VHDL File                        ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/register16.vhd             ;         ;
+; register_1bit.vhd                ; yes             ; User VHDL File                        ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/register_1bit.vhd          ;         ;
+; nand_logic.vhd                   ; yes             ; User VHDL File                        ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/nand_logic.vhd             ;         ;
+; mux8.vhd                         ; yes             ; User VHDL File                        ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mux8.vhd                   ;         ;
+; mux3.vhd                         ; yes             ; User VHDL File                        ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mux3.vhd                   ;         ;
+; mux2.vhd                         ; yes             ; User VHDL File                        ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mux2.vhd                   ;         ;
+; multiple.vhd                     ; yes             ; User VHDL File                        ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/multiple.vhd               ;         ;
+; microprocessor.vhd               ; yes             ; User VHDL File                        ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd         ;         ;
+; inst_fetch.vhd                   ; yes             ; User VHDL File                        ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/inst_fetch.vhd             ;         ;
+; if_components.vhd                ; yes             ; User VHDL File                        ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/if_components.vhd          ;         ;
+; execute.vhd                      ; yes             ; User VHDL File                        ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/execute.vhd                ;         ;
+; exe_components.vhd               ; yes             ; User VHDL File                        ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/exe_components.vhd         ;         ;
+; decoderRF.vhd                    ; yes             ; User VHDL File                        ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/decoderRF.vhd              ;         ;
+; decodeComponents.vhd             ; yes             ; User VHDL File                        ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/decodeComponents.vhd       ;         ;
+; Decode.vhd                       ; yes             ; User VHDL File                        ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/Decode.vhd                 ;         ;
+; counter.vhd                      ; yes             ; User Wizard-Generated File            ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/counter.vhd                ;         ;
+; components.vhd                   ; yes             ; User VHDL File                        ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/components.vhd             ;         ;
+; alu.vhd                          ; yes             ; User VHDL File                        ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/alu.vhd                    ;         ;
+; adder.vhd                        ; yes             ; User Wizard-Generated File            ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/adder.vhd                  ;         ;
+; instruction_memory.vhd           ; yes             ; User Wizard-Generated File            ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/instruction_memory.vhd     ;         ;
+; data_memory.vhd                  ; yes             ; User Wizard-Generated File            ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/data_memory.vhd            ;         ;
+; data_memory.hex                  ; yes             ; User Hexadecimal (Intel-Format) File  ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/data_memory.hex            ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altsyncram.tdf                                 ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/stratix_ram_block.inc                          ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_mux.inc                                    ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_decode.inc                                 ;         ;
+; aglobal161.inc                   ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/aglobal161.inc                                 ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/a_rdenreg.inc                                  ;         ;
+; altrom.inc                       ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altrom.inc                                     ;         ;
+; altram.inc                       ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altram.inc                                     ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altdpram.inc                                   ;         ;
+; db/altsyncram_3js3.tdf           ; yes             ; Auto-Generated Megafunction           ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_3js3.tdf     ;         ;
+; parallel_add.tdf                 ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/parallel_add.tdf                               ;         ;
+; pcpa_add.inc                     ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/pcpa_add.inc                                   ;         ;
+; csa_add.inc                      ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/csa_add.inc                                    ;         ;
+; altshift.inc                     ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altshift.inc                                   ;         ;
+; db/par_add_gve.tdf               ; yes             ; Auto-Generated Megafunction           ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/par_add_gve.tdf         ;         ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_counter.tdf                                ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_constant.inc                               ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_add_sub.inc                                ;         ;
+; cmpconst.inc                     ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/cmpconst.inc                                   ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_compare.inc                                ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_counter.inc                                ;         ;
+; dffeea.inc                       ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/dffeea.inc                                     ;         ;
+; alt_counter_stratix.inc          ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/alt_counter_stratix.inc                        ;         ;
+; db/cntr_2si.tdf                  ; yes             ; Auto-Generated Megafunction           ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/cntr_2si.tdf            ;         ;
+; db/altsyncram_jhs3.tdf           ; yes             ; Auto-Generated Megafunction           ; C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_jhs3.tdf     ;         ;
++----------------------------------+-----------------+---------------------------------------+-------------------------------------------------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------+
@@ -318,11 +320,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------------------------------------------------------------+--------------------+
 ; Register name                                                                                                                      ; Reason for Removal ;
 +------------------------------------------------------------------------------------------------------------------------------------+--------------------+
-; registers:MEM_WB|data[0..88]                                                                                                       ; Lost fanout        ;
-; registers:EX_MEM|data[0..108]                                                                                                      ; Lost fanout        ;
-; registers:RR_EX|data[0..86]                                                                                                        ; Lost fanout        ;
-; registers:ID_RR|data[0..60]                                                                                                        ; Lost fanout        ;
-; registers:IF_ID|data[0..31]                                                                                                        ; Lost fanout        ;
 ; inst_fetch:IFetch|register16:PC|data[0..15]                                                                                        ; Lost fanout        ;
 ; execute:executed|alu:alu1|register_1bit:reg2|dataOut                                                                               ; Lost fanout        ;
 ; execute:executed|alu:alu1|register_1bit:reg2|data                                                                                  ; Lost fanout        ;
@@ -346,410 +343,177 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; registerRead:RF|registerFile:RF|register16:register_0|dataOut[0..15]                                                               ; Lost fanout        ;
 ; registerRead:RF|registerFile:RF|register16:register_0|data[0..15]                                                                  ; Lost fanout        ;
 ; Decode:Decoded|multiple:count|counter:counter_init|lpm_counter:LPM_COUNTER_component|cntr_2si:auto_generated|counter_reg_bit[0..2] ; Lost fanout        ;
-; registers:MEM_WB|output[0..88]                                                                                                     ; Lost fanout        ;
-; registers:EX_MEM|output[0..108]                                                                                                    ; Lost fanout        ;
-; registers:RR_EX|output[0..86]                                                                                                      ; Lost fanout        ;
-; registers:ID_RR|output[0..60]                                                                                                      ; Lost fanout        ;
-; registers:IF_ID|output[0..31]                                                                                                      ; Lost fanout        ;
+; registers:MEM_WB|data[0..88]                                                                                                       ; Lost fanout        ;
+; registers:EX_MEM|data[0..108]                                                                                                      ; Lost fanout        ;
+; registers:RR_EX|data[0..86]                                                                                                        ; Lost fanout        ;
+; registers:ID_RR|data[0..60]                                                                                                        ; Lost fanout        ;
+; registers:IF_ID|data[0..31]                                                                                                        ; Lost fanout        ;
 ; inst_fetch:IFetch|register16:PC|dataOut[0..15]                                                                                     ; Lost fanout        ;
 ; CLOCK_DIVIDER:clk_divide|tick                                                                                                      ; Lost fanout        ;
-; Total Number of Removed Registers = 1055                                                                                           ;                    ;
+; Total Number of Removed Registers = 677                                                                                            ;                    ;
 +------------------------------------------------------------------------------------------------------------------------------------+--------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                                                      ;
-+------------------------------------------+--------------------+----------------------------------------------------------------------------------------------------------------------------------+
-; Register name                            ; Reason for Removal ; Registers Removed due to This Register                                                                                           ;
-+------------------------------------------+--------------------+----------------------------------------------------------------------------------------------------------------------------------+
-; registers:RR_EX|data[54]                 ; Lost Fanouts       ; registerRead:RF|registerFile:RF|register16:register_7|dataOut[15],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_6|dataOut[15],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_5|dataOut[15],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_4|dataOut[15],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_3|dataOut[15],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_2|dataOut[15],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_0|dataOut[15],                                                               ;
-;                                          ;                    ; registers:ID_RR|output[26], registers:ID_RR|output[27], registers:ID_RR|output[28]                                               ;
-; registers:RR_EX|data[43]                 ; Lost Fanouts       ; registerRead:RF|registerFile:RF|register16:register_7|dataOut[4],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_6|dataOut[4],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_5|dataOut[4],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_4|dataOut[4],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_3|dataOut[4],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_2|dataOut[4],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_0|dataOut[4]                                                                 ;
-; registers:RR_EX|data[42]                 ; Lost Fanouts       ; registerRead:RF|registerFile:RF|register16:register_7|dataOut[3],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_6|dataOut[3],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_5|dataOut[3],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_4|dataOut[3],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_3|dataOut[3],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_2|dataOut[3],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_0|dataOut[3]                                                                 ;
-; registers:RR_EX|data[41]                 ; Lost Fanouts       ; registerRead:RF|registerFile:RF|register16:register_7|dataOut[2],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_6|dataOut[2],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_5|dataOut[2],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_4|dataOut[2],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_3|dataOut[2],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_2|dataOut[2],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_0|dataOut[2]                                                                 ;
-; registers:RR_EX|data[40]                 ; Lost Fanouts       ; registerRead:RF|registerFile:RF|register16:register_7|dataOut[1],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_6|dataOut[1],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_5|dataOut[1],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_4|dataOut[1],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_3|dataOut[1],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_2|dataOut[1],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_0|dataOut[1]                                                                 ;
-; registers:RR_EX|data[39]                 ; Lost Fanouts       ; registerRead:RF|registerFile:RF|register16:register_7|dataOut[0],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_6|dataOut[0],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_5|dataOut[0],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_4|dataOut[0],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_3|dataOut[0],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_2|dataOut[0],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_0|dataOut[0]                                                                 ;
-; registers:MEM_WB|data[72]                ; Lost Fanouts       ; registers:EX_MEM|output[4], registers:EX_MEM|output[5], registers:EX_MEM|output[60],                                             ;
-;                                          ;                    ; registers:EX_MEM|output[77], registers:EX_MEM|output[78],                                                                        ;
-;                                          ;                    ; registers:EX_MEM|output[79], registers:EX_MEM|output[80]                                                                         ;
-; registers:RR_EX|data[53]                 ; Lost Fanouts       ; registerRead:RF|registerFile:RF|register16:register_7|dataOut[14],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_6|dataOut[14],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_5|dataOut[14],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_4|dataOut[14],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_3|dataOut[14],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_2|dataOut[14],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_0|dataOut[14]                                                                ;
-; registers:RR_EX|data[52]                 ; Lost Fanouts       ; registerRead:RF|registerFile:RF|register16:register_7|dataOut[13],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_6|dataOut[13],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_5|dataOut[13],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_4|dataOut[13],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_3|dataOut[13],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_2|dataOut[13],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_0|dataOut[13]                                                                ;
-; registers:RR_EX|data[51]                 ; Lost Fanouts       ; registerRead:RF|registerFile:RF|register16:register_7|dataOut[12],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_6|dataOut[12],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_5|dataOut[12],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_4|dataOut[12],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_3|dataOut[12],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_2|dataOut[12],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_0|dataOut[12]                                                                ;
-; registers:RR_EX|data[50]                 ; Lost Fanouts       ; registerRead:RF|registerFile:RF|register16:register_7|dataOut[11],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_6|dataOut[11],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_5|dataOut[11],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_4|dataOut[11],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_3|dataOut[11],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_2|dataOut[11],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_0|dataOut[11]                                                                ;
-; registers:RR_EX|data[49]                 ; Lost Fanouts       ; registerRead:RF|registerFile:RF|register16:register_7|dataOut[10],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_6|dataOut[10],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_5|dataOut[10],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_4|dataOut[10],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_3|dataOut[10],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_2|dataOut[10],                                                               ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_0|dataOut[10]                                                                ;
-; registers:RR_EX|data[48]                 ; Lost Fanouts       ; registerRead:RF|registerFile:RF|register16:register_7|dataOut[9],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_6|dataOut[9],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_5|dataOut[9],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_4|dataOut[9],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_3|dataOut[9],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_2|dataOut[9],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_0|dataOut[9]                                                                 ;
-; registers:RR_EX|data[47]                 ; Lost Fanouts       ; registerRead:RF|registerFile:RF|register16:register_7|dataOut[8],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_6|dataOut[8],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_5|dataOut[8],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_4|dataOut[8],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_3|dataOut[8],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_2|dataOut[8],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_0|dataOut[8]                                                                 ;
-; registers:RR_EX|data[46]                 ; Lost Fanouts       ; registerRead:RF|registerFile:RF|register16:register_7|dataOut[7],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_6|dataOut[7],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_5|dataOut[7],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_4|dataOut[7],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_3|dataOut[7],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_2|dataOut[7],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_0|dataOut[7]                                                                 ;
-; registers:RR_EX|data[45]                 ; Lost Fanouts       ; registerRead:RF|registerFile:RF|register16:register_7|dataOut[6],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_6|dataOut[6],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_5|dataOut[6],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_4|dataOut[6],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_3|dataOut[6],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_2|dataOut[6],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_0|dataOut[6]                                                                 ;
-; registers:RR_EX|data[44]                 ; Lost Fanouts       ; registerRead:RF|registerFile:RF|register16:register_7|dataOut[5],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_6|dataOut[5],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_5|dataOut[5],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_4|dataOut[5],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_3|dataOut[5],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_2|dataOut[5],                                                                ;
-;                                          ;                    ; registerRead:RF|registerFile:RF|register16:register_0|dataOut[5]                                                                 ;
-; registers:MEM_WB|data[88]                ; Lost Fanouts       ; registers:EX_MEM|output[6], registers:EX_MEM|output[7], registers:EX_MEM|output[28],                                             ;
-;                                          ;                    ; registers:EX_MEM|output[76], registers:EX_MEM|output[108],                                                                       ;
-;                                          ;                    ; CLOCK_DIVIDER:clk_divide|tick                                                                                                    ;
-; registers:ID_RR|data[60]                 ; Lost Fanouts       ; registers:IF_ID|output[21], registers:IF_ID|output[24], registers:IF_ID|output[28],                                              ;
-;                                          ;                    ; registers:IF_ID|output[29], registers:IF_ID|output[30], registers:IF_ID|output[31]                                               ;
-; registers:EX_MEM|data[108]               ; Lost Fanouts       ; registers:RR_EX|output[69], registers:RR_EX|output[70], registers:RR_EX|output[85],                                              ;
-;                                          ;                    ; registers:RR_EX|output[86]                                                                                                       ;
-; registers:IF_ID|data[31]                 ; Lost Fanouts       ; inst_fetch:IFetch|register16:PC|dataOut[0],                                                                                      ;
-;                                          ;                    ; inst_fetch:IFetch|register16:PC|dataOut[1],                                                                                      ;
-;                                          ;                    ; inst_fetch:IFetch|register16:PC|dataOut[2],                                                                                      ;
-;                                          ;                    ; inst_fetch:IFetch|register16:PC|dataOut[3]                                                                                       ;
-; registers:MEM_WB|data[87]                ; Lost Fanouts       ; registers:EX_MEM|output[27], registers:EX_MEM|output[75],                                                                        ;
-;                                          ;                    ; registers:EX_MEM|output[107]                                                                                                     ;
-; registers:MEM_WB|data[86]                ; Lost Fanouts       ; registers:EX_MEM|output[26], registers:EX_MEM|output[74],                                                                        ;
-;                                          ;                    ; registers:EX_MEM|output[106]                                                                                                     ;
-; registers:MEM_WB|data[85]                ; Lost Fanouts       ; registers:EX_MEM|output[25], registers:EX_MEM|output[73],                                                                        ;
-;                                          ;                    ; registers:EX_MEM|output[105]                                                                                                     ;
-; registers:MEM_WB|data[84]                ; Lost Fanouts       ; registers:EX_MEM|output[24], registers:EX_MEM|output[72],                                                                        ;
-;                                          ;                    ; registers:EX_MEM|output[104]                                                                                                     ;
-; registers:MEM_WB|data[82]                ; Lost Fanouts       ; registers:EX_MEM|output[22], registers:EX_MEM|output[70],                                                                        ;
-;                                          ;                    ; registers:EX_MEM|output[102]                                                                                                     ;
-; registers:MEM_WB|data[81]                ; Lost Fanouts       ; registers:EX_MEM|output[21], registers:EX_MEM|output[69],                                                                        ;
-;                                          ;                    ; registers:EX_MEM|output[101]                                                                                                     ;
-; registers:MEM_WB|data[80]                ; Lost Fanouts       ; registers:EX_MEM|output[20], registers:EX_MEM|output[68],                                                                        ;
-;                                          ;                    ; registers:EX_MEM|output[100]                                                                                                     ;
-; registers:MEM_WB|data[79]                ; Lost Fanouts       ; registers:EX_MEM|output[19], registers:EX_MEM|output[67],                                                                        ;
-;                                          ;                    ; registers:EX_MEM|output[99]                                                                                                      ;
-; registers:MEM_WB|data[78]                ; Lost Fanouts       ; registers:EX_MEM|output[18], registers:EX_MEM|output[66],                                                                        ;
-;                                          ;                    ; registers:EX_MEM|output[98]                                                                                                      ;
-; registers:MEM_WB|data[77]                ; Lost Fanouts       ; registers:EX_MEM|output[17], registers:EX_MEM|output[65],                                                                        ;
-;                                          ;                    ; registers:EX_MEM|output[97]                                                                                                      ;
-; registers:MEM_WB|data[76]                ; Lost Fanouts       ; registers:EX_MEM|output[16], registers:EX_MEM|output[64],                                                                        ;
-;                                          ;                    ; registers:EX_MEM|output[96]                                                                                                      ;
-; registers:MEM_WB|data[75]                ; Lost Fanouts       ; registers:EX_MEM|output[15], registers:EX_MEM|output[63],                                                                        ;
-;                                          ;                    ; registers:EX_MEM|output[95]                                                                                                      ;
-; registers:MEM_WB|data[74]                ; Lost Fanouts       ; registers:EX_MEM|output[14], registers:EX_MEM|output[62],                                                                        ;
-;                                          ;                    ; registers:EX_MEM|output[94]                                                                                                      ;
-; registers:MEM_WB|data[73]                ; Lost Fanouts       ; registers:EX_MEM|output[13], registers:EX_MEM|output[61],                                                                        ;
-;                                          ;                    ; registers:EX_MEM|output[93]                                                                                                      ;
-; registers:EX_MEM|data[92]                ; Lost Fanouts       ; registers:RR_EX|output[9], registers:RR_EX|output[16], registers:RR_EX|output[17]                                                ;
-; registers:EX_MEM|data[7]                 ; Lost Fanouts       ; execute:executed|alu:alu1|register_1bit:reg2|dataOut, registers:RR_EX|output[8],                                                 ;
-;                                          ;                    ; registers:RR_EX|output[11]                                                                                                       ;
-; registers:EX_MEM|data[3]                 ; Lost Fanouts       ; registers:RR_EX|output[3], registers:RR_EX|output[14], registers:RR_EX|output[15]                                                ;
-; registers:MEM_WB|data[83]                ; Lost Fanouts       ; registers:EX_MEM|output[23], registers:EX_MEM|output[71],                                                                        ;
-;                                          ;                    ; registers:EX_MEM|output[103]                                                                                                     ;
-; registers:RR_EX|data[38]                 ; Lost Fanouts       ; registers:ID_RR|output[23], registers:ID_RR|output[24], registers:ID_RR|output[25]                                               ;
-; registers:ID_RR|data[1]                  ; Lost Fanouts       ; Decode:Decoded|multiple:count|counter:counter_init|lpm_counter:LPM_COUNTER_component|cntr_2si:auto_generated|counter_reg_bit[2], ;
-;                                          ;                    ; Decode:Decoded|multiple:count|counter:counter_init|lpm_counter:LPM_COUNTER_component|cntr_2si:auto_generated|counter_reg_bit[1], ;
-;                                          ;                    ; Decode:Decoded|multiple:count|counter:counter_init|lpm_counter:LPM_COUNTER_component|cntr_2si:auto_generated|counter_reg_bit[0]  ;
-; registers:IF_ID|data[15]                 ; Lost Fanouts       ; inst_fetch:IFetch|register16:PC|dataOut[14],                                                                                     ;
-;                                          ;                    ; inst_fetch:IFetch|register16:PC|dataOut[15]                                                                                      ;
-; registers:MEM_WB|data[32]                ; Lost Fanouts       ; registers:EX_MEM|output[36]                                                                                                      ;
-; registers:MEM_WB|data[31]                ; Lost Fanouts       ; registers:EX_MEM|output[35]                                                                                                      ;
-; registers:MEM_WB|data[30]                ; Lost Fanouts       ; registers:EX_MEM|output[34]                                                                                                      ;
-; registers:MEM_WB|data[29]                ; Lost Fanouts       ; registers:EX_MEM|output[33]                                                                                                      ;
-; registers:MEM_WB|data[28]                ; Lost Fanouts       ; registers:EX_MEM|output[32]                                                                                                      ;
-; registers:MEM_WB|data[27]                ; Lost Fanouts       ; registers:EX_MEM|output[31]                                                                                                      ;
-; registers:MEM_WB|data[26]                ; Lost Fanouts       ; registers:EX_MEM|output[30]                                                                                                      ;
-; registers:MEM_WB|data[25]                ; Lost Fanouts       ; registers:EX_MEM|output[29]                                                                                                      ;
-; registers:MEM_WB|data[24]                ; Lost Fanouts       ; registers:EX_MEM|output[92]                                                                                                      ;
-; registers:MEM_WB|data[23]                ; Lost Fanouts       ; registers:EX_MEM|output[91]                                                                                                      ;
-; registers:MEM_WB|data[22]                ; Lost Fanouts       ; registers:EX_MEM|output[90]                                                                                                      ;
-; registers:MEM_WB|data[21]                ; Lost Fanouts       ; registers:EX_MEM|output[89]                                                                                                      ;
-; registers:MEM_WB|data[20]                ; Lost Fanouts       ; registers:EX_MEM|output[88]                                                                                                      ;
-; registers:MEM_WB|data[19]                ; Lost Fanouts       ; registers:EX_MEM|output[87]                                                                                                      ;
-; registers:MEM_WB|data[18]                ; Lost Fanouts       ; registers:EX_MEM|output[86]                                                                                                      ;
-; registers:MEM_WB|data[17]                ; Lost Fanouts       ; registers:EX_MEM|output[85]                                                                                                      ;
-; registers:MEM_WB|data[16]                ; Lost Fanouts       ; registers:EX_MEM|output[84]                                                                                                      ;
-; registers:MEM_WB|data[15]                ; Lost Fanouts       ; registers:EX_MEM|output[83]                                                                                                      ;
-; registers:MEM_WB|data[14]                ; Lost Fanouts       ; registers:EX_MEM|output[82]                                                                                                      ;
-; registers:MEM_WB|data[13]                ; Lost Fanouts       ; registers:EX_MEM|output[81]                                                                                                      ;
-; registers:MEM_WB|data[8]                 ; Lost Fanouts       ; registers:EX_MEM|output[12]                                                                                                      ;
-; registers:MEM_WB|data[7]                 ; Lost Fanouts       ; registers:EX_MEM|output[11]                                                                                                      ;
-; registers:MEM_WB|data[6]                 ; Lost Fanouts       ; registers:EX_MEM|output[10]                                                                                                      ;
-; registers:MEM_WB|data[5]                 ; Lost Fanouts       ; registers:EX_MEM|output[9]                                                                                                       ;
-; registers:MEM_WB|data[4]                 ; Lost Fanouts       ; registers:EX_MEM|output[8]                                                                                                       ;
-; registers:MEM_WB|data[3]                 ; Lost Fanouts       ; registers:EX_MEM|output[2]                                                                                                       ;
-; registers:MEM_WB|data[2]                 ; Lost Fanouts       ; registers:EX_MEM|output[3]                                                                                                       ;
-; registers:MEM_WB|data[1]                 ; Lost Fanouts       ; registers:EX_MEM|output[1]                                                                                                       ;
-; registers:MEM_WB|data[0]                 ; Lost Fanouts       ; registers:EX_MEM|output[0]                                                                                                       ;
-; registers:EX_MEM|data[76]                ; Lost Fanouts       ; registers:RR_EX|output[38]                                                                                                       ;
-; registers:EX_MEM|data[75]                ; Lost Fanouts       ; registers:RR_EX|output[37]                                                                                                       ;
-; registers:EX_MEM|data[74]                ; Lost Fanouts       ; registers:RR_EX|output[36]                                                                                                       ;
-; registers:EX_MEM|data[73]                ; Lost Fanouts       ; registers:RR_EX|output[35]                                                                                                       ;
-; registers:EX_MEM|data[72]                ; Lost Fanouts       ; registers:RR_EX|output[34]                                                                                                       ;
-; registers:EX_MEM|data[71]                ; Lost Fanouts       ; registers:RR_EX|output[33]                                                                                                       ;
-; registers:EX_MEM|data[70]                ; Lost Fanouts       ; registers:RR_EX|output[32]                                                                                                       ;
-; registers:EX_MEM|data[69]                ; Lost Fanouts       ; registers:RR_EX|output[31]                                                                                                       ;
-; registers:EX_MEM|data[68]                ; Lost Fanouts       ; registers:RR_EX|output[30]                                                                                                       ;
-; registers:EX_MEM|data[67]                ; Lost Fanouts       ; registers:RR_EX|output[29]                                                                                                       ;
-; registers:EX_MEM|data[66]                ; Lost Fanouts       ; registers:RR_EX|output[28]                                                                                                       ;
-; registers:EX_MEM|data[65]                ; Lost Fanouts       ; registers:RR_EX|output[27]                                                                                                       ;
-; registers:EX_MEM|data[64]                ; Lost Fanouts       ; registers:RR_EX|output[26]                                                                                                       ;
-; registers:EX_MEM|data[63]                ; Lost Fanouts       ; registers:RR_EX|output[25]                                                                                                       ;
-; registers:EX_MEM|data[62]                ; Lost Fanouts       ; registers:RR_EX|output[24]                                                                                                       ;
-; registers:EX_MEM|data[61]                ; Lost Fanouts       ; registers:RR_EX|output[23]                                                                                                       ;
-; registers:EX_MEM|data[60]                ; Lost Fanouts       ; registers:RR_EX|output[54]                                                                                                       ;
-; registers:EX_MEM|data[59]                ; Lost Fanouts       ; registers:RR_EX|output[53]                                                                                                       ;
-; registers:EX_MEM|data[58]                ; Lost Fanouts       ; registers:RR_EX|output[52]                                                                                                       ;
-; registers:EX_MEM|data[57]                ; Lost Fanouts       ; registers:RR_EX|output[51]                                                                                                       ;
-; registers:EX_MEM|data[56]                ; Lost Fanouts       ; registers:RR_EX|output[50]                                                                                                       ;
-; registers:EX_MEM|data[55]                ; Lost Fanouts       ; registers:RR_EX|output[49]                                                                                                       ;
-; registers:EX_MEM|data[54]                ; Lost Fanouts       ; registers:RR_EX|output[48]                                                                                                       ;
-; registers:EX_MEM|data[53]                ; Lost Fanouts       ; registers:RR_EX|output[47]                                                                                                       ;
-; registers:EX_MEM|data[52]                ; Lost Fanouts       ; registers:RR_EX|output[46]                                                                                                       ;
-; registers:EX_MEM|data[51]                ; Lost Fanouts       ; registers:RR_EX|output[45]                                                                                                       ;
-; registers:EX_MEM|data[50]                ; Lost Fanouts       ; registers:RR_EX|output[44]                                                                                                       ;
-; registers:EX_MEM|data[49]                ; Lost Fanouts       ; registers:RR_EX|output[43]                                                                                                       ;
-; registers:EX_MEM|data[48]                ; Lost Fanouts       ; registers:RR_EX|output[42]                                                                                                       ;
-; registers:EX_MEM|data[47]                ; Lost Fanouts       ; registers:RR_EX|output[41]                                                                                                       ;
-; registers:EX_MEM|data[46]                ; Lost Fanouts       ; registers:RR_EX|output[40]                                                                                                       ;
-; registers:EX_MEM|data[45]                ; Lost Fanouts       ; registers:RR_EX|output[39]                                                                                                       ;
-; registers:EX_MEM|data[42]                ; Lost Fanouts       ; registers:RR_EX|output[68]                                                                                                       ;
-; registers:EX_MEM|data[41]                ; Lost Fanouts       ; registers:RR_EX|output[67]                                                                                                       ;
-; registers:EX_MEM|data[40]                ; Lost Fanouts       ; registers:RR_EX|output[66]                                                                                                       ;
-; registers:EX_MEM|data[39]                ; Lost Fanouts       ; registers:RR_EX|output[65]                                                                                                       ;
-; registers:EX_MEM|data[38]                ; Lost Fanouts       ; registers:RR_EX|output[64]                                                                                                       ;
-; registers:EX_MEM|data[37]                ; Lost Fanouts       ; registers:RR_EX|output[63]                                                                                                       ;
-; registers:EX_MEM|data[36]                ; Lost Fanouts       ; registers:RR_EX|output[62]                                                                                                       ;
-; registers:EX_MEM|data[35]                ; Lost Fanouts       ; registers:RR_EX|output[61]                                                                                                       ;
-; registers:EX_MEM|data[34]                ; Lost Fanouts       ; registers:RR_EX|output[60]                                                                                                       ;
-; registers:EX_MEM|data[33]                ; Lost Fanouts       ; registers:RR_EX|output[59]                                                                                                       ;
-; registers:EX_MEM|data[32]                ; Lost Fanouts       ; registers:RR_EX|output[58]                                                                                                       ;
-; registers:EX_MEM|data[31]                ; Lost Fanouts       ; registers:RR_EX|output[57]                                                                                                       ;
-; registers:EX_MEM|data[30]                ; Lost Fanouts       ; registers:RR_EX|output[56]                                                                                                       ;
-; registers:EX_MEM|data[29]                ; Lost Fanouts       ; registers:RR_EX|output[55]                                                                                                       ;
-; registers:EX_MEM|data[26]                ; Lost Fanouts       ; registers:RR_EX|output[84]                                                                                                       ;
-; registers:EX_MEM|data[25]                ; Lost Fanouts       ; registers:RR_EX|output[83]                                                                                                       ;
-; registers:EX_MEM|data[24]                ; Lost Fanouts       ; registers:RR_EX|output[82]                                                                                                       ;
-; registers:EX_MEM|data[23]                ; Lost Fanouts       ; registers:RR_EX|output[81]                                                                                                       ;
-; registers:EX_MEM|data[22]                ; Lost Fanouts       ; registers:RR_EX|output[80]                                                                                                       ;
-; registers:EX_MEM|data[21]                ; Lost Fanouts       ; registers:RR_EX|output[79]                                                                                                       ;
-; registers:EX_MEM|data[20]                ; Lost Fanouts       ; registers:RR_EX|output[78]                                                                                                       ;
-; registers:EX_MEM|data[19]                ; Lost Fanouts       ; registers:RR_EX|output[77]                                                                                                       ;
-; registers:EX_MEM|data[18]                ; Lost Fanouts       ; registers:RR_EX|output[76]                                                                                                       ;
-; registers:EX_MEM|data[17]                ; Lost Fanouts       ; registers:RR_EX|output[75]                                                                                                       ;
-; registers:EX_MEM|data[16]                ; Lost Fanouts       ; registers:RR_EX|output[74]                                                                                                       ;
-; registers:EX_MEM|data[15]                ; Lost Fanouts       ; registers:RR_EX|output[73]                                                                                                       ;
-; registers:EX_MEM|data[14]                ; Lost Fanouts       ; registers:RR_EX|output[72]                                                                                                       ;
-; registers:EX_MEM|data[13]                ; Lost Fanouts       ; registers:RR_EX|output[71]                                                                                                       ;
-; registers:EX_MEM|data[12]                ; Lost Fanouts       ; registers:RR_EX|output[22]                                                                                                       ;
-; registers:EX_MEM|data[11]                ; Lost Fanouts       ; registers:RR_EX|output[21]                                                                                                       ;
-; registers:EX_MEM|data[10]                ; Lost Fanouts       ; registers:RR_EX|output[20]                                                                                                       ;
-; registers:EX_MEM|data[9]                 ; Lost Fanouts       ; registers:RR_EX|output[13]                                                                                                       ;
-; registers:EX_MEM|data[8]                 ; Lost Fanouts       ; registers:RR_EX|output[12]                                                                                                       ;
-; registers:MEM_WB|data[71]                ; Lost Fanouts       ; registers:EX_MEM|output[59]                                                                                                      ;
-; registers:EX_MEM|data[6]                 ; Lost Fanouts       ; registers:RR_EX|output[10]                                                                                                       ;
-; registers:EX_MEM|data[5]                 ; Lost Fanouts       ; registers:RR_EX|output[6]                                                                                                        ;
-; registers:EX_MEM|data[4]                 ; Lost Fanouts       ; registers:RR_EX|output[5]                                                                                                        ;
-; registers:MEM_WB|data[70]                ; Lost Fanouts       ; registers:EX_MEM|output[58]                                                                                                      ;
-; registers:EX_MEM|data[2]                 ; Lost Fanouts       ; registers:RR_EX|output[2]                                                                                                        ;
-; registers:EX_MEM|data[1]                 ; Lost Fanouts       ; registers:RR_EX|output[4]                                                                                                        ;
-; registers:EX_MEM|data[0]                 ; Lost Fanouts       ; registers:RR_EX|output[7]                                                                                                        ;
-; registers:RR_EX|data[86]                 ; Lost Fanouts       ; registers:ID_RR|output[44]                                                                                                       ;
-; registers:RR_EX|data[85]                 ; Lost Fanouts       ; registers:ID_RR|output[43]                                                                                                       ;
-; registers:RR_EX|data[84]                 ; Lost Fanouts       ; registers:ID_RR|output[42]                                                                                                       ;
-; registers:RR_EX|data[83]                 ; Lost Fanouts       ; registers:ID_RR|output[41]                                                                                                       ;
-; registers:RR_EX|data[82]                 ; Lost Fanouts       ; registers:ID_RR|output[40]                                                                                                       ;
-; registers:RR_EX|data[81]                 ; Lost Fanouts       ; registers:ID_RR|output[39]                                                                                                       ;
-; registers:RR_EX|data[80]                 ; Lost Fanouts       ; registers:ID_RR|output[38]                                                                                                       ;
-; registers:RR_EX|data[79]                 ; Lost Fanouts       ; registers:ID_RR|output[37]                                                                                                       ;
-; registers:RR_EX|data[78]                 ; Lost Fanouts       ; registers:ID_RR|output[36]                                                                                                       ;
-; registers:RR_EX|data[77]                 ; Lost Fanouts       ; registers:ID_RR|output[35]                                                                                                       ;
-; registers:RR_EX|data[76]                 ; Lost Fanouts       ; registers:ID_RR|output[34]                                                                                                       ;
-; registers:RR_EX|data[75]                 ; Lost Fanouts       ; registers:ID_RR|output[33]                                                                                                       ;
-; registers:RR_EX|data[74]                 ; Lost Fanouts       ; registers:ID_RR|output[32]                                                                                                       ;
-; registers:RR_EX|data[73]                 ; Lost Fanouts       ; registers:ID_RR|output[31]                                                                                                       ;
-; registers:RR_EX|data[72]                 ; Lost Fanouts       ; registers:ID_RR|output[30]                                                                                                       ;
-; registers:RR_EX|data[71]                 ; Lost Fanouts       ; registers:ID_RR|output[29]                                                                                                       ;
-; registers:RR_EX|data[70]                 ; Lost Fanouts       ; registers:ID_RR|output[60]                                                                                                       ;
-; registers:RR_EX|data[69]                 ; Lost Fanouts       ; registers:ID_RR|output[59]                                                                                                       ;
-; registers:RR_EX|data[68]                 ; Lost Fanouts       ; registers:ID_RR|output[58]                                                                                                       ;
-; registers:RR_EX|data[67]                 ; Lost Fanouts       ; registers:ID_RR|output[57]                                                                                                       ;
-; registers:RR_EX|data[66]                 ; Lost Fanouts       ; registers:ID_RR|output[56]                                                                                                       ;
-; registers:RR_EX|data[65]                 ; Lost Fanouts       ; registers:ID_RR|output[55]                                                                                                       ;
-; registers:RR_EX|data[64]                 ; Lost Fanouts       ; registers:ID_RR|output[54]                                                                                                       ;
-; registers:RR_EX|data[63]                 ; Lost Fanouts       ; registers:ID_RR|output[53]                                                                                                       ;
-; registers:RR_EX|data[62]                 ; Lost Fanouts       ; registers:ID_RR|output[52]                                                                                                       ;
-; registers:RR_EX|data[61]                 ; Lost Fanouts       ; registers:ID_RR|output[51]                                                                                                       ;
-; registers:RR_EX|data[60]                 ; Lost Fanouts       ; registers:ID_RR|output[50]                                                                                                       ;
-; registers:RR_EX|data[59]                 ; Lost Fanouts       ; registers:ID_RR|output[49]                                                                                                       ;
-; registers:RR_EX|data[58]                 ; Lost Fanouts       ; registers:ID_RR|output[48]                                                                                                       ;
-; registers:RR_EX|data[57]                 ; Lost Fanouts       ; registers:ID_RR|output[47]                                                                                                       ;
-; registers:RR_EX|data[56]                 ; Lost Fanouts       ; registers:ID_RR|output[46]                                                                                                       ;
-; registers:RR_EX|data[55]                 ; Lost Fanouts       ; registers:ID_RR|output[45]                                                                                                       ;
-; registers:MEM_WB|data[69]                ; Lost Fanouts       ; registers:EX_MEM|output[57]                                                                                                      ;
-; registers:MEM_WB|data[68]                ; Lost Fanouts       ; registers:EX_MEM|output[56]                                                                                                      ;
-; registers:MEM_WB|data[67]                ; Lost Fanouts       ; registers:EX_MEM|output[55]                                                                                                      ;
-; registers:MEM_WB|data[66]                ; Lost Fanouts       ; registers:EX_MEM|output[54]                                                                                                      ;
-; registers:MEM_WB|data[65]                ; Lost Fanouts       ; registers:EX_MEM|output[53]                                                                                                      ;
-; registers:MEM_WB|data[64]                ; Lost Fanouts       ; registers:EX_MEM|output[52]                                                                                                      ;
-; registers:MEM_WB|data[63]                ; Lost Fanouts       ; registers:EX_MEM|output[51]                                                                                                      ;
-; registers:MEM_WB|data[62]                ; Lost Fanouts       ; registers:EX_MEM|output[50]                                                                                                      ;
-; registers:MEM_WB|data[61]                ; Lost Fanouts       ; registers:EX_MEM|output[49]                                                                                                      ;
-; registers:MEM_WB|data[60]                ; Lost Fanouts       ; registers:EX_MEM|output[48]                                                                                                      ;
-; registers:MEM_WB|data[59]                ; Lost Fanouts       ; registers:EX_MEM|output[47]                                                                                                      ;
-; registers:MEM_WB|data[58]                ; Lost Fanouts       ; registers:EX_MEM|output[46]                                                                                                      ;
-; registers:MEM_WB|data[57]                ; Lost Fanouts       ; registers:EX_MEM|output[45]                                                                                                      ;
-; registers:MEM_WB|data[40]                ; Lost Fanouts       ; registers:EX_MEM|output[44]                                                                                                      ;
-; registers:MEM_WB|data[39]                ; Lost Fanouts       ; registers:EX_MEM|output[43]                                                                                                      ;
-; registers:MEM_WB|data[38]                ; Lost Fanouts       ; registers:EX_MEM|output[42]                                                                                                      ;
-; registers:MEM_WB|data[37]                ; Lost Fanouts       ; registers:EX_MEM|output[41]                                                                                                      ;
-; registers:RR_EX|data[22]                 ; Lost Fanouts       ; registers:ID_RR|output[22]                                                                                                       ;
-; registers:RR_EX|data[21]                 ; Lost Fanouts       ; registers:ID_RR|output[21]                                                                                                       ;
-; registers:RR_EX|data[20]                 ; Lost Fanouts       ; registers:ID_RR|output[20]                                                                                                       ;
-; registers:RR_EX|data[19]                 ; Lost Fanouts       ; registers:ID_RR|output[19]                                                                                                       ;
-; registers:RR_EX|data[18]                 ; Lost Fanouts       ; registers:ID_RR|output[18]                                                                                                       ;
-; registers:RR_EX|data[17]                 ; Lost Fanouts       ; registers:ID_RR|output[17]                                                                                                       ;
-; registers:RR_EX|data[16]                 ; Lost Fanouts       ; registers:ID_RR|output[16]                                                                                                       ;
-; registers:RR_EX|data[15]                 ; Lost Fanouts       ; registers:ID_RR|output[13]                                                                                                       ;
-; registers:RR_EX|data[14]                 ; Lost Fanouts       ; registers:ID_RR|output[12]                                                                                                       ;
-; registers:RR_EX|data[13]                 ; Lost Fanouts       ; registers:ID_RR|output[11]                                                                                                       ;
-; registers:RR_EX|data[12]                 ; Lost Fanouts       ; registers:ID_RR|output[10]                                                                                                       ;
-; registers:RR_EX|data[11]                 ; Lost Fanouts       ; registers:ID_RR|output[15]                                                                                                       ;
-; registers:RR_EX|data[10]                 ; Lost Fanouts       ; registers:ID_RR|output[14]                                                                                                       ;
-; registers:RR_EX|data[9]                  ; Lost Fanouts       ; registers:ID_RR|output[0]                                                                                                        ;
-; registers:RR_EX|data[8]                  ; Lost Fanouts       ; registers:ID_RR|output[5]                                                                                                        ;
-; registers:RR_EX|data[7]                  ; Lost Fanouts       ; registers:ID_RR|output[1]                                                                                                        ;
-; registers:RR_EX|data[6]                  ; Lost Fanouts       ; registers:ID_RR|output[3]                                                                                                        ;
-; registers:RR_EX|data[5]                  ; Lost Fanouts       ; registers:ID_RR|output[2]                                                                                                        ;
-; registers:RR_EX|data[4]                  ; Lost Fanouts       ; registers:ID_RR|output[4]                                                                                                        ;
-; registers:RR_EX|data[3]                  ; Lost Fanouts       ; registers:ID_RR|output[6]                                                                                                        ;
-; registers:RR_EX|data[2]                  ; Lost Fanouts       ; registers:ID_RR|output[7]                                                                                                        ;
-; registers:RR_EX|data[1]                  ; Lost Fanouts       ; registers:ID_RR|output[8]                                                                                                        ;
-; registers:RR_EX|data[0]                  ; Lost Fanouts       ; registers:ID_RR|output[9]                                                                                                        ;
-; registers:MEM_WB|data[36]                ; Lost Fanouts       ; registers:EX_MEM|output[40]                                                                                                      ;
-; registers:ID_RR|data[52]                 ; Lost Fanouts       ; registers:IF_ID|output[23]                                                                                                       ;
-; registers:ID_RR|data[51]                 ; Lost Fanouts       ; registers:IF_ID|output[22]                                                                                                       ;
-; registers:ID_RR|data[49]                 ; Lost Fanouts       ; registers:IF_ID|output[20]                                                                                                       ;
-; registers:ID_RR|data[48]                 ; Lost Fanouts       ; registers:IF_ID|output[19]                                                                                                       ;
-; registers:ID_RR|data[47]                 ; Lost Fanouts       ; registers:IF_ID|output[18]                                                                                                       ;
-; registers:ID_RR|data[46]                 ; Lost Fanouts       ; registers:IF_ID|output[17]                                                                                                       ;
-; registers:ID_RR|data[45]                 ; Lost Fanouts       ; registers:IF_ID|output[16]                                                                                                       ;
-; registers:ID_RR|data[44]                 ; Lost Fanouts       ; registers:IF_ID|output[15]                                                                                                       ;
-; registers:ID_RR|data[43]                 ; Lost Fanouts       ; registers:IF_ID|output[14]                                                                                                       ;
-; registers:ID_RR|data[42]                 ; Lost Fanouts       ; registers:IF_ID|output[13]                                                                                                       ;
-; registers:ID_RR|data[41]                 ; Lost Fanouts       ; registers:IF_ID|output[12]                                                                                                       ;
-; registers:ID_RR|data[40]                 ; Lost Fanouts       ; registers:IF_ID|output[11]                                                                                                       ;
-; registers:ID_RR|data[39]                 ; Lost Fanouts       ; registers:IF_ID|output[10]                                                                                                       ;
-; registers:ID_RR|data[38]                 ; Lost Fanouts       ; registers:IF_ID|output[9]                                                                                                        ;
-; registers:ID_RR|data[37]                 ; Lost Fanouts       ; registers:IF_ID|output[8]                                                                                                        ;
-; registers:ID_RR|data[36]                 ; Lost Fanouts       ; registers:IF_ID|output[7]                                                                                                        ;
-; registers:ID_RR|data[35]                 ; Lost Fanouts       ; registers:IF_ID|output[6]                                                                                                        ;
-; registers:ID_RR|data[34]                 ; Lost Fanouts       ; registers:IF_ID|output[5]                                                                                                        ;
-; registers:ID_RR|data[33]                 ; Lost Fanouts       ; registers:IF_ID|output[4]                                                                                                        ;
-; registers:ID_RR|data[32]                 ; Lost Fanouts       ; registers:IF_ID|output[3]                                                                                                        ;
-; registers:ID_RR|data[31]                 ; Lost Fanouts       ; registers:IF_ID|output[2]                                                                                                        ;
-; registers:ID_RR|data[30]                 ; Lost Fanouts       ; registers:IF_ID|output[1]                                                                                                        ;
-; registers:ID_RR|data[29]                 ; Lost Fanouts       ; registers:IF_ID|output[0]                                                                                                        ;
-; registers:ID_RR|data[28]                 ; Lost Fanouts       ; registers:IF_ID|output[27]                                                                                                       ;
-; registers:ID_RR|data[27]                 ; Lost Fanouts       ; registers:IF_ID|output[26]                                                                                                       ;
-; registers:ID_RR|data[26]                 ; Lost Fanouts       ; registers:IF_ID|output[25]                                                                                                       ;
-; registers:MEM_WB|data[35]                ; Lost Fanouts       ; registers:EX_MEM|output[39]                                                                                                      ;
-; registers:MEM_WB|data[34]                ; Lost Fanouts       ; registers:EX_MEM|output[38]                                                                                                      ;
-; registers:MEM_WB|data[33]                ; Lost Fanouts       ; registers:EX_MEM|output[37]                                                                                                      ;
-; inst_fetch:IFetch|register16:PC|data[15] ; Lost Fanouts       ; registers:MEM_WB|output[88]                                                                                                      ;
-; inst_fetch:IFetch|register16:PC|data[14] ; Lost Fanouts       ; registers:MEM_WB|output[87]                                                                                                      ;
-; inst_fetch:IFetch|register16:PC|data[13] ; Lost Fanouts       ; registers:MEM_WB|output[86]                                                                                                      ;
-; inst_fetch:IFetch|register16:PC|data[12] ; Lost Fanouts       ; registers:MEM_WB|output[85]                                                                                                      ;
-; inst_fetch:IFetch|register16:PC|data[11] ; Lost Fanouts       ; registers:MEM_WB|output[84]                                                                                                      ;
-; inst_fetch:IFetch|register16:PC|data[10] ; Lost Fanouts       ; registers:MEM_WB|output[83]                                                                                                      ;
-; inst_fetch:IFetch|register16:PC|data[9]  ; Lost Fanouts       ; registers:MEM_WB|output[82]                                                                                                      ;
-; inst_fetch:IFetch|register16:PC|data[8]  ; Lost Fanouts       ; registers:MEM_WB|output[81]                                                                                                      ;
-; inst_fetch:IFetch|register16:PC|data[7]  ; Lost Fanouts       ; registers:MEM_WB|output[80]                                                                                                      ;
-; inst_fetch:IFetch|register16:PC|data[6]  ; Lost Fanouts       ; registers:MEM_WB|output[79]                                                                                                      ;
-; inst_fetch:IFetch|register16:PC|data[5]  ; Lost Fanouts       ; registers:MEM_WB|output[78]                                                                                                      ;
-; inst_fetch:IFetch|register16:PC|data[4]  ; Lost Fanouts       ; registers:MEM_WB|output[77]                                                                                                      ;
-; inst_fetch:IFetch|register16:PC|data[3]  ; Lost Fanouts       ; registers:MEM_WB|output[76]                                                                                                      ;
-; inst_fetch:IFetch|register16:PC|data[2]  ; Lost Fanouts       ; registers:MEM_WB|output[75]                                                                                                      ;
-; inst_fetch:IFetch|register16:PC|data[1]  ; Lost Fanouts       ; registers:MEM_WB|output[74]                                                                                                      ;
-; inst_fetch:IFetch|register16:PC|data[0]  ; Lost Fanouts       ; registers:MEM_WB|output[73]                                                                                                      ;
-+------------------------------------------+--------------------+----------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                                                          ;
++----------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------+
+; Register name                                                                                                  ; Reason for Removal ; Registers Removed due to This Register                                         ;
++----------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------+
+; registers:MEM_WB|data[41]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[13], registers:RR_EX|data[71], registers:ID_RR|data[29], ;
+;                                                                                                                ;                    ; registers:IF_ID|data[0], inst_fetch:IFetch|register16:PC|dataOut[13],          ;
+;                                                                                                                ;                    ; inst_fetch:IFetch|register16:PC|dataOut[14],                                   ;
+;                                                                                                                ;                    ; inst_fetch:IFetch|register16:PC|dataOut[15]                                    ;
+; registers:IF_ID|data[31]                                                                                       ; Lost Fanouts       ; inst_fetch:IFetch|register16:PC|dataOut[0],                                    ;
+;                                                                                                                ;                    ; inst_fetch:IFetch|register16:PC|dataOut[1],                                    ;
+;                                                                                                                ;                    ; inst_fetch:IFetch|register16:PC|dataOut[2],                                    ;
+;                                                                                                                ;                    ; inst_fetch:IFetch|register16:PC|dataOut[3],                                    ;
+;                                                                                                                ;                    ; inst_fetch:IFetch|register16:PC|dataOut[4]                                     ;
+; registers:MEM_WB|data[45]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[17], registers:RR_EX|data[75], registers:ID_RR|data[33], ;
+;                                                                                                                ;                    ; registers:IF_ID|data[4]                                                        ;
+; registers:MEM_WB|data[42]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[14], registers:RR_EX|data[72], registers:ID_RR|data[30], ;
+;                                                                                                                ;                    ; registers:IF_ID|data[1]                                                        ;
+; registers:MEM_WB|data[55]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[27], registers:RR_EX|data[85], registers:ID_RR|data[43], ;
+;                                                                                                                ;                    ; registers:IF_ID|data[14]                                                       ;
+; registers:MEM_WB|data[30]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[34], registers:RR_EX|data[60], registers:ID_RR|data[50], ;
+;                                                                                                                ;                    ; registers:IF_ID|data[21]                                                       ;
+; registers:MEM_WB|data[54]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[26], registers:RR_EX|data[84], registers:ID_RR|data[42], ;
+;                                                                                                                ;                    ; registers:IF_ID|data[13]                                                       ;
+; registers:MEM_WB|data[29]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[33], registers:RR_EX|data[59], registers:ID_RR|data[49], ;
+;                                                                                                                ;                    ; registers:IF_ID|data[20]                                                       ;
+; registers:MEM_WB|data[28]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[32], registers:RR_EX|data[58], registers:ID_RR|data[48], ;
+;                                                                                                                ;                    ; registers:IF_ID|data[19]                                                       ;
+; registers:MEM_WB|data[27]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[31], registers:RR_EX|data[57], registers:ID_RR|data[47], ;
+;                                                                                                                ;                    ; registers:IF_ID|data[18]                                                       ;
+; registers:MEM_WB|data[53]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[25], registers:RR_EX|data[83], registers:ID_RR|data[41], ;
+;                                                                                                                ;                    ; registers:IF_ID|data[12]                                                       ;
+; registers:MEM_WB|data[26]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[30], registers:RR_EX|data[56], registers:ID_RR|data[46], ;
+;                                                                                                                ;                    ; registers:IF_ID|data[17]                                                       ;
+; registers:MEM_WB|data[56]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[28], registers:RR_EX|data[86], registers:ID_RR|data[44], ;
+;                                                                                                                ;                    ; registers:IF_ID|data[15]                                                       ;
+; registers:MEM_WB|data[52]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[24], registers:RR_EX|data[82], registers:ID_RR|data[40], ;
+;                                                                                                                ;                    ; registers:IF_ID|data[11]                                                       ;
+; registers:MEM_WB|data[51]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[23], registers:RR_EX|data[81], registers:ID_RR|data[39], ;
+;                                                                                                                ;                    ; registers:IF_ID|data[10]                                                       ;
+; registers:MEM_WB|data[50]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[22], registers:RR_EX|data[80], registers:ID_RR|data[38], ;
+;                                                                                                                ;                    ; registers:IF_ID|data[9]                                                        ;
+; registers:MEM_WB|data[49]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[21], registers:RR_EX|data[79], registers:ID_RR|data[37], ;
+;                                                                                                                ;                    ; registers:IF_ID|data[8]                                                        ;
+; registers:MEM_WB|data[48]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[20], registers:RR_EX|data[78], registers:ID_RR|data[36], ;
+;                                                                                                                ;                    ; registers:IF_ID|data[7]                                                        ;
+; registers:MEM_WB|data[47]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[19], registers:RR_EX|data[77], registers:ID_RR|data[35], ;
+;                                                                                                                ;                    ; registers:IF_ID|data[6]                                                        ;
+; registers:MEM_WB|data[46]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[18], registers:RR_EX|data[76], registers:ID_RR|data[34], ;
+;                                                                                                                ;                    ; registers:IF_ID|data[5]                                                        ;
+; registers:MEM_WB|data[25]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[29], registers:RR_EX|data[55], registers:ID_RR|data[45], ;
+;                                                                                                                ;                    ; registers:IF_ID|data[16]                                                       ;
+; registers:MEM_WB|data[44]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[16], registers:RR_EX|data[74], registers:ID_RR|data[32], ;
+;                                                                                                                ;                    ; registers:IF_ID|data[3]                                                        ;
+; registers:MEM_WB|data[43]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[15], registers:RR_EX|data[73], registers:ID_RR|data[31], ;
+;                                                                                                                ;                    ; registers:IF_ID|data[2]                                                        ;
+; registers:MEM_WB|data[39]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[43], registers:RR_EX|data[69], registers:ID_RR|data[59]  ;
+; registers:MEM_WB|data[37]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[41], registers:RR_EX|data[67], registers:ID_RR|data[57]  ;
+; registers:MEM_WB|data[36]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[40], registers:RR_EX|data[66], registers:ID_RR|data[56]  ;
+; registers:MEM_WB|data[35]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[39], registers:RR_EX|data[65], registers:ID_RR|data[55]  ;
+; registers:MEM_WB|data[34]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[38], registers:RR_EX|data[64], registers:ID_RR|data[54]  ;
+; registers:MEM_WB|data[33]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[37], registers:RR_EX|data[63], registers:ID_RR|data[53]  ;
+; registers:MEM_WB|data[32]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[36], registers:RR_EX|data[62], registers:ID_RR|data[52]  ;
+; registers:MEM_WB|data[31]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[35], registers:RR_EX|data[61], registers:ID_RR|data[51]  ;
+; registers:MEM_WB|data[38]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[42], registers:RR_EX|data[68], registers:ID_RR|data[58]  ;
+; registers:MEM_WB|data[8]                                                                                       ; Lost Fanouts       ; registers:EX_MEM|data[12], registers:RR_EX|data[22], registers:ID_RR|data[22]  ;
+; registers:MEM_WB|data[7]                                                                                       ; Lost Fanouts       ; registers:EX_MEM|data[11], registers:RR_EX|data[21], registers:ID_RR|data[21]  ;
+; registers:MEM_WB|data[6]                                                                                       ; Lost Fanouts       ; registers:EX_MEM|data[10], registers:RR_EX|data[20], registers:ID_RR|data[20]  ;
+; registers:MEM_WB|data[5]                                                                                       ; Lost Fanouts       ; registers:EX_MEM|data[9], registers:RR_EX|data[13], registers:ID_RR|data[11]   ;
+; registers:MEM_WB|data[4]                                                                                       ; Lost Fanouts       ; registers:EX_MEM|data[8], registers:RR_EX|data[12], registers:ID_RR|data[10]   ;
+; registers:MEM_WB|data[3]                                                                                       ; Lost Fanouts       ; registers:EX_MEM|data[2], registers:RR_EX|data[2], registers:ID_RR|data[7]     ;
+; registers:MEM_WB|data[1]                                                                                       ; Lost Fanouts       ; registers:EX_MEM|data[1], registers:RR_EX|data[4], registers:ID_RR|data[4]     ;
+; registers:MEM_WB|data[40]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[44], registers:RR_EX|data[70], registers:ID_RR|data[60]  ;
+; execute:executed|counter:counter2|lpm_counter:LPM_COUNTER_component|cntr_2si:auto_generated|counter_reg_bit[2] ; Lost Fanouts       ; registers:RR_EX|data[7], registers:ID_RR|data[1]                               ;
+; registers:EX_MEM|data[5]                                                                                       ; Lost Fanouts       ; registers:RR_EX|data[6], registers:ID_RR|data[3]                               ;
+; registers:EX_MEM|data[4]                                                                                       ; Lost Fanouts       ; registers:RR_EX|data[5], registers:ID_RR|data[2]                               ;
+; inst_fetch:IFetch|register16:PC|data[4]                                                                        ; Lost Fanouts       ; registers:MEM_WB|data[77]                                                      ;
+; inst_fetch:IFetch|register16:PC|data[3]                                                                        ; Lost Fanouts       ; registers:MEM_WB|data[76]                                                      ;
+; inst_fetch:IFetch|register16:PC|data[2]                                                                        ; Lost Fanouts       ; registers:MEM_WB|data[75]                                                      ;
+; inst_fetch:IFetch|register16:PC|data[1]                                                                        ; Lost Fanouts       ; registers:MEM_WB|data[74]                                                      ;
+; inst_fetch:IFetch|register16:PC|data[15]                                                                       ; Lost Fanouts       ; registers:MEM_WB|data[88]                                                      ;
+; execute:executed|alu:alu1|register_1bit:reg2|dataOut                                                           ; Lost Fanouts       ; CLOCK_DIVIDER:clk_divide|tick                                                  ;
+; registers:MEM_WB|data[0]                                                                                       ; Lost Fanouts       ; registers:EX_MEM|data[0]                                                       ;
+; inst_fetch:IFetch|register16:PC|data[0]                                                                        ; Lost Fanouts       ; registers:MEM_WB|data[73]                                                      ;
+; registers:MEM_WB|data[24]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[92]                                                      ;
+; registers:MEM_WB|data[23]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[91]                                                      ;
+; registers:MEM_WB|data[22]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[90]                                                      ;
+; registers:MEM_WB|data[21]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[89]                                                      ;
+; registers:MEM_WB|data[20]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[88]                                                      ;
+; registers:MEM_WB|data[19]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[87]                                                      ;
+; registers:MEM_WB|data[18]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[86]                                                      ;
+; registers:MEM_WB|data[17]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[85]                                                      ;
+; registers:MEM_WB|data[16]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[84]                                                      ;
+; registers:MEM_WB|data[15]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[83]                                                      ;
+; registers:MEM_WB|data[14]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[82]                                                      ;
+; registers:MEM_WB|data[13]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[81]                                                      ;
+; registers:MEM_WB|data[12]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[80]                                                      ;
+; registers:MEM_WB|data[11]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[79]                                                      ;
+; registers:MEM_WB|data[10]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[78]                                                      ;
+; registers:MEM_WB|data[9]                                                                                       ; Lost Fanouts       ; registers:EX_MEM|data[77]                                                      ;
+; inst_fetch:IFetch|register16:PC|data[14]                                                                       ; Lost Fanouts       ; registers:MEM_WB|data[87]                                                      ;
+; inst_fetch:IFetch|register16:PC|data[13]                                                                       ; Lost Fanouts       ; registers:MEM_WB|data[86]                                                      ;
+; inst_fetch:IFetch|register16:PC|data[12]                                                                       ; Lost Fanouts       ; registers:MEM_WB|data[85]                                                      ;
+; inst_fetch:IFetch|register16:PC|data[11]                                                                       ; Lost Fanouts       ; registers:MEM_WB|data[84]                                                      ;
+; inst_fetch:IFetch|register16:PC|data[10]                                                                       ; Lost Fanouts       ; registers:MEM_WB|data[83]                                                      ;
+; inst_fetch:IFetch|register16:PC|data[9]                                                                        ; Lost Fanouts       ; registers:MEM_WB|data[82]                                                      ;
+; registers:MEM_WB|data[2]                                                                                       ; Lost Fanouts       ; registers:EX_MEM|data[3]                                                       ;
+; inst_fetch:IFetch|register16:PC|data[8]                                                                        ; Lost Fanouts       ; registers:MEM_WB|data[81]                                                      ;
+; registers:EX_MEM|data[76]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[38]                                                       ;
+; registers:EX_MEM|data[75]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[37]                                                       ;
+; registers:EX_MEM|data[74]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[36]                                                       ;
+; registers:EX_MEM|data[73]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[35]                                                       ;
+; registers:EX_MEM|data[72]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[34]                                                       ;
+; registers:EX_MEM|data[71]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[33]                                                       ;
+; registers:EX_MEM|data[70]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[32]                                                       ;
+; registers:EX_MEM|data[69]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[31]                                                       ;
+; registers:EX_MEM|data[68]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[30]                                                       ;
+; registers:EX_MEM|data[67]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[29]                                                       ;
+; registers:EX_MEM|data[66]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[28]                                                       ;
+; registers:EX_MEM|data[65]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[27]                                                       ;
+; registers:EX_MEM|data[64]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[26]                                                       ;
+; registers:EX_MEM|data[63]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[25]                                                       ;
+; registers:EX_MEM|data[62]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[24]                                                       ;
+; registers:EX_MEM|data[61]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[23]                                                       ;
+; registers:EX_MEM|data[60]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[54]                                                       ;
+; registers:EX_MEM|data[59]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[53]                                                       ;
+; registers:EX_MEM|data[58]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[52]                                                       ;
+; registers:EX_MEM|data[57]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[51]                                                       ;
+; inst_fetch:IFetch|register16:PC|data[7]                                                                        ; Lost Fanouts       ; registers:MEM_WB|data[80]                                                      ;
+; registers:EX_MEM|data[55]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[49]                                                       ;
+; registers:EX_MEM|data[54]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[48]                                                       ;
+; registers:EX_MEM|data[53]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[47]                                                       ;
+; registers:EX_MEM|data[52]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[46]                                                       ;
+; registers:EX_MEM|data[51]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[45]                                                       ;
+; registers:EX_MEM|data[50]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[44]                                                       ;
+; registers:EX_MEM|data[49]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[43]                                                       ;
+; registers:EX_MEM|data[48]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[42]                                                       ;
+; registers:EX_MEM|data[47]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[41]                                                       ;
+; registers:EX_MEM|data[46]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[40]                                                       ;
+; registers:EX_MEM|data[45]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[39]                                                       ;
+; inst_fetch:IFetch|register16:PC|data[6]                                                                        ; Lost Fanouts       ; registers:MEM_WB|data[79]                                                      ;
+; inst_fetch:IFetch|register16:PC|data[5]                                                                        ; Lost Fanouts       ; registers:MEM_WB|data[78]                                                      ;
+; registers:RR_EX|data[0]                                                                                        ; Lost Fanouts       ; registers:ID_RR|data[9]                                                        ;
+; registers:EX_MEM|data[56]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[50]                                                       ;
+; registers:RR_EX|data[18]                                                                                       ; Lost Fanouts       ; registers:ID_RR|data[18]                                                       ;
+; registers:RR_EX|data[17]                                                                                       ; Lost Fanouts       ; registers:ID_RR|data[17]                                                       ;
+; registers:RR_EX|data[16]                                                                                       ; Lost Fanouts       ; registers:ID_RR|data[16]                                                       ;
+; registers:RR_EX|data[15]                                                                                       ; Lost Fanouts       ; registers:ID_RR|data[13]                                                       ;
+; registers:RR_EX|data[14]                                                                                       ; Lost Fanouts       ; registers:ID_RR|data[12]                                                       ;
+; registers:RR_EX|data[11]                                                                                       ; Lost Fanouts       ; registers:ID_RR|data[15]                                                       ;
+; registers:RR_EX|data[10]                                                                                       ; Lost Fanouts       ; registers:ID_RR|data[14]                                                       ;
+; registers:RR_EX|data[9]                                                                                        ; Lost Fanouts       ; registers:ID_RR|data[0]                                                        ;
+; registers:RR_EX|data[8]                                                                                        ; Lost Fanouts       ; registers:ID_RR|data[5]                                                        ;
+; registers:RR_EX|data[3]                                                                                        ; Lost Fanouts       ; registers:ID_RR|data[6]                                                        ;
+; registers:RR_EX|data[1]                                                                                        ; Lost Fanouts       ; registers:ID_RR|data[8]                                                        ;
+; registers:ID_RR|data[28]                                                                                       ; Lost Fanouts       ; registers:IF_ID|data[27]                                                       ;
+; registers:ID_RR|data[27]                                                                                       ; Lost Fanouts       ; registers:IF_ID|data[26]                                                       ;
+; registers:ID_RR|data[26]                                                                                       ; Lost Fanouts       ; registers:IF_ID|data[25]                                                       ;
+; registers:RR_EX|data[19]                                                                                       ; Lost Fanouts       ; registers:ID_RR|data[19]                                                       ;
++----------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -1209,13 +973,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Decode:Decoded|multiple:count|counter:counter_init"                                                                                         ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                      ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; aclr ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Decode:Decoded|multiple:count|counter:counter_init" ;
++------+-------+----------+------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                              ;
++------+-------+----------+------------------------------------------------------+
+; aclr ; Input ; Info     ; Stuck at GND                                         ;
++------+-------+----------+------------------------------------------------------+
 
 
 +----------------------------------------------+
@@ -1323,7 +1087,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Fri Nov 25 11:45:27 2016
+    Info: Processing started: Fri Nov 25 12:18:22 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off microprocessor -c microprocessor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1620,8 +1384,7 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component|altsyncram_3js3:auto_generated|q_a[13]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_3js3.tdf Line: 349
         Warning (14320): Synthesized away node "inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component|altsyncram_3js3:auto_generated|q_a[14]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_3js3.tdf Line: 373
         Warning (14320): Synthesized away node "inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component|altsyncram_3js3:auto_generated|q_a[15]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_3js3.tdf Line: 397
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (17049): 1055 registers lost all their fanouts during netlist optimizations.
+Info (17049): 677 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
@@ -1630,10 +1393,10 @@ Warning (21074): Design contains 2 input pin(s) that do not drive logic
 Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 41 warnings
-    Info: Peak virtual memory: 708 megabytes
-    Info: Processing ended: Fri Nov 25 11:45:42 2016
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:32
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 40 warnings
+    Info: Peak virtual memory: 705 megabytes
+    Info: Processing ended: Fri Nov 25 12:18:35 2016
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:30
 
 
