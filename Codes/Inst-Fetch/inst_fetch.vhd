@@ -1,5 +1,3 @@
--- if_id_reg : 15 to 0 : pc +1
---				31 to 16 :  inst_mem output
 
 library ieee;
 use ieee.std_logic_1164.all;
