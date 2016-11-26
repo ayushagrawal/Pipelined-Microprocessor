@@ -9,6 +9,7 @@ package if_components is
 	component inst_fetch is
 	port(	
 			clock	:in std_logic;
+			clock_mem : in std_logic;
 		 	reset	:in std_logic;
 			pcIn : in std_logic_vector(15 downto 0);
 			pc_reg : in std_logic;
@@ -44,5 +45,12 @@ package if_components is
 			q		: OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
 		);
 	END COMPONENT;
+	
+	COMPONENT mux2 is 
+		generic (n : integer);
+		port( in0,in1 : in std_logic_vector(n downto 0); 
+				sel : in std_logic; 
+				output : out std_logic_vector(n downto 0));
+	end COMPONENT;
 
 end package;

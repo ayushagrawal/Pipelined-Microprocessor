@@ -11,7 +11,7 @@ entity register_1bit is
 
 architecture reg of register_1bit is
 begin
-	process(clock,enable)
+	process(clock,enable,reset)
 		variable data: std_logic;
 	begin
 		if(clock'event and clock = '1') then
@@ -20,7 +20,10 @@ begin
 			elsif(enable = '1') then
 				data := dataIn;
 			end if;
-			dataOut <= data;
 		end if;
+		if(reset = '1') then
+			data := '0';
+		end if;
+		dataOut <= data;
 	end process;
 end;

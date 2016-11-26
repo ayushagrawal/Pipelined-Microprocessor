@@ -9,7 +9,8 @@ entity Decode is
 			clock			 : in std_logic;
 			pcPlusOneIn  : in std_logic_vector(15 downto 0);
 			pcPlusOneOut : out std_logic_vector(15 downto 0);
-			pcMux_crtl	 : out std_logic_vector(1 downto 0);
+			pcMux_crtl	 : out std_logic;
+			pcRegMux_crtl: out std_logic;
 			A_sel			 : out std_logic_vector(2 downto 0);
 			B_sel			 : out std_logic_vector(2 downto 0);
 			rf_dataIn_mux: out std_logic_vector(1 downto 0);
@@ -49,9 +50,10 @@ process(instruction,pcPlusOneIn,counter_out)
 	variable Nrf_wren			: std_logic;
 	variable Nrf_dataIn_mux : std_logic_vector(1 downto 0);
 	variable Nmem_mux			: std_logic;
-	variable NpcMux_crtl		: std_logic_vector(1 downto 0);
+	variable NpcMux_crtl		: std_logic;
 	variable NB_sel			: std_logic_vector(2 downto 0);
 	variable Nr7_enable		: std_logic;
+	variable NpcRegMux_crtl	: std_logic;
 begin
 	Nalu_crtl := "00";
 	NzeroEnable := '0';
@@ -65,7 +67,7 @@ begin
 	Nrf_wren			:= '0';
 	Nrf_dataIn_mux := "00";
 	Nmem_mux			:= '0';
-	NpcMux_crtl		:= "00";
+	NpcMux_crtl		:= '0';
 	NB_sel			:= "000";
 	Nr7_enable		:= '0';
 	if(instruction(15 downto 12) = "0000") then						--	ADD
@@ -81,7 +83,8 @@ begin
 		Nrf_dataIn_sel	:= instruction(5 downto 3);	-- From C
 		Nrf_dataIn_mux := "10";						-- ALU_OUT
 		Nmem_mux			:= '0';						-- Don't Care
-		NpcMux_crtl    := "10";
+		NpcMux_crtl    := '1';						-- Don't Care
+		NpcRegMux_crtl := '0';
 		NB_sel := instruction(8 downto 6);
 		Nr7_enable := not(instruction(5) and instruction(4) and instruction(3));
 		
@@ -98,7 +101,8 @@ begin
 		Nrf_dataIn_sel	:= instruction(8 downto 6);	-- From B
 		Nrf_dataIn_mux := "10";						-- ALU_OUT
 		Nmem_mux			:= '0';						-- Don't Care
-		NpcMux_crtl    := "10";
+		NpcMux_crtl    := '1';						-- Don't Care
+		NpcRegMux_crtl := '0';
 		NB_sel := instruction(8 downto 6);
 		Nr7_enable := not(instruction(8) and instruction(7) and instruction(6));
 		
@@ -115,7 +119,8 @@ begin
 		Nrf_dataIn_sel	:= instruction(5 downto 3);	-- From C
 		Nrf_dataIn_mux := "10";						-- ALU_OUT
 		Nmem_mux			:= '0';						-- Don't Care
-		NpcMux_crtl    := "10";
+		NpcMux_crtl    := '1';						-- Don't Care
+		NpcRegMux_crtl := '0';
 		NB_sel := instruction(8 downto 6);
 		Nr7_enable := not(instruction(5) and instruction(4) and instruction(3));
 		
@@ -132,7 +137,8 @@ begin
 		Nrf_dataIn_sel	:= instruction(11 downto 9);	-- From A
 		Nrf_dataIn_mux := "11";						-- Immediate Out
 		Nmem_mux			:= '0';						-- Don't Care
-		NpcMux_crtl    := "10";
+		NpcMux_crtl    := '1';						-- Don't Care
+		NpcRegMux_crtl := '0';
 		NB_sel := instruction(8 downto 6);
 		Nr7_enable := not(instruction(11) and instruction(10) and instruction(9));
 		
@@ -149,7 +155,8 @@ begin
 		Nrf_dataIn_sel	:= instruction(11 downto 9);	-- From A
 		Nrf_dataIn_mux := "01";						-- Immediate Out
 		Nmem_mux			:= '0';						-- Don't Care
-		NpcMux_crtl    := "10";
+		NpcMux_crtl    := '1';						-- Don't Care
+		NpcRegMux_crtl := '0';
 		NB_sel := instruction(8 downto 6);
 		Nr7_enable := not(instruction(11) and instruction(10) and instruction(9));
 		
@@ -166,7 +173,8 @@ begin
 		Nrf_dataIn_sel	:= instruction(11 downto 9);	-- Don't care
 		Nrf_dataIn_mux := "01";						-- Don't care
 		Nmem_mux			:= '0';						-- Register A
-		NpcMux_crtl    := "10";
+		NpcMux_crtl    := '1';						-- Don't Care
+		NpcRegMux_crtl := '0';
 		NB_sel := instruction(8 downto 6);
 		Nr7_enable := '1';
 		
@@ -183,7 +191,8 @@ begin
 		Nrf_dataIn_sel	:= instruction(11 downto 9);	-- Don't Care
 		Nrf_dataIn_mux := "01";						-- Don't Care
 		Nmem_mux			:= '0';						-- Don't Care
-		NpcMux_crtl    := "10";						-- Don't Care
+		NpcMux_crtl    := '1';						-- Don't Care
+		NpcRegMux_crtl := '0';
 		NB_sel := instruction(8 downto 6);
 		Nr7_enable := '1';
 		
@@ -200,7 +209,8 @@ begin
 		Nrf_dataIn_sel	:= instruction(11 downto 9);	-- Register A
 		Nrf_dataIn_mux := "00";						-- PC + 1
 		Nmem_mux			:= '0';						-- Don't Care
-		NpcMux_crtl    := "01";
+		NpcMux_crtl    := '1';
+		NpcRegMux_crtl := '1';
 		NB_sel := instruction(8 downto 6);
 		Nr7_enable := not(instruction(11) and instruction(10) and instruction(9));
 		
@@ -217,7 +227,8 @@ begin
 		Nrf_dataIn_sel	:= instruction(11 downto 9);	-- Register A
 		Nrf_dataIn_mux := "00";						-- PC + 1
 		Nmem_mux			:= '0';						-- Don't Care
-		NpcMux_crtl    := "00";						-- Register B
+		NpcMux_crtl    := '0';						-- Register B
+		NpcRegMux_crtl := '1';
 		NB_sel := instruction(8 downto 6);
 		Nr7_enable := not(instruction(11) and instruction(10) and instruction(9));
 		
@@ -234,7 +245,8 @@ begin
 		Nrf_dataIn_sel	:= counter_out;			-- Counter out
 		Nrf_dataIn_mux := "01";						-- M[Register A]
 		Nmem_mux			:= '0';						-- Don't Care
-		NpcMux_crtl    := "01";						-- PC + 1
+		NpcMux_crtl    := '1';						-- Don't Care
+		NpcRegMux_crtl := '0';
 		NB_sel := instruction(8 downto 6);
 		Nr7_enable := not(counter_out(2) and counter_out(1) and counter_out(0));
 		
@@ -251,7 +263,8 @@ begin
 		Nrf_dataIn_sel	:= instruction(11 downto 9);	-- Don't Care
 		Nrf_dataIn_mux := "01";						-- Don't Care
 		Nmem_mux			:= '1';						-- Register B
-		NpcMux_crtl    := "01";						-- PC + 1
+		NpcMux_crtl    := '1';						-- Don't Care
+		NpcRegMux_crtl := '0';
 		NB_sel			:= counter_out;
 		Nr7_enable 		:= '1';
 		
@@ -271,6 +284,7 @@ begin
 	pcMux_crtl		 	<= NpcMux_crtl;
 	B_sel			 		<= NB_sel;
 	r7_enable			<= Nr7_enable;
+	pcRegMux_crtl 	   <= NpcRegMux_crtl;
 	
 	A_sel <= instruction(11 downto 9);
 	pcPlusOneOut <= pcPlusOneIn;

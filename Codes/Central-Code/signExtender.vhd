@@ -21,8 +21,8 @@ begin
 		output(5 downto 0) <= input(5 downto 0);
 		output(15 downto 6) <= (others => input(5));
 	elsif(opcode = "0011") then
-		output(8 downto 0)  <= input(8 downto 0);
-		output(15 downto 9) <= "0000000";
+		output(15 downto 7)  <= input(8 downto 0);
+		output(6 downto 0) <= "0000000";
 	else
 		output(8 downto 0)  <= input(8 downto 0);
 		output(15 downto 9) <= (others => input(8));

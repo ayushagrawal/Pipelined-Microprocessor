@@ -14,7 +14,7 @@ entity register16 is
 
 architecture reg of register16 is
 begin
-	process(clock,enable)
+	process(clock,enable,reset)
 		variable data: std_logic_vector(15 downto 0);
 	begin
 		if(clock'event and clock = '1') then
@@ -23,7 +23,10 @@ begin
 			elsif(enable = '1') then
 				data := dataIn;
 			end if;
-			dataOut <= data;
 		end if;
+		if(reset = '1') then
+			data := (others => '0');
+		end if;
+		dataOut <= data;
 	end process;
 end;

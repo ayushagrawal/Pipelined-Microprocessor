@@ -18,6 +18,7 @@ use work.mem_components.all;
 entity mem_access is
 	port	(	
 				clock	:in STD_LOGIC;
+				clock_mem : in std_logic;
 		 		reset	:in STD_LOGIC;
 				pcAlu_result : in std_logic_vector(15 downto 0);	
 				pcPlusOne : in std_logic_vector(15 downto 0);
@@ -25,7 +26,7 @@ entity mem_access is
 				ALUresult : in std_logic_vector(15 downto 0);	
 				regB : in std_logic_vector(15 downto 0);
 				signExtend : in std_logic_vector(15 downto 0);	
-				pcMux_ctrl : in std_logic_vector(1 downto 0);
+				pcMux_ctrl : in std_logic;
 				mem_mux_ctrl : in std_logic;
 				memWrite_en : in std_logic;
 				rf_dataIn_mux_ctrl : in std_logic_vector(1 downto 0);
@@ -34,6 +35,7 @@ entity mem_access is
 				rf_wren_mux_ctrl : in std_logic;
 				rf_wren : in std_logic;
 				r7_enable : in std_logic;
+				pcRegMux_crtl_in : in std_logic;
 	
 				pc_mux_out : out std_logic_vector(15 downto 0);	
 				pcPlusOne_out : out std_logic_vector(15 downto 0);		
@@ -45,7 +47,8 @@ entity mem_access is
 				counterMuxOut : out std_logic;
 				rf_wren_mux_ctrl_out : out std_logic;
 				rf_wren_out : out std_logic;
-				r7_enable_out : out std_logic
+				r7_enable_out : out std_logic;
+				pcRegMux_crtl : out std_logic
 		);
 end entity;
 
@@ -57,9 +60,10 @@ signal mem_out : std_logic_vector(15 downto 0);
 
 begin 
 
-pc_mux : mux3 generic map (n => 15) port map (	in0 => regB,
+pcRegMux_crtl <= pcRegMux_crtl_in;
+
+pc_mux : mux2 generic map (n => 15) port map (	in0 => regB,
 												in1 => pcAlu_result,
-												in2 => pcPlusOne,
 												sel => pcMux_ctrl,
 												output => pc_out);
 						
@@ -75,7 +79,7 @@ data_mem : data_memory port map(	address => ALUresult,
 								 data =>  mem_mux_out, 
 								 wren => memWrite_en, 
 								 q => mem_out,
-								 clock => clock);
+								 clock => clock_mem);
 
 mem_data_out <= mem_out;
 ALUresult_out <= ALUresult;

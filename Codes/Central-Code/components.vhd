@@ -16,7 +16,7 @@ package components is
 				clock			 : in std_logic;
 				pcPlusOneIn  : in std_logic_vector(15 downto 0);
 				pcPlusOneOut : out std_logic_vector(15 downto 0);
-				pcMux_crtl	 : out std_logic_vector(1 downto 0);
+				pcMux_crtl	 : out std_logic;
 				A_sel			 : out std_logic_vector(2 downto 0);
 				B_sel			 : out std_logic_vector(2 downto 0);
 				rf_dataIn_mux: out std_logic_vector(1 downto 0);
@@ -34,7 +34,8 @@ package components is
 				mem_mux		 : out std_logic;
 				rf_dataIn_sel: out std_logic_vector(2 downto 0);
 				alu_crtl     : out std_logic_vector(1 downto 0);
-				op2in			 : out std_logic_vector(1 downto 0));
+				op2in			 : out std_logic_vector(1 downto 0);
+				pcRegMux_crtl: out std_logic);
 	end component;
 
 	component writeBack is
@@ -46,6 +47,8 @@ package components is
 				rfDataInsel		: in std_logic_vector(2 downto 0);
 				rfDataInsel_out: out std_logic_vector(2 downto 0);
 				counterMuxOut	: in std_logic;
+				pcRegMux_crtl    : out std_logic;
+				pcRegMux_crtl_in : in std_logic;
 				rf_wren_mux_crtl : in std_logic;
 				rf_wren			: in std_logic;
 				r7_enable		: in std_logic;
@@ -66,7 +69,7 @@ package components is
 				dataIn			  		: in std_logic_vector(15 downto 0);
 				dataIn_sel_actual	  	: in std_logic_vector(2 downto 0);
 				pcPlusOnein 			: in std_logic_vector(15 downto 0);
-				pcMux_crtlin	 		: in std_logic_vector(1 downto 0);
+				pcMux_crtlin	 		: in std_logic;
 				A_selin			 		: in std_logic_vector(2 downto 0);
 				B_selin			 		: in std_logic_vector(2 downto 0);
 				rf_dataIn_muxin		: in std_logic_vector(1 downto 0);
@@ -85,8 +88,9 @@ package components is
 				rf_dataIn_selin		: in std_logic_vector(2 downto 0);
 				alu_crtlin     		: in std_logic_vector(1 downto 0);
 				op2inin			 		: in std_logic_vector(1 downto 0);
+				pcRegMux_crtl_in		: in std_logic;
 				pcPlusOneOut 			: out std_logic_vector(15 downto 0);
-				pcMux_crtlout	 		: out std_logic_vector(1 downto 0);
+				pcMux_crtlout	 		: out std_logic;
 				regA			 			: out std_logic_vector(15 downto 0);
 				regB			 			: out std_logic_vector(15 downto 0);
 				rf_dataIn_muxout		: out std_logic_vector(1 downto 0);
@@ -104,16 +108,19 @@ package components is
 				mem_muxout		 		: out std_logic;
 				rf_dataIn_selout		: out std_logic_vector(2 downto 0);
 				alu_crtlout     		: out std_logic_vector(1 downto 0);
-				op2inout			 		: out std_logic_vector(1 downto 0));
+				op2inout			 		: out std_logic_vector(1 downto 0);
+				pcRegMux_crtl        : out std_logic);
 				
 	end component;
 	
 	component inst_fetch is
 		port(	
 				clock	:in std_logic;
+				clock_mem : in std_logic;
 				reset	:in std_logic;
 				pcIn : in std_logic_vector(15 downto 0);
 				pc_reg : in std_logic;
+				pcRegMux_crtl : in std_logic;
 				if_id_reg : out std_logic_vector(31 downto 0)				
 			);
 	end component;
@@ -141,8 +148,9 @@ package components is
 					rf_wren_mux : in std_logic;
 					mem_mux : in std_logic;
 					rf_dataIn_sel : in std_logic_vector(2 downto 0);
-					pc_mux_ctrl : in std_logic_vector(1 downto 0);
+					pc_mux_ctrl : in std_logic;
 					rf_wren_out : in std_logic;
+					pcRegMux_crtl_in: in std_logic;
 										
 					pcPlusOneOut : out std_logic_vector(15 downto 0);
 					regA_out : out std_logic_vector(15 downto 0);
@@ -154,16 +162,18 @@ package components is
 					memWrite_en_out : out std_logic;
 					rf_wren_mux_out : out std_logic;
 					mem_mux_out : out std_logic;
-					pc_mux_ctrl_out : out std_logic_vector(1 downto 0);
+					pc_mux_ctrl_out : out std_logic;
 					rf_wren_out_out : out std_logic;
 					rf_dataIn_sel_out : out std_logic_vector(2 downto 0);
 					pcALUresult : out std_logic_vector(15 downto 0);
-					counter_mux_out : out std_logic);
+					counter_mux_out : out std_logic;
+					pcRegMux_crtl: out std_logic);
 	end component;
 	
 	component mem_access is
 		port	(	
 					clock	:in STD_LOGIC;
+					clock_mem : in std_logic;
 					reset	:in STD_LOGIC;
 					pcAlu_result : in std_logic_vector(15 downto 0);	
 					pcPlusOne : in std_logic_vector(15 downto 0);
@@ -171,7 +181,7 @@ package components is
 					ALUresult : in std_logic_vector(15 downto 0);	
 					regB : in std_logic_vector(15 downto 0);
 					signExtend : in std_logic_vector(15 downto 0);	
-					pcMux_ctrl : in std_logic_vector(1 downto 0);
+					pcMux_ctrl : in std_logic;
 					mem_mux_ctrl : in std_logic;
 					memWrite_en : in std_logic;
 					rf_dataIn_mux_ctrl : in std_logic_vector(1 downto 0);
@@ -180,6 +190,7 @@ package components is
 					rf_wren_mux_ctrl : in std_logic;
 					rf_wren : in std_logic;
 					r7_enable : in std_logic;
+					pcRegMux_crtl_in : in std_logic;
 		
 					pc_mux_out : out std_logic_vector(15 downto 0);	
 					pcPlusOne_out : out std_logic_vector(15 downto 0);		
@@ -191,7 +202,8 @@ package components is
 					counterMuxOut : out std_logic;
 					rf_wren_mux_ctrl_out : out std_logic;
 					rf_wren_out : out std_logic;
-					r7_enable_out : out std_logic
+					r7_enable_out : out std_logic;
+					pcRegMux_crtl : out std_logic
 			);
 	end component;
 	

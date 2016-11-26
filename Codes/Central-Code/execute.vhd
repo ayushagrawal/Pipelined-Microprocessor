@@ -46,8 +46,9 @@ entity execute is
 				rf_wren_mux : in std_logic;
 				mem_mux : in std_logic;
 				rf_dataIn_sel : in std_logic_vector(2 downto 0);
-				pc_mux_ctrl : in std_logic_vector(1 downto 0);
+				pc_mux_ctrl : in std_logic;
 				rf_wren_out : in std_logic;
+				pcRegMux_crtl_in: in std_logic;
 									
 				pcPlusOneOut : out std_logic_vector(15 downto 0);
 				regA_out : out std_logic_vector(15 downto 0);
@@ -59,17 +60,18 @@ entity execute is
 				memWrite_en_out : out std_logic;
 				rf_wren_mux_out : out std_logic;
 				mem_mux_out : out std_logic;
-				pc_mux_ctrl_out : out std_logic_vector(1 downto 0);
+				pc_mux_ctrl_out : out std_logic;
 				rf_wren_out_out : out std_logic;
 				rf_dataIn_sel_out : out std_logic_vector(2 downto 0);
 				pcALUresult : out std_logic_vector(15 downto 0);
-				counter_mux_out : out std_logic);
+				counter_mux_out : out std_logic;
+				pcRegMux_crtl: out std_logic);
 end entity;
 
 architecture Behave of execute is
 	
 	signal temp : std_logic_vector(16 downto 0);
-	signal alu_a_in,alu_b_in,alu_output : std_logic_vector(15 downto 0);
+	signal alu_a_in,alu_b_in : std_logic_vector(15 downto 0);
 	signal cntr_16 : std_logic_vector(15 downto 0);	
 	signal carry_signal,zero_signal_in,zero_signal_out : std_logic;
 
@@ -119,19 +121,23 @@ rf_wren_mux_out <= rf_wren_mux;
 mem_mux_out <= mem_mux;
 rf_dataIn_sel_out <= rf_dataIn_sel;
 
-process(beq_mux_ctrl,pc_mux_ctrl,zero_signal_out)
-	variable var_pc_mux_ctrl_out : std_logic_vector(1 downto 0);
+process(beq_mux_ctrl,pc_mux_ctrl,zero_signal_out,pcRegMux_crtl_in)
+	variable var_pc_mux_ctrl_out, var_pcRegMux_crtl_in : std_logic;
 	begin
 		if (beq_mux_ctrl = '1') then
 			if (zero_signal_out = '1') then
-				var_pc_mux_ctrl_out := "01";
+				var_pc_mux_ctrl_out := '1';
+				var_pcRegMux_crtl_in := '1';
 			else
-				var_pc_mux_ctrl_out := "10";
+				var_pc_mux_ctrl_out := '1';			-- Don't Care
+				var_pcRegMux_crtl_in := '0';
 			end if ;
 		else
 				var_pc_mux_ctrl_out := pc_mux_ctrl;
+				var_pcRegMux_crtl_in := pcRegMux_crtl_in;
 		end if;
 	pc_mux_ctrl_out <= var_pc_mux_ctrl_out;
+	pcRegMux_crtl <= var_pcRegMux_crtl_in;
 	end process;
 end Behave;
 
