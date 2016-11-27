@@ -1,21 +1,3 @@
--- BEQ MUX CRTL LOGIC REMAINING -- rr_ex_reg(79)
--- rr_ex_Reg : 15 to 0 : pc+1 						*86
--- 				31 to 16 : alu_a_mux input 0
--- 				63 to 48 : alu_a_mx input 1 and alu_b_mux input 0
---   			47 to 32 : alu_b_mux input 1
---				65 to 64 : alu control signals
--- 				67 to 66 : opcode last 2 bits
---				68 : enable carry
--- 				69 : enable zero
--- 				70 : alu A sel
--- 				72 to 71 : alu B sel
-
--- ex_mem_reg : 15 to 0 : pc_alu_result
---				31 to 16 : pc+1
---				47 to 32 : alu_a_mux input 0
---				63 to 48 : ALU output
---				79 to 64 : alu_b_mux input 1
---				95 to 80 : sign_extend/LH output
 				
 library ieee;
 use ieee.std_logic_1164.all;
