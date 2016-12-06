@@ -31,6 +31,7 @@ entity execute is
 				pc_mux_ctrl : in std_logic;
 				rf_wren_out : in std_logic;
 				pcRegMux_crtl_in: in std_logic;
+				conditional		: in std_logic;
 									
 				pcPlusOneOut : out std_logic_vector(15 downto 0);
 				regA_out : out std_logic_vector(15 downto 0);
@@ -59,7 +60,7 @@ architecture Behave of execute is
 
 begin
 
-	rf_wren_out_out <= rf_wren_out and ((not op2in(0) and op2in(1) and carry_signal) or ((not op2in(1)) and op2in(0) and zero_signal_in) or (not (op2in(0) xor op2in(1))));
+	rf_wren_out_out <= rf_wren_out and (((not op2in(0) and op2in(1) and carry_signal) or ((not op2in(1)) and op2in(0) and zero_signal_in) or (not (op2in(0) xor op2in(1)))) or (not conditional));
 	add2 : adder port map (data0x => pcPlusOneIn,data1x => signExtend,result => temp);
 	pcPlusOneOut <= pcPlusOneIn;
 	pcALUresult <= temp(15 downto 0);

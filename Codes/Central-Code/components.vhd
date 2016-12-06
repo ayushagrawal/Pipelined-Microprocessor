@@ -32,6 +32,7 @@ package components is
 				rf_wren		 : out std_logic;
 				counter_mux  : out std_logic;
 				mem_mux		 : out std_logic;
+				conditional	 : out std_logic;
 				rf_dataIn_sel: out std_logic_vector(2 downto 0);
 				alu_crtl     : out std_logic_vector(1 downto 0);
 				op2in			 : out std_logic_vector(1 downto 0);
@@ -89,6 +90,7 @@ package components is
 				alu_crtlin     		: in std_logic_vector(1 downto 0);
 				op2inin			 		: in std_logic_vector(1 downto 0);
 				pcRegMux_crtl_in		: in std_logic;
+				conditional_in			: in std_logic;
 				pcPlusOneOut 			: out std_logic_vector(15 downto 0);
 				pcMux_crtlout	 		: out std_logic;
 				regA			 			: out std_logic_vector(15 downto 0);
@@ -109,7 +111,8 @@ package components is
 				rf_dataIn_selout		: out std_logic_vector(2 downto 0);
 				alu_crtlout     		: out std_logic_vector(1 downto 0);
 				op2inout			 		: out std_logic_vector(1 downto 0);
-				pcRegMux_crtl        : out std_logic);
+				pcRegMux_crtl        : out std_logic;
+				conditional_out		: out std_logic);
 				
 	end component;
 	
@@ -151,6 +154,7 @@ package components is
 					pc_mux_ctrl : in std_logic;
 					rf_wren_out : in std_logic;
 					pcRegMux_crtl_in: in std_logic;
+					conditional	: in std_logic;
 										
 					pcPlusOneOut : out std_logic_vector(15 downto 0);
 					regA_out : out std_logic_vector(15 downto 0);
@@ -214,6 +218,13 @@ package components is
 			  output: out std_logic_vector((N-1) downto 0);
 			  clock: in std_logic;
 			  reset: in std_logic);
+	end component;
+	
+	component mux4 is 
+		generic (n : integer);
+		port( in0,in1,in2,in3 : in std_logic_vector(n downto 0); 
+				sel : in std_logic_vector(1 downto 0); 
+				output: out std_logic_vector(n downto 0));
 	end component;
 	
 end package;

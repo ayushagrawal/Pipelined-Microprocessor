@@ -48,6 +48,7 @@ package decodeComponents is
 				rf_wren		 : out std_logic;
 				counter_mux  : out std_logic;
 				mem_mux		 : out std_logic;
+				conditional	 : out std_logic;
 				rf_dataIn_sel: out std_logic_vector(2 downto 0);
 				alu_crtl     : out std_logic_vector(1 downto 0);
 				op2in			 : out std_logic_vector(1 downto 0));

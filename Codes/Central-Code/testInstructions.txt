@@ -1,0 +1,12 @@
+Work performed			Binary Code				Hex Code	Status
+LHI r1,#000000001D		0011 001 000000001		3201		Done
+
+LW r2,r1,#000000D		0100 010 001 000000		4440		Done
+(change data_memory)
+
+
+
+add r3,r2,r1			0000 010 001 011 000	458
+
+
+adc r3,r2,r1			0000 010 001 011 010	45A

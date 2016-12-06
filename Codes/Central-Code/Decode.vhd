@@ -26,6 +26,7 @@ entity Decode is
 			rf_wren		 : out std_logic;
 			counter_mux  : out std_logic;
 			mem_mux		 : out std_logic;
+			conditional  : out std_logic;
 			rf_dataIn_sel: out std_logic_vector(2 downto 0);
 			alu_crtl     : out std_logic_vector(1 downto 0);
 			op2in			 : out std_logic_vector(1 downto 0));
@@ -54,6 +55,7 @@ process(instruction,pcPlusOneIn,counter_out)
 	variable NB_sel			: std_logic_vector(2 downto 0);
 	variable Nr7_enable		: std_logic;
 	variable NpcRegMux_crtl	: std_logic;
+	variable Nconditional	: std_logic;
 begin
 	Nalu_crtl := "00";
 	NzeroEnable := '0';
@@ -70,6 +72,8 @@ begin
 	NpcMux_crtl		:= '0';
 	NB_sel			:= "000";
 	Nr7_enable		:= '0';
+	NpcRegMux_crtl := '0';
+	Nconditional	:= '0';
 	if(instruction(15 downto 12) = "0000") then						--	ADD
 		Nalu_crtl 		 := "00";					-- Adding
 		NzeroEnable 	 := '1';
@@ -87,6 +91,7 @@ begin
 		NpcRegMux_crtl := '0';
 		NB_sel := instruction(8 downto 6);
 		Nr7_enable := not(instruction(5) and instruction(4) and instruction(3));
+		Nconditional := '1';
 		
 	elsif(instruction(15 downto 12) = "0001") then					-- ADI
 		Nalu_crtl 		 := "00";					-- Adding
@@ -123,6 +128,7 @@ begin
 		NpcRegMux_crtl := '0';
 		NB_sel := instruction(8 downto 6);
 		Nr7_enable := not(instruction(5) and instruction(4) and instruction(3));
+		Nconditional := '1';
 		
 	elsif(instruction(15 downto 12) = "0011") then					-- LHI
 		Nalu_crtl 		 := "01";					-- Don't Care
@@ -285,6 +291,7 @@ begin
 	B_sel			 		<= NB_sel;
 	r7_enable			<= Nr7_enable;
 	pcRegMux_crtl 	   <= NpcRegMux_crtl;
+	conditional 		<= Nconditional;
 	
 	A_sel <= instruction(11 downto 9);
 	pcPlusOneOut <= pcPlusOneIn;

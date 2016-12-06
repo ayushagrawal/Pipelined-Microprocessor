@@ -11,8 +11,8 @@ end entity;
 		  
 architecture mic of microprocessor is
 	signal input_if,  output_if  : std_logic_vector(31 downto 0);
-	signal input_id,  output_id  : std_logic_vector(60 downto 0);
-	signal input_rr,  output_rr  : std_logic_vector(86 downto 0);
+	signal input_id,  output_id  : std_logic_vector(61 downto 0);
+	signal input_rr,  output_rr  : std_logic_vector(87 downto 0);
 	signal input_ex,  output_ex  : std_logic_vector(108 downto 0);
 	signal input_mem, output_mem : std_logic_vector(89 downto 0);
 	
@@ -32,8 +32,8 @@ begin
 	IFetch : inst_fetch port map(clock => clock, clock_mem => clock_c, reset => reset, pcIn => pcIn_w, pc_reg => '1',if_id_reg => input_if, pcRegMux_crtl => pcRegMux_crtl_w);
 	
 	IF_ID  : registers generic map(N => 32)  port map(clock => clock, reset => reset, enable => enable_IF,  input => input_if,  output => output_if);
-	ID_RR  : registers generic map(N => 61)  port map(clock => clock, reset => reset, enable => enable_id,  input => input_id,  output => output_id);
-	RR_EX  : registers generic map(N => 87)  port map(clock => clock, reset => reset, enable => enable_rr,  input => input_rr,  output => output_rr);
+	ID_RR  : registers generic map(N => 62)  port map(clock => clock, reset => reset, enable => enable_id,  input => input_id,  output => output_id);
+	RR_EX  : registers generic map(N => 88)  port map(clock => clock, reset => reset, enable => enable_rr,  input => input_rr,  output => output_rr);
 	EX_MEM : registers generic map(N => 109) port map(clock => clock, reset => reset, enable => enable_ex,  input => input_ex,  output => output_ex);
 	MEM_WB : registers generic map(N => 90)  port map(clock => clock, reset => reset, enable => enable_mem, input => input_mem, output => output_mem);
 
@@ -49,6 +49,7 @@ begin
 	Decoded: decode port map(	clock	     		=> clock,
 										instruction  	=> output_if(31 downto 16),
    									pcPlusOneIn  	=> output_if(15 downto 0),
+										conditional		=> input_id(61),
 										signExt      	=> input_id(60 downto 45),
 										pcPlusOneOut 	=> input_id(44 downto 29),
 										A_sel		 		=> input_id(28 downto 26),
@@ -80,6 +81,7 @@ begin
 										regWrite					=> regWrite_w,							-- From WB
 										dataIn					=> DataIn_w,							-- From WB
 										dataIn_sel_actual  	=> rfDataInsel_out_w,					-- From WB
+										conditional_in			=> output_id(61),
 										signExtin      		=> output_id(60 downto 45),
 										pcPlusOnein 			=> output_id(44 downto 29),
 										A_selin					=> output_id(28 downto 26),
@@ -102,6 +104,7 @@ begin
 										counter_muxin  		=> output_id(1),
 										alu_a_muxCrtlin		=> output_id(0),
 										
+										conditional_out		=> input_rr(87),
 										pcPlusOneOut 			=> input_rr(86 downto 71),
 										signExtout      		=> input_rr(70 downto 55),
 										regA			 			=> input_rr(54 downto 39),
@@ -130,6 +133,7 @@ begin
 	executed : execute port map ( clock => clock,
 											reset => reset,
 											counter_reset 		=> counter_reset,
+											conditional			=> output_rr(87),
 											pcPlusOneIn 		=> output_rr(86 downto 71),
 											signExtend 			=> output_rr(70 downto 55),
 											regA 					=> output_rr(54 downto 39),
