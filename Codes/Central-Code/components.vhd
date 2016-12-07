@@ -14,6 +14,7 @@ package components is
 	component Decode is 
 		port (instruction  : in std_logic_vector(15 downto 0);
 				clock			 : in std_logic;
+				NOP_in		 : in std_logic;
 				pcPlusOneIn  : in std_logic_vector(15 downto 0);
 				pcPlusOneOut : out std_logic_vector(15 downto 0);
 				pcMux_crtl	 : out std_logic;
@@ -130,7 +131,8 @@ package components is
 				pc : out std_logic_vector(15 downto 0);
 				pc_reg : in std_logic;
 				pcRegMux_crtl : in std_logic;
-				if_id_reg : out std_logic_vector(31 downto 0)				
+				NOP_in	 : in std_logic;
+				if_id_reg : out std_logic_vector(32 downto 0)				
 			);
 	end component;
 	
