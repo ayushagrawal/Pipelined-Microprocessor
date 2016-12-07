@@ -8,6 +8,8 @@ entity Decode is
 	port (instruction  : in std_logic_vector(15 downto 0);
 			clock			 : in std_logic;
 			NOP_in		 : in std_logic;
+			pc_in			 : in std_logic_vector(15 downto 0);
+			pc_out		 : out std_logic_vector(15 downto 0);
 			pcPlusOneIn  : in std_logic_vector(15 downto 0);
 			pcPlusOneOut : out std_logic_vector(15 downto 0);
 			pcMux_crtl	 : out std_logic;
@@ -41,7 +43,7 @@ architecture arch of Decode is
 begin
 	signExtend : signExtender port map(input => instruction(8 downto 0),output => signExt, opcode => instruction(15 downto 12));
 	count : multiple port map(counter_enable => counter_enable, clock => clock, bit8 => instruction(7 downto 0), counter_out => counter_out, mux_out => counter_mux);
-process(instruction,pcPlusOneIn,counter_out,NOP_in)
+process(instruction,pcPlusOneIn,counter_out,NOP_in,pc_in)
 	variable Nalu_crtl : std_logic_vector(1 downto 0);
 	variable NzeroEnable : std_logic;
 	variable NcarryEnable : std_logic;
@@ -314,6 +316,8 @@ begin
 	conditional 		<= Nconditional;
 	NOP 					<= NNOP and NOP_in;
 	use_B					<= Nuse_B;
+	
+	pc_out <= pc_in;
 	
 	A_sel <= instruction(11 downto 9);
 	pcPlusOneOut <= pcPlusOneIn;

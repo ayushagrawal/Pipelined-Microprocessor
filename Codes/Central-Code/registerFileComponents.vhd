@@ -39,7 +39,8 @@ package registerFileComponents is
 		  reset	  : in std_logic;
 		  regWrite : in std_logic;
 		  pc_in    : in std_logic_vector(15 downto 0);
-		  r7_select: in std_logic);
+		  r7_select: in std_logic;
+		  NOP		  : in std_logic);
 	end component;
 	
 	component decoderRF is

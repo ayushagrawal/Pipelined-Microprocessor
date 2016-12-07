@@ -98,6 +98,7 @@ begin
 							  reset	  => reset,
 							  regWrite => regWrite,
 							  pc_in    => pc_in,
-							  r7_select => r7_enableTo_RF);
+							  r7_select => r7_enableTo_RF,
+							  NOP		=> NOP_in);
 
 end RR;

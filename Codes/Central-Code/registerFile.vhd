@@ -15,7 +15,8 @@ entity registerFile is
 		  reset	  : in std_logic;
 		  regWrite : in std_logic;
 		  pc_in    : in std_logic_vector(15 downto 0);
-		  r7_select: in std_logic);
+		  r7_select: in std_logic;
+		  NOP		  : in std_logic);
 end entity;
 
 architecture RF of registerFile is
@@ -26,7 +27,7 @@ architecture RF of registerFile is
 	signal en,re : std_logic_vector(6 downto 0);
 begin
 	inSel: decoderRF port map(input => dataInsel, output => enable);
-	r7_en <= '1' ; 
+	r7_en <= '1' and NOP ; 
 	en <= enable(6 downto 0) and re; 
 	re <= (others => regWrite);
 	
