@@ -90,7 +90,7 @@ begin
 												 regB			=> input_rr(38 downto 23),
 												 bubble_en  => bubble);
 	
-	NOP_fetch <= (r7_enable_out_w or (not output_mem(90)));
+	NOP_fetch <= ((not r7_enable_out_w) or (not output_mem(90)));
 	
 	IFetch : inst_fetch port map(clock => clock,
 										  clock_mem => clock_c,
@@ -102,7 +102,7 @@ begin
 										  if_id_reg => input_if,
 										  pcRegMux_crtl => pcRegMux_crtl_w);
 										  
-	NOP_decode <= (r7_enable_out_w or (not output_mem(90))) and output_if(32);
+	NOP_decode <= ((not r7_enable_out_w) or (not output_mem(90))) and output_if(32);
 	
 	Decoded: decode port map(	clock	     		=> clock,
 										instruction  	=> output_if(31 downto 16),
@@ -133,7 +133,7 @@ begin
 										counter_mux  	=> input_id(1),
 										alu_a_muxCrtl	=> input_id(0));
 	
-	NOP_rr <= output_id(62) and (r7_enable_out_w or (not output_mem(90)));
+	NOP_rr <= output_id(62) and (( not r7_enable_out_w) or (not output_mem(90)));
 																	
 	RR : registerRead port map(clock						=> clock,
 										reset						=> reset,
@@ -196,7 +196,7 @@ begin
 	zero_en <= output_rr(1) and not_bubble;		-- So that the carry and zero flags are affected only once
 	carry_en <= output_rr(0) and not_bubble;
 	
-	NOP_ex <= output_rr(88) and (r7_enable_out_w or (not output_mem(90)));
+	NOP_ex <= output_rr(88) and ((not r7_enable_out_w) or (not output_mem(90)));
 	
 	executed : execute port map ( clock => clock,
 											reset => reset,
@@ -243,7 +243,7 @@ begin
 											rf_wren_out_out 	=> input_ex(1),
 											counter_mux_out 	=> input_ex(0)); 
 
-	NOP_mem <= output_ex(109) and (r7_enable_out_w or (not output_mem(90)));
+	NOP_mem <= output_ex(109) and ((not r7_enable_out_w) or (not output_mem(90)));
 
 	memory : mem_access port map (clock 						=> clock,
 											clock_mem					=> clock_c,
