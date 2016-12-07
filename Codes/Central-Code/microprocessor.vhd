@@ -11,7 +11,7 @@ end entity;
 		  
 architecture mic of microprocessor is
 	signal input_if,  output_if  : std_logic_vector(48 downto 0);
-	signal input_id,  output_id  : std_logic_vector(79 downto 0);
+	signal input_id,  output_id  : std_logic_vector(63 downto 0);
 	signal input_rr,  output_rr  : std_logic_vector(88 downto 0);
 	signal input_ex,  output_ex  : std_logic_vector(109 downto 0);
 	signal input_mem, output_mem : std_logic_vector(90 downto 0);
@@ -30,13 +30,14 @@ architecture mic of microprocessor is
 	signal bubble,not_bubble : std_logic;
 	signal carry_en,zero_en : std_logic;
 	signal NOP_ex,NOP_mem,NOP_rr,NOP_decode,NOP_fetch : std_logic;
+	signal pc : std_logic_vector(15 downto 0);
 
 begin
 	
 	clk_divide : CLOCK_DIVIDER port map (reset => reset,clk => clock_c,half_clk => clock);
 	
 	IF_ID  : registers generic map(N => 49)  port map(clock => clock, reset => reset, enable => enable_IF,  input => input_if,  output => output_if);
-	ID_RR  : registers generic map(N => 80)  port map(clock => clock, reset => reset, enable => enable_id,  input => input_id,  output => output_id);
+	ID_RR  : registers generic map(N => 64)  port map(clock => clock, reset => reset, enable => enable_id,  input => input_id,  output => output_id);
 	RR_EX  : registers generic map(N => 89)  port map(clock => clock, reset => reset, enable => enable_rr,  input => input_rr,  output => output_rr);
 	EX_MEM : registers generic map(N => 110) port map(clock => clock, reset => reset, enable => enable_ex,  input => input_ex,  output => output_ex);
 	MEM_WB : registers generic map(N => 91)  port map(clock => clock, reset => reset, enable => enable_mem, input => input_mem, output => output_mem);
@@ -108,7 +109,7 @@ begin
 										instruction  	=> output_if(31 downto 16),
    									pcPlusOneIn  	=> output_if(15 downto 0),
 										NOP_in			=> NOP_decode,
-										pc_out			=> input_id(79 downto 64),
+										pc_out			=> pc,
 										use_B				=> input_id(63),
 										NOP				=> input_id(62),
 										conditional		=> input_id(61),
@@ -139,7 +140,7 @@ begin
 	RR : registerRead port map(clock						=> clock,
 										reset						=> reset,
 										r7_enableTo_RF 		=> r7_enable_out_w,						-- From Write Back Stage
-										pc_in						=> output_id(79 downto 64),
+										pc_in						=> pc,
 										regWrite					=> regWrite_w,							-- From WB
 										dataIn					=> DataIn_w,							-- From WB
 										dataIn_sel_actual  	=> rfDataInsel_out_w,					-- From WB
