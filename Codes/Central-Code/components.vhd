@@ -33,6 +33,8 @@ package components is
 				counter_mux  : out std_logic;
 				mem_mux		 : out std_logic;
 				conditional	 : out std_logic;
+				NOP			 : out std_logic;
+				use_B			 : out std_logic;
 				rf_dataIn_sel: out std_logic_vector(2 downto 0);
 				alu_crtl     : out std_logic_vector(1 downto 0);
 				op2in			 : out std_logic_vector(1 downto 0);
@@ -53,6 +55,7 @@ package components is
 				rf_wren_mux_crtl : in std_logic;
 				rf_wren			: in std_logic;
 				r7_enable		: in std_logic;
+				NOP_in			: in std_logic;
 				r7_enable_out  : out std_logic;
 				regWrite			: out std_logic;
 				DataIn			: out std_logic_vector(15 downto 0);
@@ -91,6 +94,7 @@ package components is
 				op2inin			 		: in std_logic_vector(1 downto 0);
 				pcRegMux_crtl_in		: in std_logic;
 				conditional_in			: in std_logic;
+				NOP_in					: in std_logic;
 				pcPlusOneOut 			: out std_logic_vector(15 downto 0);
 				pcMux_crtlout	 		: out std_logic;
 				regA			 			: out std_logic_vector(15 downto 0);
@@ -112,7 +116,8 @@ package components is
 				alu_crtlout     		: out std_logic_vector(1 downto 0);
 				op2inout			 		: out std_logic_vector(1 downto 0);
 				pcRegMux_crtl        : out std_logic;
-				conditional_out		: out std_logic);
+				conditional_out		: out std_logic;
+				NOP_out					: out std_logic);
 				
 	end component;
 	
@@ -122,6 +127,7 @@ package components is
 				clock_mem : in std_logic;
 				reset	:in std_logic;
 				pcIn : in std_logic_vector(15 downto 0);
+				pc : out std_logic_vector(15 downto 0);
 				pc_reg : in std_logic;
 				pcRegMux_crtl : in std_logic;
 				if_id_reg : out std_logic_vector(31 downto 0)				
@@ -155,6 +161,7 @@ package components is
 					rf_wren_out : in std_logic;
 					pcRegMux_crtl_in: in std_logic;
 					conditional	: in std_logic;
+					NOP_in			: in std_logic;
 										
 					pcPlusOneOut : out std_logic_vector(15 downto 0);
 					regA_out : out std_logic_vector(15 downto 0);
@@ -171,7 +178,8 @@ package components is
 					rf_dataIn_sel_out : out std_logic_vector(2 downto 0);
 					pcALUresult : out std_logic_vector(15 downto 0);
 					counter_mux_out : out std_logic;
-					pcRegMux_crtl: out std_logic);
+					pcRegMux_crtl: out std_logic;
+					NOP_out			: out std_logic);
 	end component;
 	
 	component mem_access is
@@ -195,6 +203,7 @@ package components is
 					rf_wren : in std_logic;
 					r7_enable : in std_logic;
 					pcRegMux_crtl_in : in std_logic;
+					NOP_in		: in std_logic;
 		
 					pc_mux_out : out std_logic_vector(15 downto 0);	
 					pcPlusOne_out : out std_logic_vector(15 downto 0);		
@@ -207,8 +216,8 @@ package components is
 					rf_wren_mux_ctrl_out : out std_logic;
 					rf_wren_out : out std_logic;
 					r7_enable_out : out std_logic;
-					pcRegMux_crtl : out std_logic
-			);
+					pcRegMux_crtl : out std_logic;
+					NOP_out		: out std_logic);
 	end component;
 	
 	component registers is
@@ -225,6 +234,58 @@ package components is
 		port( in0,in1,in2,in3 : in std_logic_vector(n downto 0); 
 				sel : in std_logic_vector(1 downto 0); 
 				output: out std_logic_vector(n downto 0));
+	end component;
+	
+	component forwardingUnit is
+		port(exe_alu		: in std_logic_vector(15 downto 0);
+			  exe_pc1		: in std_logic_vector(15 downto 0);
+			  exe_se			: in std_logic_vector(15 downto 0);
+			  
+			  mem_alu		: in std_logic_vector(15 downto 0);
+			  mem_pc1		: in std_logic_vector(15 downto 0);
+			  mem_se			: in std_logic_vector(15 downto 0);
+			  mem_mem		: in std_logic_vector(15 downto 0);
+			  
+			  wb_data		: in std_logic_vector(15 downto 0);
+			  
+			  data_mux_ex	: in std_logic_vector(1 downto 0);
+			  data_mux_mem	: in std_logic_vector(1 downto 0);
+			  
+			  reg_A_mux		: in std_logic_vector(1 downto 0);
+			  reg_B_mux		: in std_logic_vector(1 downto 0);
+			  
+			  regA_actual	: in std_logic_vector(15 downto 0);
+			  regB_actual	: in std_logic_vector(15 downto 0);
+			  
+			  dataHazardFlag : in std_logic;
+			  
+			  regA			: out std_logic_vector(15 downto 0);
+			  regB			: out std_logic_vector(15 downto 0);
+			  bubble_en		: out std_logic);
+		
+	end component;
+
+	component hazardDetectionUnit is
+		port(regSel_ex_in			: in  std_logic_vector(2 downto 0);
+			  regSel_mem_in		: in  std_logic_vector(2 downto 0);
+			  regSel_wb_in			: in  std_logic_vector(2 downto 0);
+			  regSel_A				: in  std_logic_vector(2 downto 0);
+			  regSel_B				: in  std_logic_vector(2 downto 0);
+			  NOP_ex					: in 	std_logic;
+			  NOP_mem				: in  std_logic;
+		     NOP_wb					: in  std_logic;
+			  use_B					: in  std_logic;
+		     dataHazardFlag		: out std_logic;
+			  RR_A_mux_sel			: out std_logic_vector(1 downto 0);
+			  RR_B_mux_sel			: out std_logic_vector(1 downto 0));
+		
+	end component;
+	
+	component mux2 is 
+		generic (n : integer);
+		port( in0,in1 : in std_logic_vector(n downto 0); 
+				sel : in std_logic; 
+				output : out std_logic_vector(n downto 0));
 	end component;
 	
 end package;
