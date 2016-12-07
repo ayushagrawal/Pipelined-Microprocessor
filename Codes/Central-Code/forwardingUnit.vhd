@@ -25,8 +25,11 @@ entity forwardingUnit is
 		  regA_actual	: in std_logic_vector(15 downto 0);
 		  regB_actual	: in std_logic_vector(15 downto 0);
 		  
+		  dataHazardFlag : in std_logic;
+		  
 		  regA			: out std_logic_vector(15 downto 0);
-		  regB			: out std_logic_vector(15 downto 0));
+		  regB			: out std_logic_vector(15 downto 0);
+		  bubble_en		: out std_logic);
 	
 end entity;
 
@@ -34,30 +37,38 @@ architecture FU of forwardingUnit is
 	signal exe_data,mem_data : std_logic_vector(15 downto 0);
 begin
 
-	mux_A	: mux4 generic map(n => 16) port map(in0 		=> regA_actual,
+	mux_A	: mux4 generic map(n => 15) port map(in0 		=> regA_actual,
 															 in1 		=> exe_data,
 															 in2 		=> mem_data,
 															 in3 		=> wb_data,
 															 sel  		=> reg_A_mux,
 															 output 		=> regA);
 	
-	mux_B	: mux4 generic map(n => 16) port map(in0 		=> regB_actual,
+	mux_B	: mux4 generic map(n => 15) port map(in0 		=> regB_actual,
 															 in1 		=> exe_data,
 															 in2 		=> mem_data,
 															 in3 		=> wb_data,
 															 sel  		=> reg_B_mux,
 															 output 		=> regB);
 	
-	process(exe_alu,exe_pc1,exe_se,mem_alu,mem_pc1,mem_se,mem_mem,data_mux_ex,data_mux_mem)
+	process(exe_alu,exe_pc1,exe_se,mem_alu,mem_pc1,mem_se,mem_mem,data_mux_ex,data_mux_mem,dataHazardFlag)
+	variable Nbubble_en: std_logic;
 	begin
+		-- Default Values
+		Nbubble_en := '0';
 		if(data_mux_ex = "00") then
 			exe_data <= exe_pc1;
 		elsif(data_mux_ex = "10") then
 			exe_data <= exe_alu;
 		elsif(data_mux_ex = "11") then
 			exe_data <= exe_se;
---		else															Elaboration needed later	
---			exe_data <= ;
+		else															--Elaboration needed later	
+			exe_data <= exe_alu;
+			if(dataHazardFlag = '1') then
+				Nbubble_en := '1';
+			else
+				Nbubble_en := '0';
+			end if;
 		end if;
 		
 		if(data_mux_mem = "00") then
@@ -69,6 +80,8 @@ begin
 		else															
 			mem_data <= mem_mem;
 		end if;
+		
+		bubble_en <= Nbubble_en;
 	end process;
 	
 end FU;

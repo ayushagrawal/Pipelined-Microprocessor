@@ -7,6 +7,7 @@ use work.decodeComponents.all;
 entity Decode is 
 	port (instruction  : in std_logic_vector(15 downto 0);
 			clock			 : in std_logic;
+			NOP_in		 : in std_logic;
 			pcPlusOneIn  : in std_logic_vector(15 downto 0);
 			pcPlusOneOut : out std_logic_vector(15 downto 0);
 			pcMux_crtl	 : out std_logic;
@@ -27,6 +28,8 @@ entity Decode is
 			counter_mux  : out std_logic;
 			mem_mux		 : out std_logic;
 			conditional  : out std_logic;
+			NOP			 : out std_logic;
+			use_B			 : out std_logic;
 			rf_dataIn_sel: out std_logic_vector(2 downto 0);
 			alu_crtl     : out std_logic_vector(1 downto 0);
 			op2in			 : out std_logic_vector(1 downto 0));
@@ -38,7 +41,7 @@ architecture arch of Decode is
 begin
 	signExtend : signExtender port map(input => instruction(8 downto 0),output => signExt, opcode => instruction(15 downto 12));
 	count : multiple port map(counter_enable => counter_enable, clock => clock, bit8 => instruction(7 downto 0), counter_out => counter_out, mux_out => counter_mux);
-process(instruction,pcPlusOneIn,counter_out)
+process(instruction,pcPlusOneIn,counter_out,NOP_in)
 	variable Nalu_crtl : std_logic_vector(1 downto 0);
 	variable NzeroEnable : std_logic;
 	variable NcarryEnable : std_logic;
@@ -56,6 +59,8 @@ process(instruction,pcPlusOneIn,counter_out)
 	variable Nr7_enable		: std_logic;
 	variable NpcRegMux_crtl	: std_logic;
 	variable Nconditional	: std_logic;
+	variable NNOP				: std_logic;
+	variable Nuse_B			: std_logic;
 begin
 	Nalu_crtl := "00";
 	NzeroEnable := '0';
@@ -74,6 +79,8 @@ begin
 	Nr7_enable		:= '0';
 	NpcRegMux_crtl := '0';
 	Nconditional	:= '0';
+	NNOP				:= '1';					-- NOP = '1' implies normal|| NOP = '0' implies no operation 
+	Nuse_B			:= '0';
 	if(instruction(15 downto 12) = "0000") then						--	ADD
 		Nalu_crtl 		 := "00";					-- Adding
 		NzeroEnable 	 := '1';
@@ -90,8 +97,9 @@ begin
 		NpcMux_crtl    := '1';						-- Don't Care
 		NpcRegMux_crtl := '0';
 		NB_sel := instruction(8 downto 6);
-		Nr7_enable := not(instruction(5) and instruction(4) and instruction(3));
+		Nr7_enable := instruction(5) and instruction(4) and instruction(3);
 		Nconditional := '1';
+		Nuse_B			:= '1';
 		
 	elsif(instruction(15 downto 12) = "0001") then					-- ADI
 		Nalu_crtl 		 := "00";					-- Adding
@@ -109,7 +117,8 @@ begin
 		NpcMux_crtl    := '1';						-- Don't Care
 		NpcRegMux_crtl := '0';
 		NB_sel := instruction(8 downto 6);
-		Nr7_enable := not(instruction(8) and instruction(7) and instruction(6));
+		Nr7_enable := instruction(8) and instruction(7) and instruction(6);
+		Nuse_B			:= '1';
 		
 	elsif(instruction(15 downto 12) = "0010") then					-- NDU
 		Nalu_crtl 		 := "01";					-- Nand
@@ -127,8 +136,9 @@ begin
 		NpcMux_crtl    := '1';						-- Don't Care
 		NpcRegMux_crtl := '0';
 		NB_sel := instruction(8 downto 6);
-		Nr7_enable := not(instruction(5) and instruction(4) and instruction(3));
+		Nr7_enable := instruction(5) and instruction(4) and instruction(3);
 		Nconditional := '1';
+		Nuse_B			:= '1';
 		
 	elsif(instruction(15 downto 12) = "0011") then					-- LHI
 		Nalu_crtl 		 := "01";					-- Don't Care
@@ -146,7 +156,8 @@ begin
 		NpcMux_crtl    := '1';						-- Don't Care
 		NpcRegMux_crtl := '0';
 		NB_sel := instruction(8 downto 6);
-		Nr7_enable := not(instruction(11) and instruction(10) and instruction(9));
+		Nr7_enable := instruction(11) and instruction(10) and instruction(9);
+		Nuse_B			:= '0';
 		
 	elsif(instruction(15 downto 12) = "0100") then					-- LW
 		Nalu_crtl 		 := "00";					-- Add
@@ -164,7 +175,8 @@ begin
 		NpcMux_crtl    := '1';						-- Don't Care
 		NpcRegMux_crtl := '0';
 		NB_sel := instruction(8 downto 6);
-		Nr7_enable := not(instruction(11) and instruction(10) and instruction(9));
+		Nr7_enable := instruction(11) and instruction(10) and instruction(9);
+		Nuse_B			:= '1';
 		
 	elsif(instruction(15 downto 12) = "0101") then					-- SW
 		Nalu_crtl 		 := "00";					-- Add
@@ -182,7 +194,8 @@ begin
 		NpcMux_crtl    := '1';						-- Don't Care
 		NpcRegMux_crtl := '0';
 		NB_sel := instruction(8 downto 6);
-		Nr7_enable := '1';
+		Nr7_enable := '0';
+		Nuse_B			:= '1';
 		
 	elsif(instruction(15 downto 12) = "1100") then					-- BEQ
 		Nalu_crtl 		 := "10";					-- Compare
@@ -200,7 +213,8 @@ begin
 		NpcMux_crtl    := '1';						-- Don't Care
 		NpcRegMux_crtl := '0';
 		NB_sel := instruction(8 downto 6);
-		Nr7_enable := '1';
+		Nr7_enable := '0';
+		Nuse_B			:= '1';
 		
 	elsif(instruction(15 downto 12) = "1000") then					-- JAL
 		Nalu_crtl 		 := "10";					-- Don't Care
@@ -218,7 +232,8 @@ begin
 		NpcMux_crtl    := '1';
 		NpcRegMux_crtl := '1';
 		NB_sel := instruction(8 downto 6);
-		Nr7_enable := not(instruction(11) and instruction(10) and instruction(9));
+		Nr7_enable := instruction(11) and instruction(10) and instruction(9);
+		Nuse_B			:= '0';
 		
 	elsif(instruction(15 downto 12) = "1001") then					-- JLR
 		Nalu_crtl 		 := "10";					-- Don't Care
@@ -236,7 +251,8 @@ begin
 		NpcMux_crtl    := '0';						-- Register B
 		NpcRegMux_crtl := '1';
 		NB_sel := instruction(8 downto 6);
-		Nr7_enable := not(instruction(11) and instruction(10) and instruction(9));
+		Nr7_enable := instruction(11) and instruction(10) and instruction(9);
+		Nuse_B			:= '1';
 		
 	elsif(instruction(15 downto 12) = "0110") then					-- LM
 		Nalu_crtl 		 := "01";					-- Add
@@ -254,7 +270,8 @@ begin
 		NpcMux_crtl    := '1';						-- Don't Care
 		NpcRegMux_crtl := '0';
 		NB_sel := instruction(8 downto 6);
-		Nr7_enable := not(counter_out(2) and counter_out(1) and counter_out(0));
+		Nr7_enable := counter_out(2) and counter_out(1) and counter_out(0);
+		Nuse_B			:= '0';
 		
 	elsif(instruction(15 downto 12) = "0111") then					-- SM
 		Nalu_crtl 		 := "01";					-- Add
@@ -272,8 +289,11 @@ begin
 		NpcMux_crtl    := '1';						-- Don't Care
 		NpcRegMux_crtl := '0';
 		NB_sel			:= counter_out;
-		Nr7_enable 		:= '1';
+		Nr7_enable 		:= '0';
+		Nuse_B			:= '0';
 		
+	else
+		NNOP := '0';
 	end if;
 	alu_crtl 		 	<= Nalu_crtl;
 	zeroEnable 	 		<= NzeroEnable;
@@ -292,6 +312,8 @@ begin
 	r7_enable			<= Nr7_enable;
 	pcRegMux_crtl 	   <= NpcRegMux_crtl;
 	conditional 		<= Nconditional;
+	NOP 					<= NNOP and NOP_in;
+	use_B					<= Nuse_B;
 	
 	A_sel <= instruction(11 downto 9);
 	pcPlusOneOut <= pcPlusOneIn;
