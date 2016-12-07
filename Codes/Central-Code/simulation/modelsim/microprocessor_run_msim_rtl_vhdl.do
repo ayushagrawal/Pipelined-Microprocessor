@@ -7,7 +7,6 @@ vmap work rtl_work
 
 vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/CLOCK_DIVIDER.vhd}
 vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mem_components.vhd}
-vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/writeBack.vhd}
 vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/subtractor.vhd}
 vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/signExtender.vhd}
 vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registers.vhd}
@@ -26,7 +25,10 @@ vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Cod
 vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/adder.vhd}
 vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/instruction_memory.vhd}
 vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/data_memory.vhd}
+vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/hazardDetectionUnit.vhd}
+vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mux4.vhd}
 vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mem_access.vhd}
+vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/writeBack.vhd}
 vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerRead.vhd}
 vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerFile.vhd}
 vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/register16.vhd}
@@ -36,6 +38,7 @@ vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Cod
 vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/execute.vhd}
 vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/decoderRF.vhd}
 vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/Decode.vhd}
+vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/forwardingUnit.vhd}
 
 vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/testbench.vhd}
 
