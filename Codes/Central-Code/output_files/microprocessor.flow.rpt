@@ -1,5 +1,5 @@
 Flow report for microprocessor
-Wed Dec 07 18:23:27 2016
+Wed Dec 07 18:53:17 2016
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Dec 07 18:23:27 2016       ;
+; Flow Status                        ; Successful - Wed Dec 07 18:53:17 2016       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; microprocessor                              ;
 ; Top-level Entity Name              ; microprocessor                              ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/07/2016 18:22:57 ;
+; Start date & time ; 12/07/2016 18:52:49 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; microprocessor      ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 246927996093656.148111517707092        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 246927996093656.148111696912320        ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; dut                                    ; --            ; --          ; testbench      ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; testbench                              ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
@@ -111,12 +111,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:18     ; 1.0                     ; 706 MB              ; 00:00:37                           ;
-; Fitter                    ; 00:00:04     ; 1.0                     ; 1092 MB             ; 00:00:04                           ;
+; Analysis & Synthesis      ; 00:00:16     ; 1.0                     ; 708 MB              ; 00:00:34                           ;
+; Fitter                    ; 00:00:04     ; 1.0                     ; 1091 MB             ; 00:00:05                           ;
 ; Assembler                 ; 00:00:01     ; 1.0                     ; 558 MB              ; 00:00:01                           ;
 ; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 607 MB              ; 00:00:02                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 519 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:26     ; --                      ; --                  ; 00:00:45                           ;
+; Total                     ; 00:00:24     ; --                      ; --                  ; 00:00:43                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

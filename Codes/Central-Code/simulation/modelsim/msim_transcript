@@ -515,3 +515,37 @@ restart
 run -all
 # ** Note: SUCCESS, all tests passed.
 #    Time: 3710 ns  Iteration: 0  Instance: /testbench
+add wave -position insertpoint  \
+sim:/testbench/dut/Decoded/instruction
+restart
+run -all
+# ** Note: SUCCESS, all tests passed.
+#    Time: 3710 ns  Iteration: 0  Instance: /testbench
+add wave -position insertpoint  \
+sim:/testbench/dut/Decoded/rf_wren
+add wave -position insertpoint  \
+sim:/testbench/dut/writes/writeEn
+restart
+run -all
+# ** Note: SUCCESS, all tests passed.
+#    Time: 3710 ns  Iteration: 0  Instance: /testbench
+add wave -position insertpoint  \
+sim:/testbench/dut/Decoded/NOP
+add wave -position insertpoint  \
+sim:/testbench/dut/RR/NOP_out
+add wave -position insertpoint  \
+sim:/testbench/dut/executed/NOP_out
+add wave -position insertpoint  \
+sim:/testbench/dut/memory/NOP_out
+restart
+run -all
+# ** Note: SUCCESS, all tests passed.
+#    Time: 3710 ns  Iteration: 0  Instance: /testbench
+add wave -position insertpoint  \
+sim:/testbench/dut/IFetch/if_id_reg(32)
+restart
+run -all
+# ** Note: SUCCESS, all tests passed.
+#    Time: 3710 ns  Iteration: 0  Instance: /testbench
+# End time: 18:53:05 on Dec 07,2016, Elapsed time: 0:27:46
+# Errors: 0, Warnings: 1
