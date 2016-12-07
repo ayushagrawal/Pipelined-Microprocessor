@@ -26,7 +26,7 @@ architecture RF of registerFile is
 	signal en,re : std_logic_vector(6 downto 0);
 begin
 	inSel: decoderRF port map(input => dataInsel, output => enable);
-	r7_en <= (enable(7) and regWrite) or r7_select ; 
+	r7_en <= '1' ; 
 	en <= enable(6 downto 0) and re; 
 	re <= (others => regWrite);
 	
@@ -39,7 +39,7 @@ begin
 	register_6 : register16 port map(dataIn => dataIn,enable => en(6) ,dataOut => muxA_in6 ,clock => clock_rb,reset => reset);
 	register_7 : register16 port map(dataIn => r7_in ,enable => r7_en ,dataOut => muxA_in7 ,clock => clock_rb,reset => reset);
 	
-	r7_mux : mux2 generic map(n => 15) port map(in0 => dataIn, in1 => pc_in, sel => r7_select, output => r7_in);
+	r7_mux : mux2 generic map(n => 15) port map(in0 => pc_in, in1 => dataIn, sel => r7_select, output => r7_in);
 	
 	muxB_in0 <= muxA_in0;
 	muxB_in1 <= muxA_in1;
