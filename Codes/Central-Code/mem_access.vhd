@@ -17,50 +17,54 @@ use work.mem_components.all;
 
 entity mem_access is
 	port	(	
-				clock	:in STD_LOGIC;
-				clock_mem : in std_logic;
-		 		reset	:in STD_LOGIC;
-				pcAlu_result : in std_logic_vector(15 downto 0);	
-				pcPlusOne : in std_logic_vector(15 downto 0);
-				regA : in std_logic_vector(15 downto 0);
-				ALUresult : in std_logic_vector(15 downto 0);	
-				regB : in std_logic_vector(15 downto 0);
-				signExtend : in std_logic_vector(15 downto 0);	
-				pcMux_ctrl : in std_logic;
-				mem_mux_ctrl : in std_logic;
-				memWrite_en : in std_logic;
-				rf_dataIn_mux_ctrl : in std_logic_vector(1 downto 0);
-				rfDataInSel : in std_logic_vector(2 downto 0);	
-				counterMuxIn : in std_logic;
-				rf_wren_mux_ctrl : in std_logic;
-				rf_wren : in std_logic;
-				r7_enable : in std_logic;
-				pcRegMux_crtl_in : in std_logic;
+				clock						: in STD_LOGIC;
+				clock_mem 				: in std_logic;
+		 		reset						: in STD_LOGIC;
+				pcAlu_result 			: in std_logic_vector(15 downto 0);	
+				pcPlusOne 				: in std_logic_vector(15 downto 0);
+				regA 						: in std_logic_vector(15 downto 0);
+				ALUresult				: in std_logic_vector(15 downto 0);	
+				regB 						: in std_logic_vector(15 downto 0);
+				signExtend 				: in std_logic_vector(15 downto 0);	
+				pcMux_ctrl 				: in std_logic;
+				mem_mux_ctrl 			: in std_logic;
+				memWrite_en 			: in std_logic;
+				rf_dataIn_mux_ctrl 	: in std_logic_vector(1 downto 0);
+				rfDataInSel 			: in std_logic_vector(2 downto 0);	
+				counterMuxIn 			: in std_logic;
+				rf_wren_mux_ctrl 		: in std_logic;
+				rf_wren 					: in std_logic;
+				r7_enable 				: in std_logic;
+				pcRegMux_crtl_in 		: in std_logic;
+				NOP_in					: in std_logic;
 	
-				pc_mux_out : out std_logic_vector(15 downto 0);	
-				pcPlusOne_out : out std_logic_vector(15 downto 0);		
-				mem_data_out : out std_logic_vector(15 downto 0);	
-				ALUresult_out : out std_logic_vector(15 downto 0);
-				signExtend_out : out std_logic_vector(15 downto 0);
+				pc_mux_out 				: out std_logic_vector(15 downto 0);	
+				pcPlusOne_out 			: out std_logic_vector(15 downto 0);		
+				mem_data_out			: out std_logic_vector(15 downto 0);	
+				ALUresult_out 			: out std_logic_vector(15 downto 0);
+				signExtend_out 		: out std_logic_vector(15 downto 0);
 				rf_dataIn_mux_ctrl_out : out std_logic_vector(1 downto 0);
-				rfDataInSel_out : out std_logic_vector(2 downto 0);
-				counterMuxOut : out std_logic;
+				rfDataInSel_out 		: out std_logic_vector(2 downto 0);
+				counterMuxOut 			: out std_logic;
 				rf_wren_mux_ctrl_out : out std_logic;
-				rf_wren_out : out std_logic;
-				r7_enable_out : out std_logic;
-				pcRegMux_crtl : out std_logic
-		);
+				rf_wren_out		 		: out std_logic;
+				r7_enable_out 			: out std_logic;
+				pcRegMux_crtl 			: out std_logic;
+				NOP_out					: out std_logic);
 end entity;
 
 architecture Behave of mem_access is
 
-signal pc_out : std_logic_vector(15 downto 0);
-signal mem_mux_out : std_logic_vector(15 downto 0);
-signal mem_out : std_logic_vector(15 downto 0);
+	signal pc_out : std_logic_vector(15 downto 0);
+	signal mem_mux_out : std_logic_vector(15 downto 0);
+	signal mem_out : std_logic_vector(15 downto 0);
+	signal wren : std_logic;
 
 begin 
-
-pcRegMux_crtl <= pcRegMux_crtl_in;
+	
+	wren <= memWrite_en and NOP_in;
+	NOP_out <= NOP_in;
+	pcRegMux_crtl <= pcRegMux_crtl_in;
 
 pc_mux : mux2 generic map (n => 15) port map (	in0 => regB,
 												in1 => pcAlu_result,
@@ -77,7 +81,7 @@ data_mem_mux : mux2 generic map(n => 15) port map ( in0 => regA,
 
 data_mem : data_memory port map(	address => ALUresult,
 								 data =>  mem_mux_out, 
-								 wren => memWrite_en, 
+								 wren => wren, 
 								 q => mem_out,
 								 clock => clock_mem);
 
