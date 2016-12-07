@@ -17,10 +17,10 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition"
 
-// DATE "12/06/2016 15:01:21"
+// DATE "12/07/2016 18:23:27"
 
 // 
-// Device: Altera EP4CE6E22C6 Package TQFP144
+// Device: Altera EP4CE6E22I8L Package TQFP144
 // 
 
 // 
@@ -36,8 +36,8 @@ input 	clock_c;
 input 	reset;
 
 // Design Ports Information
-// clock_c	=>  Location: PIN_104,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// reset	=>  Location: PIN_53,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// clock_c	=>  Location: PIN_1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// reset	=>  Location: PIN_2,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 wire gnd;
@@ -52,7 +52,7 @@ tri1 devclrn;
 tri1 devpor;
 tri1 devoe;
 // synopsys translate_off
-initial $sdf_annotate("microprocessor_6_1200mv_85c_v_slow.sdo");
+initial $sdf_annotate("microprocessor_min_1000mv_-40c_v_fast.sdo");
 // synopsys translate_on
 
 wire \clock_c~input_o ;
@@ -64,7 +64,7 @@ hard_block auto_generated_inst(
 	.devclrn(devclrn),
 	.devoe(devoe));
 
-// Location: IOIBUF_X34_Y18_N1
+// Location: IOIBUF_X0_Y23_N1
 cycloneive_io_ibuf \clock_c~input (
 	.i(clock_c),
 	.ibar(gnd),
@@ -74,7 +74,7 @@ defparam \clock_c~input .bus_hold = "false";
 defparam \clock_c~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: IOIBUF_X16_Y0_N1
+// Location: IOIBUF_X0_Y23_N8
 cycloneive_io_ibuf \reset~input (
 	.i(reset),
 	.ibar(gnd),

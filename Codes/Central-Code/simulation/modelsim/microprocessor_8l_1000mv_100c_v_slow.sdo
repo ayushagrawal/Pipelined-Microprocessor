@@ -15,12 +15,12 @@
 
 
 // 
-// Device: Altera EP4CE6E22C6 Package TQFP144
+// Device: Altera EP4CE6E22I8L Package TQFP144
 // 
 
 //
-// This file contains Slow Corner delays for the design using part EP4CE6E22C6,
-// with speed grade 6, core voltage 1.2VmV, and temperature 85 Celsius
+// This file contains Slow Corner delays for the design using part EP4CE6E22I8L,
+// with speed grade 8L, core voltage 1.0VmV, and temperature 100 Celsius
 //
 
 // 
@@ -30,7 +30,7 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "microprocessor")
-  (DATE "12/06/2016 15:01:21")
+  (DATE "12/07/2016 18:23:27")
   (VENDOR "Altera")
   (PROGRAM "Quartus Prime")
   (VERSION "Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition")
