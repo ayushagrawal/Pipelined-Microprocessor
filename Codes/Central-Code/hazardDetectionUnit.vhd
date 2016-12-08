@@ -27,37 +27,39 @@ architecture HDU of hazardDetectionUnit is
 begin
 	
 	process(regSel_A,regSel_B,regSel_wb_in,regSel_mem_in,regSel_ex_in,NOP_ex,NOP_mem,NOP_wb,use_B)
+		variable dataHazardFlag1,dataHazardFlag2 : std_logic;
 	begin														--
 		if((regSel_A = regSel_ex_in) and NOP_ex = '1') then				--
 			RR_A_mux_sel <= "01";												-- Priority is taken into consideration
-			dataHazardFlag <= '1';												--
+			dataHazardFlag1 := '1';												--
 		elsif((regSel_A = regSel_mem_in) and NOP_mem = '1') then								--
 			RR_A_mux_sel <= "10";
-			dataHazardFlag <= '1';
+			dataHazardFlag1 := '1';
 		elsif((regSel_A = regSel_wb_in) and NOP_wb = '1') then
 			RR_A_mux_sel <= "11";
-			dataHazardFlag <= '1';
+			dataHazardFlag1 := '1';
 		else
 			RR_A_mux_sel <= "00";
-			dataHazardFlag <= '0';
+			dataHazardFlag1 := '0';
 		end if;
 		
 		if(use_B = '1') then
 			if((regSel_B = regSel_ex_in) and NOP_ex = '1') then
 				RR_B_mux_sel <= "01";
-				dataHazardFlag <= '1';
+				dataHazardFlag2 := '1';
 			elsif((regSel_B = regSel_mem_in) and NOP_mem = '1') then
 				RR_B_mux_sel <= "10";
-				dataHazardFlag <= '1';
+				dataHazardFlag2 := '1';
 			elsif((regSel_B = regSel_wb_in) and NOP_wb = '1') then
 				RR_B_mux_sel <= "11";
-				dataHazardFlag <= '1';
+				dataHazardFlag2 := '1';
 			else
 				RR_B_mux_sel <= "00";
-				dataHazardFlag <= '0';
+				dataHazardFlag2 := '0';
 			end if;
 		else
 			RR_B_mux_sel <= "00";
+			dataHazardFlag <= dataHazardFlag1 or dataHazardFlag2;
 		end if;
 	end process;
 	

@@ -1,5 +1,5 @@
 EDA Netlist Writer report for microprocessor
-Wed Dec 07 20:08:45 2016
+Thu Dec 08 12:39:44 2016
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Dec 07 20:08:45 2016 ;
+; EDA Netlist Writer Status ; Successful - Thu Dec 08 12:39:44 2016 ;
 ; Revision Name             ; microprocessor                        ;
 ; Top-level Entity Name     ; microprocessor                        ;
 ; Family                    ; Cyclone IV E                          ;
@@ -89,7 +89,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Wed Dec 07 20:08:44 2016
+    Info: Processing started: Thu Dec 08 12:39:43 2016
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off microprocessor -c microprocessor
 Info (204019): Generated file microprocessor_8l_1000mv_100c_slow.vo in folder "C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file microprocessor_8l_1000mv_-40c_slow.vo in folder "C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/simulation/modelsim/" for EDA simulation tool
@@ -101,8 +101,8 @@ Info (204019): Generated file microprocessor_min_1000mv_-40c_v_fast.sdo in folde
 Info (204019): Generated file microprocessor_v.sdo in folder "C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 519 megabytes
-    Info: Processing ended: Wed Dec 07 20:08:46 2016
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Thu Dec 08 12:39:44 2016
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 
