@@ -12,7 +12,7 @@ end entity;
 architecture mic of microprocessor is
 	signal input_if,  output_if  : std_logic_vector(48 downto 0);
 	signal input_id,  output_id  : std_logic_vector(63 downto 0);
-	signal input_rr,  output_rr  : std_logic_vector(88 downto 0);
+	signal input_rr,  output_rr  : std_logic_vector(89 downto 0);
 	signal input_ex,  output_ex  : std_logic_vector(109 downto 0);
 	signal input_mem, output_mem : std_logic_vector(90 downto 0);
 	
@@ -38,7 +38,7 @@ begin
 	
 	IF_ID  : registers generic map(N => 49)  port map(clock => clock, reset => reset, enable => enable_IF,  input => input_if,  output => output_if);
 	ID_RR  : registers generic map(N => 64)  port map(clock => clock, reset => reset, enable => enable_id,  input => input_id,  output => output_id);
-	RR_EX  : registers generic map(N => 89)  port map(clock => clock, reset => reset, enable => enable_rr,  input => input_rr,  output => output_rr);
+	RR_EX  : registers generic map(N => 90)  port map(clock => clock, reset => reset, enable => enable_rr,  input => input_rr,  output => output_rr);
 	EX_MEM : registers generic map(N => 110) port map(clock => clock, reset => reset, enable => enable_ex,  input => input_ex,  output => output_ex);
 	MEM_WB : registers generic map(N => 91)  port map(clock => clock, reset => reset, enable => enable_mem, input => input_mem, output => output_mem);
 
@@ -85,6 +85,9 @@ begin
 												 regB_actual	=> B,
 												 
 												 dataHazardFlag => dataHazardFlag,
+												 
+												 stall_in	=> output_rr(89),
+												 stall_out 	=> input_rr(89),
 												 
 												 regA			=> input_rr(54 downto 39),
 												 regB			=> input_rr(38 downto 23),

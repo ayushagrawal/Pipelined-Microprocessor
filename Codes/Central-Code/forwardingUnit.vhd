@@ -27,6 +27,9 @@ entity forwardingUnit is
 		  
 		  dataHazardFlag : in std_logic;
 		  
+		  stall_in		: in std_logic;
+		  stall_out		: out std_logic;
+		  
 		  regA			: out std_logic_vector(15 downto 0);
 		  regB			: out std_logic_vector(15 downto 0);
 		  bubble_en		: out std_logic);
@@ -51,22 +54,30 @@ begin
 															 sel  		=> reg_B_mux,
 															 output 		=> regB);
 	
-	process(exe_alu,exe_pc1,exe_se,mem_alu,mem_pc1,mem_se,mem_mem,data_mux_ex,data_mux_mem,dataHazardFlag)
+	process(exe_alu,exe_pc1,exe_se,mem_alu,mem_pc1,mem_se,mem_mem,data_mux_ex,data_mux_mem,dataHazardFlag,stall_in)
 	variable Nbubble_en: std_logic;
 	begin
 		-- Default Values
 		Nbubble_en := '0';
 		if(data_mux_ex = "00") then
 			exe_data <= exe_pc1;
+			stall_out <= '0';
 		elsif(data_mux_ex = "10") then
 			exe_data <= exe_alu;
+			stall_out <= '0';
 		elsif(data_mux_ex = "11") then
 			exe_data <= exe_se;
+			stall_out <= '0';
 		else															--Elaboration needed later	
 			exe_data <= exe_alu;
 			if(dataHazardFlag = '1') then
 				Nbubble_en := '1';
+				stall_out <= '1';
+				if(stall_in = '1') then							-- Indicates that the pipelin has stalled for 1 cycle
+					Nbubble_en := '0';
+				end if;
 			else
+				stall_out <= '0';
 				Nbubble_en := '0';
 			end if;
 		end if;

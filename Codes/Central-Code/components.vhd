@@ -263,6 +263,9 @@ package components is
 			  
 			  dataHazardFlag : in std_logic;
 			  
+			  stall_in		: in std_logic;
+			  stall_out		: out std_logic;
+		  
 			  regA			: out std_logic_vector(15 downto 0);
 			  regB			: out std_logic_vector(15 downto 0);
 			  bubble_en		: out std_logic);
