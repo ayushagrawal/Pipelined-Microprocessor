@@ -59,7 +59,12 @@ begin
 			end if;
 		else
 			RR_B_mux_sel <= "00";
-			dataHazardFlag <= dataHazardFlag1 or dataHazardFlag2;
+			dataHazardFlag2 := '0';
+		end if;
+		if((dataHazardFlag1 = '1') or (dataHazardFlag2 = '1')) then
+			dataHazardFlag <= '1';
+		else
+			dataHazardFlag <= '0';
 		end if;
 	end process;
 	
