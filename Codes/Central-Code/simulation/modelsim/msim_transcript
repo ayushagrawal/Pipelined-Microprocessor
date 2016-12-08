@@ -464,3 +464,36 @@
 # Loading work.writeback(wb)
 # ** Warning: Design size of 11587 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: SUCCESS, all tests passed.
+#    Time: 2140 ns  Iteration: 0  Instance: /testbench
+add wave -position insertpoint  \
+sim:/testbench/dut/IFetch/pc_out
+add wave -position insertpoint  \
+sim:/testbench/dut/RR/RF/register_7/dataOut
+restart
+run -all
+# ** Note: SUCCESS, all tests passed.
+#    Time: 2140 ns  Iteration: 0  Instance: /testbench
+add wave -position insertpoint  \
+sim:/testbench/dut/RR/NOP_out
+restart
+run -all
+# ** Note: SUCCESS, all tests passed.
+#    Time: 2140 ns  Iteration: 0  Instance: /testbench
+add wave -position insertpoint  \
+sim:/testbench/dut/Decoded/NOP
+add wave -position insertpoint  \
+sim:/testbench/dut/memory/NOP_out
+restart
+run -all
+# ** Note: SUCCESS, all tests passed.
+#    Time: 2140 ns  Iteration: 0  Instance: /testbench
+# End time: 22:45:04 on Dec 08,2016, Elapsed time: 0:15:54
+# Errors: 0, Warnings: 1
