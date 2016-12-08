@@ -98,6 +98,8 @@ package components is
 				pcRegMux_crtl_in		: in std_logic;
 				conditional_in			: in std_logic;
 				NOP_in					: in std_logic;
+				
+				pc_out					: out std_logic_vector(15 downto 0);
 				pcPlusOneOut 			: out std_logic_vector(15 downto 0);
 				pcMux_crtlout	 		: out std_logic;
 				regA			 			: out std_logic_vector(15 downto 0);
@@ -166,6 +168,7 @@ package components is
 					pcRegMux_crtl_in: in std_logic;
 					conditional	: in std_logic;
 					NOP_in			: in std_logic;
+					pc_in				: std_logic_vector(15 downto 0);
 										
 					pcPlusOneOut : out std_logic_vector(15 downto 0);
 					regA_out : out std_logic_vector(15 downto 0);

@@ -33,6 +33,7 @@ entity execute is
 				pcRegMux_crtl_in	: in std_logic;
 				conditional			: in std_logic;
 				NOP_in				: in std_logic;
+				pc_in					: in std_logic_vector(15 downto 0);
 									
 				pcPlusOneOut 		: out std_logic_vector(15 downto 0);
 				regA_out 			: out std_logic_vector(15 downto 0);
@@ -68,7 +69,7 @@ begin
 	
 	NOP_out <= NOP_in;
 	rf_wren_out_out <= rf_wren_out and (((not op2in(0) and op2in(1) and carry_signal) or ((not op2in(1)) and op2in(0) and zero_signal_in) or (not (op2in(0) xor op2in(1)))) or (not conditional));
-	add2 : adder port map (data0x => pcPlusOneIn,data1x => signExtend,result => temp);
+	add2 : adder port map (data0x => pc_in,data1x => signExtend,result => temp);
 	pcPlusOneOut <= pcPlusOneIn;
 	pcALUresult <= temp(15 downto 0);
 	regA_out <= regA;

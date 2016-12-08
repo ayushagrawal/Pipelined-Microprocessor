@@ -12,7 +12,7 @@ end entity;
 architecture mic of microprocessor is
 	signal input_if,  output_if  : std_logic_vector(48 downto 0);
 	signal input_id,  output_id  : std_logic_vector(63 downto 0);
-	signal input_rr,  output_rr  : std_logic_vector(88 downto 0);
+	signal input_rr,  output_rr  : std_logic_vector(104 downto 0);
 	signal input_ex,  output_ex  : std_logic_vector(109 downto 0);
 	signal input_mem, output_mem : std_logic_vector(90 downto 0);
 	
@@ -31,6 +31,7 @@ architecture mic of microprocessor is
 	signal carry_en,zero_en : std_logic;
 	signal NOP_ex,NOP_mem,NOP_rr,NOP_decode,NOP_fetch : std_logic;
 	signal pc : std_logic_vector(15 downto 0);
+	signal pc_hazard : std_logic;
 
 begin
 	
@@ -38,7 +39,7 @@ begin
 	
 	IF_ID  : registers generic map(N => 49)  port map(clock => clock, reset => reset, enable => enable_IF,  input => input_if,  output => output_if);
 	ID_RR  : registers generic map(N => 64)  port map(clock => clock, reset => reset, enable => enable_id,  input => input_id,  output => output_id);
-	RR_EX  : registers generic map(N => 89)  port map(clock => clock, reset => reset, enable => enable_rr,  input => input_rr,  output => output_rr);
+	RR_EX  : registers generic map(N => 105)  port map(clock => clock, reset => reset, enable => enable_rr,  input => input_rr,  output => output_rr);
 	EX_MEM : registers generic map(N => 110) port map(clock => clock, reset => reset, enable => enable_ex,  input => input_ex,  output => output_ex);
 	MEM_WB : registers generic map(N => 91)  port map(clock => clock, reset => reset, enable => enable_mem, input => input_mem, output => output_mem);
 
@@ -93,7 +94,7 @@ begin
 												 regB			=> input_rr(38 downto 23),
 												 bubble_en  => bubble);
 	
-	NOP_fetch <= ((not r7_enable_out_w) or (not output_mem(90)));
+	NOP_fetch <= (not r7_enable_out_w) or (not output_mem(90));
 	
 	IFetch : inst_fetch port map(clock => clock,
 										  clock_mem => clock_c,
@@ -105,7 +106,7 @@ begin
 										  if_id_reg => input_if(32 downto 0),
 										  pcRegMux_crtl => pcRegMux_crtl_w);
 										  
-	NOP_decode <= ((not r7_enable_out_w) or (not output_mem(90))) and output_if(32);
+	NOP_decode <= ((not r7_enable_out_w) or (not output_mem(90))) and output_if(32) and (not pc_hazard);
 	
 	Decoded: decode port map(	clock	     		=> clock,
 										pc_in				=> output_if(48 downto 33),
@@ -138,7 +139,7 @@ begin
 										counter_mux  	=> input_id(1),
 										alu_a_muxCrtl	=> input_id(0));
 	
-	NOP_rr <= output_id(62);
+	NOP_rr <= output_id(62) and (not pc_hazard);
 																	
 	RR : registerRead port map(clock						=> clock,
 										reset						=> reset,
@@ -171,6 +172,7 @@ begin
 										counter_muxin  		=> output_id(1),
 										alu_a_muxCrtlin		=> output_id(0),
 										
+										pc_out					=> input_rr(104 downto 89),
 										NOP_out					=> input_rr(88),
 										conditional_out		=> input_rr(87),
 										pcPlusOneOut 			=> input_rr(86 downto 71),
@@ -201,11 +203,12 @@ begin
 	zero_en <= output_rr(1) and not_bubble;		-- So that the carry and zero flags are affected only once
 	carry_en <= output_rr(0) and not_bubble;
 	
-	NOP_ex <= output_rr(88) and ((not r7_enable_out_w) or (not output_mem(90)));
+	NOP_ex <= output_rr(88) and ((not r7_enable_out_w) or (not output_mem(90))) and (not pc_hazard);
 	
 	executed : execute port map ( clock => clock,
 											reset => reset,
 											counter_reset 		=> counter_reset,
+											pc_in					=> output_rr(104 downto 89),
 											NOP_in				=> NOP_ex,
 											conditional			=> output_rr(87),
 											pcPlusOneIn 		=> output_rr(86 downto 71),
@@ -248,7 +251,7 @@ begin
 											rf_wren_out_out 	=> input_ex(1),
 											counter_mux_out 	=> input_ex(0)); 
 
-	NOP_mem <= output_ex(109) and ((not r7_enable_out_w) or (not output_mem(90)));
+	NOP_mem <= output_ex(109) and ((not r7_enable_out_w) or (not output_mem(90))) and (not pc_hazard);
 
 	memory : mem_access port map (clock 						=> clock,
 											clock_mem					=> clock_c,
@@ -305,5 +308,7 @@ begin
 										 pcIn => pcIn_w,
 										 rfDataInsel_out => rfDataInsel_out_w,
 										 pcRegMux_crtl  => pcRegMux_crtl_w);
+										 
+	pc_hazard <= pcRegMux_crtl_w and (not(rfDataInsel_out_w(0) and rfDataInsel_out_w(1) and rfDataInsel_out_w(2)));
 
 end mic;
