@@ -22,9 +22,9 @@ VH]@5LYFV8SEKeo`obE]9R1
 !s100 XhAC^SKQ5=XIi?1ZTbJke0
 Z7 OV;C;10.5b;63
 31
-Z8 !s110 1481183529
+Z8 !s110 1481185049
 !i10b 1
-Z9 !s108 1481183529.000000
+Z9 !s108 1481185049.000000
 Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/adder.vhd|
 Z11 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/adder.vhd|
 !i113 1
@@ -103,9 +103,9 @@ V_3iC^>I=H5Hz1Kgl]YTmK0
 !s100 b5oMIf>k3D`99J=D:Y9QF2
 R7
 31
-Z23 !s110 1481183527
+Z23 !s110 1481185047
 !i10b 1
-Z24 !s108 1481183527.000000
+Z24 !s108 1481185047.000000
 Z25 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/CLOCK_DIVIDER.vhd|
 Z26 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/CLOCK_DIVIDER.vhd|
 !i113 1
@@ -132,14 +132,14 @@ R13
 Pcomponents
 R3
 R4
-w1481183113
+w1481184080
 R0
 8C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/components.vhd
 FC:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/components.vhd
 l0
 L4
-VT<z1=2C[Y<n[22HDTfHf`0
-!s100 O2Qg9J@zTFg:9RC66WmXZ1
+VMTAh>QD`L@`<KW[5GE7N@3
+!s100 PQKHXUeeMh3OW<b9?=5QV2
 R7
 31
 R8
@@ -244,9 +244,9 @@ VKZG2CCzKEf73DLXWYA[?V1
 !s100 MW5Wz@N4><C>=lYHa^5bI1
 R7
 31
-Z40 !s110 1481183531
+Z40 !s110 1481185051
 !i10b 1
-Z41 !s108 1481183530.000000
+Z41 !s108 1481185051.000000
 Z42 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/Decode.vhd|
 Z43 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/Decode.vhd|
 !i113 1
@@ -306,11 +306,11 @@ V>B161dFSE`3ElN8D6LVMh0
 !s100 F`SoTQjW:WCZE3VA?JH8F2
 R7
 31
-Z49 !s110 1481183530
+R40
 !i10b 1
 R41
-Z50 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/decoderRF.vhd|
-Z51 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/decoderRF.vhd|
+Z49 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/decoderRF.vhd|
+Z50 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/decoderRF.vhd|
 !i113 1
 R12
 R13
@@ -325,11 +325,11 @@ Vczc1V>]?PIZ8PjQJ0=6oW0
 !s100 PhJ:kQ?WTaM]nAT7OiO3Q2
 R7
 31
-R49
+R40
 !i10b 1
 R41
+R49
 R50
-R51
 !i113 1
 R12
 R13
@@ -346,38 +346,38 @@ VU_ec]]VmkX41bPh@6LP>j2
 !s100 loC6USf3zcGa]gzN=gW`c2
 R7
 31
-Z52 !s110 1481183528
+Z51 !s110 1481185048
 !i10b 1
-Z53 !s108 1481183528.000000
+Z52 !s108 1481185048.000000
 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/exe_components.vhd|
 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/exe_components.vhd|
 !i113 1
 R12
 R13
 Eexecute
-Z54 w1481096636
-Z55 DPx4 work 14 exe_components 0 22 U_ec]]VmkX41bPh@6LP>j2
+Z53 w1481096636
+Z54 DPx4 work 14 exe_components 0 22 U_ec]]VmkX41bPh@6LP>j2
 R3
 R4
 R0
-Z56 8C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/execute.vhd
-Z57 FC:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/execute.vhd
+Z55 8C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/execute.vhd
+Z56 FC:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/execute.vhd
 l0
 L8
 V7im:>S1_2kKcG_D]mZndg2
 !s100 dDECNEDEeF7aMF0fXh2;l3
 R7
 31
-R49
+R40
 !i10b 1
 R41
-Z58 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/execute.vhd|
-Z59 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/execute.vhd|
+Z57 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/execute.vhd|
+Z58 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/execute.vhd|
 !i113 1
 R12
 R13
 Abehave
-R55
+R54
 R3
 R4
 DEx4 work 7 execute 0 22 7im:>S1_2kKcG_D]mZndg2
@@ -387,62 +387,62 @@ V:A=2cd9i=aNDzD<D:3ldW2
 !s100 V;C7]c`Wh4V?S^S70KF?m3
 R7
 31
-R49
+R40
 !i10b 1
 R41
+R57
 R58
-R59
 !i113 1
 R12
 R13
 Eforwardingunit
-Z60 w1481183415
-Z61 DPx4 work 10 components 0 22 T<z1=2C[Y<n[22HDTfHf`0
+Z59 w1481184937
+Z60 DPx4 work 10 components 0 22 MTAh>QD`L@`<KW[5GE7N@3
 R3
 R4
 R0
-Z62 8C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/forwardingUnit.vhd
-Z63 FC:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/forwardingUnit.vhd
+Z61 8C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/forwardingUnit.vhd
+Z62 FC:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/forwardingUnit.vhd
 l0
 L7
-VF5fgUZScocKWZWbg4LW:83
-!s100 h7D>D5c`k]0P2_D]9b@if1
+VOSTDIX?fLn^PT:zJGMgIT1
+!s100 m0g=Ibzm2f6LzE@FU@coG0
 R7
 31
 R40
 !i10b 1
-Z64 !s108 1481183531.000000
-Z65 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/forwardingUnit.vhd|
-Z66 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/forwardingUnit.vhd|
+R41
+Z63 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/forwardingUnit.vhd|
+Z64 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/forwardingUnit.vhd|
 !i113 1
 R12
 R13
 Afu
-R61
+R60
 R3
 R4
-DEx4 work 14 forwardingunit 0 22 F5fgUZScocKWZWbg4LW:83
-l41
+DEx4 work 14 forwardingunit 0 22 OSTDIX?fLn^PT:zJGMgIT1
+l42
 L39
-VTB_o]LadM<9Z5k8?QYNTe2
-!s100 h2CEBZ9kgYa?2]W^]2j>91
+V6kS`i9jG2]TYQ_QZJ>lDb3
+!s100 ]XAC?[GkL5c6Mz2HOi:MY2
 R7
 31
 R40
 !i10b 1
+R41
+R63
 R64
-R65
-R66
 !i113 1
 R12
 R13
 Ehazarddetectionunit
-Z67 w1481181438
+Z65 w1481181438
 R3
 R4
 R0
-Z68 8C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/hazardDetectionUnit.vhd
-Z69 FC:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/hazardDetectionUnit.vhd
+Z66 8C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/hazardDetectionUnit.vhd
+Z67 FC:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/hazardDetectionUnit.vhd
 l0
 L4
 VZLXY5EVmePbEO62B0FFSF0
@@ -452,8 +452,8 @@ R7
 R8
 !i10b 1
 R9
-Z70 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/hazardDetectionUnit.vhd|
-Z71 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/hazardDetectionUnit.vhd|
+Z68 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/hazardDetectionUnit.vhd|
+Z69 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/hazardDetectionUnit.vhd|
 !i113 1
 R12
 R13
@@ -470,8 +470,8 @@ R7
 R8
 !i10b 1
 R9
-R70
-R71
+R68
+R69
 !i113 1
 R12
 R13
@@ -488,38 +488,38 @@ VlgeF:X^_;KnSE@k7]>oYE0
 !s100 =C]Pd[k]<SBBfz9DCY7TO1
 R7
 31
-R52
+R51
 !i10b 1
-R53
+R52
 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/if_components.vhd|
 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/if_components.vhd|
 !i113 1
 R12
 R13
 Einst_fetch
-Z72 w1481114428
-Z73 DPx4 work 13 if_components 0 22 lgeF:X^_;KnSE@k7]>oYE0
+Z70 w1481114428
+Z71 DPx4 work 13 if_components 0 22 lgeF:X^_;KnSE@k7]>oYE0
 R3
 R4
 R0
-Z74 8C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/inst_fetch.vhd
-Z75 FC:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/inst_fetch.vhd
+Z72 8C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/inst_fetch.vhd
+Z73 FC:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/inst_fetch.vhd
 l0
 L10
 V;T5Q;Nk@jA]5VE0n>mI:;2
 !s100 zgOVh>4]=4<YH9n>OH0<`1
 R7
 31
-R49
+R40
 !i10b 1
-R41
-Z76 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/inst_fetch.vhd|
-Z77 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/inst_fetch.vhd|
+Z74 !s108 1481185050.000000
+Z75 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/inst_fetch.vhd|
+Z76 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/inst_fetch.vhd|
 !i113 1
 R12
 R13
 Abehave
-R73
+R71
 R3
 R4
 DEx4 work 10 inst_fetch 0 22 ;T5Q;Nk@jA]5VE0n>mI:;2
@@ -529,22 +529,22 @@ V?Dk8aTI[W:?A3hizBM;2a3
 !s100 iA2]n3=S>9bE9<P3gF5o70
 R7
 31
-R49
+R40
 !i10b 1
-R41
+R74
+R75
 R76
-R77
 !i113 1
 R12
 R13
 Einstruction_memory
-Z78 w1480053881
+Z77 w1480053881
 R2
 R3
 R4
 R0
-Z79 8C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/instruction_memory.vhd
-Z80 FC:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/instruction_memory.vhd
+Z78 8C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/instruction_memory.vhd
+Z79 FC:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/instruction_memory.vhd
 l0
 L43
 VG0iJ6h@O1E2[nz2FV_?ok2
@@ -554,8 +554,8 @@ R7
 R8
 !i10b 1
 R9
-Z81 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/instruction_memory.vhd|
-Z82 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/instruction_memory.vhd|
+Z80 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/instruction_memory.vhd|
+Z81 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/instruction_memory.vhd|
 !i113 1
 R12
 R13
@@ -573,35 +573,35 @@ R7
 R8
 !i10b 1
 R9
+R80
 R81
-R82
 !i113 1
 R12
 R13
 Emem_access
-Z83 w1481096805
-Z84 DPx4 work 14 mem_components 0 22 ^ng1aI9HcjnCO`aeC_BCX1
+Z82 w1481096805
+Z83 DPx4 work 14 mem_components 0 22 ^ng1aI9HcjnCO`aeC_BCX1
 R3
 R4
 R0
-Z85 8C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mem_access.vhd
-Z86 FC:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mem_access.vhd
+Z84 8C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mem_access.vhd
+Z85 FC:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mem_access.vhd
 l0
 L18
 VYdBYZIRoPcl0>G=KQUS7A0
 !s100 YV?DAG_MYWlMIJg7?X@H;3
 R7
 31
-R49
+Z86 !s110 1481185050
 !i10b 1
-R41
+R74
 Z87 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mem_access.vhd|
 Z88 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mem_access.vhd|
 !i113 1
 R12
 R13
 Abehave
-R84
+R83
 R3
 R4
 DEx4 work 10 mem_access 0 22 YdBYZIRoPcl0>G=KQUS7A0
@@ -611,9 +611,9 @@ V2;l5X7DM6RM@3?Ve8hWj<0
 !s100 B`c3=eo`=B7WhBHf8:fWJ0
 R7
 31
-R49
+R86
 !i10b 1
-R41
+R74
 R87
 R88
 !i113 1
@@ -641,8 +641,8 @@ R24
 R12
 R13
 Emicroprocessor
-Z89 w1481183353
-R61
+Z89 w1481184149
+R60
 R3
 R4
 R0
@@ -654,28 +654,28 @@ V9@]1b_[1Pjg<ES9Cb=2z93
 !s100 Ci1>_S6J:Q27[zgZEm2nV3
 R7
 31
-R49
+R86
 !i10b 1
-R41
+R74
 Z92 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd|
 Z93 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd|
 !i113 1
 R12
 R13
 Amic
-R61
+R60
 R3
 R4
 DEx4 work 14 microprocessor 0 22 9@]1b_[1Pjg<ES9Cb=2z93
 l35
 L12
-VVcIeOh><8i9Z^M6ZV>JYa0
-!s100 BIRb1ETMJNI_b44@4jan73
+V>BW=7I:Fbc112IQk9gLlB0
+!s100 f;z:_RdRJF_Kn4`P9UAoO1
 R7
 31
-R49
+R86
 !i10b 1
-R41
+R74
 R92
 R93
 !i113 1
@@ -695,9 +695,9 @@ VzFZ`[l>af?l`@imN3[coR1
 !s100 VRzJfe]Vj3g@6]jN?eVIW3
 R7
 31
-R49
+R86
 !i10b 1
-R41
+R74
 Z97 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/multiple.vhd|
 Z98 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/multiple.vhd|
 !i113 1
@@ -714,9 +714,9 @@ V5JiN^HNC<CTFVG82C1W_S1
 !s100 HBB3Kc_NgaT;0;@_<8^N21
 R7
 31
-R49
+R86
 !i10b 1
-R41
+R74
 R97
 R98
 !i113 1
@@ -735,9 +735,9 @@ V_]MNEg5oN@mkHW1jFej_B3
 !s100 [1U8Y?m:lhdPNak3clPb?2
 R7
 31
-R52
+R51
 !i10b 1
-R53
+R52
 Z101 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mux2.vhd|
 Z102 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mux2.vhd|
 !i113 1
@@ -753,9 +753,9 @@ VW_kR=d[gTL[2`=D?ISkok2
 !s100 El3oc@6FFm_>3:A;H[i750
 R7
 31
-R52
+R51
 !i10b 1
-R53
+R52
 R101
 R102
 !i113 1
@@ -774,9 +774,9 @@ Vh:EN@VmN?Eef6THIAZ>N=2
 !s100 zE0aXOaR1O5:ZOzIfkzU13
 R7
 31
-R52
+R51
 !i10b 1
-R53
+R52
 Z105 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mux3.vhd|
 Z106 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mux3.vhd|
 !i113 1
@@ -792,9 +792,9 @@ V8L1TLKZeZS`n?d58h;1LU1
 !s100 ]94GDgazBj3SAI4iDCPR:1
 R7
 31
-R52
+R51
 !i10b 1
-R53
+R52
 R105
 R106
 !i113 1
@@ -813,9 +813,9 @@ V@fXdnF>KoTBLi`[zj@]Ua0
 !s100 6NPUzf@6CHe76G:3R6;Wj3
 R7
 31
-R8
+R86
 !i10b 1
-R9
+R74
 Z109 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mux4.vhd|
 Z110 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mux4.vhd|
 !i113 1
@@ -831,9 +831,9 @@ V80:dl5o_;85?4iJSWdm?j3
 !s100 9LMDQoGgS=WEK`no?ZL]O2
 R7
 31
-R8
+R86
 !i10b 1
-R9
+R74
 R109
 R110
 !i113 1
@@ -852,9 +852,9 @@ V7bEL>RYg^ibbLBVE1lD9o2
 !s100 GW]7kUIUPR]Jhl>d[4X`51
 R7
 31
-R52
+R51
 !i10b 1
-R53
+R52
 Z114 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mux8.vhd|
 Z115 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mux8.vhd|
 !i113 1
@@ -870,9 +870,9 @@ VQ7R9FRY@oBz?1g@mlUVk[1
 !s100 SN02mVeagb0zgzQN]WabW2
 R7
 31
-R52
+R51
 !i10b 1
-R53
+R52
 R114
 R115
 !i113 1
@@ -892,9 +892,9 @@ V5?d2OoH<hR3_jYW?`Ab6?3
 !s100 PTmIdM3`Ig<2XM9XHfE>G1
 R7
 31
-R52
+R51
 !i10b 1
-R53
+R52
 Z118 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/nand_logic.vhd|
 Z119 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/nand_logic.vhd|
 !i113 1
@@ -911,9 +911,9 @@ VgONzUOEzGS^`hm6CGX?I<1
 !s100 4CIl=9>_`a]FJh:4^eiA02
 R7
 31
-R52
+R51
 !i10b 1
-R53
+R52
 R118
 R119
 !i113 1
@@ -933,9 +933,9 @@ V:3SCTLGJW@iBG[0k6]WBV0
 !s100 IfRjJXPD1<Z>mP>H5h<dP2
 R7
 31
-R49
+R86
 !i10b 1
-R41
+R74
 Z123 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/register16.vhd|
 Z124 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/register16.vhd|
 !i113 1
@@ -952,9 +952,9 @@ VMe[;kLWhbnjKH>52i0Go10
 !s100 h3TR]0Hkm@R@:P3E5kkP51
 R7
 31
-R49
+R86
 !i10b 1
-R41
+R74
 R123
 R124
 !i113 1
@@ -973,9 +973,9 @@ VKM_I;I:bmo;_Bh;Oj2AOE2
 !s100 dTILVLl3Vz`Q<HLWmQ;mP1
 R7
 31
-R52
+R51
 !i10b 1
-R53
+R52
 Z128 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/register_1bit.vhd|
 Z129 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/register_1bit.vhd|
 !i113 1
@@ -991,9 +991,9 @@ V9kYc[FINhZS??IPHG4@BD2
 !s100 oZ5<9cV38enEZV?7dCnk91
 R7
 31
-R52
+R51
 !i10b 1
-R53
+R52
 R128
 R129
 !i113 1
@@ -1013,9 +1013,9 @@ VF`5DY0R`=Z@UUR[KIno0j0
 !s100 mgTHaAOkAaz@Q`PfSlNIk1
 R7
 31
-R49
+R86
 !i10b 1
-R41
+R74
 Z133 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerFile.vhd|
 Z134 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerFile.vhd|
 !i113 1
@@ -1032,9 +1032,9 @@ VKO=;BFd[m=D9lchCCeEA;2
 !s100 A[0M=?5`004PLWWboJD1`3
 R7
 31
-R49
+R86
 !i10b 1
-R41
+R74
 R133
 R134
 !i113 1
@@ -1053,9 +1053,9 @@ VhMfQR9L:oRfJeTKZnCaE>2
 !s100 JeJoN7jSCR7:BS4;hC^4k2
 R7
 31
-R52
+R51
 !i10b 1
-R53
+R52
 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerFileComponents.vhd|
 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerFileComponents.vhd|
 !i113 1
@@ -1075,9 +1075,9 @@ VR>;;3le3enWjed3@^hbRW1
 !s100 >ghfi;keCeNaAl7K<zGjY1
 R7
 31
-R49
+R86
 !i10b 1
-R41
+R74
 Z138 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerRead.vhd|
 Z139 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerRead.vhd|
 !i113 1
@@ -1094,9 +1094,9 @@ VPKQLzUUYogd2E?CGK7geD2
 !s100 nhPVJ[eD<N]77HPAQf`UD3
 R7
 31
-R49
+R86
 !i10b 1
-R41
+R74
 R138
 R139
 !i113 1
@@ -1115,9 +1115,9 @@ V3XE4NAFWN^]DRYWNEdjM31
 !s100 [cIm8fP8cdfSL8?CHgzBT1
 R7
 31
-R52
+R51
 !i10b 1
-R53
+R24
 Z143 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registers.vhd|
 Z144 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registers.vhd|
 !i113 1
@@ -1133,9 +1133,9 @@ Vb[]ZVL8@gi_o=dI92[V_J1
 !s100 o0m81[ZR6EA]01=UFLKz01
 R7
 31
-R52
+R51
 !i10b 1
-R53
+R24
 R143
 R144
 !i113 1
@@ -1155,9 +1155,9 @@ VbClbUD]X2dR@R^]kUdLSA2
 !s100 YX_5^O2i_<1i38Tzd[P@n2
 R7
 31
-R52
+R23
 !i10b 1
-R53
+R24
 Z148 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/signExtender.vhd|
 Z149 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/signExtender.vhd|
 !i113 1
@@ -1174,9 +1174,9 @@ V;6Ke_fHRR;MBV`Se5e0mA1
 !s100 XcRVE`Ho9[?Y6Cnbo7ZWY0
 R7
 31
-R52
+R23
 !i10b 1
-R53
+R24
 R148
 R149
 !i113 1
@@ -1238,7 +1238,7 @@ R7
 31
 R40
 !i10b 1
-R64
+R41
 Z158 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/testbench.vhd|
 Z159 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/testbench.vhd|
 !i113 1
@@ -1256,7 +1256,7 @@ R7
 31
 R40
 !i10b 1
-R64
+R41
 R158
 R159
 !i113 1
@@ -1264,7 +1264,7 @@ R12
 R13
 Ewriteback
 Z160 w1481097659
-R61
+R60
 R3
 R4
 R0
@@ -1276,16 +1276,16 @@ VzN7mP5T37fag<5BeT7UYg0
 !s100 <D?36z:h=jlm6g9P>9kak0
 R7
 31
-R49
+R86
 !i10b 1
-R41
+R74
 Z163 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/writeBack.vhd|
 Z164 !s107 C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/writeBack.vhd|
 !i113 1
 R12
 R13
 Awb
-R61
+R60
 R3
 R4
 DEx4 work 9 writeback 0 22 zN7mP5T37fag<5BeT7UYg0
@@ -1295,9 +1295,9 @@ V]^AJd3kfYGjOUJ=BWjISU2
 !s100 Wj>Ncm0;nAU_XjVQz>MjH1
 R7
 31
-R49
+R86
 !i10b 1
-R41
+R74
 R163
 R164
 !i113 1

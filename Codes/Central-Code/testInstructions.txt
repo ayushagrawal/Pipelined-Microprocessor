@@ -18,6 +18,8 @@ LOAD and Store with HAZARD <-  This would not be hazard
 SW r7,r0,#000010B		0101 111 000 000010		5E02
 LW r2,r1,#000010B		0100 010 001 000010		4442
 
-Data Hazard with store
+Data Hazard with store										Done
 LW r2,r1,#000000B		0100 010 001 000000		4440
 SW r2,r0,#000010B		0101 010 000 000010		5402
+
+JAL r0,#000000011B		1000 000 000000011		8003

@@ -12,28 +12,28 @@
 # 
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/CLOCK_DIVIDER.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:07 on Dec 08,2016
+# Start time: 13:47:27 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/CLOCK_DIVIDER.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity CLOCK_DIVIDER
 # -- Compiling architecture CLOCK_DIVIDER of CLOCK_DIVIDER
-# End time: 13:22:07 on Dec 08,2016, Elapsed time: 0:00:00
+# End time: 13:47:27 on Dec 08,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mem_components.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:07 on Dec 08,2016
+# Start time: 13:47:27 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mem_components.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package mem_components
-# End time: 13:22:07 on Dec 08,2016, Elapsed time: 0:00:00
+# End time: 13:47:27 on Dec 08,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/subtractor.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:07 on Dec 08,2016
+# Start time: 13:47:27 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/subtractor.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -41,11 +41,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity subtractor
 # -- Compiling architecture formulas of subtractor
-# End time: 13:22:08 on Dec 08,2016, Elapsed time: 0:00:01
+# End time: 13:47:27 on Dec 08,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/signExtender.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:08 on Dec 08,2016
+# Start time: 13:47:27 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/signExtender.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -53,43 +53,43 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity signExtender
 # -- Compiling architecture form of signExtender
-# End time: 13:22:08 on Dec 08,2016, Elapsed time: 0:00:00
+# End time: 13:47:27 on Dec 08,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registers.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:08 on Dec 08,2016
+# Start time: 13:47:27 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registers.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity registers
 # -- Compiling architecture reg of registers
-# End time: 13:22:08 on Dec 08,2016, Elapsed time: 0:00:00
+# End time: 13:47:28 on Dec 08,2016, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerFileComponents.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:08 on Dec 08,2016
+# Start time: 13:47:28 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerFileComponents.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package registerFileComponents
-# End time: 13:22:08 on Dec 08,2016, Elapsed time: 0:00:00
+# End time: 13:47:28 on Dec 08,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/register_1bit.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:08 on Dec 08,2016
+# Start time: 13:47:28 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/register_1bit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity register_1bit
 # -- Compiling architecture reg of register_1bit
-# End time: 13:22:08 on Dec 08,2016, Elapsed time: 0:00:00
+# End time: 13:47:28 on Dec 08,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/nand_logic.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:08 on Dec 08,2016
+# Start time: 13:47:28 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/nand_logic.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -97,95 +97,95 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity nand_logic
 # -- Compiling architecture form of nand_logic
-# End time: 13:22:08 on Dec 08,2016, Elapsed time: 0:00:00
+# End time: 13:47:28 on Dec 08,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mux8.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:08 on Dec 08,2016
+# Start time: 13:47:28 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mux8.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity mux8
 # -- Compiling architecture Behave of mux8
-# End time: 13:22:08 on Dec 08,2016, Elapsed time: 0:00:00
+# End time: 13:47:28 on Dec 08,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mux3.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:08 on Dec 08,2016
+# Start time: 13:47:28 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mux3.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity mux3
 # -- Compiling architecture Behave of mux3
-# End time: 13:22:08 on Dec 08,2016, Elapsed time: 0:00:00
+# End time: 13:47:28 on Dec 08,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mux2.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:08 on Dec 08,2016
+# Start time: 13:47:28 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mux2.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity mux2
 # -- Compiling architecture Behave of mux2
-# End time: 13:22:08 on Dec 08,2016, Elapsed time: 0:00:00
+# End time: 13:47:28 on Dec 08,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/if_components.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:08 on Dec 08,2016
+# Start time: 13:47:28 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/if_components.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package if_components
-# End time: 13:22:08 on Dec 08,2016, Elapsed time: 0:00:00
+# End time: 13:47:28 on Dec 08,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/exe_components.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:08 on Dec 08,2016
+# Start time: 13:47:28 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/exe_components.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package exe_components
-# End time: 13:22:09 on Dec 08,2016, Elapsed time: 0:00:01
+# End time: 13:47:29 on Dec 08,2016, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/decodeComponents.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:09 on Dec 08,2016
+# Start time: 13:47:29 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/decodeComponents.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package decodeComponents
-# End time: 13:22:09 on Dec 08,2016, Elapsed time: 0:00:00
+# End time: 13:47:29 on Dec 08,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/counter.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:09 on Dec 08,2016
+# Start time: 13:47:29 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/counter.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity counter
 # -- Compiling architecture SYN of counter
-# End time: 13:22:09 on Dec 08,2016, Elapsed time: 0:00:00
+# End time: 13:47:29 on Dec 08,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/components.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:09 on Dec 08,2016
+# Start time: 13:47:29 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/components.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package components
-# End time: 13:22:09 on Dec 08,2016, Elapsed time: 0:00:00
+# End time: 13:47:29 on Dec 08,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/alu.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:09 on Dec 08,2016
+# Start time: 13:47:29 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/alu.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -193,11 +193,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity alu
 # -- Compiling architecture formulas of alu
-# End time: 13:22:09 on Dec 08,2016, Elapsed time: 0:00:00
+# End time: 13:47:29 on Dec 08,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/adder.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:09 on Dec 08,2016
+# Start time: 13:47:29 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/adder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -205,11 +205,11 @@
 # -- Loading package altera_mf_components
 # -- Compiling entity adder
 # -- Compiling architecture SYN of adder
-# End time: 13:22:09 on Dec 08,2016, Elapsed time: 0:00:00
+# End time: 13:47:29 on Dec 08,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/instruction_memory.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:09 on Dec 08,2016
+# Start time: 13:47:29 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/instruction_memory.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -217,11 +217,11 @@
 # -- Loading package altera_mf_components
 # -- Compiling entity instruction_memory
 # -- Compiling architecture SYN of instruction_memory
-# End time: 13:22:09 on Dec 08,2016, Elapsed time: 0:00:00
+# End time: 13:47:29 on Dec 08,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/data_memory.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:09 on Dec 08,2016
+# Start time: 13:47:29 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/data_memory.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -229,33 +229,33 @@
 # -- Loading package altera_mf_components
 # -- Compiling entity data_memory
 # -- Compiling architecture SYN of data_memory
-# End time: 13:22:09 on Dec 08,2016, Elapsed time: 0:00:00
+# End time: 13:47:29 on Dec 08,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/hazardDetectionUnit.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:09 on Dec 08,2016
+# Start time: 13:47:29 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/hazardDetectionUnit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity hazardDetectionUnit
 # -- Compiling architecture HDU of hazardDetectionUnit
-# End time: 13:22:09 on Dec 08,2016, Elapsed time: 0:00:00
+# End time: 13:47:29 on Dec 08,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mux4.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:09 on Dec 08,2016
+# Start time: 13:47:30 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mux4.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity mux4
 # -- Compiling architecture Behave of mux4
-# End time: 13:22:10 on Dec 08,2016, Elapsed time: 0:00:01
+# End time: 13:47:30 on Dec 08,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mem_access.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:10 on Dec 08,2016
+# Start time: 13:47:30 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mem_access.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -263,11 +263,11 @@
 # -- Loading package mem_components
 # -- Compiling entity mem_access
 # -- Compiling architecture Behave of mem_access
-# End time: 13:22:10 on Dec 08,2016, Elapsed time: 0:00:00
+# End time: 13:47:30 on Dec 08,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/writeBack.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:10 on Dec 08,2016
+# Start time: 13:47:30 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/writeBack.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -275,11 +275,11 @@
 # -- Loading package components
 # -- Compiling entity writeBack
 # -- Compiling architecture WB of writeBack
-# End time: 13:22:10 on Dec 08,2016, Elapsed time: 0:00:00
+# End time: 13:47:30 on Dec 08,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerRead.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:10 on Dec 08,2016
+# Start time: 13:47:30 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerRead.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -287,11 +287,11 @@
 # -- Loading package registerFileComponents
 # -- Compiling entity registerRead
 # -- Compiling architecture RR of registerRead
-# End time: 13:22:10 on Dec 08,2016, Elapsed time: 0:00:00
+# End time: 13:47:30 on Dec 08,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerFile.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:10 on Dec 08,2016
+# Start time: 13:47:30 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerFile.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -299,11 +299,11 @@
 # -- Loading package registerFileComponents
 # -- Compiling entity registerFile
 # -- Compiling architecture RF of registerFile
-# End time: 13:22:10 on Dec 08,2016, Elapsed time: 0:00:00
+# End time: 13:47:30 on Dec 08,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/register16.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:10 on Dec 08,2016
+# Start time: 13:47:30 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/register16.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -311,11 +311,11 @@
 # -- Loading package registerFileComponents
 # -- Compiling entity register16
 # -- Compiling architecture reg of register16
-# End time: 13:22:10 on Dec 08,2016, Elapsed time: 0:00:00
+# End time: 13:47:30 on Dec 08,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/multiple.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:10 on Dec 08,2016
+# Start time: 13:47:30 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/multiple.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -323,11 +323,11 @@
 # -- Loading package decodeComponents
 # -- Compiling entity multiple
 # -- Compiling architecture form of multiple
-# End time: 13:22:10 on Dec 08,2016, Elapsed time: 0:00:00
+# End time: 13:47:30 on Dec 08,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:10 on Dec 08,2016
+# Start time: 13:47:30 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -335,11 +335,11 @@
 # -- Loading package components
 # -- Compiling entity microprocessor
 # -- Compiling architecture mic of microprocessor
-# End time: 13:22:10 on Dec 08,2016, Elapsed time: 0:00:00
+# End time: 13:47:30 on Dec 08,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/inst_fetch.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:10 on Dec 08,2016
+# Start time: 13:47:30 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/inst_fetch.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -347,11 +347,11 @@
 # -- Loading package if_components
 # -- Compiling entity inst_fetch
 # -- Compiling architecture Behave of inst_fetch
-# End time: 13:22:10 on Dec 08,2016, Elapsed time: 0:00:00
+# End time: 13:47:31 on Dec 08,2016, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/execute.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:10 on Dec 08,2016
+# Start time: 13:47:31 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/execute.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -359,11 +359,11 @@
 # -- Loading package exe_components
 # -- Compiling entity execute
 # -- Compiling architecture Behave of execute
-# End time: 13:22:10 on Dec 08,2016, Elapsed time: 0:00:00
+# End time: 13:47:31 on Dec 08,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/decoderRF.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:10 on Dec 08,2016
+# Start time: 13:47:31 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/decoderRF.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -371,11 +371,11 @@
 # -- Loading package registerFileComponents
 # -- Compiling entity decoderRF
 # -- Compiling architecture Decode of decoderRF
-# End time: 13:22:10 on Dec 08,2016, Elapsed time: 0:00:00
+# End time: 13:47:31 on Dec 08,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/Decode.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:10 on Dec 08,2016
+# Start time: 13:47:31 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/Decode.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -383,11 +383,11 @@
 # -- Loading package decodeComponents
 # -- Compiling entity Decode
 # -- Compiling architecture arch of Decode
-# End time: 13:22:11 on Dec 08,2016, Elapsed time: 0:00:01
+# End time: 13:47:31 on Dec 08,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/forwardingUnit.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:11 on Dec 08,2016
+# Start time: 13:47:31 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/forwardingUnit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -395,24 +395,24 @@
 # -- Loading package components
 # -- Compiling entity forwardingUnit
 # -- Compiling architecture FU of forwardingUnit
-# End time: 13:22:11 on Dec 08,2016, Elapsed time: 0:00:00
+# End time: 13:47:31 on Dec 08,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/testbench.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:22:11 on Dec 08,2016
+# Start time: 13:47:31 on Dec 08,2016
 # vcom -reportprogress 300 -93 -work work C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/testbench.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity testbench
 # -- Compiling architecture Behave of testbench
-# End time: 13:22:11 on Dec 08,2016, Elapsed time: 0:00:00
+# End time: 13:47:31 on Dec 08,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  testbench
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=""+acc"" testbench 
-# Start time: 13:22:11 on Dec 08,2016
+# Start time: 13:47:31 on Dec 08,2016
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -462,7 +462,7 @@
 # Loading work.mem_access(behave)
 # Loading work.data_memory(syn)
 # Loading work.writeback(wb)
-# ** Warning: Design size of 11478 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 11522 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # 
 # add wave *
@@ -473,9 +473,5 @@
 # run -all
 # ** Note: SUCCESS, all tests passed.
 #    Time: 3710 ns  Iteration: 0  Instance: /testbench
-add wave -position insertpoint  \
-sim:/testbench/dut/IFetch/pc_out
-restart
-run -all
-# ** Note: SUCCESS, all tests passed.
-#    Time: 3710 ns  Iteration: 0  Instance: /testbench
+# End time: 13:51:43 on Dec 08,2016, Elapsed time: 0:04:12
+# Errors: 0, Warnings: 1

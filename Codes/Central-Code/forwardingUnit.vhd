@@ -27,8 +27,8 @@ entity forwardingUnit is
 		  
 		  dataHazardFlag : in std_logic;
 		  
-		  stall_in		: in std_logic;
-		  stall_out		: out std_logic;
+		  clock			: in std_logic;
+		  reset			: in std_logic;
 		  
 		  regA			: out std_logic_vector(15 downto 0);
 		  regB			: out std_logic_vector(15 downto 0);
@@ -38,6 +38,7 @@ end entity;
 
 architecture FU of forwardingUnit is
 	signal exe_data,mem_data : std_logic_vector(15 downto 0);
+	signal stall_in,stall_out : std_logic;
 begin
 
 	mux_A	: mux4 generic map(n => 15) port map(in0 		=> regA_actual,
@@ -54,6 +55,8 @@ begin
 															 sel  		=> reg_B_mux,
 															 output 		=> regB);
 	
+	stall	: registers generic map(N => 1) port map(clock => clock ,reset => reset, enable => '1', input(0) => stall_out, output(0) => stall_in);
+	
 	process(exe_alu,exe_pc1,exe_se,mem_alu,mem_pc1,mem_se,mem_mem,data_mux_ex,data_mux_mem,dataHazardFlag,stall_in)
 	variable Nbubble_en: std_logic;
 	begin
@@ -69,14 +72,17 @@ begin
 			exe_data <= exe_se;
 			stall_out <= '0';
 		else															--Elaboration needed later	
-			exe_data <= exe_alu;
 			if(dataHazardFlag = '1') then
 				Nbubble_en := '1';
 				stall_out <= '1';
 				if(stall_in = '1') then							-- Indicates that the pipelin has stalled for 1 cycle
 					Nbubble_en := '0';
+					exe_data <= mem_mem;
+				else
+					exe_data <= exe_alu;
 				end if;
 			else
+				exe_data <= exe_alu;
 				stall_out <= '0';
 				Nbubble_en := '0';
 			end if;

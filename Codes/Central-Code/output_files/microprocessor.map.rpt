@@ -1,5 +1,5 @@
 Analysis & Synthesis report for microprocessor
-Thu Dec 08 13:20:45 2016
+Thu Dec 08 16:39:15 2016
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -26,37 +26,39 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
  18. Parameter Settings for User Entity Instance: registers:MEM_WB
  19. Parameter Settings for User Entity Instance: forwardingUnit:forward|mux4:mux_A
  20. Parameter Settings for User Entity Instance: forwardingUnit:forward|mux4:mux_B
- 21. Parameter Settings for User Entity Instance: inst_fetch:IFetch|mux2:mux
- 22. Parameter Settings for User Entity Instance: inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component
- 23. Parameter Settings for User Entity Instance: inst_fetch:IFetch|adder:add3|parallel_add:parallel_add_component
- 24. Parameter Settings for User Entity Instance: Decode:Decoded|multiple:count|counter:counter_init|lpm_counter:LPM_COUNTER_component
- 25. Parameter Settings for User Entity Instance: registerRead:RR|registerFile:RF|mux2:r7_mux
- 26. Parameter Settings for User Entity Instance: registerRead:RR|registerFile:RF|mux8:muxA
- 27. Parameter Settings for User Entity Instance: registerRead:RR|registerFile:RF|mux8:muxb
- 28. Parameter Settings for User Entity Instance: execute:executed|adder:add2|parallel_add:parallel_add_component
- 29. Parameter Settings for User Entity Instance: execute:executed|counter:counter2|lpm_counter:LPM_COUNTER_component
- 30. Parameter Settings for User Entity Instance: execute:executed|mux2:alu_a_mux
- 31. Parameter Settings for User Entity Instance: execute:executed|mux3:alu_b_mux
- 32. Parameter Settings for User Entity Instance: execute:executed|alu:alu1|adder:add1|parallel_add:parallel_add_component
- 33. Parameter Settings for User Entity Instance: mem_access:memory|mux2:pc_mux
- 34. Parameter Settings for User Entity Instance: mem_access:memory|mux2:data_mem_mux
- 35. Parameter Settings for User Entity Instance: mem_access:memory|data_memory:data_mem|altsyncram:altsyncram_component
- 36. Parameter Settings for User Entity Instance: writeBack:writes|mux2:mux
- 37. Parameter Settings for User Entity Instance: writeBack:writes|mux4:dataMux
- 38. Parameter Settings for User Entity Instance: writeBack:writes|mux2:writeMux
- 39. altsyncram Parameter Settings by Entity Instance
- 40. Port Connectivity Checks: "execute:executed|alu:alu1|subtractor:sub1"
- 41. Port Connectivity Checks: "execute:executed|mux3:alu_b_mux"
- 42. Port Connectivity Checks: "execute:executed|adder:add2"
- 43. Port Connectivity Checks: "registerRead:RR|registerFile:RF|decoderRF:inSel"
- 44. Port Connectivity Checks: "Decode:Decoded|multiple:count|counter:counter_init"
- 45. Port Connectivity Checks: "inst_fetch:IFetch|adder:add3"
- 46. Port Connectivity Checks: "inst_fetch:IFetch|instruction_memory:inst_memory"
- 47. Port Connectivity Checks: "registers:MEM_WB"
- 48. Port Connectivity Checks: "registers:EX_MEM"
- 49. Post-Synthesis Netlist Statistics for Top Partition
- 50. Elapsed Time Per Partition
- 51. Analysis & Synthesis Messages
+ 21. Parameter Settings for User Entity Instance: forwardingUnit:forward|registers:stall
+ 22. Parameter Settings for User Entity Instance: inst_fetch:IFetch|mux2:mux
+ 23. Parameter Settings for User Entity Instance: inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component
+ 24. Parameter Settings for User Entity Instance: inst_fetch:IFetch|adder:add3|parallel_add:parallel_add_component
+ 25. Parameter Settings for User Entity Instance: Decode:Decoded|multiple:count|counter:counter_init|lpm_counter:LPM_COUNTER_component
+ 26. Parameter Settings for User Entity Instance: registerRead:RR|registerFile:RF|mux2:r7_mux
+ 27. Parameter Settings for User Entity Instance: registerRead:RR|registerFile:RF|mux8:muxA
+ 28. Parameter Settings for User Entity Instance: registerRead:RR|registerFile:RF|mux8:muxb
+ 29. Parameter Settings for User Entity Instance: execute:executed|adder:add2|parallel_add:parallel_add_component
+ 30. Parameter Settings for User Entity Instance: execute:executed|counter:counter2|lpm_counter:LPM_COUNTER_component
+ 31. Parameter Settings for User Entity Instance: execute:executed|mux2:alu_a_mux
+ 32. Parameter Settings for User Entity Instance: execute:executed|mux3:alu_b_mux
+ 33. Parameter Settings for User Entity Instance: execute:executed|alu:alu1|adder:add1|parallel_add:parallel_add_component
+ 34. Parameter Settings for User Entity Instance: mem_access:memory|mux2:pc_mux
+ 35. Parameter Settings for User Entity Instance: mem_access:memory|mux2:data_mem_mux
+ 36. Parameter Settings for User Entity Instance: mem_access:memory|data_memory:data_mem|altsyncram:altsyncram_component
+ 37. Parameter Settings for User Entity Instance: writeBack:writes|mux2:mux
+ 38. Parameter Settings for User Entity Instance: writeBack:writes|mux4:dataMux
+ 39. Parameter Settings for User Entity Instance: writeBack:writes|mux2:writeMux
+ 40. altsyncram Parameter Settings by Entity Instance
+ 41. Port Connectivity Checks: "execute:executed|alu:alu1|subtractor:sub1"
+ 42. Port Connectivity Checks: "execute:executed|mux3:alu_b_mux"
+ 43. Port Connectivity Checks: "execute:executed|adder:add2"
+ 44. Port Connectivity Checks: "registerRead:RR|registerFile:RF|decoderRF:inSel"
+ 45. Port Connectivity Checks: "Decode:Decoded|multiple:count|counter:counter_init"
+ 46. Port Connectivity Checks: "inst_fetch:IFetch|adder:add3"
+ 47. Port Connectivity Checks: "inst_fetch:IFetch|instruction_memory:inst_memory"
+ 48. Port Connectivity Checks: "forwardingUnit:forward|registers:stall"
+ 49. Port Connectivity Checks: "registers:MEM_WB"
+ 50. Port Connectivity Checks: "registers:EX_MEM"
+ 51. Post-Synthesis Netlist Statistics for Top Partition
+ 52. Elapsed Time Per Partition
+ 53. Analysis & Synthesis Messages
 
 
 
@@ -83,7 +85,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Dec 08 13:20:45 2016       ;
+; Analysis & Synthesis Status        ; Successful - Thu Dec 08 16:39:15 2016       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; microprocessor                              ;
 ; Top-level Entity Name              ; microprocessor                              ;
@@ -341,9 +343,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; registerRead:RR|registerFile:RF|register16:register_0|data[0..15]                                                                  ; Lost fanout        ;
 ; Decode:Decoded|multiple:count|counter:counter_init|lpm_counter:LPM_COUNTER_component|cntr_2si:auto_generated|counter_reg_bit[0..2] ; Lost fanout        ;
 ; inst_fetch:IFetch|register16:PC1|data[0..15]                                                                                       ; Lost fanout        ;
+; forwardingUnit:forward|registers:stall|data[0]                                                                                     ; Lost fanout        ;
 ; registers:MEM_WB|data[0..90]                                                                                                       ; Lost fanout        ;
 ; registers:EX_MEM|data[0..109]                                                                                                      ; Lost fanout        ;
-; registers:RR_EX|data[0..89]                                                                                                        ; Lost fanout        ;
+; registers:RR_EX|data[0..88]                                                                                                        ; Lost fanout        ;
 ; registers:ID_RR|data[0..63]                                                                                                        ; Lost fanout        ;
 ; registers:IF_ID|data[0..48]                                                                                                        ; Lost fanout        ;
 ; CLOCK_DIVIDER:clk_divide|tick                                                                                                      ; Lost fanout        ;
@@ -356,8 +359,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------+
 ; Register name                                                                                                  ; Reason for Removal ; Registers Removed due to This Register                                         ;
 +----------------------------------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------+
-; inst_fetch:IFetch|register16:PC1|data[0]                                                                       ; Lost Fanouts       ; registers:RR_EX|data[89], registers:RR_EX|data[13], registers:RR_EX|data[12],  ;
-;                                                                                                                ;                    ; registers:ID_RR|data[11], registers:ID_RR|data[10]                             ;
+; inst_fetch:IFetch|register16:PC1|data[0]                                                                       ; Lost Fanouts       ; forwardingUnit:forward|registers:stall|data[0], registers:RR_EX|data[13],      ;
+;                                                                                                                ;                    ; registers:RR_EX|data[12], registers:ID_RR|data[11], registers:ID_RR|data[10]   ;
 ; registers:MEM_WB|data[48]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[20], registers:RR_EX|data[78], registers:ID_RR|data[36], ;
 ;                                                                                                                ;                    ; registers:IF_ID|data[7]                                                        ;
 ; registers:MEM_WB|data[45]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[17], registers:RR_EX|data[75], registers:ID_RR|data[33], ;
@@ -547,7 +550,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-------------------------------------+
 ; Parameter Name ; Value ; Type                                ;
 +----------------+-------+-------------------------------------+
-; n              ; 90    ; Signed Integer                      ;
+; n              ; 89    ; Signed Integer                      ;
 +----------------+-------+-------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -589,6 +592,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-------------------------------------------------------+
 ; n              ; 15    ; Signed Integer                                        ;
 +----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: forwardingUnit:forward|registers:stall ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1046,6 +1059,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+----------------------------------------------------+
 
 
++--------------------------------------------------------------------+
+; Port Connectivity Checks: "forwardingUnit:forward|registers:stall" ;
++--------+-------+----------+----------------------------------------+
+; Port   ; Type  ; Severity ; Details                                ;
++--------+-------+----------+----------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                           ;
++--------+-------+----------+----------------------------------------+
+
+
 +----------------------------------------------+
 ; Port Connectivity Checks: "registers:MEM_WB" ;
 +--------+-------+----------+------------------+
@@ -1091,7 +1113,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Thu Dec 08 13:20:24 2016
+    Info: Processing started: Thu Dec 08 16:38:58 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off microprocessor -c microprocessor
 Info (20032): Parallel compilation is enabled and will use up to 2 processors
 Info (12021): Found 2 design units, including 1 entities, in source file clock_divider.vhd
@@ -1202,7 +1224,8 @@ Info (12128): Elaborating entity "registers" for hierarchy "registers:EX_MEM" Fi
 Info (12128): Elaborating entity "registers" for hierarchy "registers:MEM_WB" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 43
 Info (12128): Elaborating entity "hazardDetectionUnit" for hierarchy "hazardDetectionUnit:HazardDU" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 54
 Info (12128): Elaborating entity "forwardingUnit" for hierarchy "forwardingUnit:forward" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 67
-Info (12128): Elaborating entity "mux4" for hierarchy "forwardingUnit:forward|mux4:mux_A" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/forwardingUnit.vhd Line: 43
+Info (12128): Elaborating entity "mux4" for hierarchy "forwardingUnit:forward|mux4:mux_A" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/forwardingUnit.vhd Line: 44
+Info (12128): Elaborating entity "registers" for hierarchy "forwardingUnit:forward|registers:stall" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/forwardingUnit.vhd Line: 58
 Info (12128): Elaborating entity "inst_fetch" for hierarchy "inst_fetch:IFetch" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 98
 Info (12128): Elaborating entity "mux2" for hierarchy "inst_fetch:IFetch|mux2:mux" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/inst_fetch.vhd Line: 33
 Info (12128): Elaborating entity "register16" for hierarchy "inst_fetch:IFetch|register16:PC1" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/inst_fetch.vhd Line: 35
@@ -1263,6 +1286,7 @@ Info (12133): Instantiated megafunction "inst_fetch:IFetch|instruction_memory:in
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_3js3.tdf
     Info (12023): Found entity 1: altsyncram_3js3 File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_3js3.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_3js3" for hierarchy "inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component|altsyncram_3js3:auto_generated" File: c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Critical Warning (127005): Memory depth (64) in the design file differs from memory depth (32) in the Memory Initialization File "C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/instruction.hex" -- setting initial value for remaining addresses to 0 File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/instruction_memory.vhd Line: 62
 Info (12128): Elaborating entity "adder" for hierarchy "inst_fetch:IFetch|adder:add3" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/inst_fetch.vhd Line: 48
 Info (12128): Elaborating entity "parallel_add" for hierarchy "inst_fetch:IFetch|adder:add3|parallel_add:parallel_add_component" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/adder.vhd Line: 100
 Info (12130): Elaborated megafunction instantiation "inst_fetch:IFetch|adder:add3|parallel_add:parallel_add_component" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/adder.vhd Line: 100
@@ -1409,10 +1433,10 @@ Warning (21074): Design contains 2 input pin(s) that do not drive logic
 Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 39 warnings
-    Info: Peak virtual memory: 710 megabytes
-    Info: Processing ended: Thu Dec 08 13:20:45 2016
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:40
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 40 warnings
+    Info: Peak virtual memory: 709 megabytes
+    Info: Processing ended: Thu Dec 08 16:39:15 2016
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:35
 
 
