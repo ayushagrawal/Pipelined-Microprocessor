@@ -9,6 +9,7 @@ entity registerRead is
 			reset						: in std_logic;
 			r7_enableTo_RF 		: in std_logic;
 			pc_in			  			: in std_logic_vector(15 downto 0);
+			pc1_in					: in std_logic_vector(15 downto 0);
 			regWrite		  			: in std_logic;
 			dataIn			  		: in std_logic_vector(15 downto 0);
 			dataIn_sel_actual	  	: in std_logic_vector(2 downto 0);
@@ -35,6 +36,7 @@ entity registerRead is
 			pcRegMux_crtl_in		: in std_logic;
 			conditional_in			: in std_logic;
 			NOP_in					: in std_logic;
+			NOP_r7					: in std_logic;
 			
 			pc_out					: out std_logic_vector(15 downto 0);
 			pcPlusOneOut 			: out std_logic_vector(15 downto 0);
@@ -64,7 +66,7 @@ entity registerRead is
 end entity;
 
 architecture RR of registerRead is
-
+	signal pc_in_a : std_logic_vector(15 downto 0);
 begin
 
 	pc_out <= pc_in;
@@ -90,6 +92,11 @@ begin
 	pcMux_crtlout <= pcMux_crtlin;
 	memWrite_enout <= memWrite_enin;
 	
+	mux1 : mux2 generic map(n => 15) port map(in0 		=> pc_in,
+															in1	 	=> pc1_in,
+															sel 		=> NOP_r7,
+															output 	=> pc_in_a);
+	
 	RF : registerFile port map(dataOut_A => regA,
 							  dataOut_B => regB,
 							  clock_rb => clock,
@@ -99,7 +106,7 @@ begin
 							  dataInsel => dataIn_sel_actual,
 							  reset	  => reset,
 							  regWrite => regWrite,
-							  pc_in    => pc_in,
+							  pc_in    => pc_in_a,
 							  r7_select => r7_enableTo_RF,
 							  NOP		=> NOP_in);
 

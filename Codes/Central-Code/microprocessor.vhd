@@ -11,7 +11,7 @@ end entity;
 		  
 architecture mic of microprocessor is
 	signal input_if,  output_if  : std_logic_vector(48 downto 0);
-	signal input_id,  output_id  : std_logic_vector(63 downto 0);
+	signal input_id,  output_id  : std_logic_vector(79 downto 0);
 	signal input_rr,  output_rr  : std_logic_vector(104 downto 0);
 	signal input_ex,  output_ex  : std_logic_vector(109 downto 0);
 	signal input_mem, output_mem : std_logic_vector(90 downto 0);
@@ -38,7 +38,7 @@ begin
 	clk_divide : CLOCK_DIVIDER port map (reset => reset,clk => clock_c,half_clk => clock);
 	
 	IF_ID  : registers generic map(N => 49)  port map(clock => clock, reset => reset, enable => enable_IF,  input => input_if,  output => output_if);
-	ID_RR  : registers generic map(N => 64)  port map(clock => clock, reset => reset, enable => enable_id,  input => input_id,  output => output_id);
+	ID_RR  : registers generic map(N => 80)  port map(clock => clock, reset => reset, enable => enable_id,  input => input_id,  output => output_id);
 	RR_EX  : registers generic map(N => 105)  port map(clock => clock, reset => reset, enable => enable_rr,  input => input_rr,  output => output_rr);
 	EX_MEM : registers generic map(N => 110) port map(clock => clock, reset => reset, enable => enable_ex,  input => input_ex,  output => output_ex);
 	MEM_WB : registers generic map(N => 91)  port map(clock => clock, reset => reset, enable => enable_mem, input => input_mem, output => output_mem);
@@ -138,17 +138,20 @@ begin
 										mem_mux			=> input_id(2),
 										counter_mux  	=> input_id(1),
 										alu_a_muxCrtl	=> input_id(0));
-	
+										
+	input_id(79 downto 64) <= pc;
 	NOP_rr <= output_id(62) and (not pc_hazard);
 																	
 	RR : registerRead port map(clock						=> clock,
 										reset						=> reset,
 										r7_enableTo_RF 		=> r7_enable_out_w,						-- From Write Back Stage
-										pc_in						=> pc,
+										pc1_in					=> pc,
+										pc_in						=> output_id(79 downto 64),
 										regWrite					=> regWrite_w,							-- From WB
 										dataIn					=> DataIn_w,							-- From WB
 										dataIn_sel_actual  	=> rfDataInsel_out_w,					-- From WB
 										NOP_in					=> NOP_rr,
+										NOP_r7					=> input_id(62),
 										conditional_in			=> output_id(61),
 										signExtin      		=> output_id(60 downto 45),
 										pcPlusOnein 			=> output_id(44 downto 29),

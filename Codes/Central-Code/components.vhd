@@ -72,6 +72,7 @@ package components is
 				reset						: in std_logic;
 				r7_enableTo_RF 		: in std_logic;
 				pc_in			  			: in std_logic_vector(15 downto 0);
+				pc1_in					: in std_logic_vector(15 downto 0);
 				regWrite		  			: in std_logic;
 				dataIn			  		: in std_logic_vector(15 downto 0);
 				dataIn_sel_actual	  	: in std_logic_vector(2 downto 0);
@@ -98,6 +99,7 @@ package components is
 				pcRegMux_crtl_in		: in std_logic;
 				conditional_in			: in std_logic;
 				NOP_in					: in std_logic;
+				NOP_r7					: in std_logic;
 				
 				pc_out					: out std_logic_vector(15 downto 0);
 				pcPlusOneOut 			: out std_logic_vector(15 downto 0);
@@ -168,7 +170,7 @@ package components is
 					pcRegMux_crtl_in: in std_logic;
 					conditional	: in std_logic;
 					NOP_in			: in std_logic;
-					pc_in				: std_logic_vector(15 downto 0);
+					pc_in				: in std_logic_vector(15 downto 0);
 										
 					pcPlusOneOut : out std_logic_vector(15 downto 0);
 					regA_out : out std_logic_vector(15 downto 0);

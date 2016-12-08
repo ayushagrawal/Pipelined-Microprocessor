@@ -1,5 +1,5 @@
 Analysis & Synthesis report for microprocessor
-Thu Dec 08 19:39:20 2016
+Thu Dec 08 22:24:34 2016
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -31,34 +31,35 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
  23. Parameter Settings for User Entity Instance: inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component
  24. Parameter Settings for User Entity Instance: inst_fetch:IFetch|adder:add3|parallel_add:parallel_add_component
  25. Parameter Settings for User Entity Instance: Decode:Decoded|multiple:count|counter:counter_init|lpm_counter:LPM_COUNTER_component
- 26. Parameter Settings for User Entity Instance: registerRead:RR|registerFile:RF|mux2:r7_mux
- 27. Parameter Settings for User Entity Instance: registerRead:RR|registerFile:RF|mux8:muxA
- 28. Parameter Settings for User Entity Instance: registerRead:RR|registerFile:RF|mux8:muxb
- 29. Parameter Settings for User Entity Instance: execute:executed|adder:add2|parallel_add:parallel_add_component
- 30. Parameter Settings for User Entity Instance: execute:executed|counter:counter2|lpm_counter:LPM_COUNTER_component
- 31. Parameter Settings for User Entity Instance: execute:executed|mux2:alu_a_mux
- 32. Parameter Settings for User Entity Instance: execute:executed|mux3:alu_b_mux
- 33. Parameter Settings for User Entity Instance: execute:executed|alu:alu1|adder:add1|parallel_add:parallel_add_component
- 34. Parameter Settings for User Entity Instance: mem_access:memory|mux2:pc_mux
- 35. Parameter Settings for User Entity Instance: mem_access:memory|mux2:data_mem_mux
- 36. Parameter Settings for User Entity Instance: mem_access:memory|data_memory:data_mem|altsyncram:altsyncram_component
- 37. Parameter Settings for User Entity Instance: writeBack:writes|mux2:mux
- 38. Parameter Settings for User Entity Instance: writeBack:writes|mux4:dataMux
- 39. Parameter Settings for User Entity Instance: writeBack:writes|mux2:writeMux
- 40. altsyncram Parameter Settings by Entity Instance
- 41. Port Connectivity Checks: "execute:executed|alu:alu1|subtractor:sub1"
- 42. Port Connectivity Checks: "execute:executed|mux3:alu_b_mux"
- 43. Port Connectivity Checks: "execute:executed|adder:add2"
- 44. Port Connectivity Checks: "registerRead:RR|registerFile:RF|decoderRF:inSel"
- 45. Port Connectivity Checks: "Decode:Decoded|multiple:count|counter:counter_init"
- 46. Port Connectivity Checks: "inst_fetch:IFetch|adder:add3"
- 47. Port Connectivity Checks: "inst_fetch:IFetch|instruction_memory:inst_memory"
- 48. Port Connectivity Checks: "forwardingUnit:forward|registers:stall"
- 49. Port Connectivity Checks: "registers:MEM_WB"
- 50. Port Connectivity Checks: "registers:EX_MEM"
- 51. Post-Synthesis Netlist Statistics for Top Partition
- 52. Elapsed Time Per Partition
- 53. Analysis & Synthesis Messages
+ 26. Parameter Settings for User Entity Instance: registerRead:RR|mux2:mux1
+ 27. Parameter Settings for User Entity Instance: registerRead:RR|registerFile:RF|mux2:r7_mux
+ 28. Parameter Settings for User Entity Instance: registerRead:RR|registerFile:RF|mux8:muxA
+ 29. Parameter Settings for User Entity Instance: registerRead:RR|registerFile:RF|mux8:muxb
+ 30. Parameter Settings for User Entity Instance: execute:executed|adder:add2|parallel_add:parallel_add_component
+ 31. Parameter Settings for User Entity Instance: execute:executed|counter:counter2|lpm_counter:LPM_COUNTER_component
+ 32. Parameter Settings for User Entity Instance: execute:executed|mux2:alu_a_mux
+ 33. Parameter Settings for User Entity Instance: execute:executed|mux3:alu_b_mux
+ 34. Parameter Settings for User Entity Instance: execute:executed|alu:alu1|adder:add1|parallel_add:parallel_add_component
+ 35. Parameter Settings for User Entity Instance: mem_access:memory|mux2:pc_mux
+ 36. Parameter Settings for User Entity Instance: mem_access:memory|mux2:data_mem_mux
+ 37. Parameter Settings for User Entity Instance: mem_access:memory|data_memory:data_mem|altsyncram:altsyncram_component
+ 38. Parameter Settings for User Entity Instance: writeBack:writes|mux2:mux
+ 39. Parameter Settings for User Entity Instance: writeBack:writes|mux4:dataMux
+ 40. Parameter Settings for User Entity Instance: writeBack:writes|mux2:writeMux
+ 41. altsyncram Parameter Settings by Entity Instance
+ 42. Port Connectivity Checks: "execute:executed|alu:alu1|subtractor:sub1"
+ 43. Port Connectivity Checks: "execute:executed|mux3:alu_b_mux"
+ 44. Port Connectivity Checks: "execute:executed|adder:add2"
+ 45. Port Connectivity Checks: "registerRead:RR|registerFile:RF|decoderRF:inSel"
+ 46. Port Connectivity Checks: "Decode:Decoded|multiple:count|counter:counter_init"
+ 47. Port Connectivity Checks: "inst_fetch:IFetch|adder:add3"
+ 48. Port Connectivity Checks: "inst_fetch:IFetch|instruction_memory:inst_memory"
+ 49. Port Connectivity Checks: "forwardingUnit:forward|registers:stall"
+ 50. Port Connectivity Checks: "registers:MEM_WB"
+ 51. Port Connectivity Checks: "registers:EX_MEM"
+ 52. Post-Synthesis Netlist Statistics for Top Partition
+ 53. Elapsed Time Per Partition
+ 54. Analysis & Synthesis Messages
 
 
 
@@ -85,7 +86,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Dec 08 19:39:20 2016       ;
+; Analysis & Synthesis Status        ; Successful - Thu Dec 08 22:24:34 2016       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; microprocessor                              ;
 ; Top-level Entity Name              ; microprocessor                              ;
@@ -347,10 +348,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; registers:MEM_WB|data[0..90]                                                                                                       ; Lost fanout        ;
 ; registers:EX_MEM|data[0..109]                                                                                                      ; Lost fanout        ;
 ; registers:RR_EX|data[0..104]                                                                                                       ; Lost fanout        ;
-; registers:ID_RR|data[0..63]                                                                                                        ; Lost fanout        ;
+; registers:ID_RR|data[0..79]                                                                                                        ; Lost fanout        ;
 ; registers:IF_ID|data[0..48]                                                                                                        ; Lost fanout        ;
 ; CLOCK_DIVIDER:clk_divide|tick                                                                                                      ; Lost fanout        ;
-; Total Number of Removed Registers = 573                                                                                            ;                    ;
+; Total Number of Removed Registers = 589                                                                                            ;                    ;
 +------------------------------------------------------------------------------------------------------------------------------------+--------------------+
 
 
@@ -417,24 +418,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; execute:executed|counter:counter2|lpm_counter:LPM_COUNTER_component|cntr_2si:auto_generated|counter_reg_bit[2] ; Lost Fanouts       ; registers:RR_EX|data[7], registers:ID_RR|data[1]                               ;
 ; registers:EX_MEM|data[5]                                                                                       ; Lost Fanouts       ; registers:RR_EX|data[6], registers:ID_RR|data[3]                               ;
 ; registers:EX_MEM|data[4]                                                                                       ; Lost Fanouts       ; registers:RR_EX|data[5], registers:ID_RR|data[2]                               ;
+; registers:RR_EX|data[89]                                                                                       ; Lost Fanouts       ; registers:ID_RR|data[64], registers:IF_ID|data[33]                             ;
+; registers:RR_EX|data[104]                                                                                      ; Lost Fanouts       ; registers:ID_RR|data[79], registers:IF_ID|data[48]                             ;
+; registers:RR_EX|data[103]                                                                                      ; Lost Fanouts       ; registers:ID_RR|data[78], registers:IF_ID|data[47]                             ;
+; registers:RR_EX|data[102]                                                                                      ; Lost Fanouts       ; registers:ID_RR|data[77], registers:IF_ID|data[46]                             ;
+; registers:RR_EX|data[101]                                                                                      ; Lost Fanouts       ; registers:ID_RR|data[76], registers:IF_ID|data[45]                             ;
+; registers:RR_EX|data[100]                                                                                      ; Lost Fanouts       ; registers:ID_RR|data[75], registers:IF_ID|data[44]                             ;
+; registers:RR_EX|data[99]                                                                                       ; Lost Fanouts       ; registers:ID_RR|data[74], registers:IF_ID|data[43]                             ;
+; registers:RR_EX|data[98]                                                                                       ; Lost Fanouts       ; registers:ID_RR|data[73], registers:IF_ID|data[42]                             ;
+; registers:RR_EX|data[97]                                                                                       ; Lost Fanouts       ; registers:ID_RR|data[72], registers:IF_ID|data[41]                             ;
+; registers:RR_EX|data[96]                                                                                       ; Lost Fanouts       ; registers:ID_RR|data[71], registers:IF_ID|data[40]                             ;
+; registers:RR_EX|data[95]                                                                                       ; Lost Fanouts       ; registers:ID_RR|data[70], registers:IF_ID|data[39]                             ;
+; registers:RR_EX|data[94]                                                                                       ; Lost Fanouts       ; registers:ID_RR|data[69], registers:IF_ID|data[38]                             ;
+; registers:RR_EX|data[93]                                                                                       ; Lost Fanouts       ; registers:ID_RR|data[68], registers:IF_ID|data[37]                             ;
+; registers:RR_EX|data[92]                                                                                       ; Lost Fanouts       ; registers:ID_RR|data[67], registers:IF_ID|data[36]                             ;
+; registers:RR_EX|data[91]                                                                                       ; Lost Fanouts       ; registers:ID_RR|data[66], registers:IF_ID|data[35]                             ;
+; registers:RR_EX|data[90]                                                                                       ; Lost Fanouts       ; registers:ID_RR|data[65], registers:IF_ID|data[34]                             ;
 ; registers:RR_EX|data[15]                                                                                       ; Lost Fanouts       ; registers:ID_RR|data[13], registers:IF_ID|data[17]                             ;
 ; registers:RR_EX|data[14]                                                                                       ; Lost Fanouts       ; registers:ID_RR|data[12], registers:IF_ID|data[16]                             ;
-; registers:MEM_WB|data[23]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[91]                                                      ;
-; registers:MEM_WB|data[22]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[90]                                                      ;
-; registers:MEM_WB|data[21]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[89]                                                      ;
-; registers:MEM_WB|data[20]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[88]                                                      ;
-; registers:MEM_WB|data[19]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[87]                                                      ;
-; registers:MEM_WB|data[18]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[86]                                                      ;
-; registers:MEM_WB|data[17]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[85]                                                      ;
-; registers:MEM_WB|data[16]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[84]                                                      ;
-; registers:MEM_WB|data[15]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[83]                                                      ;
-; registers:MEM_WB|data[14]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[82]                                                      ;
-; registers:MEM_WB|data[13]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[81]                                                      ;
-; registers:MEM_WB|data[12]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[80]                                                      ;
-; registers:MEM_WB|data[11]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[79]                                                      ;
-; registers:MEM_WB|data[10]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[78]                                                      ;
-; registers:MEM_WB|data[9]                                                                                       ; Lost Fanouts       ; registers:EX_MEM|data[77]                                                      ;
-; registers:MEM_WB|data[5]                                                                                       ; Lost Fanouts       ; registers:EX_MEM|data[9]                                                       ;
 ; registers:MEM_WB|data[4]                                                                                       ; Lost Fanouts       ; registers:EX_MEM|data[8]                                                       ;
 ; registers:MEM_WB|data[1]                                                                                       ; Lost Fanouts       ; registers:EX_MEM|data[1]                                                       ;
 ; registers:EX_MEM|data[76]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[38]                                                       ;
@@ -471,30 +472,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; registers:EX_MEM|data[45]                                                                                      ; Lost Fanouts       ; registers:RR_EX|data[39]                                                       ;
 ; registers:MEM_WB|data[0]                                                                                       ; Lost Fanouts       ; registers:EX_MEM|data[0]                                                       ;
 ; registers:MEM_WB|data[89]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[6]                                                       ;
+; execute:executed|alu:alu1|register_1bit:reg2|data                                                              ; Lost Fanouts       ; CLOCK_DIVIDER:clk_divide|tick                                                  ;
+; registers:MEM_WB|data[24]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[92]                                                      ;
+; registers:MEM_WB|data[23]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[91]                                                      ;
+; registers:MEM_WB|data[22]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[90]                                                      ;
+; registers:MEM_WB|data[21]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[89]                                                      ;
+; registers:MEM_WB|data[20]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[88]                                                      ;
+; registers:MEM_WB|data[19]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[87]                                                      ;
+; registers:MEM_WB|data[18]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[86]                                                      ;
+; registers:MEM_WB|data[17]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[85]                                                      ;
+; registers:MEM_WB|data[16]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[84]                                                      ;
+; registers:MEM_WB|data[15]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[83]                                                      ;
+; registers:MEM_WB|data[14]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[82]                                                      ;
+; registers:MEM_WB|data[13]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[81]                                                      ;
+; registers:MEM_WB|data[12]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[80]                                                      ;
+; registers:MEM_WB|data[11]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[79]                                                      ;
+; registers:MEM_WB|data[10]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[78]                                                      ;
 ; registers:RR_EX|data[0]                                                                                        ; Lost Fanouts       ; registers:ID_RR|data[9]                                                        ;
-; registers:RR_EX|data[104]                                                                                      ; Lost Fanouts       ; registers:IF_ID|data[48]                                                       ;
-; registers:RR_EX|data[103]                                                                                      ; Lost Fanouts       ; registers:IF_ID|data[47]                                                       ;
-; registers:RR_EX|data[102]                                                                                      ; Lost Fanouts       ; registers:IF_ID|data[46]                                                       ;
-; registers:RR_EX|data[101]                                                                                      ; Lost Fanouts       ; registers:IF_ID|data[45]                                                       ;
-; registers:RR_EX|data[100]                                                                                      ; Lost Fanouts       ; registers:IF_ID|data[44]                                                       ;
-; registers:RR_EX|data[99]                                                                                       ; Lost Fanouts       ; registers:IF_ID|data[43]                                                       ;
-; registers:RR_EX|data[98]                                                                                       ; Lost Fanouts       ; registers:IF_ID|data[42]                                                       ;
-; registers:RR_EX|data[97]                                                                                       ; Lost Fanouts       ; registers:IF_ID|data[41]                                                       ;
-; registers:RR_EX|data[96]                                                                                       ; Lost Fanouts       ; registers:IF_ID|data[40]                                                       ;
-; registers:RR_EX|data[95]                                                                                       ; Lost Fanouts       ; registers:IF_ID|data[39]                                                       ;
-; registers:RR_EX|data[94]                                                                                       ; Lost Fanouts       ; registers:IF_ID|data[38]                                                       ;
-; registers:RR_EX|data[93]                                                                                       ; Lost Fanouts       ; registers:IF_ID|data[37]                                                       ;
-; registers:RR_EX|data[92]                                                                                       ; Lost Fanouts       ; registers:IF_ID|data[36]                                                       ;
-; registers:RR_EX|data[91]                                                                                       ; Lost Fanouts       ; registers:IF_ID|data[35]                                                       ;
-; registers:RR_EX|data[90]                                                                                       ; Lost Fanouts       ; registers:IF_ID|data[34]                                                       ;
-; registers:RR_EX|data[89]                                                                                       ; Lost Fanouts       ; registers:IF_ID|data[33]                                                       ;
 ; registers:RR_EX|data[87]                                                                                       ; Lost Fanouts       ; registers:ID_RR|data[61]                                                       ;
 ; registers:RR_EX|data[19]                                                                                       ; Lost Fanouts       ; registers:ID_RR|data[19]                                                       ;
 ; registers:RR_EX|data[18]                                                                                       ; Lost Fanouts       ; registers:ID_RR|data[18]                                                       ;
 ; registers:RR_EX|data[17]                                                                                       ; Lost Fanouts       ; registers:ID_RR|data[17]                                                       ;
 ; registers:RR_EX|data[16]                                                                                       ; Lost Fanouts       ; registers:ID_RR|data[16]                                                       ;
-; execute:executed|alu:alu1|register_1bit:reg2|data                                                              ; Lost Fanouts       ; CLOCK_DIVIDER:clk_divide|tick                                                  ;
-; registers:MEM_WB|data[24]                                                                                      ; Lost Fanouts       ; registers:EX_MEM|data[92]                                                      ;
+; registers:MEM_WB|data[9]                                                                                       ; Lost Fanouts       ; registers:EX_MEM|data[77]                                                      ;
+; registers:MEM_WB|data[5]                                                                                       ; Lost Fanouts       ; registers:EX_MEM|data[9]                                                       ;
 ; registers:RR_EX|data[11]                                                                                       ; Lost Fanouts       ; registers:ID_RR|data[15]                                                       ;
 ; registers:RR_EX|data[10]                                                                                       ; Lost Fanouts       ; registers:ID_RR|data[14]                                                       ;
 ; registers:RR_EX|data[9]                                                                                        ; Lost Fanouts       ; registers:ID_RR|data[0]                                                        ;
@@ -555,7 +556,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-------------------------------------+
 ; Parameter Name ; Value ; Type                                ;
 +----------------+-------+-------------------------------------+
-; n              ; 64    ; Signed Integer                      ;
+; n              ; 80    ; Signed Integer                      ;
 +----------------+-------+-------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -738,6 +739,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; USE_NEW_VERSION        ; TRUE         ; Untyped                                                                                   ;
 ; CBXI_PARAMETER         ; cntr_2si     ; Untyped                                                                                   ;
 +------------------------+--------------+-------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerRead:RR|mux2:mux1 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; n              ; 15    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1128,7 +1139,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Thu Dec 08 19:39:04 2016
+    Info: Processing started: Thu Dec 08 22:24:17 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off microprocessor -c microprocessor
 Info (20032): Parallel compilation is enabled and will use up to 2 processors
 Info (12021): Found 2 design units, including 1 entities, in source file clock_divider.vhd
@@ -1152,7 +1163,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file registe
     Info (12022): Found design unit 1: registers-reg File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registers.vhd Line: 13
     Info (12023): Found entity 1: registers File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registers.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file registerread.vhd
-    Info (12022): Found design unit 1: registerRead-RR File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerRead.vhd Line: 66
+    Info (12022): Found design unit 1: registerRead-RR File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerRead.vhd Line: 68
     Info (12023): Found entity 1: registerRead File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerRead.vhd Line: 7
 Info (12021): Found 1 design units, including 0 entities, in source file registerfilecomponents.vhd
     Info (12022): Found design unit 1: registerFileComponents File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerFileComponents.vhd Line: 7
@@ -1333,18 +1344,18 @@ Info (12133): Instantiated megafunction "Decode:Decoded|multiple:count|counter:c
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_2si.tdf
     Info (12023): Found entity 1: cntr_2si File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/cntr_2si.tdf Line: 26
 Info (12128): Elaborating entity "cntr_2si" for hierarchy "Decode:Decoded|multiple:count|counter:counter_init|lpm_counter:LPM_COUNTER_component|cntr_2si:auto_generated" File: c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_counter.tdf Line: 259
-Info (12128): Elaborating entity "registerRead" for hierarchy "registerRead:RR" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 144
-Info (12128): Elaborating entity "registerFile" for hierarchy "registerRead:RR|registerFile:RF" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerRead.vhd Line: 93
+Info (12128): Elaborating entity "registerRead" for hierarchy "registerRead:RR" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 145
+Info (12128): Elaborating entity "registerFile" for hierarchy "registerRead:RR|registerFile:RF" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerRead.vhd Line: 100
 Info (12128): Elaborating entity "decoderRF" for hierarchy "registerRead:RR|registerFile:RF|decoderRF:inSel" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerFile.vhd Line: 29
 Info (12128): Elaborating entity "mux8" for hierarchy "registerRead:RR|registerFile:RF|mux8:muxA" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/registerFile.vhd Line: 54
-Info (12128): Elaborating entity "execute" for hierarchy "execute:executed" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 208
+Info (12128): Elaborating entity "execute" for hierarchy "execute:executed" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 211
 Info (12128): Elaborating entity "mux3" for hierarchy "execute:executed|mux3:alu_b_mux" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/execute.vhd Line: 88
 Info (12128): Elaborating entity "alu" for hierarchy "execute:executed|alu:alu1" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/execute.vhd Line: 94
 Warning (10036): Verilog HDL or VHDL warning at alu.vhd(58): object "sub_out" assigned a value but never read File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/alu.vhd Line: 58
 Info (12128): Elaborating entity "subtractor" for hierarchy "execute:executed|alu:alu1|subtractor:sub1" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/alu.vhd Line: 68
 Info (12128): Elaborating entity "nand_logic" for hierarchy "execute:executed|alu:alu1|nand_logic:nnd1" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/alu.vhd Line: 69
 Info (12128): Elaborating entity "register_1bit" for hierarchy "execute:executed|alu:alu1|register_1bit:reg1" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/alu.vhd Line: 83
-Info (12128): Elaborating entity "mem_access" for hierarchy "mem_access:memory" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 256
+Info (12128): Elaborating entity "mem_access" for hierarchy "mem_access:memory" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 259
 Info (12128): Elaborating entity "data_memory" for hierarchy "mem_access:memory|data_memory:data_mem" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/mem_access.vhd Line: 82
 Info (12128): Elaborating entity "altsyncram" for hierarchy "mem_access:memory|data_memory:data_mem|altsyncram:altsyncram_component" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/data_memory.vhd Line: 62
 Info (12130): Elaborated megafunction instantiation "mem_access:memory|data_memory:data_mem|altsyncram:altsyncram_component" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/data_memory.vhd Line: 62
@@ -1402,7 +1413,7 @@ Info (12133): Instantiated megafunction "mem_access:memory|data_memory:data_mem|
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_jhs3.tdf
     Info (12023): Found entity 1: altsyncram_jhs3 File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_jhs3.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_jhs3" for hierarchy "mem_access:memory|data_memory:data_mem|altsyncram:altsyncram_component|altsyncram_jhs3:auto_generated" File: c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "writeBack" for hierarchy "writeBack:writes" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 291
+Info (12128): Elaborating entity "writeBack" for hierarchy "writeBack:writes" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/microprocessor.vhd Line: 294
 Info (12128): Elaborating entity "mux2" for hierarchy "writeBack:writes|mux2:writeMux" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/writeBack.vhd Line: 55
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
@@ -1438,7 +1449,7 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component|altsyncram_3js3:auto_generated|q_a[13]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_3js3.tdf Line: 349
         Warning (14320): Synthesized away node "inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component|altsyncram_3js3:auto_generated|q_a[14]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_3js3.tdf Line: 373
         Warning (14320): Synthesized away node "inst_fetch:IFetch|instruction_memory:inst_memory|altsyncram:altsyncram_component|altsyncram_3js3:auto_generated|q_a[15]" File: C:/Users/Ayush Agrawal/Desktop/Pipelined-Microprocessor/Codes/Central-Code/db/altsyncram_3js3.tdf Line: 397
-Info (17049): 573 registers lost all their fanouts during netlist optimizations.
+Info (17049): 589 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
@@ -1448,9 +1459,9 @@ Info (21057): Implemented 2 device resources after synthesis - the final resourc
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 39 warnings
-    Info: Peak virtual memory: 708 megabytes
-    Info: Processing ended: Thu Dec 08 19:39:20 2016
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:32
+    Info: Peak virtual memory: 707 megabytes
+    Info: Processing ended: Thu Dec 08 22:24:34 2016
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:35
 
 
