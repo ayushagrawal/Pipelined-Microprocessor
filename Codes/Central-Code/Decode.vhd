@@ -3,46 +3,60 @@ use ieee.std_logic_1164.all;
 
 library work;
 use work.decodeComponents.all;
+use work.components.all;
 
 entity Decode is 
-	port (instruction  : in std_logic_vector(15 downto 0);
-			clock			 : in std_logic;
-			NOP_in		 : in std_logic;
-			pc_in			 : in std_logic_vector(15 downto 0);
-			pc_out		 : out std_logic_vector(15 downto 0);
-			pcPlusOneIn  : in std_logic_vector(15 downto 0);
-			pcPlusOneOut : out std_logic_vector(15 downto 0);
-			pcMux_crtl	 : out std_logic;
-			pcRegMux_crtl: out std_logic;
-			A_sel			 : out std_logic_vector(2 downto 0);
-			B_sel			 : out std_logic_vector(2 downto 0);
-			rf_dataIn_mux: out std_logic_vector(1 downto 0);
-			carryEnable  : out std_logic;
-			zeroEnable   : out std_logic;
-			signExt      : out std_logic_vector(15 downto 0);
-			alu_a_muxCrtl: out std_logic;
-			alu_b_muxCrtl: out std_logic_vector(1 downto 0);
-			r7_enable	 : out std_logic;
-			memWrite_en  : out std_logic;
-			beq_pc_crtl  : out std_logic;
-			rf_wren_mux  : out std_logic;
-			rf_wren		 : out std_logic;
-			counter_mux  : out std_logic;
-			mem_mux		 : out std_logic;
-			conditional  : out std_logic;
-			NOP			 : out std_logic;
-			use_B			 : out std_logic;
-			rf_dataIn_sel: out std_logic_vector(2 downto 0);
-			alu_crtl     : out std_logic_vector(1 downto 0);
-			op2in			 : out std_logic_vector(1 downto 0));
+	port (instruction  	: in std_logic_vector(15 downto 0);
+			clock			 	: in std_logic;
+			reset				: in std_logic;
+			NOP_in		 	: in std_logic;
+			pc_in			 	: in std_logic_vector(15 downto 0);
+			pc_out		 	: out std_logic_vector(15 downto 0);
+			pcPlusOneIn  	: in std_logic_vector(15 downto 0);
+			pcPlusOneOut 	: out std_logic_vector(15 downto 0);
+			pcMux_crtl	 	: out std_logic;
+			pcRegMux_crtl	: out std_logic;
+			A_sel			 	: out std_logic_vector(2 downto 0);
+			B_sel			 	: out std_logic_vector(2 downto 0);
+			rf_dataIn_mux	: out std_logic_vector(1 downto 0);
+			carryEnable  	: out std_logic;
+			zeroEnable   	: out std_logic;
+			signExt      	: out std_logic_vector(15 downto 0);
+			alu_a_muxCrtl	: out std_logic;
+			alu_b_muxCrtl	: out std_logic_vector(1 downto 0);
+			r7_enable	 	: out std_logic;
+			memWrite_en  	: out std_logic;
+			beq_pc_crtl  	: out std_logic;
+			rf_wren_mux  	: out std_logic;
+			rf_wren		 	: out std_logic;
+			counter_mux  	: out std_logic;
+			mem_mux		 	: out std_logic;
+			conditional  	: out std_logic;
+			NOP			 	: out std_logic;
+			use_B			 	: out std_logic;
+			counter_enable	: out std_logic;
+			counter_en2		: out std_logic;
+			count_val		: out std_logic_vector(2 downto 0);
+			rf_dataIn_sel	: out std_logic_vector(2 downto 0);
+			alu_crtl     	: out std_logic_vector(1 downto 0);
+			op2in			 	: out std_logic_vector(1 downto 0));
 end entity;
 
 architecture arch of Decode is
-		signal counter_enable : std_logic;
 		signal counter_out    : std_logic_vector(2 downto 0);
+		signal counter_en		 : std_logic;
 begin
 	signExtend : signExtender port map(input => instruction(8 downto 0),output => signExt, opcode => instruction(15 downto 12));
-	count : multiple port map(counter_enable => counter_enable, clock => clock, bit8 => instruction(7 downto 0), counter_out => counter_out, mux_out => counter_mux);
+	count : multiple port map(counter_enable => counter_en, clock => clock, bit8 => instruction(7 downto 0), counter_out => counter_out, mux_out => counter_mux);
+	
+	count_val <= counter_out;
+	counter_en2 <= counter_en;
+	counter_reg : registers generic map(n => 1) port map(enable 	=> '1',
+																		  clock  	=> clock,
+																		  reset  	=> reset,
+																		  input(0)  => counter_en,
+																		  output(0) => counter_enable);
+	
 process(instruction,pcPlusOneIn,counter_out,NOP_in,pc_in)
 	variable Nalu_crtl : std_logic_vector(1 downto 0);
 	variable NzeroEnable : std_logic;
@@ -63,6 +77,7 @@ process(instruction,pcPlusOneIn,counter_out,NOP_in,pc_in)
 	variable Nconditional	: std_logic;
 	variable NNOP				: std_logic;
 	variable Nuse_B			: std_logic;
+	variable Ncounter_en		: std_logic;
 begin
 	Nalu_crtl := "00";
 	NzeroEnable := '0';
@@ -83,6 +98,7 @@ begin
 	Nconditional	:= '0';
 	NNOP				:= '1';					-- NOP = '1' implies normal|| NOP = '0' implies no operation 
 	Nuse_B			:= '0';
+	Ncounter_en    := '0';
 	if(instruction(15 downto 12) = "0000") then						--	ADD
 		Nalu_crtl 		 := "00";					-- Adding
 		NzeroEnable 	 := '1';
@@ -257,7 +273,7 @@ begin
 		Nuse_B			:= '1';
 		
 	elsif(instruction(15 downto 12) = "0110") then					-- LM
-		Nalu_crtl 		 := "01";					-- Add
+		Nalu_crtl 		 := "00";					-- Add
 		NzeroEnable 	 := '0';
 		NcarryEnable 	 := '0';
 		Nalu_a_mux_crtl := '0';						-- Register A
@@ -274,6 +290,7 @@ begin
 		NB_sel := instruction(8 downto 6);
 		Nr7_enable := counter_out(2) and counter_out(1) and counter_out(0);
 		Nuse_B			:= '0';
+		Ncounter_en		:= '1';
 		
 	elsif(instruction(15 downto 12) = "0111") then					-- SM
 		Nalu_crtl 		 := "01";					-- Add
@@ -293,6 +310,7 @@ begin
 		NB_sel			:= counter_out;
 		Nr7_enable 		:= '0';
 		Nuse_B			:= '0';
+		Ncounter_en		:= '1';
 		
 	else
 		NNOP := '0';
@@ -316,6 +334,7 @@ begin
 	conditional 		<= Nconditional;
 	NOP 					<= NNOP and NOP_in;
 	use_B					<= Nuse_B;
+	counter_en			<= Ncounter_en;
 	
 	pc_out <= pc_in;
 	

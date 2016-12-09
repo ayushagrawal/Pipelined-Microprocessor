@@ -32,12 +32,15 @@ architecture mic of microprocessor is
 	signal NOP_ex,NOP_mem,NOP_rr,NOP_decode,NOP_fetch : std_logic;
 	signal pc : std_logic_vector(15 downto 0);
 	signal pc_hazard : std_logic;
+	signal counter_en,pc_reg,counter_en2 : std_logic;
+	signal counter_value : std_logic_vector(2 downto 0);
+	signal counter_validity,lm_en,lm : std_logic;
 
 begin
 	
 	clk_divide : CLOCK_DIVIDER port map (reset => reset,clk => clock_c,half_clk => clock);
 	
-	IF_ID  : registers generic map(N => 49)  port map(clock => clock, reset => reset, enable => enable_IF,  input => input_if,  output => output_if);
+	IF_ID  : registers generic map(N => 49)  port map(clock => clock, reset => reset, enable => enable_if,  input => input_if,  output => output_if);
 	ID_RR  : registers generic map(N => 80)  port map(clock => clock, reset => reset, enable => enable_id,  input => input_id,  output => output_id);
 	RR_EX  : registers generic map(N => 105)  port map(clock => clock, reset => reset, enable => enable_rr,  input => input_rr,  output => output_rr);
 	EX_MEM : registers generic map(N => 110) port map(clock => clock, reset => reset, enable => enable_ex,  input => input_ex,  output => output_ex);
@@ -45,8 +48,12 @@ begin
 
 	not_bubble <= (not bubble);
 	
+	counter_validity <= counter_value(0) and counter_value(1) and counter_value(2);
+	lm_en <= counter_value(0) and (not counter_value(1)) and (not counter_value(2));
+	lm <= counter_value(0) or counter_value(1) or counter_value(2);
+	
+	enable_if <= not_bubble and ((not (counter_en or counter_en2)) or counter_validity);
 	enable_id <= not_bubble;
-	enable_if <= not_bubble;
 	enable_rr <= not_bubble;
 	enable_ex <= '1';
 	enable_mem <= '1';
@@ -60,6 +67,7 @@ begin
 														 dataHazardFlag => dataHazardFlag,				-- Can be used for inserting a bubble
 														 RR_A_mux_sel => regA_mux,
 														 RR_B_mux_sel => regB_mux,
+														 counter_en => counter_en,
 														 NOP_ex => output_rr(88),
 														 NOP_mem => output_ex(109),
 														 NOP_wb => output_mem(90),
@@ -96,12 +104,14 @@ begin
 	
 	NOP_fetch <= (not r7_enable_out_w) or (not output_mem(90));
 	
+	pc_reg <= not_bubble and ((not (counter_en or counter_en2)) or counter_validity);
+	
 	IFetch : inst_fetch port map(clock => clock,
 										  clock_mem => clock_c,
 										  reset => reset,
 										  pcIn => pcIn_w,
 										  pc => input_if(48 downto 33),
-										  pc_reg => not_bubble,
+										  pc_reg => pc_reg,
 										  NOP_in => NOP_fetch,
 										  if_id_reg => input_if(32 downto 0),
 										  pcRegMux_crtl => pcRegMux_crtl_w);
@@ -109,11 +119,15 @@ begin
 	NOP_decode <= ((not r7_enable_out_w) or (not output_mem(90))) and output_if(32) and (not pc_hazard);
 	
 	Decoded: decode port map(	clock	     		=> clock,
+										reset				=> reset,
 										pc_in				=> output_if(48 downto 33),
 										instruction  	=> output_if(31 downto 16),
    									pcPlusOneIn  	=> output_if(15 downto 0),
 										NOP_in			=> NOP_decode,
 										pc_out			=> pc,
+										counter_enable => counter_en,
+										counter_en2		=> counter_en2,
+										count_val		=> counter_value,
 										use_B				=> input_id(63),
 										NOP				=> input_id(62),
 										conditional		=> input_id(61),
@@ -235,6 +249,8 @@ begin
 											r7_enable 			=> output_rr(2),
 											zeroEnable			=> zero_en,
 											carryEnable 		=> carry_en,
+											lm_en					=> lm_en,
+											lm						=> lm,
 											
 											NOP_out				=> input_ex(109),
 											pcALUresult 		=> input_ex(108 downto 93),

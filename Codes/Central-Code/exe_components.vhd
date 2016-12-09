@@ -27,8 +27,7 @@ package exe_components is
 		reset : in std_logic;						
 		carry_flag : out std_logic;
 		zero_flag_in : out std_logic;
-		zero_flag_out : out std_logic
-		);
+		zero : out std_logic);
 	end component;
 
 	component counter IS
@@ -76,5 +75,14 @@ package exe_components is
 		zero_flag : out std_logic 
 		);
 	end component;
-
+	
+	component registers is
+		generic(N : integer);
+		port(input: in std_logic_vector((N-1) downto 0);
+			  enable: in std_logic;
+			  output: out std_logic_vector((N-1) downto 0);
+			  clock: in std_logic;
+			  reset: in std_logic);
+	end component;
+	
 end package;

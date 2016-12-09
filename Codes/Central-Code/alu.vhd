@@ -16,8 +16,7 @@ entity alu is
 		reset : in std_logic;						
 		carry_flag : out std_logic;
 		zero_flag_in : out std_logic;
-		zero_flag_out : out std_logic
-		);
+		zero				: out std_logic);
 end entity;
 
 architecture formulas of alu is
@@ -68,13 +67,14 @@ begin
     sub1 : subtractor port map (ra => ra, rb => rb, rc => sub_out, zero_flag => subz);
     nnd1 : nand_logic port map (ra => ra, rb => rb, rc => nand_out, zero_flag => nandz);
 	
+	zero <= subz;
+	
 	zero_temp <= (addz and(not alu_ctrl(0))and(not alu_ctrl(1))) or (subz and(not alu_ctrl(1))and(alu_ctrl(0))) or (nandz and(not alu_ctrl(0))and(alu_ctrl(1)));
 
 	carry_temp <= (add_out(16))and(not alu_ctrl(0))and(not alu_ctrl(1));
 
 	carry_flag <= carry_temp;
 	zero_flag_in <= zero_temp;
-	zero_flag_out <= zero_flag1;
 	
 	temp_carry_en <= enable_carry and((op_2in(1) and (not op_2in(0)) and carry_flag1) or ((not op_2in(1)) and op_2in(0) and zero_flag1) or (not(op_2in(1) xor op_2in(0))));
 	

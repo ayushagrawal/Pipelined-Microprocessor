@@ -14,6 +14,7 @@ package components is
 	component Decode is 
 		port (instruction  : in std_logic_vector(15 downto 0);
 				clock			 : in std_logic;
+				reset			 : in std_logic;
 				NOP_in		 : in std_logic;
 				pc_in			 : in std_logic_vector(15 downto 0);
 				pc_out		 : out std_logic_vector(15 downto 0);
@@ -38,6 +39,9 @@ package components is
 				conditional	 : out std_logic;
 				NOP			 : out std_logic;
 				use_B			 : out std_logic;
+				counter_enable: out std_logic;
+				counter_en2	 : out std_logic;
+				count_val	 : out std_logic_vector(2 downto 0);
 				rf_dataIn_sel: out std_logic_vector(2 downto 0);
 				alu_crtl     : out std_logic_vector(1 downto 0);
 				op2in			 : out std_logic_vector(1 downto 0);
@@ -170,6 +174,8 @@ package components is
 					pcRegMux_crtl_in: in std_logic;
 					conditional	: in std_logic;
 					NOP_in			: in std_logic;
+					lm_en				: in std_logic;
+					lm					: in std_logic;
 					pc_in				: in std_logic_vector(15 downto 0);
 										
 					pcPlusOneOut : out std_logic_vector(15 downto 0);
@@ -287,6 +293,7 @@ package components is
 			  NOP_mem				: in  std_logic;
 		     NOP_wb					: in  std_logic;
 			  use_B					: in  std_logic;
+			  counter_en			: in  std_logic;
 		     dataHazardFlag		: out std_logic;
 			  RR_A_mux_sel			: out std_logic_vector(1 downto 0);
 			  RR_B_mux_sel			: out std_logic_vector(1 downto 0));

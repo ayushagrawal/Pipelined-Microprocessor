@@ -33,7 +33,9 @@ entity execute is
 				pcRegMux_crtl_in	: in std_logic;
 				conditional			: in std_logic;
 				NOP_in				: in std_logic;
+				lm_en					: in std_logic;
 				pc_in					: in std_logic_vector(15 downto 0);
+				lm						: in std_logic;
 									
 				pcPlusOneOut 		: out std_logic_vector(15 downto 0);
 				regA_out 			: out std_logic_vector(15 downto 0);
@@ -57,12 +59,18 @@ end entity;
 architecture Behave of execute is
 	
 	signal temp : std_logic_vector(16 downto 0);
-	signal alu_a_in,alu_b_in : std_logic_vector(15 downto 0);
-	signal cntr_16 : std_logic_vector(15 downto 0);	
-	signal carry_signal,zero_signal_in,zero_signal_out : std_logic;
-	signal carry_en,zero_en : std_logic;
+	signal alu_a_in,alu_a_in1,alu_b_in : std_logic_vector(15 downto 0);
+	signal cntr_16,address,temp1 : std_logic_vector(15 downto 0);	
+	signal carry_signal,zero_signal_in : std_logic;
+	signal carry_en,zero_en,zero : std_logic;
 
 begin
+	
+	LM_reg : registers generic map(n => 16) port map(clock => clock,
+																	 reset => reset,
+																	 enable => lm_en,
+																	 input  => regA,
+																	 output => address);
 	
 	carry_en <= carryEnable and NOP_in;
 	zero_en  <= zeroEnable and NOP_in;
@@ -75,17 +83,20 @@ begin
 	regA_out <= regA;
 	regB_out <= regB;
 
-counter2 : counter port map (aclr => counter_reset,clock => clock,cnt_en =>counter_ctrl,q => cntr_16(2 downto 0));
-cntr_16(15 downto 3) <= (others => '0');
+	counter2 : counter port map (aclr => counter_reset,clock => clock,cnt_en =>counter_ctrl,q => cntr_16(2 downto 0));
+	cntr_16(15 downto 3) <= (others => '0');
 
-counter_mux_out <= counter_ctrl;
+	counter_mux_out <= counter_ctrl;
 
-alu_a_mux : mux2 generic map (n => 15) port map ( 	in0 =>regA,
+	alu_a_mux : mux2 generic map (n => 15) port map ( 	in0 =>regA,
 													in1 =>signExtend,
 													sel =>A_mux_sel,
-													output => alu_a_in);
-
-alu_b_mux : mux3 generic map (n => 15) port map ( 	in0 =>signExtend,
+													output => alu_a_in1);
+	
+	temp1 <= (others => lm);
+	alu_a_in <= (alu_a_in1 and (not temp1)) or (address and temp1);
+	
+	alu_b_mux : mux3 generic map (n => 15) port map ( 	in0 =>signExtend,
 													in1 =>regB,
 													in2 =>cntr_16,
 													sel =>B_mux_sel,
@@ -102,7 +113,7 @@ alu1 : alu port map ( ra => alu_a_in,
 					  reset => reset,
 					  carry_flag => carry_signal,
 					  zero_flag_in => zero_signal_in,
-					  zero_flag_out => zero_signal_out);
+					  zero			=> zero);
 
 signExtendOut <= signExtend;
 rf_dataIn_mux_out <=rf_dataIn_mux;
@@ -112,11 +123,11 @@ rf_wren_mux_out <= rf_wren_mux;
 mem_mux_out <= mem_mux;
 rf_dataIn_sel_out <= rf_dataIn_sel;
 
-process(beq_mux_ctrl,pc_mux_ctrl,zero_signal_out,pcRegMux_crtl_in)
+process(beq_mux_ctrl,pc_mux_ctrl,zero,pcRegMux_crtl_in)
 	variable var_pc_mux_ctrl_out, var_pcRegMux_crtl_in : std_logic;
 	begin
 		if (beq_mux_ctrl = '1') then
-			if (zero_signal_out = '1') then
+			if (zero = '1') then
 				var_pc_mux_ctrl_out := '1';
 				var_pcRegMux_crtl_in := '1';
 			else
