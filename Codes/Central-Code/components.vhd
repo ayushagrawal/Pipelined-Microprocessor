@@ -104,7 +104,9 @@ package components is
 				conditional_in			: in std_logic;
 				NOP_in					: in std_logic;
 				NOP_r7					: in std_logic;
+				lm_in						: in std_logic;
 				
+				lm_out					: out std_logic;
 				pc_out					: out std_logic_vector(15 downto 0);
 				pcPlusOneOut 			: out std_logic_vector(15 downto 0);
 				pcMux_crtlout	 		: out std_logic;

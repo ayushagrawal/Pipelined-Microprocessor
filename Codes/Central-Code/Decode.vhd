@@ -288,7 +288,7 @@ begin
 		NpcMux_crtl    := '1';						-- Don't Care
 		NpcRegMux_crtl := '0';
 		NB_sel := instruction(8 downto 6);
-		Nr7_enable := counter_out(2) and counter_out(1) and counter_out(0);
+		Nr7_enable 		:= counter_out(2) and counter_out(1) and counter_out(0);
 		Nuse_B			:= '0';
 		Ncounter_en		:= '1';
 		

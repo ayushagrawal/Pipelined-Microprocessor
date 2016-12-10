@@ -83,7 +83,7 @@ begin
 	regA_out <= regA;
 	regB_out <= regB;
 
-	counter2 : counter port map (aclr => counter_reset,clock => clock,cnt_en =>counter_ctrl,q => cntr_16(2 downto 0));
+	counter2 : counter port map (aclr => counter_reset,clock => counter_ctrl,cnt_en => '1',q => cntr_16(2 downto 0));
 	cntr_16(15 downto 3) <= (others => '0');
 
 	counter_mux_out <= counter_ctrl;
@@ -115,13 +115,13 @@ alu1 : alu port map ( ra => alu_a_in,
 					  zero_flag_in => zero_signal_in,
 					  zero			=> zero);
 
-signExtendOut <= signExtend;
-rf_dataIn_mux_out <=rf_dataIn_mux;
-r7_enable_out <=r7_enable;
-memWrite_en_out <= memWrite_en;
-rf_wren_mux_out <= rf_wren_mux;
-mem_mux_out <= mem_mux;
-rf_dataIn_sel_out <= rf_dataIn_sel;
+	signExtendOut 		<= signExtend;
+	rf_dataIn_mux_out <=rf_dataIn_mux;
+	r7_enable_out 		<= r7_enable and counter_ctrl;
+	memWrite_en_out 	<= memWrite_en;
+	rf_wren_mux_out 	<= rf_wren_mux;
+	mem_mux_out 		<= mem_mux;
+	rf_dataIn_sel_out <= rf_dataIn_sel;
 
 process(beq_mux_ctrl,pc_mux_ctrl,zero,pcRegMux_crtl_in)
 	variable var_pc_mux_ctrl_out, var_pcRegMux_crtl_in : std_logic;

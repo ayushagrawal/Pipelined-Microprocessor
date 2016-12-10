@@ -11,8 +11,8 @@ end entity;
 		  
 architecture mic of microprocessor is
 	signal input_if,  output_if  : std_logic_vector(48 downto 0);
-	signal input_id,  output_id  : std_logic_vector(79 downto 0);
-	signal input_rr,  output_rr  : std_logic_vector(104 downto 0);
+	signal input_id,  output_id  : std_logic_vector(80 downto 0);
+	signal input_rr,  output_rr  : std_logic_vector(105 downto 0);
 	signal input_ex,  output_ex  : std_logic_vector(109 downto 0);
 	signal input_mem, output_mem : std_logic_vector(90 downto 0);
 	
@@ -34,15 +34,15 @@ architecture mic of microprocessor is
 	signal pc_hazard : std_logic;
 	signal counter_en,pc_reg,counter_en2 : std_logic;
 	signal counter_value : std_logic_vector(2 downto 0);
-	signal counter_validity,lm_en,lm : std_logic;
+	signal counter_validity,lm_en,lm,lm1 : std_logic;
 
 begin
 	
 	clk_divide : CLOCK_DIVIDER port map (reset => reset,clk => clock_c,half_clk => clock);
 	
 	IF_ID  : registers generic map(N => 49)  port map(clock => clock, reset => reset, enable => enable_if,  input => input_if,  output => output_if);
-	ID_RR  : registers generic map(N => 80)  port map(clock => clock, reset => reset, enable => enable_id,  input => input_id,  output => output_id);
-	RR_EX  : registers generic map(N => 105)  port map(clock => clock, reset => reset, enable => enable_rr,  input => input_rr,  output => output_rr);
+	ID_RR  : registers generic map(N => 81)  port map(clock => clock, reset => reset, enable => enable_id,  input => input_id,  output => output_id);
+	RR_EX  : registers generic map(N => 106)  port map(clock => clock, reset => reset, enable => enable_rr,  input => input_rr,  output => output_rr);
 	EX_MEM : registers generic map(N => 110) port map(clock => clock, reset => reset, enable => enable_ex,  input => input_ex,  output => output_ex);
 	MEM_WB : registers generic map(N => 91)  port map(clock => clock, reset => reset, enable => enable_mem, input => input_mem, output => output_mem);
 
@@ -50,7 +50,7 @@ begin
 	
 	counter_validity <= counter_value(0) and counter_value(1) and counter_value(2);
 	lm_en <= counter_value(0) and (not counter_value(1)) and (not counter_value(2));
-	lm <= counter_value(0) or counter_value(1) or counter_value(2);
+	lm1 <= counter_en2;
 	
 	enable_if <= not_bubble and ((not (counter_en or counter_en2)) or counter_validity);
 	enable_id <= not_bubble;
@@ -155,11 +155,13 @@ begin
 										
 	input_id(79 downto 64) <= pc;
 	NOP_rr <= output_id(62) and (not pc_hazard);
+	input_id(80) <= lm1;
 																	
 	RR : registerRead port map(clock						=> clock,
 										reset						=> reset,
 										r7_enableTo_RF 		=> r7_enable_out_w,						-- From Write Back Stage
 										pc1_in					=> pc,
+										lm_in						=> output_id(80),
 										pc_in						=> output_id(79 downto 64),
 										regWrite					=> regWrite_w,							-- From WB
 										dataIn					=> DataIn_w,							-- From WB
@@ -189,6 +191,7 @@ begin
 										counter_muxin  		=> output_id(1),
 										alu_a_muxCrtlin		=> output_id(0),
 										
+										lm_out					=> lm,
 										pc_out					=> input_rr(104 downto 89),
 										NOP_out					=> input_rr(88),
 										conditional_out		=> input_rr(87),
@@ -214,7 +217,9 @@ begin
 										zeroEnableout   		=> input_rr(1),
 										carryEnableout  		=> input_rr(0));
 	
-
+	
+	input_rr(105) <= lm;
+	
 	counter_reset <= (not (output_rr(22)) ) and (not (output_rr(21)) ) and (not (output_rr(20)));
 	
 	zero_en <= output_rr(1) and not_bubble;		-- So that the carry and zero flags are affected only once
@@ -250,7 +255,7 @@ begin
 											zeroEnable			=> zero_en,
 											carryEnable 		=> carry_en,
 											lm_en					=> lm_en,
-											lm						=> lm,
+											lm						=> output_rr(105),
 											
 											NOP_out				=> input_ex(109),
 											pcALUresult 		=> input_ex(108 downto 93),

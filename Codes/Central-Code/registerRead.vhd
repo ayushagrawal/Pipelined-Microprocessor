@@ -37,7 +37,9 @@ entity registerRead is
 			conditional_in			: in std_logic;
 			NOP_in					: in std_logic;
 			NOP_r7					: in std_logic;
+			lm_in						: in std_logic;
 			
+			lm_out					: out std_logic;
 			pc_out					: out std_logic_vector(15 downto 0);
 			pcPlusOneOut 			: out std_logic_vector(15 downto 0);
 			pcMux_crtlout	 		: out std_logic;
@@ -68,7 +70,8 @@ end entity;
 architecture RR of registerRead is
 	signal pc_in_a : std_logic_vector(15 downto 0);
 begin
-
+	
+	lm_out <= lm_in;
 	pc_out <= pc_in;
 	NOP_out <= NOP_in;
 	conditional_out <= conditional_in;

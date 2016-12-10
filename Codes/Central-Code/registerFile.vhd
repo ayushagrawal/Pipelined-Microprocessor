@@ -27,7 +27,7 @@ architecture RF of registerFile is
 	signal en,re : std_logic_vector(6 downto 0);
 begin
 	inSel: decoderRF port map(input => dataInsel, output => enable);
-	r7_en <= '1' and NOP ; 
+	r7_en <= NOP ; 
 	en <= enable(6 downto 0) and re; 
 	re <= (others => regWrite);
 	
